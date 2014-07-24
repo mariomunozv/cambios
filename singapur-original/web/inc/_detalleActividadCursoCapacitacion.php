@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 function asignaActividadCurso( $idCursoCapacitacion, $idActividad){
 	$sql_ = "INSERT INTO detalleActividadCursoCapacitacion ( idCursoCapacitacion , idActividad ";

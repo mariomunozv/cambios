@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set("display_errors","on");
 include("../inc/_formulario.php");
 require("inc/config.php");
@@ -33,7 +33,7 @@ function asociar()
 <tr>
 <td>Seleccione Fromulario </td>
 <td align="left">
-		<?php
+		<?
 		
 		$formularios = getFormularios();
 		print("<select name='formulario' id='formulario' class='campos' onchange='javascript:listarEnunciadosCerrados();'>");

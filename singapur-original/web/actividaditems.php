@@ -1,4 +1,4 @@
-<?php 
+<? 
 ini_set("display_errors","ON");
 require("inc/incluidos.php");
 
@@ -143,7 +143,7 @@ function closer() {
 
 
 <div id="principal">
-<?php require("topMenu.php"); 
+<? require("topMenu.php"); 
 $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 //$navegacion = "Home*home.php,".$nombreCurso."*curso.php?idCurso=".$_SESSION["sesionIdCurso"].",".$datosActividad["tituloActividad"]."*#";
 //require("_navegacion.php");
@@ -157,7 +157,7 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 </style>
 	
 <div id="lateralIzq">
-<?php 
+<? 
 	require("caja_misCursos.php");
 	require("caja_participantes.php");
 	require("caja_mensajes.php");
@@ -169,7 +169,7 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
     
     
      <div id="lateralDer">
-      <?php 
+      <? 
 	  require("caja_bienvenida.php");
 	require("caja_calendario.php");
 	  ?>
@@ -182,7 +182,7 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
     
 	<div id="columnaCentro">
 	<center>
-		<?php 
+		<? 
 		$respuestas = getRespuestaItem($idPautaItem,$idUsuario);
 		echo '<table class="tablesorter"><thead><tr><th><center>Numero Item</center></th><th colspan="2"><center>Puntos Obtenidos</center></th><th><center>Puntaje Total </center></th><th><center>Opcion</center></th></tr></thead>';
 		$i = 0;
@@ -236,7 +236,7 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 		</center>
 
 
-		<?php 
+		<? 
 
 		$result = getResultadoCapitulos($idPautaItem,$idUsuario);
 		
@@ -335,7 +335,7 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 		    <th colspan="2">Resultados por Capitulos</th>
 			<th colspan="2">Resultados por Apartado</th>
 		</tr>
-		<?php
+		<?
 
 		foreach ($agrupados as $key => $value) {
 
@@ -374,7 +374,7 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 
 		</table>
 		<br>
-		<?php boton("Volver","history.back();"); ?>
+		<? boton("Volver","history.back();"); ?>
 		</center>
 
 
@@ -382,7 +382,7 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
     </div><!--columnaCentro-->
      
               
-	<?php 
+	<? 
     
     	require("pie.php");
     

@@ -21,7 +21,7 @@ $(function () {
 });
 //-->
 </script>
-<?php 
+<? 
 $datosColegio = getColegiosProyecto(1);
 ?>
 <br />
@@ -34,7 +34,7 @@ $datosColegio = getColegiosProyecto(1);
         <marquee behavior="scroll" direction="up" scrollamount="1" height="100">
         
         
-        <?php
+        <?
 			if ($datosColegio[0]){
 			
 				foreach ($datosColegio as $i => $value) {

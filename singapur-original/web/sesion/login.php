@@ -1,5 +1,5 @@
 
-<?php 
+<? 
 session_start();
 include "../inc/conecta.php";
 include "../inc/funciones.php";
@@ -69,7 +69,7 @@ Conectarse_seg();
           <tr>
             <td height="457" align="left" valign="top" bgcolor="#FFFFFF"><table>
               <tr>
-                <td align="center" background="../images/fondo.jpg"><?php //require("../header.php"); ?>
+                <td align="center" background="../images/fondo.jpg"><? //require("../header.php"); ?>
                   <table >
                     <tr>
                       <td height="240" align="center"><table>
@@ -82,7 +82,7 @@ Conectarse_seg();
                         <tr>
                           <td height="100" class="txtnegro10">
                           
-						<?php  $usuario = $_POST["usuario"];	
+						<?  $usuario = $_POST["usuario"];	
                             $password = $_POST["password"];	
                             if(estaUsuario($usuario)){
                                if(claveCorrectaUsuario($usuario,md5($password))){ 	   
@@ -143,12 +143,12 @@ Conectarse_seg();
                                 }else{
                                      echo "Su clave es Incorrecta";  ?>
                                       <a href="../index.php">&lt;&lt; Volver</a>
-               <?php               }
+               <?               }
                            }else{
 							   echo " El usuario ingresado no existe"; ?>
 							  <br />
  <a href="../index.php">&lt;&lt; Volver</a> 
-                           <?php }
+                           <? }
                                 
                                 
                                 ?>
@@ -162,7 +162,7 @@ Conectarse_seg();
                         </table></td>
                       </tr>
                     </table>
-                  <?php //require("../pie.php"); ?></td>
+                  <? //require("../pie.php"); ?></td>
                 </tr>
             </table>              <h2>
               

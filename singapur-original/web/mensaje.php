@@ -1,4 +1,4 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 require ("hd.php");
 
@@ -34,10 +34,10 @@ $datosU = getDatosGenerico($datosMensaje["deMensaje"]);
 
 <body>
 <div id="principal">
-<?php require("topMenu.php"); ?>
+<? require("topMenu.php"); ?>
 	
     <div id="lateralIzq">
-    <?php 
+    <? 
 		require("caja_misCursos.php");
 		require("caja_glosarioPalabra.php");
 		require("caja_mensajes.php");
@@ -48,7 +48,7 @@ $datosU = getDatosGenerico($datosMensaje["deMensaje"]);
     
     
     <div id="lateralDer">
-    <?php 
+    <? 
 		require("caja_bienvenida.php");
 		require("caja_eventosProximos.php");
 		
@@ -59,17 +59,17 @@ $datosU = getDatosGenerico($datosMensaje["deMensaje"]);
     
 	<div id="columnaCentro">
     	
-        <h2><?php echo $datosMensaje["asuntoMensaje"]; ?></h2>
+        <h2><? echo $datosMensaje["asuntoMensaje"]; ?></h2>
         <table width="100%" border="0" cellspacing="2">
             <tr>
                 <td width="50">
-                	<img src="<?php echo "subir/fotos_perfil/th_".$datosU["imagenUsuario"];?>" />
+                	<img src="<? echo "subir/fotos_perfil/th_".$datosU["imagenUsuario"];?>" />
 				</td>
                 
                 <td>
                 	<div align="left">
                     	<strong>
-						<?php
+						<?
 
 							$texto_de = $datosU["nombreParaMostrar"];
 						
@@ -81,7 +81,7 @@ $datosU = getDatosGenerico($datosMensaje["deMensaje"]);
                 
                 <td>
                 	<div align="right">
-						<?php echo fechaConFormato($datosMensaje["fechaMensaje"]); ?>
+						<? echo fechaConFormato($datosMensaje["fechaMensaje"]); ?>
                     </div>
 				</td>
             </tr>
@@ -89,7 +89,7 @@ $datosU = getDatosGenerico($datosMensaje["deMensaje"]);
             <tr>
                 <td colspan="3">
                 <br />
-				<?php echo $datosMensaje["contenidoMensaje"]; ?>
+				<? echo $datosMensaje["contenidoMensaje"]; ?>
                 </td>
 			</tr>
             
@@ -99,7 +99,7 @@ $datosU = getDatosGenerico($datosMensaje["deMensaje"]);
         </table>
         
         <p align="right">
-       	 	<?php 
+       	 	<? 
 			boton("Volver","history.go(-1)");
 			boton("Responder","responderMensaje(".$_REQUEST["idMensaje"].")");
 			?>
@@ -110,7 +110,7 @@ $datosU = getDatosGenerico($datosMensaje["deMensaje"]);
 			
     </div> <!--columnaCentro-->
 
-	<?php 
+	<? 
     	
 		require("pie.php");
 		

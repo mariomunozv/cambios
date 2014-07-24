@@ -1,4 +1,4 @@
-<?php 
+<? 
 // ini_set('display_errors','On');
 
 ob_start("ob_gzhandler");
@@ -490,37 +490,37 @@ if ($ingresoCompletado) {
 	<table class="tablesorter" id="tabla"> 
 		   	<thead>  
 	   		<tr>
-			   <th colspan="5">Alumnos de: <?php echo $nombreNivel." ".$letraCursoColegio;?></th>
+			   <th colspan="5">Alumnos de: <? echo $nombreNivel." ".$letraCursoColegio;?></th>
 			</tr>
 			<tr>
 			    <th>Nº</th>
 			    <th>Nombres</th>
 			    <th>Puntaje</th>
 			    <th>%Logro</th>
-			    <?php if ( $mostrarEscala ) { ?>
+			    <? if ( $mostrarEscala ) { ?>
 			    <th>
-			    	Nota al <?php echo $escala * 100 ?>%
+			    	Nota al <? echo $escala * 100 ?>%
 	            </th>
-			    <?php } ?>
+			    <? } ?>
 			</tr>
 			</thead>
 			<tbody>
-			<?php 
+			<? 
 			if (count($alumnos) > 0){
 				 $i = 1;
 				foreach ($alumnos as $alumno){ 
 					if ($alumno['asistio'] == 1) {
 			  			?>
 				        <tr>
-							<td><?php echo $i;?></td>
-							<td><?php echo $alumno["apellidoPaternoAlumno"]." ".$alumno["nombreAlumno"];?></td>
-							<td><?php echo $alumno["datosPauta"]["resultadoListaPautaItem"] == NULL ? 0 : $alumno["datosPauta"]["resultadoListaPautaItem"];?></td>
-				            <td><?php echo $alumno["datosPauta"]["porcentajeLogroPautaItem"]." %";?></td>
-				            <?php if ( $mostrarEscala ) { ?>
-				            <td><?php echo $alumno["nota"];?></td>
-				            <?php } ?>
+							<td><? echo $i;?></td>
+							<td><? echo $alumno["apellidoPaternoAlumno"]." ".$alumno["nombreAlumno"];?></td>
+							<td><? echo $alumno["datosPauta"]["resultadoListaPautaItem"] == NULL ? 0 : $alumno["datosPauta"]["resultadoListaPautaItem"];?></td>
+				            <td><? echo $alumno["datosPauta"]["porcentajeLogroPautaItem"]." %";?></td>
+				            <? if ( $mostrarEscala ) { ?>
+				            <td><? echo $alumno["nota"];?></td>
+				            <? } ?>
 						</tr>
-						<?php 	$i++;					
+						<? 	$i++;					
 					} else {
 						$noAsistieron[$alumno["idUsuario"]] = $alumno["apellidoPaternoAlumno"]." ".$alumno["nombreAlumno"];
 					}
@@ -532,7 +532,7 @@ if ($ingresoCompletado) {
 		</tbody> 
 	</table>
 <br>
-	<?php 
+	<? 
 	if (count($noAsistieron) > 0) {	
 	?>
 		<table class="tablesorter" id="tabla"> 
@@ -542,20 +542,20 @@ if ($ingresoCompletado) {
 				</tr>
 			</thead>
 			<tbody>
-				<?php 
+				<? 
 					foreach ($noAsistieron as $id => $nombre) {
 				?>	
 				<tr>
 					<td>										
-						<?php echo $nombre; ?>					
+						<? echo $nombre; ?>					
 					</td>
 				</tr>
-				<?php
+				<?
 				}
 				?>
 			</tbody>
 		</table>
-	<?php 
+	<? 
 	}
 	?>
 <br>
@@ -570,17 +570,17 @@ if ($ingresoCompletado) {
 				   <th>% Logro Curso</th>
 				</tr>
 			</thead>
-			<?php 
+			<? 
 			for($i=0;$i<count($items);$i++){ 
 			?>
 			<tr>
-				<td style="text-align:center;"><?php echo $items[$i]["enunciadoItem"]; ?></td>
-				<td style="text-align:left;"><?php echo getTareaMatematicaItem($items[$i]["idItem"]); ?></td>
-				<td style="text-align:left;"><?php echo getNivelComplejidadItem($items[$i]["idItem"]); ?></td>
-				<td style="text-align:left;"><?php echo getCompetenciaMatematicaItem($items[$i]["idItem"]); ?></td>
-	            <td style="text-align:center;"><?php echo $items[$i]["porcentajeLogro"]." %"; ?></td>
+				<td style="text-align:center;"><? echo $items[$i]["enunciadoItem"]; ?></td>
+				<td style="text-align:left;"><? echo getTareaMatematicaItem($items[$i]["idItem"]); ?></td>
+				<td style="text-align:left;"><? echo getNivelComplejidadItem($items[$i]["idItem"]); ?></td>
+				<td style="text-align:left;"><? echo getCompetenciaMatematicaItem($items[$i]["idItem"]); ?></td>
+	            <td style="text-align:center;"><? echo $items[$i]["porcentajeLogro"]." %"; ?></td>
 			</tr>		
-			<?php } ?> 
+			<? } ?> 
 		</table>
 <br>
 
@@ -589,16 +589,16 @@ if ($ingresoCompletado) {
             	<th  style="text-align:left;">Resultados por capitulos</th>
                 <th style="text-align:center;">%logro Curso</th>
 			</tr>
-			<?php 
+			<? 
 
 			foreach($seccionesLista as $seccion){ 
 				$promedioSeccion = calculaPromedioSeccion($seccion["idSeccionBitacora"],$items);
 				?>
 				<tr>
-					<td style="text-align:left;"><?php echo $seccion["nombreSeccionBitacora"]; ?></td>
-	                <td style="text-align:center;"><?php echo $promedioSeccion." %"; ?></td>
+					<td style="text-align:left;"><? echo $seccion["nombreSeccionBitacora"]; ?></td>
+	                <td style="text-align:center;"><? echo $promedioSeccion." %"; ?></td>
 				</tr>		
-			<?php } ?> 
+			<? } ?> 
 		</table>
 <br>
 		<table class="tablesorter">
@@ -606,13 +606,13 @@ if ($ingresoCompletado) {
             	<th style="text-align:left;">Resultados por habilidad matemática</th>
                 <th style="text-align:center;">%logro Curso</th>
 			</tr>
-			<?php foreach($competencias as $competencia){ 
+			<? foreach($competencias as $competencia){ 
 				$promedioCompetencia = calculaPromedioCompetenciaMatematica($competencia["idCompetencia"],$items); ?>
 				<tr>
-					<td style="text-align:left;"><strong><?php echo $competencia["nombreCompetencia"]; ?></strong></td>
-	                <td style="text-align:center;"><?php echo $promedioCompetencia." %"; ?></td>
+					<td style="text-align:left;"><strong><? echo $competencia["nombreCompetencia"]; ?></strong></td>
+	                <td style="text-align:center;"><? echo $promedioCompetencia." %"; ?></td>
 				</tr>	
-			<?php } ?> 
+			<? } ?> 
 		</table>
 <br>
 		<table class="tablesorter">
@@ -620,42 +620,42 @@ if ($ingresoCompletado) {
             	<th style="text-align:left;">Resultados por Nivel de Complejidad</th>
                 <th style="text-align:center;">%logro Curso</th>
 			</tr>
-			<?php foreach($nivelesLista as $nivel){ 
+			<? foreach($nivelesLista as $nivel){ 
 					$promedioNivel = calculaPromedioNivelComplejidad($nivel["idNivelDeComplejidad"],$items); ?>
 					<tr>
-						<td style="text-align:left;"><strong><?php echo $nivel["nombreNivelDeComplejidad"]; ?></strong></td>
-		                <td style="text-align:center;"><?php echo $promedioNivel." %"; ?></td>
+						<td style="text-align:left;"><strong><? echo $nivel["nombreNivelDeComplejidad"]; ?></strong></td>
+		                <td style="text-align:center;"><? echo $promedioNivel." %"; ?></td>
 					</tr>	
-			<?php } ?> 
+			<? } ?> 
 		</table>
 
 
 		<br>
 
-		<?php 
+		<? 
 		$cursosMismoColegio = getCursosByColegio($rbdColegio, $anoCursoColegio, $idNivel);
 		 ?>
 		<table id="table1" class="tablesorter">
 			<tr>
-				<th style="text-align:left;" colspan="<?php echo count($cursosMismoColegio) ?>">Cursos <?php echo $datosColegio["nombreColegio"] ?></th>
-				<th style="text-align:left;" rowspan="2">% Logro <?php echo $datosColegio["nombreColegio"] ?></th>
-				<?php 
+				<th style="text-align:left;" colspan="<? echo count($cursosMismoColegio) ?>">Cursos <? echo $datosColegio["nombreColegio"] ?></th>
+				<th style="text-align:left;" rowspan="2">% Logro <? echo $datosColegio["nombreColegio"] ?></th>
+				<? 
 					if ($datosColegio['idCongregacion'] !== NULL) {
 						?>
-						<th style="text-align:left;" rowspan="2">% Logro Grupo <?php echo $datosColegio["nombreCongregacion"] ?></th>
-						<?php
+						<th style="text-align:left;" rowspan="2">% Logro Grupo <? echo $datosColegio["nombreCongregacion"] ?></th>
+						<?
 					}
 				 ?>
 			</tr>
 			<tr>
-				<th style="text-align:left;"><?php echo $idNivel."° ".$letraCursoColegio ?></th>
-				<?php 
+				<th style="text-align:left;"><? echo $idNivel."° ".$letraCursoColegio ?></th>
+				<? 
 				$cursoSeleccionado = array();
 				foreach ($cursosMismoColegio as $key => $curso) {
 					if ($curso["letraCursoColegio"] !== $letraCursoColegio) {
 						?>
-						<th style="text-align:left;"><?php echo $curso["idNivel"]."° ".$curso["letraCursoColegio"] ?></th>
-						<?php		
+						<th style="text-align:left;"><? echo $curso["idNivel"]."° ".$curso["letraCursoColegio"] ?></th>
+						<?		
 					} else {
 						$cursoSeleccionado = $curso;
 					}	
@@ -663,26 +663,26 @@ if ($ingresoCompletado) {
 				?>
 			</tr>
 			<tr>
-				<?php 
+				<? 
 				$logroColegio = getLogroColegio($rbdColegio, $anoCursoColegio, $idLista, $idNivel);
 				$logroCurso = getLogroByCursoAndIdLista($cursoSeleccionado, $idLista);
 				?>
-				<td style="text-align:left;"><?php echo $logroCurso; ?></td>
-				<?php 				
+				<td style="text-align:left;"><? echo $logroCurso; ?></td>
+				<? 				
 				foreach ($cursosMismoColegio as $key => $curso) {
 					if ($curso["letraCursoColegio"] !== $letraCursoColegio) {
 						?>
-						<td style="text-align:left;"><?php echo getLogroByCursoAndIdLista($curso, $idLista) ?></td>
-						<?php		
+						<td style="text-align:left;"><? echo getLogroByCursoAndIdLista($curso, $idLista) ?></td>
+						<?		
 					}	
 				}
 				?>
-				<td style="text-align:left;"><?php echo $logroColegio; ?></td>
-				<?php 
+				<td style="text-align:left;"><? echo $logroColegio; ?></td>
+				<? 
 					if ($datosColegio['idCongregacion'] !== NULL) {
 						?>
-						<td style="text-align:left;"><?php echo getLogroCongregacion($datosColegio["idCongregacion"], $anoCursoColegio); ?></td>
-						<?php
+						<td style="text-align:left;"><? echo getLogroCongregacion($datosColegio["idCongregacion"], $anoCursoColegio); ?></td>
+						<?
 					}
 				 ?>
 			</tr>
@@ -690,32 +690,32 @@ if ($ingresoCompletado) {
 		<br>
 		<table id="table2" class="tablesorter">
 			<tr>
-				<th style="text-align:left; width:40px;"><?php echo $idNivel."° ".$letraCursoColegio ?></th>				
-				<th style="text-align:left;">% Logro <?php echo $datosColegio["nombreColegio"] ?></th>
-				<?php 
+				<th style="text-align:left; width:40px;"><? echo $idNivel."° ".$letraCursoColegio ?></th>				
+				<th style="text-align:left;">% Logro <? echo $datosColegio["nombreColegio"] ?></th>
+				<? 
 				if ($datosColegio['idGrupoSocioEconomico'] !== NULL) {
 				?>
-					<th style="text-align:left;">% Logro grupo socio-económico <?php echo $datosColegio["nombreGrupoSocioEconomico"] ?></th>				
-				<?php
+					<th style="text-align:left;">% Logro grupo socio-económico <? echo $datosColegio["nombreGrupoSocioEconomico"] ?></th>				
+				<?
 				}
 				?>
-				<th style="text-align:left;">% Logro general <?php echo $cursoSeleccionado['nombreNivel'] ?></th>						
+				<th style="text-align:left;">% Logro general <? echo $cursoSeleccionado['nombreNivel'] ?></th>						
 			</tr>
 			<tr>
-				<td style="text-align:left;"><?php echo $logroCurso; ?></td>
-				<td style="text-align:left;"><?php echo $logroColegio; ?></td>
-				<?php 
+				<td style="text-align:left;"><? echo $logroCurso; ?></td>
+				<td style="text-align:left;"><? echo $logroColegio; ?></td>
+				<? 
 				if ($datosColegio['idGrupoSocioEconomico'] !== NULL) {
 				?>
-					<td style="text-align:left;"><?php echo getLogroGrupoSocioEconomico($datosColegio["idGrupoSocioEconomico"], $anoCursoColegio, $idLista, $idNivel); ?></td>
-				<?php
+					<td style="text-align:left;"><? echo getLogroGrupoSocioEconomico($datosColegio["idGrupoSocioEconomico"], $anoCursoColegio, $idLista, $idNivel); ?></td>
+				<?
 				}
 				?>
-				<td style="text-align:left;"><?php echo getLogroGeneralByNivel($idNivel, $anoCursoColegio, $idLista); ?></td>
+				<td style="text-align:left;"><? echo getLogroGeneralByNivel($idNivel, $anoCursoColegio, $idLista); ?></td>
 			</tr>
 		</table>
 
-<?php 
+<? 
 }
 
 ob_end_flush();

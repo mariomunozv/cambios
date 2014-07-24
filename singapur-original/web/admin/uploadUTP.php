@@ -1,4 +1,4 @@
-<?php session_start();
+<? session_start();
 include "../inc/conecta.php";
 include "../inc/funciones.php";
 
@@ -88,7 +88,7 @@ function Valida_Rut( Objeto )
 
 
 function cancelar(){
-	if(confirm("Cancelar esta operación?")){ location.href="cursoDetalle.php?rbdColegio=<?php echo $rbdColegio;?>&idNivel=<?php echo $idNivel;?>&anoCursoColegio=<?php echo $anoCursoColegio;?>&letraCursoColegio=<?php echo $letraCursoColegio;?>"; }   
+	if(confirm("Cancelar esta operación?")){ location.href="cursoDetalle.php?rbdColegio=<? echo $rbdColegio;?>&idNivel=<? echo $idNivel;?>&anoCursoColegio=<? echo $anoCursoColegio;?>&letraCursoColegio=<? echo $letraCursoColegio;?>"; }   
 }
 
 function valida_rut(rut){
@@ -121,9 +121,9 @@ function upload(){
 
 <form name="form" action="cargaMasivaUTP.php" method="POST" enctype="multipart/form-data">
 <input type="hidden"  name="modo" id="modo" value="carga"  class="campos" /> 
-<input type="hidden"  name="rbdColegio" id="rbdColegio" value="<?php echo $rbdColegio;?>"  class="campos" />       
-<input type="hidden"  name="anoCursoColegio" id="anoCursoColegio" value="<?php echo $anoCursoColegio;?>"  class="campos" />   
-<input type="hidden"  name="letraCursoColegio" id="letraCursoColegio" value="<?php echo $letraCursoColegio;?>"  class="campos" />     
+<input type="hidden"  name="rbdColegio" id="rbdColegio" value="<? echo $rbdColegio;?>"  class="campos" />       
+<input type="hidden"  name="anoCursoColegio" id="anoCursoColegio" value="<? echo $anoCursoColegio;?>"  class="campos" />   
+<input type="hidden"  name="letraCursoColegio" id="letraCursoColegio" value="<? echo $letraCursoColegio;?>"  class="campos" />     
 <input name="userfile" type="file"> 
        
        <input type="submit" name="aa" />

@@ -1,4 +1,4 @@
-<?php 
+<? 
 session_start();
 include("../metodosingapur/inc/funciones.php");
 include "../metodosingapur/inc/conecta.php";
@@ -32,7 +32,7 @@ Conectarse_seg();
 
 <script language="javascript">
 $(function() {
-	<?php /* Asi inicializas tablesorter */ ?>	   
+	<? /* Asi inicializas tablesorter */ ?>	   
 	$("#tabla").tablesorter({ 
 		headers: {  
 			6: { sorter: false },
@@ -49,8 +49,8 @@ $(function() {
 
 <body>
 <div id="principal">
-	<?php require("menu.php");?>
-	<?php 
+	<? require("menu.php");?>
+	<? 
 		  function getAccesos(){
 			  	$sql = "SELECT * FROM `accesoRecurso` a left join tipoRecursoObservado b on a.idTipoRecursoObservado = b.idTipoRecursoObservado ORDER BY fechaAccesoRecurso DESC";
 				//echo $sql;
@@ -120,26 +120,26 @@ $(function() {
                     </tr> 
                 </thead> 
                 <tbody> 
-                <?php $i=0;
+                <? $i=0;
 				   foreach ($acceso as $value){
 					  
 					   ?> 
                         <tr valign="top"> 
-                            <td ><?php echo $value["idAccesoRecurso"]; ?></td>
-                            <?php 
+                            <td ><? echo $value["idAccesoRecurso"]; ?></td>
+                            <? 
 							$datosUsuario = getNombreFotoUsuarioProfesor($value["idUsuario"]);
 							?>
                              
-                            <td ><?php echo $datosUsuario["nombreProfesor"]." ".$datosUsuario["apellidoPaternoProfesor"]; ?></td>  
-                            <td ><?php echo $value["fechaAccesoRecurso"]; ?></td> 
-                            <td ><?php echo $value["nombreRecursoObservado"]; ?></td> 
-                            <td ><?php echo $value["categoriaRecursoObservado"]; ?></td> 
-                            <td ><?php echo $value["nombreRecurso"]; ?></td>  		
-                            <td width="50"><a href="prv_editar.php?id=<?php echo $value["idAccesoRecurso"]; ?>"><img src="css/btn/editar.gif" border="0"></a></td>
+                            <td ><? echo $datosUsuario["nombreProfesor"]." ".$datosUsuario["apellidoPaternoProfesor"]; ?></td>  
+                            <td ><? echo $value["fechaAccesoRecurso"]; ?></td> 
+                            <td ><? echo $value["nombreRecursoObservado"]; ?></td> 
+                            <td ><? echo $value["categoriaRecursoObservado"]; ?></td> 
+                            <td ><? echo $value["nombreRecurso"]; ?></td>  		
+                            <td width="50"><a href="prv_editar.php?id=<? echo $value["idAccesoRecurso"]; ?>"><img src="css/btn/editar.gif" border="0"></a></td>
                 
-                            <td width="70"><a href="javascript:eliminar(<?php echo $value["idAccesoRecurso"]; ?>);"><img src="css/btn/cancelar.gif" border="0"></a></td> 
+                            <td width="70"><a href="javascript:eliminar(<? echo $value["idAccesoRecurso"]; ?>);"><img src="css/btn/cancelar.gif" border="0"></a></td> 
                         </tr>
-                <?php $i++;
+                <? $i++;
 				}?>    
                     </tbody> 
                 </table> 
@@ -151,7 +151,7 @@ $(function() {
                         <img src="css/tabla/next.png" class="next"/>
             
                         <img src="css/tabla/last.png" class="last"/>
-                        <input type="hidden" class="pagesize" value="20"><?php /* Registros por paginas */ ?> 
+                        <input type="hidden" class="pagesize" value="20"><? /* Registros por paginas */ ?> 
                     </form>
                 </div>
 

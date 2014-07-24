@@ -48,16 +48,16 @@ td.col1
             <th>Colonne 3</th>
         </tr>
     </thead>
-<?php
+<?
     for ($k=0; $k<50; $k++) {
 ?>
     <tr>
-        <td><?php echo $k; ?></td>
+        <td><? echo $k; ?></td>
         <td>test de texte assez long pour engendrer des retours à la ligne automatique...</td>
         <td>test de texte assez long pour engendrer des retours à la ligne automatique...</td>
         <td>test de texte assez long pour engendrer des retours à la ligne automatique...</td>
     </tr>
-<?php
+<?
     }
 ?>
     <tfoot>

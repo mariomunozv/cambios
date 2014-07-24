@@ -1,4 +1,4 @@
-<?php
+<?
 require("inc/incluidos.php");
 //require ("hd.php");
 Conectarse_seg();
@@ -35,7 +35,7 @@ function temaGuarda(){
     <tr>
         <td align="center">
 			<input type="text" name="tituloTema" id="tituloTema" size="60px" class="campos"/>
-			<input type="hidden" name="idCategoria" id="idCategoria" value="<?php echo $idCategoria;?>" class="campos"/>
+			<input type="hidden" name="idCategoria" id="idCategoria" value="<? echo $idCategoria;?>" class="campos"/>
         </td>
 		<td align="center">
 			<input type="text" name="fecha_termino" id="datepicker" class="campos" size="10px" value=""/>
@@ -52,7 +52,7 @@ function temaGuarda(){
     
     <tr>
         <td colspan="3">
-	        <?php boton("Crear Tema","temaGuarda()"); ?>
+	        <? boton("Crear Tema","temaGuarda()"); ?>
         </td>
     </tr>
 </table>

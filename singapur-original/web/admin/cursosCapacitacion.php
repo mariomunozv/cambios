@@ -1,4 +1,4 @@
-<?php 
+<? 
 
  ini_set('display_errors','On');
 
@@ -67,7 +67,7 @@ class_activo('boton_curso','activo');
 
 
 
-<?php 
+<? 
 $colegios = getColegiosProyecto(1);
 
 $tiposUsuarios = getTiposUsuario();
@@ -87,7 +87,7 @@ $perfiles = getPerfiles();
     <a class="button" href="javascript:new_cursoCapacitacion();">
         <span>
             <div class="add">
-            	<?php echo "Nuevo Curso"; ?>
+            	<? echo "Nuevo Curso"; ?>
             </div>
         </span>
     </a>
@@ -110,20 +110,20 @@ $perfiles = getPerfiles();
                 	
                     <td><label>
                       <select name="rbdColegio" id="rbdColegio" onchange="actualizarLista();">
-                      <?php foreach ($colegios as $colegio){?>
-                      		<option value="<?php echo $colegio["rbdColegio"];?>"><?php echo $colegio["nombreColegio"];?></option>
-                      <?php }?>
+                      <? foreach ($colegios as $colegio){?>
+                      		<option value="<? echo $colegio["rbdColegio"];?>"><? echo $colegio["nombreColegio"];?></option>
+                      <? }?>
                       </select>
                     </label></td>
                     <td><select name="select2" id="select2">
-                     <?php foreach ($tiposUsuarios as $tipo){?>
-                      		<option value="<?php echo $tipo["tipoUsuario"];?>"><?php echo $tipo["tipoUsuario"];?></option>
-                      <?php }?>
+                     <? foreach ($tiposUsuarios as $tipo){?>
+                      		<option value="<? echo $tipo["tipoUsuario"];?>"><? echo $tipo["tipoUsuario"];?></option>
+                      <? }?>
                     </select></td>
                      <td><select name="perfil" id="perfil" class="campos">
-                     <?php foreach ($perfiles as $perfil){?>
-                      		<option value="<?php echo $perfil["idPerfil"];?>"><?php echo $perfil["nombrePerfil"];?></option>
-                      <?php }?>
+                     <? foreach ($perfiles as $perfil){?>
+                      		<option value="<? echo $perfil["idPerfil"];?>"><? echo $perfil["nombrePerfil"];?></option>
+                      <? }?>
                     </select></td>
                     
                 </tr>
@@ -143,9 +143,9 @@ $perfiles = getPerfiles();
                     <td><label>
                       <select name="idCurso" id="idCurso" onchange="actualizaCurso()">
                       		<option value="">Seleccione Curso</option>
-                       <?php foreach ($cursosCapacitacion as $curso){?>
-                      		<option value="<?php echo $curso["idCursoCapacitacion"];?>"><?php echo $curso["nombreCortoCursoCapacitacion"];?></option>
-                      <?php }?>
+                       <? foreach ($cursosCapacitacion as $curso){?>
+                      		<option value="<? echo $curso["idCursoCapacitacion"];?>"><? echo $curso["nombreCortoCursoCapacitacion"];?></option>
+                      <? }?>
                       </select>
                     </label></td>
                     
@@ -158,4 +158,4 @@ $perfiles = getPerfiles();
 <script language="javascript">
 	usuariosListado();
 </script>      
-<?php require("_pie.php"); ?>
+<? require("_pie.php"); ?>

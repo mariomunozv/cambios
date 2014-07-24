@@ -1,4 +1,4 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 
 $idCurso = $_REQUEST["idCurso"];
@@ -59,19 +59,19 @@ $profesores = getProfesoresCurso($idCurso);?>
         </thead>
         <tbody>
 
-		<?php 
+		<? 
         foreach ($profesores as $row){ 
 
         $idUsuario = $row["idUsuario"];
 		$num = getCountActividades($idUsuario);
         ?>
             <tr>
-                <td><?phpecho $row["rutProfesor"];?></td>
-                <td><?phpecho $row["rbdColegio"];?></td>
-                <td><?phpecho $row["nombreProfesor"] . " " . $row["apellidoPaternoProfesor"];?></td>
-                <td><a href="<?php echo "actividadesProfesor.php?id=".$idUsuario?>" >Actividades Realizadas (<?phpecho $num;?>)</a></td>
+                <td><?echo $row["rutProfesor"];?></td>
+                <td><?echo $row["rbdColegio"];?></td>
+                <td><?echo $row["nombreProfesor"] . " " . $row["apellidoPaternoProfesor"];?></td>
+                <td><a href="<? echo "actividadesProfesor.php?id=".$idUsuario?>" >Actividades Realizadas (<?echo $num;?>)</a></td>
             </tr>
-        <?php 
+        <? 
         }
         ?>
 

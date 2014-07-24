@@ -41,7 +41,7 @@
 <body>
 	<div id="agenda">
 		<h1>Mi Agenda</h1>
-		<?php
+		<?
 			include("config.inc.php");
 			function fecha ($valor)
 			{

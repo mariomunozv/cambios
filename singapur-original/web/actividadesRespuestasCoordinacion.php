@@ -1,4 +1,4 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 
 $idPerfil =  $_SESSION["sesionPerfilUsuario"];
@@ -104,27 +104,27 @@ function closer() {
 </script>
 
 <div id="principal">
-<?php 
+<? 
 	require("topMenu.php"); 
 	
 	require("_navegacion.php");
 
 ?>
     <div id="lateralIzq">
-	    <?php require("menuleft.php");	?>
+	    <? require("menuleft.php");	?>
 	</div>
     
     
     
     <div id="lateralDer">
-	    <?php require("menuright.php");?>
+	    <? require("menuright.php");?>
     </div><!--lateralDer-->
     
     <div id="columnaCentro" >
 
     <p class="titulo_curso">Actividades Profesor</p>
     <br>
-    <?php $datos = getRutNombre($idProfesor);
+    <? $datos = getRutNombre($idProfesor);
 
        foreach($datos as $row){
             echo "<h3>Rut: ".$row["rutProfesor"]."</h3>";
@@ -134,7 +134,7 @@ function closer() {
     ?>
      
     <center>
-        <?php 
+        <? 
         $respuestas = getRespuestaItem($idPautaItem,$idProfesor);
         echo '<table class="tablesorter"><thead><tr><th><center>Numero Item</center></th><th colspan="2"><center>Puntos Obtenidos</center></th><th><center>Puntaje Total </center></th><th><center>Opcion</center></th></tr></thead>';
         $i = 0;
@@ -188,7 +188,7 @@ function closer() {
         </center>
 
 
-        <?php 
+        <? 
 
         $result = getResultadoCapitulos($idPautaItem,$idProfesor);
         
@@ -286,7 +286,7 @@ function closer() {
             <th colspan="2">Resultados por Capitulos</th>
             <th colspan="2">Resultados por Apartado</th>
         </tr>
-        <?php
+        <?
 
         foreach ($agrupados as $key => $value) {
 
@@ -325,7 +325,7 @@ function closer() {
 
         </table>
         <br>
-        <?php boton("Volver","history.back();"); ?>
+        <? boton("Volver","history.back();"); ?>
         </center>    
 
        
@@ -333,7 +333,7 @@ function closer() {
    
     
               
-	<?php 
+	<? 
     
     	require("pie.php");
 

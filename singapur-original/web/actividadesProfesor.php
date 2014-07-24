@@ -1,4 +1,4 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 
 $idPerfil =  $_SESSION["sesionPerfilUsuario"];
@@ -53,27 +53,27 @@ function registraMuestra(link,idRecurso){
 
 <body>
 <div id="principal">
-<?php 
+<? 
 	require("topMenu.php"); 
 	
 	require("_navegacion.php");
 
 ?>
     <div id="lateralIzq">
-	    <?php require("menuleft.php");	?>
+	    <? require("menuleft.php");	?>
 	</div>
     
     
     
     <div id="lateralDer">
-	    <?php require("menuright.php");?>
+	    <? require("menuright.php");?>
     </div><!--lateralDer-->
     
     <div id="columnaCentro" >
 
     <p class="titulo_curso">Actividades Profesor</p>
     <br>
-    <?php $datos = getRutNombre($idProfesor);
+    <? $datos = getRutNombre($idProfesor);
 
        foreach($datos as $row){
             echo "<h3>Rut: ".$row["rutProfesor"]."</h3>";
@@ -83,7 +83,7 @@ function registraMuestra(link,idRecurso){
     ?>
      
     
-    <?php 
+    <? 
         $listaActividades = getListaActividades($idProfesor);
        
     ?>
@@ -94,25 +94,25 @@ function registraMuestra(link,idRecurso){
             <th></th>
         </thead>
         <tbody>
-            <?php foreach($listaActividades as $row){
+            <? foreach($listaActividades as $row){
                 $idLista = $row["idLista"];
             ?>
                 <tr>
-                <td><center><?phpecho $row["tituloActividad"]?></center></td>
-                <td><center><a href="<?php echo "actividadesIntentos.php?idProfesor=".$idProfesor."&idLista=".$idLista."";?>">Ver Intentos</a></center></td>
+                <td><center><?echo $row["tituloActividad"]?></center></td>
+                <td><center><a href="<? echo "actividadesIntentos.php?idProfesor=".$idProfesor."&idLista=".$idLista."";?>">Ver Intentos</a></center></td>
                 </tr>
-            <?php } ?>
+            <? } ?>
         </tbody>
     </table>
 
-    <center><?php boton("Volver","history.back();"); ?></center>
+    <center><? boton("Volver","history.back();"); ?></center>
      
        
     </div>
    
     
               
-	<?php 
+	<? 
     
     	require("pie.php");
 

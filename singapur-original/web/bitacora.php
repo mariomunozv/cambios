@@ -1,4 +1,4 @@
-<?php 
+<? 
 	require("inc/incluidos.php");
 	require ("hdOld.php");
 	$idCurso = $_SESSION["sesionIdCurso"];
@@ -27,7 +27,7 @@ function iniciar(){
 
 
 $(function() {
-	<?php /* Asi inicializas tablesorter */ ?>	   
+	<? /* Asi inicializas tablesorter */ ?>	   
 	$("#tabla").tablesorter({ 
 		headers: {  
 			5: { sorter: false },
@@ -69,7 +69,7 @@ function muestraBitacoras(){
 }
 	
 function revisaBitacoras(){  
-	window.location.href = "informeBitacorasCurso.php?idCurso="+<?php echo $idCurso?>;
+	window.location.href = "informeBitacorasCurso.php?idCurso="+<? echo $idCurso?>;
 }
 	
 
@@ -80,18 +80,18 @@ function revisaBitacoras(){
 <body>
 
 <div id="principal">
-<?php 
+<? 
 require("topMenu.php"); 
 $navegacion = "Home*curso.php?idCurso=$idCurso,Bitacora*#";
 require("_navegacion.php");
 ?>
 	
 	<div id="lateralIzq">
-    	<?php require("menuleft.php");?>
+    	<? require("menuleft.php");?>
     </div> <!--lateralIzq-->
     
     <div id="lateralDer">
-	    <?php require("menuright.php");?>
+	    <? require("menuright.php");?>
     </div><!--lateralDer-->
  
     
@@ -111,7 +111,7 @@ require("_navegacion.php");
 			</p><br />
         </div><!--textoBienvenida-->
   
-<?php 
+<? 
 $idPerfil = $_SESSION["sesionPerfilUsuario"];  
 
 
@@ -145,15 +145,15 @@ switch($idPerfil){
 
 
   
-<?php
+<?
 // Llegó desde el curso profes
 if (isset ($_REQUEST["idSeccionBitacora"])){
 ?>
-	<input name="idSeccionBitacora" id="idSeccionBitacora" class="campos" type="hidden" value="<?php echo @$_REQUEST["idSeccionBitacora"]; ?>" />
+	<input name="idSeccionBitacora" id="idSeccionBitacora" class="campos" type="hidden" value="<? echo @$_REQUEST["idSeccionBitacora"]; ?>" />
     <script>
-		nuevoBitacoraProfe(<?php echo $idPerfil?>);
+		nuevoBitacoraProfe(<? echo $idPerfil?>);
 	</script>
-<?php }
+<? }
 
 // Llegó desde el curso profes
 /*if (isset ($_REQUEST["tipoBitacora"])){
@@ -162,19 +162,19 @@ if (isset ($_REQUEST["idSeccionBitacora"])){
 		<script>
 			nuevoBitacoraReunion();
 		</script>    
-	<?php
+	<?
 	}else{
 	?>
         <script>
             nuevoBitacoraAula();
         </script>
-	<?php	
+	<?	
 	}
 }*/
 ?>
 
    
-<?php 
+<? 
 	require("pie.php");
 ?> 
 </div>

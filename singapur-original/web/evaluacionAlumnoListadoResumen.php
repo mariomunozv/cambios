@@ -1,4 +1,4 @@
-<?php 
+<? 
 //ini_set('display_errors','On');
 require("inc/incluidos.php"); 
 require("inc/_item.php"); 
@@ -305,12 +305,12 @@ function guarda(){
 	var division = document.getElementById("actualiza");
 	//a = "arreglo="+document.getElementsByName("sel"+jornada);
 	var a = $(".campos").fieldSerialize();
-	<?php 
+	<? 
 	$valores = "";
 	foreach ($items as $item){
 		$valores = $valores.$item["idItem"].";";
 	} ?>
-	a = a+"itemes=<?php echo $valores;?>";
+	a = a+"itemes=<? echo $valores;?>";
 
 	AJAXPOST("evaluacionAlumnoGuarda.php",a,division);
 }
@@ -333,7 +333,7 @@ $(function() {
  <div id="actualiza"></div>
 <p>
 
-<?php 
+<? 
 if ($idLista>0){
 	
 switch($idLista){
@@ -404,16 +404,16 @@ echo "Seleccione una prueba";
             	<th  style="text-align:left;">Secciones</th>
                 <th style="text-align:center;">%logro Curso</th>
 			</tr>
-			<?php 
+			<? 
 
 			foreach($seccionesLista as $seccion){ 
 			$promedioSeccion = calculaPromedioSeccion($seccion["idSeccionBitacora"],$items);
 			?>
 			<tr>
-				<td style="text-align:left;"><?php echo $seccion["nombreSeccionBitacora"]; ?></td>
-                <td style="text-align:center;"><?php echo $promedioSeccion." %"; ?></td>
+				<td style="text-align:left;"><? echo $seccion["nombreSeccionBitacora"]; ?></td>
+                <td style="text-align:center;"><? echo $promedioSeccion." %"; ?></td>
 			</tr>		
-			<?php } ?> 
+			<? } ?> 
 		</table>
 
 		<table class="tablesorter">
@@ -421,13 +421,13 @@ echo "Seleccione una prueba";
             	<th style="text-align:left;">Competencia matemática</th>
                 <th style="text-align:center;">%logro Curso</th>
 			</tr>
-			<?php foreach($competencias as $competencia){ 
+			<? foreach($competencias as $competencia){ 
 			$promedioCompetencia = calculaPromedioCompetenciaMatematica($competencia["idCompetencia"],$items); ?>
 			<tr>
-				<td style="text-align:left;"><strong><?php echo $competencia["nombreCompetencia"]; ?></strong></td>
-                <td style="text-align:center;"><?php echo $promedioCompetencia." %"; ?></td>
+				<td style="text-align:left;"><strong><? echo $competencia["nombreCompetencia"]; ?></strong></td>
+                <td style="text-align:center;"><? echo $promedioCompetencia." %"; ?></td>
 			</tr>	
-			<?php } ?> 
+			<? } ?> 
 		</table>
 
 		<table class="tablesorter">
@@ -435,13 +435,13 @@ echo "Seleccione una prueba";
             	<th style="text-align:left;">Niveles de Complejidad</th>
                 <th style="text-align:center;">%logro Curso</th>
 			</tr>
-			<?php foreach($nivelesLista as $nivel){ 
+			<? foreach($nivelesLista as $nivel){ 
 				$promedioNivel = calculaPromedioNivelComplejidad($nivel["idNivelDeComplejidad"],$items); ?>
 			<tr>
-				<td style="text-align:left;"><strong><?php echo $nivel["nombreNivelDeComplejidad"]; ?></strong></td>
-                <td style="text-align:center;"><?php echo $promedioNivel." %"; ?></td>
+				<td style="text-align:left;"><strong><? echo $nivel["nombreNivelDeComplejidad"]; ?></strong></td>
+                <td style="text-align:center;"><? echo $promedioNivel." %"; ?></td>
 			</tr>	
-			<?php } ?> 
+			<? } ?> 
 		</table>
 	</div>
     
@@ -454,17 +454,17 @@ echo "Seleccione una prueba";
             	<th style="text-align:center;">Competencia Matemática</th>
                 <th style="text-align:center;">%logro Curso</th>
 			</tr>
-			<?php 
+			<? 
 			for($i=0;$i<count($items);$i++){ 
 			?>
 			<tr>
-				<td style="text-align:center;"><?php echo $items[$i]["enunciadoItem"]; ?></td>
-   				<td style="text-align:left;"><?php echo getTareaMatematicaItem($items[$i]["idItem"]); ?></td>
-				<td style="text-align:left;"><?php echo getNivelComplejidadItem($items[$i]["idItem"]); ?></td>
-				<td style="text-align:left;"><?php echo getCompetenciaMatematicaItem($items[$i]["idItem"]); ?></td>
-                <td style="text-align:center;"><?php echo $items[$i]["porcentajeLogro"]." %"; ?></td>
+				<td style="text-align:center;"><? echo $items[$i]["enunciadoItem"]; ?></td>
+   				<td style="text-align:left;"><? echo getTareaMatematicaItem($items[$i]["idItem"]); ?></td>
+				<td style="text-align:left;"><? echo getNivelComplejidadItem($items[$i]["idItem"]); ?></td>
+				<td style="text-align:left;"><? echo getCompetenciaMatematicaItem($items[$i]["idItem"]); ?></td>
+                <td style="text-align:center;"><? echo $items[$i]["porcentajeLogro"]." %"; ?></td>
 			</tr>		
-			<?php } ?> 
+			<? } ?> 
 		</table>
 	</div>
 
@@ -472,7 +472,7 @@ echo "Seleccione una prueba";
 	    <table class="tablesorter" id="tabla"> 
 	   	<thead>  
    		<tr>
-		   <th colspan="5">Alumnos de: <?php echo getNombreNivel($idNivel)." ".$letraCursoColegio;?></th>
+		   <th colspan="5">Alumnos de: <? echo getNombreNivel($idNivel)." ".$letraCursoColegio;?></th>
 		</tr>
 		<tr>
 		    <th>Nº</th>
@@ -481,14 +481,14 @@ echo "Seleccione una prueba";
 		    <th>%Logro</th>
 		    <th>
             	<select id="escala" onchange="acutalizaNotas();">
-			    <option value="0.5" <?php if ($escala == 0.5){ echo 'selected="selected"';}?>>50%</option>
-			    <option value="0.6" <?php if ($escala == 0.6){ echo 'selected="selected"';}?>>60%</option>
-			    <option value="0.7" <?php if ($escala == 0.7){ echo 'selected="selected"';}?>>70%</option></select>
+			    <option value="0.5" <? if ($escala == 0.5){ echo 'selected="selected"';}?>>50%</option>
+			    <option value="0.6" <? if ($escala == 0.6){ echo 'selected="selected"';}?>>60%</option>
+			    <option value="0.7" <? if ($escala == 0.7){ echo 'selected="selected"';}?>>70%</option></select>
             </th>
 		</tr>
 		</thead>
 		<tbody>
-		<?php if (count($alumnos) > 0){
+		<? if (count($alumnos) > 0){
 			  $i = 1;
 			 // echo $idLista;
 				foreach ($alumnos as $alumno){ 
@@ -521,14 +521,14 @@ echo "Seleccione una prueba";
 					$nota = round($nota,1);
 					// FIN CALCLULO DE NOTA
 	  	?>
-        <tr onmouseover="this.className='normalActive'" onmouseout="this.className='<?php echo $claseTR; ?>'" class="<?php echo $claseTR; ?>">
-			<td><?php echo $i;?></td>
-			<td  style="text-align:left;"><?php echo $alumno["apellidoPaternoAlumno"]." ".$alumno["nombreAlumno"];?></td>
-			<td style="text-align:center;"><?php echo $datosPauta["resultadoListaPautaItem"];?></td>
-            <td style="text-align:center;"><?php echo $datosPauta["porcentajeLogroPautaItem"]." %";?></td>
-            <td style="text-align:center;"><?php echo $nota;?></td>
+        <tr onmouseover="this.className='normalActive'" onmouseout="this.className='<? echo $claseTR; ?>'" class="<? echo $claseTR; ?>">
+			<td><? echo $i;?></td>
+			<td  style="text-align:left;"><? echo $alumno["apellidoPaternoAlumno"]." ".$alumno["nombreAlumno"];?></td>
+			<td style="text-align:center;"><? echo $datosPauta["resultadoListaPautaItem"];?></td>
+            <td style="text-align:center;"><? echo $datosPauta["porcentajeLogroPautaItem"]." %";?></td>
+            <td style="text-align:center;"><? echo $nota;?></td>
 		</tr>
-<?php 	$i++;	}
+<? 	$i++;	}
  }else{ 
 	 echo "<tr><td colspan='12'>No existen Alumnos en este curso.</td></tr>"; 
   }

@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 function getDatosActividad($idActividad){
 	$sql ="SELECT * FROM actividad where idActividad = ".$idActividad;

@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set('display_errors', true);
 
 require '../admin/inc/jsonwrapper_inner.php';

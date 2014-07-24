@@ -1,4 +1,4 @@
-<?php
+<?
 include("../inc/_detalleSeccionEnunciado.php");
 require("inc/config.php");
 
@@ -26,7 +26,7 @@ if($cuentaErrores == 0)
 		<script language="javascript">
 		   enunciadoListado(1);
 		</script>
-	<?php
+	<?
 }
 else
 {

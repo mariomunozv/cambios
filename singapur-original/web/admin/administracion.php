@@ -1,4 +1,4 @@
-<?php 
+<? 
 session_start();
 require("inc/config.php");
 require("_head.php");
@@ -16,4 +16,4 @@ require("_navegacion.php");
 <li><a href="adm_empresas.php">Empresas</a></li>
 <li><a href="adm_areas.php">Areas</a></li>
 </ul>
-<?php require("_pie.php"); ?>
+<? require("_pie.php"); ?>

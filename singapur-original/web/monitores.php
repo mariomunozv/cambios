@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set("Display_Errors","On");
 //require("inc/_profesor.php");
 require("inc/_pauta.php");
@@ -47,26 +47,26 @@ switch($idFormulario)
 
 	<table border="1" class="tablesorter" align="left">
 		<tr>
-        	<th colspan="3"><?php echo $form["descripcionFormulario"] ?></th>
+        	<th colspan="3"><? echo $form["descripcionFormulario"] ?></th>
 		</tr>
         <tr>
         	<th>Colegio</th>
             <th>Profesor</th>
             <th>Estado</th>
         </tr>
-		<?php foreach($datos as $dato) {
+		<? foreach($datos as $dato) {
 			if($idFormulario == 26){ ?>
 		<tr>
-			<td align="left"><?php echo $dato['nombreColegio'];?></td>
-            <td align="left"><?php echo $dato['nombreProfesor']." ".$dato['apellidoPaternoProfesor']." ".$dato['apellidoMaternoProfesor'];?></td>
-            <?php if(existePauta($dato["idUsuario"], $idFormulario)){
+			<td align="left"><? echo $dato['nombreColegio'];?></td>
+            <td align="left"><? echo $dato['nombreProfesor']." ".$dato['apellidoPaternoProfesor']." ".$dato['apellidoMaternoProfesor'];?></td>
+            <? if(existePauta($dato["idUsuario"], $idFormulario)){
             	echo "<td bgcolor='#0f0'>Contest&oacute;</td>";
 			}else {
 				echo "<td>No Contest&oacute;</td>"; }?>
 		</tr>
-		<?php }} ?>
+		<? }} ?>
 	</table>
-    <?php break;
+    <? break;
 	
 	
 	default:

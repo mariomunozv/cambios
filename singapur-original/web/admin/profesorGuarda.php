@@ -1,4 +1,4 @@
-<?php
+<?
 require("inc/config.php");
 function asignaPerfilProyectoProfesor($idUsuario, $idPerfil, $idProyectoKlein){
 	$sql_ = "INSERT INTO `detalleUsuarioProyectoPerfil` ( `idUsuario` , `idPerfil` , `idProyectoKlein` ";

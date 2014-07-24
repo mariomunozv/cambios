@@ -1,11 +1,11 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 ?>
-<?php require ("hd.php");?>
+<? require ("hd.php");?>
 
 <script language="javascript">
 $(function() {
-	<?php /* Asi inicializas tablesorter */ ?>	   
+	<? /* Asi inicializas tablesorter */ ?>	   
 	$("#tabla").tablesorter({ 
 		headers: {  
 			5: { sorter: false },
@@ -22,7 +22,7 @@ $(function() {
 
 <body>
 <div id="principal" style="font-size: 12px;">
-<?php require("topMenu.php"); ?>
+<? require("topMenu.php"); ?>
 	
     <div id="lateralIzq" style="width: 180px;">
         <p class="titulo_div" style="width: 180px;">Noticias</p>
@@ -50,7 +50,7 @@ $(function() {
     
     
      <div id="lateralDer">
-     <?php 
+     <? 
 	 	require("ingreso.php");
 		require("caja_colegiosParticipantes.php");
 	 
@@ -64,7 +64,7 @@ $(function() {
     
      <div id="columnaCentro" style="padding: 14px; width: 540px;"><p align="justify">     
        <p align="justify">       
- <?php /*?>      <p align="justify"><br />
+ <? /*?>      <p align="justify"><br />
 		Bienvenidas y bienvenidos a la
          Plataforma Virtual de los cursos de capacitaci&oacute;n y asesor&iacute;a
          en la propuesta did&aacute;ctica para la&nbsp; ense&ntilde;anza de las
@@ -87,14 +87,14 @@ $(function() {
          centr&aacute;ndose en la gesti&oacute;n de aula, a trav&eacute;s de
          la preparaci&oacute;n, an&aacute;lisis y reflexi&oacute;n de procesos
          de ense&ntilde;anza aprendizaje matem&aacute;ticos.
-         <?php */?>
+         <? */?>
         
      	<img src="img/avisoReceso.jpg" width="555">
      
   </div> 
   
      
-       <?php //  require("misCursos.php");?>
+       <? //  require("misCursos.php");?>
      
                <!-- <hr />
                 
@@ -166,7 +166,7 @@ $(function() {
                         <img src="css/tabla/next.png" class="next"/>
             
                         <img src="css/tabla/last.png" class="last"/>
-                        <input type="hidden" class="pagesize" value="1"><?php  //Registros por paginas  ?> 
+                        <input type="hidden" class="pagesize" value="1"><?  //Registros por paginas  ?> 
                     </form>
                 </div>-->
 
@@ -174,11 +174,11 @@ $(function() {
                 
 		</td>
        
-      <?php //require("ingreso.php");?>
+      <? //require("ingreso.php");?>
      
        
       </tr>
-        <?php require("pie.php");?>
+        <? require("pie.php");?>
 
 </div>
 </body>

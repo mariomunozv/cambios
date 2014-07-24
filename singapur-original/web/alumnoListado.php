@@ -1,4 +1,4 @@
-<?php 
+<? 
   ini_set('display_errors','On');
 require("inc/incluidos.php"); 
 $rbdColegio = $_REQUEST["rbdColegio"];
@@ -55,7 +55,7 @@ En esta pantalla debe revisar cada uno de los datos de sus alumnos y confirmarlo
 En el caso de que estos datos presenten algún error, deberá <strong>deshabilitarlos</strong> o <strong>editarlos</strong> entrando a la opción <strong>"Editar"</strong>. Después de editarlos correctamente debe presionar el botón <strong>"Guardar"</strong>.
 <br /><br />
 Para agregar un nuevo alumno al listado debe presionar el botón <strong>"Nuevo Alumno"</strong> </p>
-<a class="button" href="javascript:newAlumno();"><span><div class="crear"><?php echo " Nuevo Alumno"; ?></div></span></a>
+<a class="button" href="javascript:newAlumno();"><span><div class="crear"><? echo " Nuevo Alumno"; ?></div></span></a>
 <br />
 <br />
 
@@ -64,10 +64,10 @@ Para agregar un nuevo alumno al listado debe presionar el botón <strong>"Nuevo A
    <thead>  
    <tr>
    <td></td><td></td><td></td><td></td>
-   <?php    foreach($items as $item){ ?>   
+   <?    foreach($items as $item){ ?>   
 	   
-       <td><?php echo $item["idItem"];?></td>
-       <?php }  ?>
+       <td><? echo $item["idItem"];?></td>
+       <? }  ?>
    <td>%</td>
    </tr>
          
@@ -84,7 +84,7 @@ Para agregar un nuevo alumno al listado debe presionar el botón <strong>"Nuevo A
   <tbody>
 
 	
-  <?php 
+  <? 
   
 $alumnos = getAlumnosCurso2($rbdColegio,$idNivel,$anoCursoColegio,$letraCursoColegio);
 
@@ -105,21 +105,21 @@ $alumnos = getAlumnosCurso2($rbdColegio,$idNivel,$anoCursoColegio,$letraCursoCol
 
 	
 	  ?>
-              <tr onmouseover="this.className='normalActive'" onmouseout="this.className='<?php echo $claseTR; ?>'" class="<?php echo $claseTR; ?>">
-              <td><?php echo $i;?></td>
+              <tr onmouseover="this.className='normalActive'" onmouseout="this.className='<? echo $claseTR; ?>'" class="<? echo $claseTR; ?>">
+              <td><? echo $i;?></td>
                 
-                <td><?php echo $alumno["nombreAlumno"];?></td>
-                <td><?php echo $alumno["apellidoPaternoAlumno"];?></td>
-                <td><?php echo $alumno["apellidoMaternoAlumno"];?></td>
+                <td><? echo $alumno["nombreAlumno"];?></td>
+                <td><? echo $alumno["apellidoPaternoAlumno"];?></td>
+                <td><? echo $alumno["apellidoMaternoAlumno"];?></td>
              
-                <?php    foreach($items as $item){ ?>   
+                <?    foreach($items as $item){ ?>   
 	   
-       <td><?php echo $item["idItem"];?></td>
-       <?php }  ?>
+       <td><? echo $item["idItem"];?></td>
+       <? }  ?>
        <td>%</td>
        
               </tr>
-<?php 	$i++;	}
+<? 	$i++;	}
  }else{ 
 	 echo "<tr><td colspan='12'>No existen Alumnos en este curso.</td></tr>"; 
   

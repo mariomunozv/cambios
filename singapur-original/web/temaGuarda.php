@@ -1,4 +1,4 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 //require ("hd.php");
 
@@ -13,8 +13,8 @@ $estadoTema = 1;
 
 if (guardarTema($idCurso, $idUsuario, $idProyecto, $idCategoria, $tituloTema,$mensajeInicialTema,$estadoTema) > 0){?>
 <script language="javascript">
-	var categoria = <?php echo $idCategoria ?>;
+	var categoria = <? echo $idCategoria ?>;
 	window.location.href ="foroCategoria.php?idCategoria="+categoria;
 </script>
-<?php }?>
+<? }?>
 

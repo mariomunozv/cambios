@@ -1,4 +1,4 @@
-<?php 
+<? 
 ini_set("display_errors","on");
 require("../inc/_seccionBitacora.php");
 require("../inc/conecta.php");

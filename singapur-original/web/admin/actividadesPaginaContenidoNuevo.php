@@ -1,4 +1,4 @@
-<?php
+<?
 require("inc/config.php");
 
 $idActividadPagina = $_REQUEST["idActividadPagina"];
@@ -63,21 +63,21 @@ $("#cancelar").click(function () {
     </tr>
     <tr>
         <td>idActividadPagina</td>
-        <td><input type="text" name="idActividadPagina" id="idActividadPagina" class="campos" size="100px" readonly="readonly" value="<?php echo $idActividadPagina; ?>"/></td>
+        <td><input type="text" name="idActividadPagina" id="idActividadPagina" class="campos" size="100px" readonly="readonly" value="<? echo $idActividadPagina; ?>"/></td>
     </tr>
-	<?php if(isset($idContenidoPagina)) { ?>
+	<? if(isset($idContenidoPagina)) { ?>
     <tr>
 	    <td>idContenidoPagina</td>
-    	<td><input type="text" name="idContenidoPagina" id="idContenidoPagina" class="campos" size="100px" readonly="readonly" value="<?php echo $idContenidoPagina?>"/></td>
+    	<td><input type="text" name="idContenidoPagina" id="idContenidoPagina" class="campos" size="100px" readonly="readonly" value="<? echo $idContenidoPagina?>"/></td>
     </tr>
-    <?php 
+    <? 
 	} 
 	?>
     
     <tr>
 	    <td>Tipo Contenido</td>
         <td><select name="tipoContenido" id="tipoContenido" class="campos"> 
-        <?php foreach($contenidos as $contenido)
+        <? foreach($contenidos as $contenido)
 		{
 			echo "<option value=".$contenido['idTipoContenidoPagina'].">".$contenido["nombreTipoContenidoPagina"]."</option>";
 		}
@@ -87,25 +87,25 @@ $("#cancelar").click(function () {
     </tr> 
     <tr>
     	<td>Contenido</td> 
-	    <td><textarea cols="100" rows="5" name="contenido" id="contenido" class="campos"><?php echo $contPag[0]["textoContenidoPagina"]; ?></textarea></td> 
+	    <td><textarea cols="100" rows="5" name="contenido" id="contenido" class="campos"><? echo $contPag[0]["textoContenidoPagina"]; ?></textarea></td> 
     </tr> 
     <tr>
     	<td>Orden</td>
-	    <td><input type="text" name="ordenContenido" id="ordenContenido" class="campos" size="100px" value="<?php echo $contPag[0]["ordenContenidoPagina"]; ?>"/></td>
+	    <td><input type="text" name="ordenContenido" id="ordenContenido" class="campos" size="100px" value="<? echo $contPag[0]["ordenContenidoPagina"]; ?>"/></td>
     </tr>
     <tr>
     	<td colspan="2" align="center">
-            <?php
+            <?
                 if(isset($idContenidoPagina))
                 { ?>
                 <input type="button" name="enviar" id="enviar" value="Actualizar" onclick="guarda_contenido()"/>				
                 <input type="hidden" name="orden" id="orden" value="actualizar" class="campos" />
-                <input type="hidden" name="idActividadPagina" id="idActividadPagina" value="<?php echo $idActividadPagina ?>" class="campos"/>
-                <?php 
+                <input type="hidden" name="idActividadPagina" id="idActividadPagina" value="<? echo $idActividadPagina ?>" class="campos"/>
+                <? 
                 }else{ ?>
                 <input type="button" name="enviar" id="enviar" value="Guardar" onclick="guarda_contenido()"/>				
                 <input type="hidden" name="orden" id="orden" value="guardar" class="campos"/>
-                <?php }	?>
+                <? }	?>
             <input type="button" name="cancelar" id="cancelar" value="Cancelar"/>
         </td>
     </tr>

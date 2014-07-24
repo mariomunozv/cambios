@@ -1,4 +1,4 @@
-<?php
+<?
 include "inc/conecta.php";
 include("inc/_cursoColegio.php");
 Conectarse_seg();

@@ -1,4 +1,4 @@
-<?php
+<?
 
 require("inc/config.php");
 //require "inc/funcionesAdmin.php";
@@ -92,7 +92,7 @@ function Valida_Rut( Objeto )
 
 
 function cancelar(){
-	if(confirm("Cancelar esta operación?")){ location.href="cursoDetalle.php?rbdColegio=<?php echo $rbdColegio;?>&idNivel=<?php echo $idNivel;?>&anoCursoColegio=<?php echo $anoCursoColegio;?>&letraCursoColegio=<?php echo $letraCursoColegio;?>"; }  
+	if(confirm("Cancelar esta operación?")){ location.href="cursoDetalle.php?rbdColegio=<? echo $rbdColegio;?>&idNivel=<? echo $idNivel;?>&anoCursoColegio=<? echo $anoCursoColegio;?>&letraCursoColegio=<? echo $letraCursoColegio;?>"; }  
 }
 
 function valida_rut(rut){
@@ -138,19 +138,19 @@ function save_alumno(){
 				<td colspan="2">Los campos con un  (*) son obligatorios.</td> 
 			</tr> 
 			<input type="hidden" class="campos" name="modo" id="modo" value="nuevo">  
-            <input type="hidden" class="campos" name="anoCursoColegio" id="anoCursoColegio" value="<?php echo $anoCursoColegio; ?>">
-            <input type="hidden" class="campos" name="letraCursoColegio" id="letraCursoColegio" value="<?php echo $letraCursoColegio; ?>">
-            <input type="hidden" class="campos" name="idNivel" id="idNivel" value="<?php echo $idNivel; ?>">
-            <input type="hidden" class="campos" name="rbdColegio" id="rbdColegio" value="<?php echo $rbdColegio; ?>">
+            <input type="hidden" class="campos" name="anoCursoColegio" id="anoCursoColegio" value="<? echo $anoCursoColegio; ?>">
+            <input type="hidden" class="campos" name="letraCursoColegio" id="letraCursoColegio" value="<? echo $letraCursoColegio; ?>">
+            <input type="hidden" class="campos" name="idNivel" id="idNivel" value="<? echo $idNivel; ?>">
+            <input type="hidden" class="campos" name="rbdColegio" id="rbdColegio" value="<? echo $rbdColegio; ?>">
             <input type="hidden" class="campos" name="tipoUsuario" id="tipoUsuario" value="Alumno">
 			 <tr>
 				<th align="right">Colegio</th> 
-				<td><input type="text" name="rbdColegio" size="70" class="campos" id="rbdColegio" disabled="disabled" value="<?php echo $rbdColegio;?>">
+				<td><input type="text" name="rbdColegio" size="70" class="campos" id="rbdColegio" disabled="disabled" value="<? echo $rbdColegio;?>">
 				</td>
 			</tr>   
              <tr>
 				<th align="right">Curso</th> 
-				<td><?php ?></td>
+				<td><? ?></td>
 
                 
 			</tr>   

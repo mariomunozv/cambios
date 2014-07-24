@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set('display_errors','On');
 require("inc/incluidos.php");
 require("hd.php");
@@ -54,11 +54,11 @@ a
 	<tr>
 		<td colspan="2" align="center" valign="top">
 			<p class="style4">
-				<?php
+				<?
 				  echo $frm[0]['nombreFormulario'];
 				?>
 			<br/></p><hr color="#339900"/>
-            	<?php
+            	<?
 				  echo "<h3 style='color:'>".$frm[0]['descripcionFormulario']."</h3>";
 				?>
             
@@ -92,7 +92,7 @@ a
                 <tr>
                   <td class="style10" colspan="2" align="center">
   				  	<input type="hidden" name="tipoCuestionario" id="tipoCuestionario" value="docente"/>
-			        <input type="hidden" name="idFormulario" id="idFormulario" value="<?php echo $idFormulario ?>"/>
+			        <input type="hidden" name="idFormulario" id="idFormulario" value="<? echo $idFormulario ?>"/>
 					<p align="center"><input type="submit" value="Comenzar"/></p>
                 </tr>
 				<tr>
@@ -103,7 +103,7 @@ a
               </td>
             </tr> 
 </table>
-<?php } else {?>
+<? } else {?>
 <table width="100%">
 	<tr>
         <td>&nbsp;</td>
@@ -119,4 +119,4 @@ a
 	</tr>
 	<tr><td><br/><br/><br/><br/></td></tr>
 </table>
-<?php } ?>
+<? } ?>

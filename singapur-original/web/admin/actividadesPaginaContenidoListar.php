@@ -1,4 +1,4 @@
-<?php
+<?
 require("inc/config.php");
 include "../inc/_funciones.php";
 
@@ -62,18 +62,18 @@ $(".elimina").button({
    		<th>Editar</th>
    		<th>Eliminar</th>
 	</tr>
-	<?php 
+	<? 
 	foreach($contenidos as $contenido)
 	{
 	?>
-	<tr id="<?php echo $contenido["idContenidoPagina"];?>">
-   		<td><?php echo $contenido["idContenidoPagina"]; ?></td>
-		<td><?php echo $contenido["idTipoContenidoPagina"]; ?></td>
-		<td><?php echo $contenido["idActividadPagina"]; ?></td>
-		<td><?php echo $contenido["textoContenidoPagina"];?></td>
-   		<td><?php echo $contenido["ordenContenidoPagina"];?></td>
-		<td><a href="javascript:edit_contenido(<?php echo $contenido["idContenidoPagina"].",".$contenido["idActividadPagina"]?>)">Editar</a></td>
-		<td><a href="javascript:delete_contenido(<?php echo $contenido["idContenidoPagina"].",".$contenido["idActividadPagina"]?>)" class="elimina"/></td>
+	<tr id="<? echo $contenido["idContenidoPagina"];?>">
+   		<td><? echo $contenido["idContenidoPagina"]; ?></td>
+		<td><? echo $contenido["idTipoContenidoPagina"]; ?></td>
+		<td><? echo $contenido["idActividadPagina"]; ?></td>
+		<td><? echo $contenido["textoContenidoPagina"];?></td>
+   		<td><? echo $contenido["ordenContenidoPagina"];?></td>
+		<td><a href="javascript:edit_contenido(<? echo $contenido["idContenidoPagina"].",".$contenido["idActividadPagina"]?>)">Editar</a></td>
+		<td><a href="javascript:delete_contenido(<? echo $contenido["idContenidoPagina"].",".$contenido["idActividadPagina"]?>)" class="elimina"/></td>
 	</tr>
-	<?php } ?>
+	<? } ?>
 </table>

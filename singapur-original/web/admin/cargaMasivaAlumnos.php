@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set('display_errors','On');
 require("inc/config.php");
 $modo = $_REQUEST["modo"];
@@ -223,21 +223,21 @@ switch ($modo){
 		$rut = $_REQUEST["rut"];
 		cambiaEstadoAlumno($rut,$modo); ?>
 <script>mostrar_alumnosCurso();</script>
-<?php	break;
+<?	break;
 	case "Desactivar":
 
 		$rut = $_REQUEST["rut"];
 		echo $rut."dasdasjd asjd ajdk";
 		cambiaEstadoAlumno($rut,$modo); ?>
 <script>mostrar_alumnosCurso();</script>
-<?php	break;
+<?	break;
 	
 	case "carga":
 			echo "CARGA MASIVA"; ?>
 			<script>
-			alert(<?php echo $_FILES['userfile']['name'];?>+"h");
+			alert(<? echo $_FILES['userfile']['name'];?>+"h");
 			</script>
-			<?php
+			<?
 			$nombre_archivo = $_FILES['userfile']['name'];
 			$tipo_archivo = $_FILES['userfile']['type'];
 			$tamano_archivo = $_FILES['userfile']['size'];

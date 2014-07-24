@@ -1,5 +1,5 @@
 
-<?php session_start();
+<? session_start();
 
 include "../inc/incluidos.php";
 
@@ -222,9 +222,9 @@ switch ($modo){
 	case "carga":
 	echo "CARGA MASIVA"; ?>
     <script>
-    alert(<?php echo $_FILES['userfile']['name'];?>+"h");
+    alert(<? echo $_FILES['userfile']['name'];?>+"h");
     </script>
-	<?php
+	<?
 	$nombre_archivo = $_FILES['userfile']['name'];
 	$tipo_archivo = $_FILES['userfile']['type'];
 	$tamano_archivo = $_FILES['userfile']['size'];

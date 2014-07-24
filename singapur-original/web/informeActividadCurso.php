@@ -1,5 +1,5 @@
 
-<?php 
+<? 
 require("inc/incluidos.php");
 include "inc/_actividad.php";
 include "inc/_pauta.php";
@@ -133,7 +133,7 @@ Shadowbox.init();
 </script>
 <body>
 <div id="principal">
-<?php 
+<? 
 require("topMenu.php"); 
 $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 //$navegacion = "Home*home.php,".$nombreCurso."*curso.php?idCurso=".$_SESSION["sesionIdCurso"].",Actividades*informeActividad.php,Informe Curso*informeActividadCurso.php?idActividad=".$idActividad;
@@ -142,7 +142,7 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 ?>
 	
     <div id="lateralIzq">
-    <?php 
+    <? 
 		require("caja_misCursos.php");
 		
 		require("caja_participantes.php");
@@ -157,7 +157,7 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
     
     
      <div id="lateralDer">
-      <?php 
+      <? 
 	  require("caja_bienvenida.php");
 		require("caja_calendario.php");
 	  ?>
@@ -170,7 +170,7 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
     
 	<div id="columnaCentro">
      
-        <p class="titulo_curso"><?php echo $datosActividad["tituloActividad"]; ?></p>
+        <p class="titulo_curso"><? echo $datosActividad["tituloActividad"]; ?></p>
         <hr />
         <br />
     
@@ -184,7 +184,7 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
     </tr>
   
 
-	<?php 
+	<? 
 	//print_r($_SESSION);
 
     $alumnosCurso = getAlumnosCurso($idCurso);
@@ -212,11 +212,11 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 		}
 
 		?>
-		<tr <?php echo $color;?>>
+		<tr <? echo $color;?>>
 			<td valign="center">
-				<?php echo $num;?>
+				<? echo $num;?>
 			</td>
-		<?php
+		<?
 		// Si no existen alumnos
 		if(empty($alumnosCurso[0])){
 			echo '<td colspan="6">No hay alumnos inscritos em el curso</td>';
@@ -225,13 +225,13 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 			?>
 			<td valign="center">
 				<div align="left">
-					<strong><?php echo $value["nombreCompleto"]; ?></strong>
+					<strong><? echo $value["nombreCompleto"]; ?></strong>
 				</div>
 			</td>
 			
 			<td valign="center">
 				<div align="center">
-					<?php
+					<?
 					echo getNombrePerfil($value["idPerfil"]); 
 					?>
 				</div>
@@ -240,7 +240,7 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 			<td>
 				<div align="center"> 
                 	
-                <?php 
+                <? 
 				// FORMULARIOS
 				if($datosActividad["linkActividad"] == "actividadesPagina.php" ||  $datosActividad["linkActividad"] == "actividadesPaginaSeccion.php" ){ 
 					switch ($idActividad){
@@ -259,9 +259,9 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 								$datosAcceso = getAcceso( $value["idUsuario"], 14, $datosActividad["idActividad"]);
 								//print_r($datosAcceso);
 							?>
-								<a href="actividades.php?idUsuarioRevisado=<?php echo $value["idUsuario"]; ?>&idActividad=<?php echo $datosActividad["idActividad"];?>" target="_blank">Revisar</a>
+								<a href="actividades.php?idUsuarioRevisado=<? echo $value["idUsuario"]; ?>&idActividad=<? echo $datosActividad["idActividad"];?>" target="_blank">Revisar</a>
 							</div>
-                            <?php
+                            <?
 									
 							}
 						break;
@@ -280,27 +280,27 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 							
 							?>
                             
-									<a href="actividades.php?idUsuarioRevisado=<?php echo $value["idUsuario"]; ?>&idActividad=<?php echo $datosActividad["idActividad"];?>" target="_blank">
+									<a href="actividades.php?idUsuarioRevisado=<? echo $value["idUsuario"]; ?>&idActividad=<? echo $datosActividad["idActividad"];?>" target="_blank">
 										Revisar
 									</a>
-							<?php
+							<?
 								}
 								else{
 									?>
                                     <div style="color:#F00">
-                                    <a href="actividades.php?idUsuarioRevisado=<?php echo $value["idUsuario"]; ?>&idActividad=<?php echo $datosActividad["idActividad"];?>" target="_blank">
+                                    <a href="actividades.php?idUsuarioRevisado=<? echo $value["idUsuario"]; ?>&idActividad=<? echo $datosActividad["idActividad"];?>" target="_blank">
 										Revisar
 		
                                         
 									</a><br>(ATRASADO:<br>
-									<?php 
+									<? 
 									
 								
 									echo $datosAcceso["fechaAccesoRecurso"] ; 
 									
 									?>)
                                     </div>
-                                    <?php
+                                    <?
 									
 								}
 							}
@@ -323,19 +323,19 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 							
 							?>
                             
-									<a href="actividades.php?idUsuarioRevisado=<?php echo $value["idUsuario"]; ?>&idActividad=<?php echo $datosActividad["idActividad"];?>" target="_blank">
+									<a href="actividades.php?idUsuarioRevisado=<? echo $value["idUsuario"]; ?>&idActividad=<? echo $datosActividad["idActividad"];?>" target="_blank">
 										Revisar
 									</a>
-							<?php
+							<?
 								}
 								else{
 									?>
                                     <div style="color:#F00">
-                                    <a href="actividades.php?idUsuarioRevisado=<?php echo $value["idUsuario"]; ?>&idActividad=<?php echo $datosActividad["idActividad"];?>" target="_blank">
+                                    <a href="actividades.php?idUsuarioRevisado=<? echo $value["idUsuario"]; ?>&idActividad=<? echo $datosActividad["idActividad"];?>" target="_blank">
 										Revisar
 									</a><br>(ATRASADO)
                                     </div>
-                                    <?php
+                                    <?
 									
 								}
 							}
@@ -359,19 +359,19 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 							
 							?>
                             
-									<a href="actividades.php?idUsuarioRevisado=<?php echo $value["idUsuario"]; ?>&idActividad=<?php echo $datosActividad["idActividad"];?>" target="_blank">
+									<a href="actividades.php?idUsuarioRevisado=<? echo $value["idUsuario"]; ?>&idActividad=<? echo $datosActividad["idActividad"];?>" target="_blank">
 										Revisar
 									</a>
-							<?php
+							<?
 								}
 								else{
 									?>
                                     <div style="color:#F00">
-                                    <a href="actividades.php?idUsuarioRevisado=<?php echo $value["idUsuario"]; ?>&idActividad=<?php echo $datosActividad["idActividad"];?>" target="_blank">
+                                    <a href="actividades.php?idUsuarioRevisado=<? echo $value["idUsuario"]; ?>&idActividad=<? echo $datosActividad["idActividad"];?>" target="_blank">
 										Revisar
 									</a><br>(ATRASADO)
                                     </div>
-                                    <?php
+                                    <?
 									
 								}
 							}
@@ -387,8 +387,8 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 							if (buscaAcceso( $value["idUsuario"], 14, $datosActividad["idActividad"]) == true ){
 								$datosAcceso = getAcceso( $value["idUsuario"], 14, $datosActividad["idActividad"]);
 							?>
-								<a href="actividades.php?idUsuarioRevisado=<?php echo $value["idUsuario"]; ?>&idActividad=<?php echo $datosActividad["idActividad"];?>" target="_blank">Revisar</a>
-							<?php
+								<a href="actividades.php?idUsuarioRevisado=<? echo $value["idUsuario"]; ?>&idActividad=<? echo $datosActividad["idActividad"];?>" target="_blank">Revisar</a>
+							<?
 							}
 						break;
 						
@@ -402,21 +402,21 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 				?>
                 
 
-                <?php }
+                <? }
 					// ITEMS
 					else{
 					
 						$numPautasItem = cuentaPautasItem($idLista,$value["idUsuario"]);
 						if ($numPautasItem > 0){
 				?>
-                             <a href="informeActividadDetalle.php?idUsuario=<?php  echo $value["idUsuario"]; ?>&idActividad=<?php echo $datosActividad["idActividad"];?>" >
+                             <a href="informeActividadDetalle.php?idUsuario=<?  echo $value["idUsuario"]; ?>&idActividad=<? echo $datosActividad["idActividad"];?>" >
                             
-                                Ver Respuestas (<?php echo $numPautasItem;?>)
+                                Ver Respuestas (<? echo $numPautasItem;?>)
                             </a>
-                <?php
+                <?
 						}else{?>
-							 Ver Respuestas (<?php echo $numPautasItem;?>)
-							<?php
+							 Ver Respuestas (<? echo $numPautasItem;?>)
+							<?
                             }
 				
 					}
@@ -427,7 +427,7 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 			
 		</tr>
 		
-	<?php 	
+	<? 	
 		
 	
 		} // else (existen alumnos)
@@ -439,7 +439,7 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
        
 </table>
      
-        <?php boton("Volver","history.back();");?>
+        <? boton("Volver","history.back();");?>
 
    
     
@@ -447,12 +447,12 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
         
       </div><!--columnaCentro-->
          
-       <?php //  require("misCursos.php");?>
+       <? //  require("misCursos.php");?>
      
                
     
               
-	<?php 
+	<? 
     
     	require("pie.php");
     

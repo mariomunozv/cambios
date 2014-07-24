@@ -1,4 +1,4 @@
-<?php 
+<? 
 require("inc/config.php");
 require("_head.php");
 $menu = "ite";
@@ -55,7 +55,7 @@ function handleKeyPress(e){
 	</form>
     <a class="button" href="javascript:new_();">
     	<span>
-        	<div class="add"><?php echo "Nuevo item"; ?></div>
+        	<div class="add"><? echo "Nuevo item"; ?></div>
         </span>
 	</a>
     
@@ -65,7 +65,7 @@ function handleKeyPress(e){
         <td>
         <a class="button" href="javascript:busca_();">
             <span>
-                <div class="add"><?php echo "Buscar item"; ?></div>
+                <div class="add"><? echo "Buscar item"; ?></div>
             </span>
         </a>
     	</td>
@@ -77,7 +77,7 @@ function handleKeyPress(e){
             
 <p> 
 
-<?php
+<?
   $arregloItems = getItemsTodos();
   if (count($arregloItems) > 1)
   	echo count($arregloItems)." Items en la BD: ";
@@ -94,18 +94,18 @@ function handleKeyPress(e){
   </tr>
   </thead>
   <tbody>
-  <?php 
+  <? 
  
   if (count($arregloItems) > 1){
 		foreach ($arregloItems as $item){  
 	  ?>
               <tr>
-                <td><?php echo $item["idItem"];?></td>
-                <td><?php echo $item["enunciadoItem"];?></td>
-                <td><a href="#top" onclick="javascript:edit_(<?php echo $item["idItem"]; ?>);">Editar</a> - <a href="../series/verItem.php?idItem=<?php echo $item["idItem"];?>" target="_blank">Ver</a></td>
+                <td><? echo $item["idItem"];?></td>
+                <td><? echo $item["enunciadoItem"];?></td>
+                <td><a href="#top" onclick="javascript:edit_(<? echo $item["idItem"]; ?>);">Editar</a> - <a href="../series/verItem.php?idItem=<? echo $item["idItem"];?>" target="_blank">Ver</a></td>
                
               </tr>
-<?php 		}
+<? 		}
  }else{ 
 	 echo "<tr><td colspan='5'>No hay items</td></tr>"; 
   
@@ -115,4 +115,4 @@ function handleKeyPress(e){
  </tbody> 
 </table>
 </p>
-<?php require("_pie.php"); ?>
+<? require("_pie.php"); ?>

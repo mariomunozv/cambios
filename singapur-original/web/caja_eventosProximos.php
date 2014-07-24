@@ -1,4 +1,4 @@
-<?php
+<?
 $datosEventos = getEventosProximosCurso(1);
 ?>
 <br />
@@ -165,17 +165,17 @@ calendario()
 
 
     <ul>
-	<?php 
+	<? 
 		foreach ($datosEventos as $i => $value) { 
     		if ($value["nombreEvento"] == "No existen Eventos Proximos."){ ?>
-    			<li><?php 	echo $value["nombreEvento"];?></li>
-    <?php		}else{
+    			<li><? 	echo $value["nombreEvento"];?></li>
+    <?		}else{
     
     ?>
     			<li>
-                	<?php echo $value["nombreEvento"];?>: <?php echo cambiaf_a_normal($value["fechaEvento"]);?>
+                	<? echo $value["nombreEvento"];?>: <? echo cambiaf_a_normal($value["fechaEvento"]);?>
 				</li>
-    <?php 
+    <? 
 			} 
 		}
 	?>

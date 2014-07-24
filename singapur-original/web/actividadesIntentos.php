@@ -1,4 +1,4 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 
 $idPerfil =  $_SESSION["sesionPerfilUsuario"];
@@ -74,20 +74,20 @@ function registraMuestra(link,idRecurso){
 </style>
 
 <div id="principal">
-<?php 
+<? 
 	require("topMenu.php"); 
 	
 	require("_navegacion.php");
 
 ?>
     <div id="lateralIzq">
-	    <?php require("menuleft.php");	?>
+	    <? require("menuleft.php");	?>
 	</div>
     
     
     
     <div id="lateralDer">
-	    <?php require("menuright.php");?>
+	    <? require("menuright.php");?>
     </div><!--lateralDer-->
     
     <div id="columnaCentro" >
@@ -98,7 +98,7 @@ function registraMuestra(link,idRecurso){
         <p class="titulo_curso">Actividades Profesor</p>
         <br>
 
-        <?php $datos = getRutNombre($idProfesor);
+        <? $datos = getRutNombre($idProfesor);
 
            foreach($datos as $row){
                 echo "<h3>Rut: ".$row["rutProfesor"]."</h3>";
@@ -117,7 +117,7 @@ function registraMuestra(link,idRecurso){
         </tr>
         </thead>
         <tbody>
-        <?php //$intentos = getIntentos($idActividad,$idUsuario);
+        <? //$intentos = getIntentos($idActividad,$idUsuario);
            $intentos = getIntentos($idLista,$idProfesor);
            
            $i = 1;
@@ -132,12 +132,12 @@ function registraMuestra(link,idRecurso){
                     
                     ?>
                         <tr>
-                            <td><center> <?php echo $i; ?></center></td>
-                            <td><center> <?php echo $porcentaje."%"; ?></center></td>
-                            <td><center> <?php echo segToMin($tiempo); ?></center></td>
-                            <td><center> <a href="<?php echo "actividadesRespuestasCoordinacion.php?idPautaItem=".$row["idPautaItem"]."&idProfesor=".$idProfesor; ?>" >Ver Items</a></center></td>
+                            <td><center> <? echo $i; ?></center></td>
+                            <td><center> <? echo $porcentaje."%"; ?></center></td>
+                            <td><center> <? echo segToMin($tiempo); ?></center></td>
+                            <td><center> <a href="<? echo "actividadesRespuestasCoordinacion.php?idPautaItem=".$row["idPautaItem"]."&idProfesor=".$idProfesor; ?>" >Ver Items</a></center></td>
                         </tr>
-                    <?php
+                    <?
 
                     if($maxPorcentaje < $porcentaje){
                         $maxPorcentaje = $porcentaje;
@@ -154,7 +154,7 @@ function registraMuestra(link,idRecurso){
         </table>  
 
         
-        <h2>Porcentaje de logro final: <?php echo $maxPorcentaje."%";?>.</h2> 
+        <h2>Porcentaje de logro final: <? echo $maxPorcentaje."%";?>.</h2> 
         <br>
         
     
@@ -171,7 +171,7 @@ function registraMuestra(link,idRecurso){
         </tr>
         </thead>
         <tbody>
-        <?php //$intentos = getIntentos($idActividad,$idUsuario);
+        <? //$intentos = getIntentos($idActividad,$idUsuario);
            $intentos = getIntentos($idLista,$idProfesor);
            
            $i = 1;
@@ -185,12 +185,12 @@ function registraMuestra(link,idRecurso){
 
                     ?>
                         <tr>
-                            <td><center> <?php echo $i; ?></center></td>
-                            <td><center> <?php echo $porcentaje."%"; ?></center></td>
-                            <td><center> <?php echo segToMin($tiempo); ?></center></td>
-                            <td><center> <a href="<?php echo "actividadesRespuestasCoordinacion.php?idPautaItem=".$row["idPautaItem"]."&idProfesor=".$idProfesor; ?>" >Ver Items</a></center></td>
+                            <td><center> <? echo $i; ?></center></td>
+                            <td><center> <? echo $porcentaje."%"; ?></center></td>
+                            <td><center> <? echo segToMin($tiempo); ?></center></td>
+                            <td><center> <a href="<? echo "actividadesRespuestasCoordinacion.php?idPautaItem=".$row["idPautaItem"]."&idProfesor=".$idProfesor; ?>" >Ver Items</a></center></td>
                         </tr>
-                    <?php
+                    <?
 
                     if($maxPorcentaje < $porcentaje){
                         $maxPorcentaje = $porcentaje;
@@ -208,14 +208,14 @@ function registraMuestra(link,idRecurso){
 
         </center>
 
-    <center><?php boton("Volver","history.back();"); ?></center>
+    <center><? boton("Volver","history.back();"); ?></center>
      
        
     </div>
    
     
               
-	<?php 
+	<? 
     
     	require("pie.php");
 

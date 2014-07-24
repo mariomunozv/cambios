@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set("display_errors","on");
 session_start();
 include "../inc/conectav10.php";
@@ -7,7 +7,7 @@ Conectarse();
 
 ?>
 <link rel="stylesheet" href="css/estilo.css" type="text/css" >
-<?php
+<?
 
 
 

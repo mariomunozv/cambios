@@ -1,4 +1,4 @@
-<?php
+<?
 require_once("../dompdf_config.inc.php");
 
 // We check wether the user is accessing the demo locally
@@ -21,20 +21,20 @@ if ( isset( $_POST["html"] ) && $is_local ) {
 }
 
 ?>
-<?php include("head.inc"); ?>
+<? include("head.inc"); ?>
 
 <a name="demo"> </a>
 <h2>Demo</h2>
 
-<?php if ($is_local) { ?>
+<? if ($is_local) { ?>
 
 <p>Enter your html snippet in the text box below to see it rendered as a
 PDF: (Note by default, remote stylesheets, images &amp; inline PHP are disabled.)</p>
 
-<form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
+<form action="<? echo $_SERVER["PHP_SELF"];?>" method="post">
 <p>Paper size and orientation:
 <select name="paper">
-<?php
+<?
 foreach ( array_keys(CPDF_Adapter::$PAPER_SIZES) as $size )
   echo "<option ". ($size == "letter" ? "selected " : "" ) . "value=\"$size\">$size</option>\n";
 ?>
@@ -72,12 +72,12 @@ foreach ( array_keys(CPDF_Adapter::$PAPER_SIZES) as $size )
 based browser and are having difficulties loading the sample output, try
 saving it to a file first.)</p>
 
-<?php } else { ?>
+<? } else { ?>
 
   <p style="color: red;">
     User input has been disabled for remote connections.
   </p>
   
-<?php } ?>
+<? } ?>
 
-<?php include("foot.inc"); ?>
+<? include("foot.inc"); ?>

@@ -1,4 +1,4 @@
-<?php
+<?
 /**
  * HTML2PDF Librairy - example
  *
@@ -94,7 +94,7 @@ ob_start();
         </div>
     </div>
 </page>
-<?php
+<?
     $content = ob_get_clean();
 
     require_once(dirname(__FILE__).'/../html2pdf.class.php');

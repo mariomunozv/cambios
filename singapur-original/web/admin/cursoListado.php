@@ -1,5 +1,5 @@
 
-<?php require("inc/config.php"); 
+<? require("inc/config.php"); 
 require("inc/funcionesAdmin.php");
 ini_set('display_errors','On');
 
@@ -26,7 +26,7 @@ function cuentaAlumnosCurso($letraCursoColegio,$anoCursoColegio,$rbdColegio,$idN
   </tr>
   </thead>
   <tbody> 
-  <?php 
+  <? 
   
   $cursos = getCursosColegio($rbdColegio);
  
@@ -36,16 +36,16 @@ function cuentaAlumnosCurso($letraCursoColegio,$anoCursoColegio,$rbdColegio,$idN
 		
 	  ?>
               <tr onmouseover="this.className='normalActive'" onmouseout="this.className='normal'" class="normal">
-                <td><?php echo $curso["nombreNivel"]." ".$curso["letraCursoColegio"];?></td>
-                <td><?php echo $curso["anoCursoColegio"];?></td>
-                <td><?php echo $curso["nombreProfesor"];?> <?php echo $curso["apellidoPaternoProfesor"];?></td>
-                  <td><?php cuentaAlumnosCurso($curso["letraCursoColegio"],$curso["anoCursoColegio"],$rbdColegio,$curso["idNivel"]);?> </td>
+                <td><? echo $curso["nombreNivel"]." ".$curso["letraCursoColegio"];?></td>
+                <td><? echo $curso["anoCursoColegio"];?></td>
+                <td><? echo $curso["nombreProfesor"];?> <? echo $curso["apellidoPaternoProfesor"];?></td>
+                  <td><? cuentaAlumnosCurso($curso["letraCursoColegio"],$curso["anoCursoColegio"],$rbdColegio,$curso["idNivel"]);?> </td>
                 
-                <td>Editar - Activar - <a href="cursoDetalle.php?rbdColegio=<?php echo $rbdColegio;?>&idNivel=<?php echo $curso["idNivel"];?>&anoCursoColegio=<?php echo $curso["anoCursoColegio"];?>&letraCursoColegio=<?php echo $curso["letraCursoColegio"];?>">Ver Ficha</a></td>
+                <td>Editar - Activar - <a href="cursoDetalle.php?rbdColegio=<? echo $rbdColegio;?>&idNivel=<? echo $curso["idNivel"];?>&anoCursoColegio=<? echo $curso["anoCursoColegio"];?>&letraCursoColegio=<? echo $curso["letraCursoColegio"];?>">Ver Ficha</a></td>
                
                
               </tr>
-<?php 		}
+<? 		}
  }else{ 
 	 echo "<tr><td colspan='5'>No existen Cursos en este colegio</td></tr>"; 
   

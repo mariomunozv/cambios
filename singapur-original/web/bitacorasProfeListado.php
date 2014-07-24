@@ -1,4 +1,4 @@
-<?php session_start();
+<? session_start();
 include "inc/conecta.php";
 include "inc/_bitacora.php";
 include "inc/_usuario.php";
@@ -34,7 +34,7 @@ foreach($bitacoras as $bitacora){
         <th align="left">Fecha término</th>
         <th>Estado</th>
     </tr>
-<?php 
+<? 
 foreach($secciones as $seccion){
 	$match = 0;
 	foreach($bitacoras as $bitacora)
@@ -44,28 +44,28 @@ foreach($secciones as $seccion){
 			?>
             <tr>
 				<td align="center" valign="top">
-					<?php echo getNombreUsuario($bitacora["usuarioIngresa"]);?>
+					<? echo getNombreUsuario($bitacora["usuarioIngresa"]);?>
                 </td>
                 <td align="center" valign="top">
-                    <?php echo getNombreUsuario($bitacora["idUsuario"]);?>
+                    <? echo getNombreUsuario($bitacora["idUsuario"]);?>
                 </td>
                 <td align="center" valign="top">
-                    <?php echo getNombreCapituloBitacora($bitacora["idSeccionBitacora"]);?>
+                    <? echo getNombreCapituloBitacora($bitacora["idSeccionBitacora"]);?>
                 </td>
                 <td align="center" valign="top">
-                    <?php echo $bitacora["nombreBitacora"];?>
+                    <? echo $bitacora["nombreBitacora"];?>
                 </td>
                 <td align="center" valign="top">
-                    <?php echo $bitacora["tiempoBitacora"];?>
+                    <? echo $bitacora["tiempoBitacora"];?>
                 </td>
                 <td align="center" valign="top">
-                    <?php echo $bitacora["fechaInicio"];?>
+                    <? echo $bitacora["fechaInicio"];?>
                 </td>
                 <td align="center" valign="top">
-                    <?php echo $bitacora["fechaTermino"];?>
+                    <? echo $bitacora["fechaTermino"];?>
                 </td>        
                 <td align="center" valign="top">Declarado</td> 
-		<?php
+		<?
 		}//fin if($seccion["idSeccionBitacora"] == $bitacora["idSeccionBitacora"])
 	} //foreach($bitacoras as $bitacora)
 	if($match==0){//Si hasta aquí no han habido coincidencias, muestra por defecto
@@ -74,16 +74,16 @@ foreach($secciones as $seccion){
 		<td align="center" valign="top">No declarado</td>
 		<td align="center" valign="top">No declarado</td>
 		<td align="center" valign="top">
-        	<?php echo getNombreCapituloBitacora($seccion["idSeccionBitacora"]);?>
+        	<? echo getNombreCapituloBitacora($seccion["idSeccionBitacora"]);?>
         </td>
         <td align="center" valign="top">
-        	<?php echo $seccion["nombreSeccionBitacora"];?>
+        	<? echo $seccion["nombreSeccionBitacora"];?>
         </td>
 		<td align="center" valign="top">No declarado</td>
 		<td align="center" valign="top">No declarado</td>
 		<td align="center" valign="top">No declarado</td>
 		<td align="center" valign="top">No declarado</td>
-    <?php }//fin del if
+    <? }//fin del if
 	} //fin del foreach ?>
     </tr>
 </table>

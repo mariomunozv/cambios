@@ -8,7 +8,7 @@
             Test de TD très grand, en désactivant le test de TD ne devant pas depasser une page<br>
             via la méthode <b>setTestTdInOnePage</b>.<br>
             <table style="width:100%;">
-<?php
+<?
     for ($i=0; $i<=40; $i++) {
 ?>
                 <tr>
@@ -18,7 +18,7 @@
                         a b c d e f g h i j k l m n o p q r s t u v w x y z
                     </td>
                 </tr>
-<?php
+<?
     }
 ?>
             </table>

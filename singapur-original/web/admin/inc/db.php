@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 $host_base_datos	= "localhost";
 $usuario_base_datos = "epunto_gar";

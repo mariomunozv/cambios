@@ -64,7 +64,7 @@ div.minifiche div.download { position: absolute; border: none; left: 257px; top:
         <div style="position: absolute; left: 10px; top: 10px; font-size: 20px; font-family: Arial;">Exemple</div>
     </div>
     <hr>
-    <pre><?php
+    <pre><?
     ob_start();
     readfile(dirname(__FILE__).'/../exemple10.php');
     echo htmlentities(ob_get_clean());

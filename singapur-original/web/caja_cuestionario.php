@@ -1,4 +1,4 @@
-<?php
+<?
 
 $perfil = $_SESSION["sesionPerfilUsuario"];
 
@@ -12,4 +12,4 @@ if($perfil == 1 || $perfil == 4)
 			<li><a href="datosInicialesEncuesta.php?formulario=26">Cuestionario Para Docentes</a></li>
     </ul>
 </div>
-<?php } ?>
+<? } ?>

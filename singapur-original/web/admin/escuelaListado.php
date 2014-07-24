@@ -1,4 +1,4 @@
-<?php require("inc/config.php");
+<? require("inc/config.php");
 require("../inc/_detalleColegioProyecto.php");
 ?> 
  <p> <table class="tablesorter" id="tabla">
@@ -13,7 +13,7 @@ require("../inc/_detalleColegioProyecto.php");
   </tr>
   </thead>
   <tbody>
-  <?php 
+  <? 
  
     $colegios = getColegios(1);
 
@@ -22,14 +22,14 @@ require("../inc/_detalleColegioProyecto.php");
 		foreach ($colegios as $colegio){  
 	  ?> 
               <tr>
-                <td><?php echo $colegio["rbdColegio"];?></td>
-                <td><?php echo $colegio["nombreColegio"];?></td>
-                <td><?php echo $colegio["nombreComuna"];?></td>
-                <td><?php echo $colegio["emailColegio"];?></td>
-                <td>Editar - Activar - <a href="escuelaDetalle.php?rbdColegio=<?php echo $colegio["rbdColegio"];?>">Ver Ficha</a></td>
+                <td><? echo $colegio["rbdColegio"];?></td>
+                <td><? echo $colegio["nombreColegio"];?></td>
+                <td><? echo $colegio["nombreComuna"];?></td>
+                <td><? echo $colegio["emailColegio"];?></td>
+                <td>Editar - Activar - <a href="escuelaDetalle.php?rbdColegio=<? echo $colegio["rbdColegio"];?>">Ver Ficha</a></td>
                
               </tr>
-<?php 		}
+<? 		}
  }else{ 
 	 echo "<tr><td colspan='5'>No existen colegio registrados</td></tr>"; 
   

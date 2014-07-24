@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 function getRespuestaUsuarioItem($idItem,$idUsuario,$idPauta){
 

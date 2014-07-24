@@ -1,4 +1,4 @@
-<?php
+<?
 
 require("inc/incluidos.php");
 
@@ -25,7 +25,7 @@ if ($_FILES[$file]["error"] > 0)
 	<script>
     alert("Se ha producido un error al adjuntar el archivo.");
     </script>
-    <?php
+    <?
 
 }
 else
@@ -46,7 +46,7 @@ else
 			alert("Ya has subido este archivo anteriormente.");
 			
 			</script>
-			<?php
+			<?
       	}else{
 		
 			move_uploaded_file($_FILES[$file]["tmp_name"],"subir/archivos_act/" . $_SESSION["sesionIdUsuario"]."_".$_FILES[$file]["name"]);
@@ -55,7 +55,7 @@ else
 			alert("Archivo Guardado satisfactoriamente.\nContinue completando la actividad.");
 			
 			</script>
-			<?php
+			<?
 		}
 	}
 	else
@@ -65,7 +65,7 @@ else
 		<script>
 		alert("El formato del archivo no es Power Point.");
 		</script>
-		<?php
+		<?
 		
 		
 		

@@ -1,4 +1,4 @@
-<?php 
+<? 
 ini_set("display_errors","on");
 require("inc/incluidos.php");
 
@@ -35,39 +35,39 @@ function registraMuestra(link,idRecurso){
 
 <body>
 <div id="principal">
-<?php require("topMenu.php"); ?>
-<?php
+<? require("topMenu.php"); ?>
+<?
 $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 $navegacion = "Home*home.php,".$nombreCurso."*curso.php?idCurso=".$_SESSION["sesionIdCurso"].",".$datosRecurso["nombreRecurso"]."*#";
 require("_navegacion.php");
 ?>
 	<div id="lateralIzq">
-	    <?php require("menuleft.php");	?>
+	    <? require("menuleft.php");	?>
     </div>
 
 	<div id="lateralDer">
-    	<?php require("menuright.php");	?>
+    	<? require("menuright.php");	?>
 	</div>
     
     <div id="columnaCentro">
      
-<p class="titulo_curso"><?php echo getNombreCurso($idCurso); ?></p>
+<p class="titulo_curso"><? echo getNombreCurso($idCurso); ?></p>
     <hr />
     <br />
 
 
-   <?php 
+   <? 
 				 
 				
 //				print_r($datosRecurso);
 				?>   
                  <p align="center">Usted ha ingresado al recurso:<br>
-                 <strong><?php echo $datosRecurso["nombreRecurso"];?></strong>                 
-                 <?php getLinkRecursoDownload($idRecurso); ?>
+                 <strong><? echo $datosRecurso["nombreRecurso"];?></strong>                 
+                 <? getLinkRecursoDownload($idRecurso); ?>
                    <br />
                    <br />
                    
-				<?php
+				<?
 				$archivo = "subir/docs/".$datosRecurso["urlRecurso"];
 				$path_parts = pathinfo($archivo);
 
@@ -94,21 +94,21 @@ require("_navegacion.php");
 				  default:  die ( "Archivo invalido." ); 
     }                
                 ?>
-                  <embed src="subir/docs/<?php echo $datosRecurso["urlRecurso"];?>" type="<?php echo $ctype; ?>" <?php echo $largo_ancho; ?>>
+                  <embed src="subir/docs/<? echo $datosRecurso["urlRecurso"];?>" type="<? echo $ctype; ?>" <? echo $largo_ancho; ?>>
 					<br />
                    <br />
 				
-                <?php boton("Volver","history.back();"); ?>
+                <? boton("Volver","history.back();"); ?>
     
       </div> 
     
      
-       <?php //  require("misCursos.php");?>
+       <? //  require("misCursos.php");?>
      
                
     
               
-	<?php 
+	<? 
     
     	require("pie.php");
     

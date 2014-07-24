@@ -41,17 +41,17 @@ table.morpion td.j2 { color: #A00; }
     <table align="center" style="border: solid 1px #000000;"><tr><td style="border-top: dotted 4mm #000077; border-right: dotted 3mm #007700; border-bottom: dotted 2mm #770000; border-left: dotted 1mm #007777; padding: 2mm 4mm 6mm 8mm; width: 100mm; background: #FFDDDD">Coucou ! ceci est un border dotted</td></tr></table><br>
     <table align="center" style="border: solid 1px #000000;"><tr><td style="border-top: dashed 4mm #000077; border-right: dashed 3mm #007700; border-bottom: dashed 2mm #770000; border-left: dashed 1mm #007777; padding: 2mm 4mm 6mm 8mm; width: 100mm; background: #FFDDDD">Coucou ! ceci est un border dashed</td></tr></table><br>
     <table align="center" style="border: solid 1px #000000;"><tr><td style="border-top: double 4mm #000077; border-right: double 3mm #007700; border-bottom: double 2mm #770000; border-left: double 1mm #007777; padding: 2mm 4mm 6mm 8mm; width: 100mm; background: #FFDDDD">Coucou ! ceci est un border double</td></tr></table><br>
-<?php $back = 'background-image: url(./res/off.png); background-position: left top; background-repeat: repeat; '; ?>
+<? $back = 'background-image: url(./res/off.png); background-position: left top; background-repeat: repeat; '; ?>
     <table style="background: #FFAAAA; color: #000022; border: 3px solid #555555;">
         <tr>
-            <td style="width: 40mm; border: solid 1px #000000; <?php echo $back; ?>color: #003300">Case A1</td>
-            <td style="width: 50mm; border: solid 1px #000000; <?php echo $back; ?>font-weight: bold;">Case A2</td>
-            <td style="width: 60mm; border: solid 1px #000000; <?php echo $back; ?>font-size: 20px;">Case A3</td>
+            <td style="width: 40mm; border: solid 1px #000000; <? echo $back; ?>color: #003300">Case A1</td>
+            <td style="width: 50mm; border: solid 1px #000000; <? echo $back; ?>font-weight: bold;">Case A2</td>
+            <td style="width: 60mm; border: solid 1px #000000; <? echo $back; ?>font-size: 20px;">Case A3</td>
         </tr>
         <tr>
-            <td style="border: solid 1px #000000; text-align: left;   <?php echo $back; ?>vertical-align: top; ">Case B1</td>
-            <td style="border: solid 1px #000000; text-align: center; <?php echo $back; ?>vertical-align: middle; height: 20mm">Case B2<hr style="color: #22AA22">test de hr</td>
-            <td style="border: solid 1px #000000; text-align: right;  <?php echo $back; ?>vertical-align: bottom; border-radius: 3mm; ">Case B3</td>
+            <td style="border: solid 1px #000000; text-align: left;   <? echo $back; ?>vertical-align: top; ">Case B1</td>
+            <td style="border: solid 1px #000000; text-align: center; <? echo $back; ?>vertical-align: middle; height: 20mm">Case B2<hr style="color: #22AA22">test de hr</td>
+            <td style="border: solid 1px #000000; text-align: right;  <? echo $back; ?>vertical-align: bottom; border-radius: 3mm; ">Case B3</td>
         </tr>
     </table>
     <br>

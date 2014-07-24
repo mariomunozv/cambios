@@ -1,4 +1,4 @@
-<?php
+<?
 session_start();
 include "inc/conecta.php";
 include "inc/funciones.php";
@@ -21,11 +21,11 @@ obj.value=obj.value.substring(0,mlength)
 </script>
  
 	
-    <input type="hidden" name="idMensaje" class="campos" id="idMensaje" value="<?php echo @$idReferenciaComentario; ?>">
+    <input type="hidden" name="idMensaje" class="campos" id="idMensaje" value="<? echo @$idReferenciaComentario; ?>">
     <textarea maxlength="1000" name="contenidoComentario" cols="52" rows="2" id="contenidoComentario" class="campos" onkeyup="return ismaxlength(this)"></textarea>
 	<br />
 	<p align="right">
-	<?php
+	<?
 	boton("Enviar","enviarComentario(".@$idReferenciaComentario.")");
 	?>
     </p>

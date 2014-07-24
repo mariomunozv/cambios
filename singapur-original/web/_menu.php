@@ -34,7 +34,7 @@
  
  </script>
 
-<?php 
+<? 
 //sesion();
 $datos_usuario["per_admin"] = 1;
 ?> 

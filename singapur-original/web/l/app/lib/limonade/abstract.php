@@ -1,4 +1,4 @@
-<?php
+<?
 /**
  * Abstract methods that might be redefined by user
  * Do not include this file in your app: it only aims to provide documentation

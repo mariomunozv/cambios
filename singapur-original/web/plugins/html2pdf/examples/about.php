@@ -1,4 +1,4 @@
-<?php
+<?
 /**
  * HTML2PDF Librairy - example
  *

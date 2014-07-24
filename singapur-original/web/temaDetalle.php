@@ -1,4 +1,4 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 ini_set("display_errors","on");
 
@@ -74,32 +74,32 @@ function muestraRespuestas($idTema,$orden){
 			<td>No hay respuestas en este foro.</td>
 			</tr>
 		</table>
-			<?php }else{
+			<? }else{
 		$i = 0;
 					foreach ($respuestasTema as $value[$i]) {
 							
 							$datosProfesor = getNombreFotoUsuarioProfesor($value[$i]["idUsuario"]);
 							// print_r($datosProfesor);
 							?>
-						<a name="mensaje_<?php echo $value[$i]["idMensajeTema"];?>"></a>
+						<a name="mensaje_<? echo $value[$i]["idMensajeTema"];?>"></a>
 						<table width="550" border="0" cellpadding="0" cellspacing="3">
                             
 							<tr>
                               	<td></td>
 								<td width="30">
-							       	<img src="<?php echo "subir/fotos_perfil/th_".$datosProfesor["imagenUsuario"];?>" onerror="this.src='subir/fotos_perfil/nophotoMini.jpg'"  width="50" height="46" />
+							       	<img src="<? echo "subir/fotos_perfil/th_".$datosProfesor["imagenUsuario"];?>" onerror="this.src='subir/fotos_perfil/nophotoMini.jpg'"  width="50" height="46" />
 								</td>
                                 
 								<td width="515" height="46" class="style7">
                                 	<span class="right style6 style10 style14">
 								  		&nbsp; El 
-										<?php echo fechaConFormato($value[$i]["fechaMensajeTema"]);?>
+										<? echo fechaConFormato($value[$i]["fechaMensajeTema"]);?>
 								  		<br />
                                         <strong>
                                         &nbsp;
-										<?php echo "<a style='text-decoration:none' href='verPerfil.php?idUsuario=".$value[$i]["idUsuario"]."'>".getNombreUsuario($value[$i]["idUsuario"])."</a>"; ?>	
+										<? echo "<a style='text-decoration:none' href='verPerfil.php?idUsuario=".$value[$i]["idUsuario"]."'>".getNombreUsuario($value[$i]["idUsuario"])."</a>"; ?>	
 								  		</strong>
-                                        <?php 
+                                        <? 
 										echo " escribió:";
 										?>
 									</span>
@@ -109,7 +109,7 @@ function muestraRespuestas($idTema,$orden){
 							
                             <tr align="justify">
                             	<td></td>
-                                <?php
+                                <?
 								
 								$colorMensaje = "#CCF2D9";
 	
@@ -118,17 +118,17 @@ function muestraRespuestas($idTema,$orden){
 									$colorMensaje = "#92D050";
 								}
 								?>
-								<td style="padding:10px;" colspan="2" bgcolor="<?php echo $colorMensaje; ?>">
-									<?php echo nl2br($value[$i]["contenidoMensajeTema"]);?>
+								<td style="padding:10px;" colspan="2" bgcolor="<? echo $colorMensaje; ?>">
+									<? echo nl2br($value[$i]["contenidoMensajeTema"]);?>
                             	</td>
                                 <!-- Solo se puede comentar si el tema está abierto"; -->
-                                <?php if($abierto>0){?> 
-	                            <td><a href="#mensaje_<?php echo $value[$i]["idMensajeTema"];?>" onClick="javascript:nuevoComentario(<?php echo $value[$i]["idMensajeTema"];?>)">Comentar</a></td>
-                                <?php }else{
+                                <? if($abierto>0){?> 
+	                            <td><a href="#mensaje_<? echo $value[$i]["idMensajeTema"];?>" onClick="javascript:nuevoComentario(<? echo $value[$i]["idMensajeTema"];?>)">Comentar</a></td>
+                                <? }else{
 									echo "<td></td>";
 								}?>
 							</tr>
-                            <?php
+                            <?
 							/* Ciclo Comentarios */
 							$comentarios = getComentariosMensaje($value[$i]["idMensajeTema"]);
 							if ($comentarios[0]){
@@ -144,23 +144,23 @@ function muestraRespuestas($idTema,$orden){
 									
 									$datosComentario = getNombreFotoUsuario($comentario["idUsuario"]);
 									?>
-                                    <tr align="justify" title="<?php echo fechaConFormato($comentario["fechaComentario"]); ?>">
+                                    <tr align="justify" title="<? echo fechaConFormato($comentario["fechaComentario"]); ?>">
                                         <td></td>
                                         <td></td>
-                                        <td style="padding:2px; border-width:1px; border-style:dotted; background-color:<?php echo $colorComentario; ?>">
+                                        <td style="padding:2px; border-width:1px; border-style:dotted; background-color:<? echo $colorComentario; ?>">
                                         <img src="img/coment.gif" width="16" height="16" />
                                        	<strong>
-										<?php
+										<?
 										echo "<a style='text-decoration:none' href='verPerfil.php?idUsuario=".$comentario["idUsuario"]."'>".$datosComentario["nombre"]." ".$datosComentario["apellidoPaterno"]."</a>: ";
 										?>
                                         </strong>
-                                        <?php
+                                        <?
 										echo " ".$comentario["textoComentario"];
 										
 										?>
                                         </td>                                
                                     </tr>
-                                    <?php		
+                                    <?		
 								}
 								
 							
@@ -173,14 +173,14 @@ function muestraRespuestas($idTema,$orden){
                             	<td></td>
 								<td></td>
                                 <td>
-                                	<div id="nuevoComentario_<?php echo $value[$i]["idMensajeTema"];?>"></div> 
+                                	<div id="nuevoComentario_<? echo $value[$i]["idMensajeTema"];?>"></div> 
                                 </td>                                
 							</tr>
                         
 						</table>
                         
 						
-							<?php 
+							<? 
 							 $i++;   
 					}
 			}
@@ -194,11 +194,11 @@ if ($flag == 1){
 	$flag = 1;	
 		}
 ?>
-<?php require ("hd.php");?>
+<? require ("hd.php");?>
 
 <script language="javascript">
 $(function() {
-	<?php /* Asi inicializas tablesorter */ ?>	   
+	<? /* Asi inicializas tablesorter */ ?>	   
 	$("#tabla").tablesorter({ 
 		headers: {  
 			5: { sorter: false },
@@ -221,7 +221,7 @@ $(function() {
 function nuevoMensaje(){  
    
 	var division = document.getElementById("nuevoMensaje");
-	AJAXPOST("nuevoMensajeForo.php","idForo=<?php echo $_REQUEST["idForo"];?>",division);  
+	AJAXPOST("nuevoMensajeForo.php","idForo=<? echo $_REQUEST["idForo"];?>",division);  
 
 }
 
@@ -271,13 +271,13 @@ function val_obligatorio(campo){
 <body>
 
 <div id="principal">
-<?php 
+<? 
 	require("topMenu.php"); 
 	$navegacion = "Home*curso.php?idCurso=$idCurso,Foro*#";	
 	require("_navegacion.php");	
 ?>
     <div id="lateralIzq">
-	<?php 
+	<? 
 		require("menuleft.php");
 		require ("categoriaForo.php");
 	?>
@@ -285,27 +285,27 @@ function val_obligatorio(campo){
     </div>
     
      <div id="lateralDer">
-    <?php 		require("menuright.php"); ?>
+    <? 		require("menuright.php"); ?>
     </div><!--lateralDer-->
 
 <div id="columnaCentro">
 	<p class="titulo_curso">Foros de Conversación</p>
     <hr />
-	<?php      
+	<?      
   	$datosTema = getTema($idTema);
 	//print_r($datosTema);
 	$fecha_actual = date("Y-m-d");
 	$datosProfesor = getNombreFotoUsuarioProfesor($datosTema["idUsuario"]);		
 	?>
  
-    <input type="hidden" name="idTema" class="campos" id="idTema" value="<?php echo @$idTema; ?>">             
+    <input type="hidden" name="idTema" class="campos" id="idTema" value="<? echo @$idTema; ?>">             
   <table class="tablesorter" width="550" border="0" cellpadding="5" cellspacing="2" bgcolor="#B1D8B1">
         <tr>
             <td bgcolor="#33CC66" >
             	<strong>
-              	<?php echo $datosTema["tituloTema"];?><br /> 
+              	<? echo $datosTema["tituloTema"];?><br /> 
 				<p align="right">
-                <a href="temaDetalle.php?idForo=<?php echo $idTema;?>&flag=<?php echo $flag;?>">(Invertir orden de respuestas)</a>
+                <a href="temaDetalle.php?idForo=<? echo $idTema;?>&flag=<? echo $flag;?>">(Invertir orden de respuestas)</a>
                 </p>
                 </strong>
                 <br />
@@ -313,28 +313,28 @@ function val_obligatorio(campo){
         </td>
             
 			<td width="50" height="46">
-            	<img src="<?php echo "subir/fotos_perfil/th_".$datosProfesor["imagenUsuario"];?>" onerror="this.src='/nophoto.jpg'"  width="50" height="46" />
+            	<img src="<? echo "subir/fotos_perfil/th_".$datosProfesor["imagenUsuario"];?>" onerror="this.src='/nophoto.jpg'"  width="50" height="46" />
             </td>
         </tr>
         
         <tr align="justify">
           	<td colspan="2">
-			El <?php echo fechaConFormato($datosTema["fechaTema"]);?>
+			El <? echo fechaConFormato($datosTema["fechaTema"]);?>
 				<strong>
-				<?php echo "<a href='verPerfil.php?idUsuario=".$datosTema['idUsuario']."'>".getNombreUsuario($datosTema["idUsuario"])."</a>"; ?>	
+				<? echo "<a href='verPerfil.php?idUsuario=".$datosTema['idUsuario']."'>".getNombreUsuario($datosTema["idUsuario"])."</a>"; ?>	
 				 	
                 </strong>
-                <?php 
+                <? 
                 echo " escribió:";
                 ?><br />
 <br />
-			<?php echo $datosTema["mensajeInicialTema"];?>
+			<? echo $datosTema["mensajeInicialTema"];?>
             </td>
         </tr>
         
 	</table>
     <p align="right">
-	<?php 
+	<? 
         boton("Volver","history.go(-1)");
 		if(comparar_fechas_mysql($datosTema["fechaTerminoTema"],$fecha_actual) == 1){ // paso el tiempo
     	    boton("Responder","nuevoMensaje()");
@@ -349,10 +349,10 @@ function val_obligatorio(campo){
     
     <br />
    
-	<?php muestraRespuestas($idTema,$orden); ?>
+	<? muestraRespuestas($idTema,$orden); ?>
 </div>    
 
-<?php   require("pie.php");?>
+<?   require("pie.php");?>
 
 </div>
 </body>

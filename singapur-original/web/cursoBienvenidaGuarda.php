@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 require("admin/inc/config.php");
 include "inc/_cursoCapacitacion.php";

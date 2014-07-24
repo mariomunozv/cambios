@@ -1,4 +1,4 @@
-<?php
+<?
 require("inc/config.php");
 
 $visible = $_REQUEST["visible"];
@@ -85,7 +85,7 @@ function lista_jornada_Curso(idCursoCapacitacion){
 	<select name="curso" id="curso" onChange="javascript:lista_jornada_Curso(this.value)">
    	<option value="">Seleccione un curso</option>
 	<option value="">Todos los Cursos</option>
-	<?php
+	<?
 	foreach($cursosConJornada as $curso) 
 	{
 		echo "<option value=".$curso["idCursoCapacitacion"].">".$curso["nombreCortoCursoCapacitacion"]."</option>";

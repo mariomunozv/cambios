@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 $notificaciones = getNotificaciones($_SESSION["sesionIdUsuario"]);
 
@@ -22,11 +22,11 @@ function toggleDisplay(tbl) {
 
 </script>
 
-<p class="titulo_curso">Notificaciones <?php echo $_SESSION["sesionNombreUsuario"]; ?></p>
+<p class="titulo_curso">Notificaciones <? echo $_SESSION["sesionNombreUsuario"]; ?></p>
 <hr />
 <br />
 <table id="theTable" border="0" cellspacing="2" class="tablesorter">
-<?php
+<?
 $class = ' class="headerRow"';
 // Ejecuta el ciclo solo si hay notificaciones
 if ($notificaciones[0]){

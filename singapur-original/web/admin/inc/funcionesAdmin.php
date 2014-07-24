@@ -1,4 +1,4 @@
-<?php 
+<? 
 // FUNCIONES INFORME RESULTADOS POR CURSO Y SESION
 
 
@@ -528,9 +528,9 @@ function matrizXY2($columna,$fila,$idSesion){
 //	echo $cuentaX." ".$cuentaY."<br>";
 	//print_r($ejeY);
 	$i = 0; ?>
-<?php    foreach ($ejeX as $x){ ?>
-<?php		foreach ($ejeY as $y){ ?>
-			<?php //echo $x["valorInstanciaVariableDidactica"]."-";
+<?    foreach ($ejeX as $x){ ?>
+<?		foreach ($ejeY as $y){ ?>
+			<? //echo $x["valorInstanciaVariableDidactica"]."-";
 			//echo $y["valorInstanciaVariableDidactica"]." <br>";
 			$cuenta = getCuentaMatrizXY2($idListas,$x["idInstanciaVariableDidactica"],$y["idInstanciaVariableDidactica"]);
 			$datosMatrizXY[$i] = array("cuenta" => $cuenta, "idInstanciaVariableDidacticaX"  => $x["idInstanciaVariableDidactica"], "idInstanciaVariableDidacticaY"  => $y["idInstanciaVariableDidactica"]);
@@ -538,18 +538,18 @@ function matrizXY2($columna,$fila,$idSesion){
 			$i++;
 			//echo $cuenta."XY".$i++."<br>";
 			?>
-	<?php		} ?>
-<?php		} 
+	<?		} ?>
+<?		} 
 ?>
 	
  <table class="tablesorter">
     <tr>
-    <th width="300"><?php 
+    <th width="300"><? 
 	$variableX = getNombreVaribleDidactica($ejeX[0]["idInstanciaVariableDidactica"]);
 	$variableY = getNombreVaribleDidactica($ejeY[0]["idInstanciaVariableDidactica"]);
 	echo $variableX." / ".$variableY;
 	?></th>
-<?php  
+<?  
 	$k = 0;
 	foreach ($ejeY as $y){ // TITULO TABLA EJE X
 		echo "<th>".$y['valorInstanciaVariableDidactica']."</th>";
@@ -579,7 +579,7 @@ function matrizXY2($columna,$fila,$idSesion){
 	</tr>
     <tr>
     <th>Total</th>
-    <?php 
+    <? 
 	
 	foreach ($ejeY as $y){ // TITULO TABLA EJE X
 		$totalEjeY = getTotalInstanciaDidacticaSesionCurso($y["idInstanciaVariableDidactica"],$idSesion);	
@@ -590,7 +590,7 @@ function matrizXY2($columna,$fila,$idSesion){
 	   </table>
 	
 	
-<?php	}	
+<?	}	
 
 function getTotalInstanciaDidacticaSesionCurso($idInstanciaVariableDidactica,$idSesion){ // recibe una instacia de variable didactica deseada y una sesion y devuelve el % de logro de un curso
 	$rbd = $_REQUEST["rbd"];

@@ -1,4 +1,4 @@
-<?php require("inc/config.php"); 
+<? require("inc/config.php"); 
 
 include("../inc/_usuario.php");
 include("../inc/_profesor.php");
@@ -34,7 +34,7 @@ function saca(){
 
 
 $(function() {
-	<?php /* Asi inicializas tablesorter */ ?>	   
+	<? /* Asi inicializas tablesorter */ ?>	   
 	$("#tabla2").tablesorter({ 
 		headers: {  
 			0: { sorter: false }
@@ -49,7 +49,7 @@ $(function() {
 }); 
 
 </script>
-<?php  boton("Desinscribir alumnos","saca();");?>
+<?  boton("Desinscribir alumnos","saca();");?>
 <table class="tablesorter" id="tabla2">
 
    <thead>         
@@ -67,7 +67,7 @@ $(function() {
   <tbody>
   
   <input name="curso" id="curso"  type="hidden" class="campos"/> 
-  <?php 
+  <? 
   
  $i = 1;
 $alumnos=   getAlumnosCurso($idCurso);
@@ -85,15 +85,15 @@ $alumnos=   getAlumnosCurso($idCurso);
 
  ?>
               <tr>
-              <td><?php echo $i++;?></td>
-			    <td><input type="checkbox"  name="sel2[]" id="sel2<?php echo $alumno['idUsuario'];?>"  class="campos" value="<?php echo $alumno['idUsuario'];?>"></td>
-                <td><?php echo $alumno["idUsuario"];?></td>
-				<td><?php echo $alumno["apellidoPaterno"];?></td>
-				<td><?php echo $alumno["nombreCompleto"];?></td>
+              <td><? echo $i++;?></td>
+			    <td><input type="checkbox"  name="sel2[]" id="sel2<? echo $alumno['idUsuario'];?>"  class="campos" value="<? echo $alumno['idUsuario'];?>"></td>
+                <td><? echo $alumno["idUsuario"];?></td>
+				<td><? echo $alumno["apellidoPaterno"];?></td>
+				<td><? echo $alumno["nombreCompleto"];?></td>
 				
                
               </tr>
-<?php 		}
+<? 		}
  }else{ 
 	 echo "<tr><td colspan='12'>No existen alumnos</td></tr>"; 
   
@@ -115,7 +115,7 @@ $alumnos=   getAlumnosCurso($idCurso);
                         <img src="css/tabla/next.png" class="next"/>
             
                         <img src="css/tabla/last.png" class="last"/>
-                        <input type="hidden" class="pagesize" value="50"><?php /* Registros por paginas */ ?> 
+                        <input type="hidden" class="pagesize" value="50"><? /* Registros por paginas */ ?> 
                     </form>
                 </div>
 <div id="guarda2"></div>

@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set("display_errors","on");
 session_start();
 include "inc/conecta.php";
@@ -21,11 +21,11 @@ $capitulo = getCapituloBySeccion($idSeccionBitacora);
 
 if(insertaBitacoraProfe($idUsuarioIngresa,$profesor,$idCursoColegio,$idSeccionBitacora,$nombreSeccion,$fechaInicioBitacora,$fechaFinBitacora,$tiempoBitacora)>0){?>
 <script language="javascript">
-	traeCapitulos('<?php echo $profesor ?>','<?php echo $parte ?>');
-	muestraBitacorasSeccion('<?php echo $profesor ?>','<?php echo $capitulo ?>');
-	muestraCapitulosCompletos('<?php echo $profesor ?>','<?php echo $idCursoColegio ?>');
+	traeCapitulos('<? echo $profesor ?>','<? echo $parte ?>');
+	muestraBitacorasSeccion('<? echo $profesor ?>','<? echo $capitulo ?>');
+	muestraCapitulosCompletos('<? echo $profesor ?>','<? echo $idCursoColegio ?>');
 </script>
-<?php }else{
+<? }else{
 	echo "No se pudo inserta una bitácora";
 }
 ?>

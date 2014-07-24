@@ -1,4 +1,4 @@
-<?php 
+<? 
  ini_set('display_errors','On');
  header('Content-type: application/vnd.ms-excel');
 header("Content-Disposition: attachment; filename=ResumenCursoMetodoSingapur.xls");
@@ -73,12 +73,12 @@ function guarda(){
 	var division = document.getElementById("actualiza");
 	//a = "arreglo="+document.getElementsByName("sel"+jornada);
 	var a = $(".campos").fieldSerialize();
-	<?php 
+	<? 
 	$valores = "";
 	foreach ($items as $item){
 		$valores = $valores.$item["idItem"].";";
 	} ?>
-	a = a+"itemes=<?php echo $valores;?>";
+	a = a+"itemes=<? echo $valores;?>";
 
 	AJAXPOST("evaluacionAlumnoGuarda.php",a,division);
 }
@@ -88,7 +88,7 @@ function guarda(){
 	
 		// decimal values
 		
-		<?php 
+		<? 
 		 if (count($alumnos) > 0){
 		  $i = 1;
 		foreach ($alumnos as $alumno){ 
@@ -111,7 +111,7 @@ function guarda(){
  
  
 <p>
-Resumen del Curso: <?php echo getNombreNivel($idNivel)." ".$letraCursoColegio;?>
+Resumen del Curso: <? echo getNombreNivel($idNivel)." ".$letraCursoColegio;?>
 
 
 
@@ -121,7 +121,7 @@ Resumen del Curso: <?php echo getNombreNivel($idNivel)." ".$letraCursoColegio;?>
    <thead>  
    <tr>
    <th colspan="2">Listado de Alumnos</th>
-   		<th colspan="<?php echo count($items);?>">Preguntas</th>
+   		<th colspan="<? echo count($items);?>">Preguntas</th>
    </tr>
          
   <tr>
@@ -129,10 +129,10 @@ Resumen del Curso: <?php echo getNombreNivel($idNivel)." ".$letraCursoColegio;?>
     
     <th>Nombres</th>
     
-    <?php    foreach($items as $item){ ?>   
+    <?    foreach($items as $item){ ?>   
 	   
-       		<th><?php echo $item["enunciadoItem"];?></th>
-       <?php }  ?>
+       		<th><? echo $item["enunciadoItem"];?></th>
+       <? }  ?>
        
    
   </tr>
@@ -140,7 +140,7 @@ Resumen del Curso: <?php echo getNombreNivel($idNivel)." ".$letraCursoColegio;?>
   <tbody>
 
 	
-  <?php 
+  <? 
   
 
 
@@ -164,15 +164,15 @@ Resumen del Curso: <?php echo getNombreNivel($idNivel)." ".$letraCursoColegio;?>
 
 	
 	  ?>
-      <input type="hidden" name="pauta[]" value="<?php echo $datosPauta["idPautaItem"];?>"  class="campos" />
-              <tr onmouseover="this.className='normalActive'" onmouseout="this.className='<?php echo $claseTR; ?>'" class="<?php echo $claseTR; ?>">
-              <td><?php echo $i;?></td>
+      <input type="hidden" name="pauta[]" value="<? echo $datosPauta["idPautaItem"];?>"  class="campos" />
+              <tr onmouseover="this.className='normalActive'" onmouseout="this.className='<? echo $claseTR; ?>'" class="<? echo $claseTR; ?>">
+              <td><? echo $i;?></td>
                 
-                <td><?php echo $alumno["apellidoPaternoAlumno"]." ".$alumno["nombreAlumno"];?></td>
+                <td><? echo $alumno["apellidoPaternoAlumno"]." ".$alumno["nombreAlumno"];?></td>
               
                
-               <input type="hidden" name="usuarios[]" class="campos" value="<?php echo $alumno['idUsuario'];?>" /> 
-           <?php  foreach($items as $item){ 
+               <input type="hidden" name="usuarios[]" class="campos" value="<? echo $alumno['idUsuario'];?>" /> 
+           <?  foreach($items as $item){ 
 		   			
 		   			$respuesta = getRespuestaUsuarioItem($item["idItem"],$alumno["idUsuario"],$datosPauta["idPautaItem"]);
 					//print_r($respuesta);
@@ -183,11 +183,11 @@ Resumen del Curso: <?php echo getNombreNivel($idNivel)." ".$letraCursoColegio;?>
                          <td>
                      
                   			
-                          <?php echo $respuesta["puntajeRespuestaItem"];?></td>
-       <?php }  ?>
+                          <? echo $respuesta["puntajeRespuestaItem"];?></td>
+       <? }  ?>
       
               </tr>
-<?php 	$i++;	}
+<? 	$i++;	}
  }else{ 
 	 echo "<tr><td colspan='12'>No existen Alumnos en este curso.</td></tr>"; 
   

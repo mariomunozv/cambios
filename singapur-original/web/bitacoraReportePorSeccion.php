@@ -1,5 +1,5 @@
-<?php require("inc/incluidos.php"); ?>
-<?php require ("hd.php");
+<? require("inc/incluidos.php"); ?>
+<? require ("hd.php");
 
 $idCurso = $_SESSION["sesionIdCurso"];
 
@@ -19,7 +19,7 @@ function muestraBitacorasCapitulo(idCapitulo){
     </tr>
   
 
-	<?php 
+	<? 
 
 
 
@@ -45,7 +45,7 @@ function muestraBitacorasCapitulo(idCapitulo){
 			?>
 			<td valign="center">
 				<div align="left">
-					<a href="javascript:muestraBitacorasCapitulo(<?php echo $capitulo["idSeccionBitacora"]; ?>);"><strong><?php echo $capitulo["nombreSeccionBitacora"]; ?></strong></a>
+					<a href="javascript:muestraBitacorasCapitulo(<? echo $capitulo["idSeccionBitacora"]; ?>);"><strong><? echo $capitulo["nombreSeccionBitacora"]; ?></strong></a>
 				</div>
 			</td>
 			
@@ -56,7 +56,7 @@ function muestraBitacorasCapitulo(idCapitulo){
 			
 		</tr>
 		
-	<?php 	
+	<? 	
 		} // else (existen alumnos)
 		
 	} //foreach

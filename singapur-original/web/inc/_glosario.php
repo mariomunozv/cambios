@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 function getGlosarioCurso($idCurso){
 	$sql = "SELECT * FROM `glosario` g join palabra p 

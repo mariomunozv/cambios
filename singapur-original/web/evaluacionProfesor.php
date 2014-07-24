@@ -1,4 +1,4 @@
-<?php 
+<? 
 //ini_set('display_errors','On');
 require("inc/incluidos.php");
 require("inc/pruebasPorCurso.php");
@@ -109,7 +109,7 @@ var muestraCurso = function (rbdColegio,idNivel,anoCursoColegio,letraCursoColegi
  
 
 <div id="principal">
-<?php 
+<? 
 	require("topMenu.php"); 
 	$navegacion = "Home*curso.php?idCurso=$idCurso,Evaluación*#";
 	require("_navegacion.php");
@@ -117,7 +117,7 @@ var muestraCurso = function (rbdColegio,idNivel,anoCursoColegio,letraCursoColegi
 ?>
 	
     <div id="lateralIzq">
-    <?php 
+    <? 
 		require("menuleft.php")	
 	?>
     </div> <!--lateralIzq-->
@@ -125,7 +125,7 @@ var muestraCurso = function (rbdColegio,idNivel,anoCursoColegio,letraCursoColegi
     
     
     <div id="lateralDer">
-  	<?php 
+  	<? 
 		require("menuright.php")
     ?>
     
@@ -157,7 +157,7 @@ var muestraCurso = function (rbdColegio,idNivel,anoCursoColegio,letraCursoColegi
 			  </tr>
 			  </thead>
 			  <tbody> 
-			  <?php 
+			  <? 
 			  $perfilUsuario = $_SESSION['sesionPerfilUsuario'];
 			  $cursos = getCursosProfesor($datosUsuario["rutProfesor"], $anoActual, $perfilUsuario);
 			 
@@ -169,13 +169,13 @@ var muestraCurso = function (rbdColegio,idNivel,anoCursoColegio,letraCursoColegi
 
 				  ?>
 			              <tr onMouseOver="this.className='normalActive'" onMouseOut="this.className='normal'" class="normal">
-			                <td><?php echo $curso["nombreNivel"]." ".$curso["letraCursoColegio"];?></td>
-			                <td><?php echo $curso["anoCursoColegio"];?></td>
-			                <td><?php echo $nombre;?> </td>
-			            	<td><?php cuentaAlumnosCurso($curso["letraCursoColegio"],$curso["anoCursoColegio"],$curso["rbdColegio"],$curso["idNivel"]);?> </td>
+			                <td><? echo $curso["nombreNivel"]." ".$curso["letraCursoColegio"];?></td>
+			                <td><? echo $curso["anoCursoColegio"];?></td>
+			                <td><? echo $nombre;?> </td>
+			            	<td><? cuentaAlumnosCurso($curso["letraCursoColegio"],$curso["anoCursoColegio"],$curso["rbdColegio"],$curso["idNivel"]);?> </td>
 			                
                             <td>
-                            <?php 
+                            <? 
                             $i=0;
                             if (isset($pruebasPorCurso[$curso["idNivel"]])) {
                                 $pruebas = $pruebasPorCurso[$curso["idNivel"]];
@@ -189,14 +189,14 @@ var muestraCurso = function (rbdColegio,idNivel,anoCursoColegio,letraCursoColegi
                                     echo "<br>"; 
                                 }
                               ?>
-                            		<a href="javascript:muestraCurso(<?php echo $curso["rbdColegio"];?>,<?php echo $curso["idNivel"];?>,<?php echo $curso["anoCursoColegio"];?>,'<?php echo $curso["letraCursoColegio"];?>',<?php echo $escala.",'".$curso["nombreNivel"]."',".$idLista; ?>,<?php echo $i; ?>)"><img border="0" src="img/ver.gif" width="14" height="14" alt="Ver más" title="Ver más" /> Prueba <?php echo $i;?></a>
-                            <?php } ?>
+                            		<a href="javascript:muestraCurso(<? echo $curso["rbdColegio"];?>,<? echo $curso["idNivel"];?>,<? echo $curso["anoCursoColegio"];?>,'<? echo $curso["letraCursoColegio"];?>',<? echo $escala.",'".$curso["nombreNivel"]."',".$idLista; ?>,<? echo $i; ?>)"><img border="0" src="img/ver.gif" width="14" height="14" alt="Ver más" title="Ver más" /> Prueba <? echo $i;?></a>
+                            <? } ?>
                             
                             </td>
 			             <!--</a>-->
 			               
 			              </tr>
-			<?php 		}
+			<? 		}
 			 }else{ 
 				 echo "<tr><td colspan='5'>No existen Cursos asociados a este profesor</td></tr>"; 
 			  
@@ -211,12 +211,12 @@ var muestraCurso = function (rbdColegio,idNivel,anoCursoColegio,letraCursoColegi
            
   	<div id="lugarCarga"></div>          
       
-  <?php
+  <?
 if(isset($_GET["rbdColegio"]) && isset($_GET["idNivel"]) && isset($_GET["anoCursoColegio"]) && isset($_GET["letraCursoColegio"]) && isset($_GET["escala"]) && isset($_GET["nombreNivel"]) && isset($_GET["idLista"]) && isset($_GET["idPrueba"])){?>
 	<script>
-	muestraCurso(<?php echo $_GET["rbdColegio"];?>,<?php echo $_GET["idNivel"];?>,<?php echo $_GET["anoCursoColegio"];?>,'<?php echo $_GET["letraCursoColegio"];?>',<?php echo $_GET["escala"];?>,<?php echo $_GET["nombreNivel"];?>,<?php echo $_GET["idLista"];?>,<?php echo $_GET["idPrueba"];?>);
+	muestraCurso(<? echo $_GET["rbdColegio"];?>,<? echo $_GET["idNivel"];?>,<? echo $_GET["anoCursoColegio"];?>,'<? echo $_GET["letraCursoColegio"];?>',<? echo $_GET["escala"];?>,<? echo $_GET["nombreNivel"];?>,<? echo $_GET["idLista"];?>,<? echo $_GET["idPrueba"];?>);
 	</script>
-	<?php
+	<?
 	}
 ?>      
         <center>
@@ -229,7 +229,7 @@ if(isset($_GET["rbdColegio"]) && isset($_GET["idNivel"]) && isset($_GET["anoCurs
 
     
 
-	<?php 
+	<? 
     	
 		require("pie.php");
 		

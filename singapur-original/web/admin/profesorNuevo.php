@@ -1,4 +1,4 @@
-<?php
+<?
 
 require("inc/config.php");
 //require "inc/funcionesAdmin.php";
@@ -90,7 +90,7 @@ function Valida_Rut( Objeto )
 
 
 function cancelar(){
-	if(confirm("Cancelar esta operación?")){ location.href="escuelaDetalle.php?rbdColegio=<?php echo $rbdColegio;?>"; }  
+	if(confirm("Cancelar esta operación?")){ location.href="escuelaDetalle.php?rbdColegio=<? echo $rbdColegio;?>"; }  
 }
 
 function valida_rut(rut){
@@ -131,11 +131,11 @@ function save_profesor(){
 			</tr> 
 			<input type="hidden" class="campos" name="modo" id="modo" value="">  
          
-            <input type="hidden" class="campos" name="rbdColegio" id="rbdColegio" value="<?php echo $rbdColegio; ?>">
+            <input type="hidden" class="campos" name="rbdColegio" id="rbdColegio" value="<? echo $rbdColegio; ?>">
             <input type="hidden" class="campos" name="tipoUsuario" id="tipoUsuario" value="Profesor">
 			 <tr>
 				<th align="right">Colegio</th> 
-				<td><input type="text" name="rbdColegio" size="70" class="campos" id="rbdColegio" disabled="disabled" value="<?php echo $rbdColegio;?>">
+				<td><input type="text" name="rbdColegio" size="70" class="campos" id="rbdColegio" disabled="disabled" value="<? echo $rbdColegio;?>">
 				</td>
 			</tr>   
             <tr>

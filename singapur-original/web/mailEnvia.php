@@ -1,4 +1,4 @@
-<?php
+<?
 require ("hd.php");
 require("inc/incluidos.php");
 

@@ -1,4 +1,4 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 require ("hd.php");
 
@@ -81,10 +81,10 @@ function muestraCurso(rbdColegio,idNivel,anoCursoColegio,letraCursoColegio,escal
 
 
 <div id="principal">
-<?php require("topMenu.php"); ?>
+<? require("topMenu.php"); ?>
 	
     <div id="lateralIzq">
-    <?php 
+    <? 
 		require("caja_misCursos.php");
         require("caja_glosarioPalabra.php");
        require("caja_participantes.php");
@@ -97,7 +97,7 @@ function muestraCurso(rbdColegio,idNivel,anoCursoColegio,letraCursoColegio,escal
     
     <div id="lateralDer">
   
-		<?php 
+		<? 
         require("caja_bienvenida.php");
         require("caja_calendario.php");
         ?>
@@ -129,7 +129,7 @@ En el siguiente listado usted encontrará los cursos que tiene asignados en el Si
   </tr>
   </thead>
   <tbody> 
-  <?php 
+  <? 
   
   $cursos = getCursosProfesor($datosUsuario["rutProfesor"]);
  
@@ -141,20 +141,20 @@ $nombre = getNombreProfesor($datosUsuario["rutProfesor"]);
 
 	  ?>
               <tr onMouseOver="this.className='normalActive'" onMouseOut="this.className='normal'" class="normal">
-                <td><?php echo $curso["nombreNivel"]." ".$curso["letraCursoColegio"];?></td>
-                <td><?php echo $curso["anoCursoColegio"];?></td>
-                <td><?php echo $nombre;?> </td>
-                  <td><?php cuentaAlumnosCurso($curso["letraCursoColegio"],$curso["anoCursoColegio"],$curso["rbdColegio"],$curso["idNivel"]);?> </td>
+                <td><? echo $curso["nombreNivel"]." ".$curso["letraCursoColegio"];?></td>
+                <td><? echo $curso["anoCursoColegio"];?></td>
+                <td><? echo $nombre;?> </td>
+                  <td><? cuentaAlumnosCurso($curso["letraCursoColegio"],$curso["anoCursoColegio"],$curso["rbdColegio"],$curso["idNivel"]);?> </td>
                 
   <td>
-  <?php 
+  <? 
   $i=0;
   foreach ($pruebas as $idLista){
 	  $i++;
 	 // echo $idLista."<-";
 	  ?>
-  <a href="javascript:muestraCurso(<?php echo $curso["rbdColegio"];?>,<?php echo $curso["idNivel"];?>,<?php echo $curso["anoCursoColegio"];?>,'<?php echo $curso["letraCursoColegio"];?>',<?php echo $escala.",'".$curso["nombreNivel"]."',".$idLista; ?>)"><img border="0" src="img/ver.gif" width="14" height="14" alt="Ver más" title="Ver más" /> Prueba <?php echo $i;?></a>
-  <?php } ?>
+  <a href="javascript:muestraCurso(<? echo $curso["rbdColegio"];?>,<? echo $curso["idNivel"];?>,<? echo $curso["anoCursoColegio"];?>,'<? echo $curso["letraCursoColegio"];?>',<? echo $escala.",'".$curso["nombreNivel"]."',".$idLista; ?>)"><img border="0" src="img/ver.gif" width="14" height="14" alt="Ver más" title="Ver más" /> Prueba <? echo $i;?></a>
+  <? } ?>
   
   </td>
                
@@ -163,7 +163,7 @@ $nombre = getNombreProfesor($datosUsuario["rutProfesor"]);
                 </a>
                
               </tr>
-<?php 		}
+<? 		}
  }else{ 
 	 echo "<tr><td colspan='5'>No existen Cursos asociados a este profesor</td></tr>"; 
   
@@ -177,24 +177,24 @@ $nombre = getNombreProfesor($datosUsuario["rutProfesor"]);
            
   <div id="lugarCarga"></div>          
       
-  <?php
+  <?
 if(@$_SESSION["sesionRbdColegio"] != ""){?>
 	<script>
 
 	
 	
-	muestraCurso(<?php echo $_SESSION["sesionRbdColegio"];?>,<?php echo $_SESSION["sesionIdNivel"];?>,<?php echo $_SESSION["sesionAnoCursoColegio"];?>,'<?php echo $_SESSION["sesionLetraCursoColegio"];?>',<?php echo $escala.","."'".$_SESSION["sesionNombreNivel"]."'"; ?>);
+	muestraCurso(<? echo $_SESSION["sesionRbdColegio"];?>,<? echo $_SESSION["sesionIdNivel"];?>,<? echo $_SESSION["sesionAnoCursoColegio"];?>,'<? echo $_SESSION["sesionLetraCursoColegio"];?>',<? echo $escala.","."'".$_SESSION["sesionNombreNivel"]."'"; ?>);
 
 		
 	</script>
-	<?php
+	<?
 	}
 ?>      
         
 			
     </div> <!--columnaCentro-->
 
-	<?php 
+	<? 
     	
 		require("pie.php");
 		

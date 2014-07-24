@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 function getNombrePerfil ($idPerfil){
 	$sql = " SELECT * FROM `perfil` WHERE idPerfil = ".$idPerfil;

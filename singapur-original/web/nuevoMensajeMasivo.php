@@ -1,4 +1,4 @@
-<?php
+<?
 session_start();
 include "inc/conecta.php";
 include "inc/funciones.php";
@@ -45,12 +45,12 @@ if(@$_REQUEST["idUsuarioDestino"] != ""){
 
     <p>
         <br />
-        <input type="hidden" name="para_id" class="campos" id="para_id" value="<?php echo @$idPara; ?>">
-        <input type="hidden" name="respuesta" class="campos" id="respuesta" value="<?php echo @$respuesta; ?>">
+        <input type="hidden" name="para_id" class="campos" id="para_id" value="<? echo @$idPara; ?>">
+        <input type="hidden" name="respuesta" class="campos" id="respuesta" value="<? echo @$respuesta; ?>">
         
         <!--<input type="button" onclick="javascript:participantes();" value="Grupos de contactos">-->
     </p>
-    <?php 
+    <? 
     boton("Enviar","enviarMsj()");
     ?><br /><br />
 
@@ -64,7 +64,7 @@ if(@$_REQUEST["idUsuarioDestino"] != ""){
     <br />
     
     <input type="text" name="asunto" size="40" id="asunto" class="campos" 
-    value="<?php 
+    value="<? 
     if(@$asunto != "") echo "Re: ".@$asunto; ?>"/>
     
     <br /> 

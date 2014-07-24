@@ -1,4 +1,4 @@
-<?php
+<?
 //============================================================+
 // File name   : makefont.php
 // Begin       : 2004-12-31
@@ -105,7 +105,7 @@ function MakeFont($fontfile, $fmfile, $embedded=true, $enc='cp1252', $patch=arra
 		$fd = MakeFontDescriptor($fm, false);
 	}
 	//Start generation
-	$s = '<?php'."\n";
+	$s = '<?'."\n";
 	$s .= '$type=\''.$type."';\n";
 	$s .= '$name=\''.$fm['FontName']."';\n";
 	$s .= '$desc='.$fd.";\n";

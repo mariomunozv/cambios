@@ -1,4 +1,4 @@
-<?php
+<?
 require("inc/incluidos.php");
 require ("hd.php");
 require_once 'models/PautaObservacion/PautaObservacion.php';
@@ -9,7 +9,7 @@ require_once 'models/PautaObservacion/PautaObservacion.php';
 <body>
 <div id="principal">
 
-<?php require("topMenu.php");
+<? require("topMenu.php");
 $navegacion = "Home*mural.php?idCurso=$idCurso,Informes*#";
 require("_navegacion.php");
 
@@ -23,11 +23,11 @@ if ($perfil == 3 || $perfil == 4) {
 ?>
 
   <div id="lateralIzq">
-      <?php require("menuleft.php");	?>
+      <? require("menuleft.php");	?>
     </div> <!--lateralIzq-->
 
     <div id="lateralDer">
-    <?php require("menuright.php"); ?>
+    <? require("menuright.php"); ?>
     </div><!--lateralDer-->
 
   <div id="columnaCentro">
@@ -45,7 +45,7 @@ if ($perfil == 3 || $perfil == 4) {
             </div>
 
             <div class="container" >
-<?php
+<?
 
 $rut = null;
 if ($tipoUsuario == 'UTP') {
@@ -63,18 +63,18 @@ if ( empty($rutProfesores) ) {
                     <label class="control-label" for="inputProfesor">Profesor</label>
                     <div class="controls">
                       <select class="input-xlarge async" name="profesores" id="profesores" data-placeholder="Seleccione Rut">
-                        <?php foreach ($rutProfesores as $key => $data) {?>
-                          <option value="<?php echo $data["rutProfesor"]?>" ><?php echo utf8_decode( $data["nombreProfesor"]) ?></option>
-                        <?php}?>
+                        <? foreach ($rutProfesores as $key => $data) {?>
+                          <option value="<? echo $data["rutProfesor"]?>" ><? echo utf8_decode( $data["nombreProfesor"]) ?></option>
+                        <?}?>
                       </select>
                     </div>
                   </div>
 
                   <div class="control-group">
                     <div class="controls">
-                     <?php if ($tipoUsuario != 'UTP') { ?>
+                     <? if ($tipoUsuario != 'UTP') { ?>
                       <a href="#" id='cambiaVisibilidad' class="btn btn-info" style="color:white">Cambiar Visibilidad</a>
-                     <?php } ?>
+                     <? } ?>
 
                       <button type="submit" class="btn btn btn-success">Descargar Informe</button>
                     </div>
@@ -107,7 +107,7 @@ if ( empty($rutProfesores) ) {
                     </div>
                     </form>
                   </div>
-<?php
+<?
 }
 ?>
             <br><br>
@@ -126,7 +126,7 @@ if ( empty($rutProfesores) ) {
 
     </div> <!--columnaCentro-->
 
-<?php
+<?
 
 require("pie.php");
 
@@ -140,7 +140,7 @@ require("pie.php");
 $(document).ready(function() {
   var profesores = $("#profesores").select2();
   var table = $("#detallePauta");
-  var tipoUsuario = '<?php echo $tipoUsuario ?>';
+  var tipoUsuario = '<? echo $tipoUsuario ?>';
 
   $("#cambiaVisibilidad").click(function() {
     $.ajax({

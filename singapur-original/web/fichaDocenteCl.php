@@ -1,4 +1,4 @@
-<?php 
+<? 
 ini_set("display_errors","on");
 require("inc/incluidos.php");
 require ("hd.php");
@@ -46,7 +46,7 @@ function editaPerfil()
 <meta charset="iso-8859-1"/>    
 <body>
 <div id="principal">
-<?php 
+<? 
 	require("topMenu.php"); 
 	$navegacion = "Home*curso.php?idCurso=$idCurso,Ficha Docente*#";	
 	require("_navegacion.php");
@@ -56,7 +56,7 @@ function editaPerfil()
 	<div>
 <div align="center">
 <br/>
-<p align="right" style="width:800px"><button name="pdf" id="pdf" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  onclick="creaPDF(<?php echo $idUsuario; ?>)"><span class="ui-button-text">Exportar a PDF</span></button> &nbsp; <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  onclick="editaPerfil()"><span class="ui-button-text">Editar Perfil</span></button></p>
+<p align="right" style="width:800px"><button name="pdf" id="pdf" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  onclick="creaPDF(<? echo $idUsuario; ?>)"><span class="ui-button-text">Exportar a PDF</span></button> &nbsp; <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  onclick="editaPerfil()"><span class="ui-button-text">Editar Perfil</span></button></p>
 <table border="0" class="tablesorter" style="width:800px;" id="tbGeneral">
 	<tr>
     	<th colspan="4" align="center"><h1>Ficha Docente</h1></th>
@@ -64,121 +64,121 @@ function editaPerfil()
 	<tr> 
     	<th width="20%">Actualizar Imagen:</th>
 	    <td align="center" colspan="3">
-	    <img src="<?php echo "subir/fotos_perfil/orig_".$_SESSION["sesionImagenUsuario"]; ?>"  border="1" onerror="this.src='img/nophoto.jpg'" width="250px"/><br/><br/>
+	    <img src="<? echo "subir/fotos_perfil/orig_".$_SESSION["sesionImagenUsuario"]; ?>"  border="1" onerror="this.src='img/nophoto.jpg'" width="250px"/><br/><br/>
 		</td>
  	</tr>
 	<tr>
         <th>Nombre:</th>
-        <td colspan="3"><label><?php echo $datos["nombreProfesor"]; ?></label></td>  
+        <td colspan="3"><label><? echo $datos["nombreProfesor"]; ?></label></td>  
 	</tr>
 	<tr>
         <th> Apellido Paterno:</th>
-        <td colspan="3"><label><?php echo $datos["apellidoPaternoProfesor"];?></label></td>
+        <td colspan="3"><label><? echo $datos["apellidoPaternoProfesor"];?></label></td>
 	</tr>
 	<tr>
         <th>Apellido Materno:</th>
-        <td colspan="3"><label><?php echo $datos["apellidoMaternoProfesor"]; ?></label></td>
+        <td colspan="3"><label><? echo $datos["apellidoMaternoProfesor"]; ?></label></td>
 	</tr>
 	<tr>
 		<th align="left">Nombre del establecimiento:</th>
-		<td style="vertical-align:middle" width="30%"><label><?php echo $datosColegio["nombreColegio"];?></label></td>
+		<td style="vertical-align:middle" width="30%"><label><? echo $datosColegio["nombreColegio"];?></label></td>
         <th>RBD:</th>
-        <td style="vertical-align:middle"><label><?php echo $datos["rbdColegio"]; ?></label></td>
+        <td style="vertical-align:middle"><label><? echo $datos["rbdColegio"]; ?></label></td>
 	</tr>
   	<tr>
 		<th>Region/Departamento: </th>
-        <td colspan="3"><label><?php echo $region; ?></label></td>
+        <td colspan="3"><label><? echo $region; ?></label></td>
 	</tr>
   	<tr>
       	<th>Comuna/Ciudad: </th>
-		<td colspan="3"><label><?php echo $datosColegio["nombreComuna"]; ?></label></td>
+		<td colspan="3"><label><? echo $datosColegio["nombreComuna"]; ?></label></td>
 	</tr>
 	<tr>
     	<th>Acerca de mi:</th>
-	    <td colspan="3" style="vertical-align:middle"><label style="border:thin"><?php echo $datos["acercaDeUsuario"]?></label></td>
+	    <td colspan="3" style="vertical-align:middle"><label style="border:thin"><? echo $datos["acercaDeUsuario"]?></label></td>
  	</tr>
 	<tr>
     	<th>Rut/C&eacute;dula:</th>
 	    <td colspan="3">
-	      <label><?php echo $datos["rutProfesor"]; ?></label>
+	      <label><? echo $datos["rutProfesor"]; ?></label>
 		</td>
 	</tr>
 	<tr>
     	<th>Fecha de Nacimiento:</th>
 	    <td colspan="3" style="vertical-align:middle">
-        	<label><?php echo $datos["fechaNacimientoProfesor"]?></label>
+        	<label><? echo $datos["fechaNacimientoProfesor"]?></label>
 		</td>
 	</tr>
 	<tr>
     	<th>Correo Electrónico:</th>
-	    <td colspan="3"><label><?php echo $datos["emailProfesor"]?></label></td>
+	    <td colspan="3"><label><? echo $datos["emailProfesor"]?></label></td>
   	</tr>
 	<tr>
     	<th align="left">Teléfono del Establecimiento:</th>
-	    <td style="vertical-align:middle"><label><?php echo $datosColegio["telefonoColegio"]?></label></td>
+	    <td style="vertical-align:middle"><label><? echo $datosColegio["telefonoColegio"]?></label></td>
         <th width="15%">Teléfono Móvil</th>
-		<td style="vertical-align:middle"><label><?php echo $datos["telefonoProfesor"]?></label></td>
+		<td style="vertical-align:middle"><label><? echo $datos["telefonoProfesor"]?></label></td>
 	</tr>
 	<tr>
     	<th>Años de Docencia</th>
-	    <td colspan="3"><label><?php echo @$datos["anosExperienciaProfesor"]; ?></label></td>
+	    <td colspan="3"><label><? echo @$datos["anosExperienciaProfesor"]; ?></label></td>
 	</tr>
 	<tr>
     	<th align="left">Años de Docencia en Establecimiento actual:</th>
-	    <td style="vertical-align:middle" colspan="3"><label><?php echo @$datos["anosExperienciaEnColegio"]?></label></td>
+	    <td style="vertical-align:middle" colspan="3"><label><? echo @$datos["anosExperienciaEnColegio"]?></label></td>
 	</tr>
 	<tr>
     	<th align="left">Curso(s) en que hace clases de matemática durante el 2013:</th>
         <td colspan="3" style="vertical-align:middle">
-        <label><?php echo $cursos;?></label>
+        <label><? echo $cursos;?></label>
 	</tr>
 	<tr>
     	<th align="left">Realiza labores de apoyo Técnico en el establecimiento:</th>
         <td colspan="3" style="vertical-align:middle">
-	        <label><?php echo $datos['apoyoTecnico']; ?></label>
+	        <label><? echo $datos['apoyoTecnico']; ?></label>
          </td>
 	</tr>
 	<tr>
     	<th>Indique qué título posee:</th>
         <td colspan="3" style="vertical-align:middle">
-	        <label><?php echo $datos['titulo']; ?></label>
+	        <label><? echo $datos['titulo']; ?></label>
         </td>
 	</tr>
 	<tr>
         <th align="left">¿Tiene especialización en matemáticas?:</th>
         <td colspan="3" style="vertical-align:middle">
-        	<label><?php echo $especializacion ?></label>
+        	<label><? echo $especializacion ?></label>
         </td>
 	</tr>
 	<tr>
         <th align="left">¿Cómo obtuvo la especialización?:</th>
         <td colspan="3" style="vertical-align:middle">
-	        <label><?php echo $datos['obtEspecializacion']; ?></label>
+	        <label><? echo $datos['obtEspecializacion']; ?></label>
         </td>
 	</tr>
 	<tr>
         <th align="left">¿En qué institución obtuvo la especialización?:</th>
         <td colspan="3" style="vertical-align:middle">
-	        <label><?php echo $datos['uEspecialiazcion']; ?></label>
+	        <label><? echo $datos['uEspecialiazcion']; ?></label>
         </td>
 	</tr>
 	<tr>
         <th align="left">¿Indique otro perfeccionamiento que posea a nivel de Postítulo o Postgrado:</th>
         <td colspan="3" style="vertical-align:middle">
-	        <label><?php echo $datos['otroPerfeccionamiento']; ?></label>
+	        <label><? echo $datos['otroPerfeccionamiento']; ?></label>
         </td>
 	</tr>
 	<tr>
     	<th align="left">¿Cuánto tiempo ha trabajado con los textos del Método Singapur Implementando en aula la propuesta?</th>
         <td colspan="3">
-			<label><?php echo $xpSingapur; ?></label>
+			<label><? echo $xpSingapur; ?></label>
         </td>
 	</tr>
     
     <tr id="trDesplegable">
     	<th>¿En qué Nivel(es)?:</th>
         <td colspan="3">
-			<label><?php echo $niveles ?></label>
+			<label><? echo $niveles ?></label>
 		</td>
 	</tr>
     <tr>
@@ -187,25 +187,25 @@ function editaPerfil()
 	<tr>
 	    <th>Indique curso en el cual se capacita actualmente:</th>
         <td colspan="3">
-	        <label><?php echo $datos['cursoCapacitacion']; ?></label>
+	        <label><? echo $datos['cursoCapacitacion']; ?></label>
 		</td>
     </tr>
     <tr>
 	    <th align="left">Indique curso(s) en que implementará en aula la propuesta del Método Singapur en el 2013:</th>
         <td colspan="3">
-	        <label><?php echo $datos['cursosImplementa']; ?></label>
+	        <label><? echo $datos['cursosImplementa']; ?></label>
 		</td>
     </tr>
 	<tr>
 	    <th align="left">¿Cuánto tiempo se ha capacitado en el Método Singapur con el Centro Felix Klein?:</th>
         <td colspan="3">
-	        <label><?php echo $datos['tiempoCapacitando']; ?></label>
+	        <label><? echo $datos['tiempoCapacitando']; ?></label>
 		</td>
     </tr>
 	<tr>
 	    <th>¿En qué curso(s)?:</th>
         <td colspan="3">
-	        <label><?php echo $datos['cursosCapacitando']; ?></label>
+	        <label><? echo $datos['cursosCapacitando']; ?></label>
 		</td>
     </tr>
     <tr>
@@ -214,19 +214,19 @@ function editaPerfil()
     <tr>
 	    <th>¿Se ha capacitado en el Método Singapur con otra institución?:</th>
         <td colspan="3">
-	        <label><?php echo $datos['otroSingapur']; ?></label>
+	        <label><? echo $datos['otroSingapur']; ?></label>
 		</td>
     </tr>
     <tr>
 	    <th>Indique en qué institución:</th>
         <td colspan="3">
-	        <label><?php echo $datos['otraInsSingapur']; ?></label>
+	        <label><? echo $datos['otraInsSingapur']; ?></label>
 		</td>
     </tr>
     <tr>
 	    <th align="left">Indique el tipo de capacitación recibida:</th>
         <td colspan="3">
-	        <label><?php echo $datos['otroTipoCapacitacion']; ?></label>
+	        <label><? echo $datos['otroTipoCapacitacion']; ?></label>
 		</td>
     </tr>
 </table>

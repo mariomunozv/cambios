@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 /* Devuelve el idPerfil de un usuario */	
 function getIdPerfilUsuario($idUsuario){

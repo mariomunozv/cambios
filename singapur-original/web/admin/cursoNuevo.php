@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set('display_errors','On');
 require("inc/config.php");
 require("inc/funcionesAdmin.php");
@@ -15,7 +15,7 @@ $niveles = getNiveles();
 <script language="javascript">
 
 function cancelar(){
-	if(confirm("Cancelar esta operación?")){ location.href="escuelaDetalle.php?rbdColegio=<?php echo $rbdColegio;?>"; }  
+	if(confirm("Cancelar esta operación?")){ location.href="escuelaDetalle.php?rbdColegio=<? echo $rbdColegio;?>"; }  
 }
 function save_curso(){
 	
@@ -52,16 +52,16 @@ function save_curso(){
 			<input type="hidden" class="campos" name="modo" id="modo" value="nuevo">  
 			 <tr>
 				<th align="right">Colegio</th> 
-				<td><input type="text" name="rbdColegio" size="70" value="<?php echo $rbdColegio;?>" class="campos" id="rbdColegio">
+				<td><input type="text" name="rbdColegio" size="70" value="<? echo $rbdColegio;?>" class="campos" id="rbdColegio">
 				</td>
 			</tr>   
              <tr>
 				<th align="right">Nivel</th> 
 				<td><select class="campos" id="idNivel" name="idNivel">
-                <?php foreach ($niveles as $nivel){ ?> 
-				<option value="<?php echo $nivel["idNivel"];?>"><?php echo $nivel["nombreNivel"];?></option>
+                <? foreach ($niveles as $nivel){ ?> 
+				<option value="<? echo $nivel["idNivel"];?>"><? echo $nivel["nombreNivel"];?></option>
 				
-				<?php }?>
+				<? }?>
 				</select></td>
 			</tr>   
             <tr>
@@ -77,10 +77,10 @@ function save_curso(){
 		<tr>
 				<th align="right">Profesor</th> 
 				<td><select class="campos" id="rutProfesor" name="rutProfesor">
-                <?php foreach ($profesores as $profesor){ ?> 
-				<option value="<?php echo $profesor["rutProfesor"];?>"><?php echo $profesor["nombreProfesor"]." ".$profesor["apellidoPaternoProfesor"];?></option>
+                <? foreach ($profesores as $profesor){ ?> 
+				<option value="<? echo $profesor["rutProfesor"];?>"><? echo $profesor["nombreProfesor"]." ".$profesor["apellidoPaternoProfesor"];?></option>
 				
-				<?php }?>
+				<? }?>
 				</select></td>
 			</tr>  
              

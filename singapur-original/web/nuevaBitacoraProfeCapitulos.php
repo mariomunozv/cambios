@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set("display_errors","on");
 include "inc/conecta.php";
 include("inc/_seccionBitacora.php");

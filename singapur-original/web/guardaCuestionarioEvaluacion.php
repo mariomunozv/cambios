@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set("Display_Errors","On");
 require("inc/incluidos.php");
 require("hd.php");

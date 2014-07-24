@@ -1,4 +1,4 @@
-<?php
+<?
 session_start();
 //include "inc/conecta.php";
 require("inc/incluidos.php");
@@ -23,7 +23,7 @@ $(function() {
 
 </script>
 
-<?php
+<?
 
 echo("Agrega destinatarios haciendo clic en los íconos de la derecha.");
 ?>
@@ -37,7 +37,7 @@ echo("Agrega destinatarios haciendo clic en los íconos de la derecha.");
     </tr>
   
 
-	<?php 
+	<? 
     $alumnosCurso = getAlumnosCurso($_SESSION["sesionIdCurso"]);
 	
     
@@ -63,11 +63,11 @@ echo("Agrega destinatarios haciendo clic en los íconos de la derecha.");
 		}
 
 		?>
-		<tr <?php echo $color;?>>
+		<tr <? echo $color;?>>
 			<td valign="center">
-				<?php echo $num;?>
+				<? echo $num;?>
 			</td>
-		<?php
+		<?
 		// Si no existen alumnos
 		if(empty($alumnosCurso[0])){
 			echo '<td colspan="6">No hay alumnos inscritos en el curso</td>';
@@ -76,27 +76,27 @@ echo("Agrega destinatarios haciendo clic en los íconos de la derecha.");
 			?>
 			<td valign="center">
 				<div align="left">
-					<strong><?php echo $value["nombreCompleto"]; ?></strong>
+					<strong><? echo $value["nombreCompleto"]; ?></strong>
 				</div>
 			</td>
 			
 			<td valign="center">
 				<div align="center">
-					<?php echo getNombrePerfil($value["idPerfil"]); ?>
+					<? echo getNombrePerfil($value["idPerfil"]); ?>
 				</div>
 			</td>
 			
 			<td>
 				<div align="center">
 					<img src="img/mail.png" width="16" height="16" style="cursor:pointer" 
-					onclick="nuevoMensaje(<?php echo $value["idUsuario"];?>)" title="Agregar Destinatario"/>
+					onclick="nuevoMensaje(<? echo $value["idUsuario"];?>)" title="Agregar Destinatario"/>
 				</div>
 			</td>
 			
 			
 		</tr>
 		
-	<?php 	
+	<? 	
 		} // else (existen alumnos)
 		
 	} //foreach

@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 require("inc/config.php");
 
@@ -30,7 +30,7 @@ class_activo('boton_publicacion','activo');
 
 <a class="button" href="javascript:new_cursoCapacitacion();">
 	<span>
-		<?php echo "Nueva publicacion"; ?>
+		<? echo "Nueva publicacion"; ?>
     </span>
 </a>
 

@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 require("inc/config.php");
 
@@ -26,11 +26,11 @@ if($_REQUEST["modo"] == "rechazar"){
 <script language="javascript">
 function newCurso(){
 	var division = document.getElementById("lugar_de_cargaCurso");
-	AJAXPOST("cursoNuevo.php","rbdColegio=<?php echo $rbdColegio;?>",division);
+	AJAXPOST("cursoNuevo.php","rbdColegio=<? echo $rbdColegio;?>",division);
 } 
 function newProfesor(){
 	var division = document.getElementById("lugar_de_cargaProfesor");
-	AJAXPOST("profesorNuevo.php","rbdColegio=<?php echo $rbdColegio;?>",division);
+	AJAXPOST("profesorNuevo.php","rbdColegio=<? echo $rbdColegio;?>",division);
 
 } 
 
@@ -38,18 +38,18 @@ function newProfesor(){
 function mostrar_datosEscuela(){
 	var division = document.getElementById("datos_escuela");
 	
-	AJAXPOST("datosEscuela.php","rbdColegio=<?php echo $rbdColegio;?>",division);
+	AJAXPOST("datosEscuela.php","rbdColegio=<? echo $rbdColegio;?>",division);
 	
 } 
 
 function mostrar_cursosEscuela(){
 	var division = document.getElementById("listado_cursos");
-	AJAXPOST("cursoListado.php","rbdColegio=<?php echo $rbdColegio;?>",division);
+	AJAXPOST("cursoListado.php","rbdColegio=<? echo $rbdColegio;?>",division);
 	
 } 
 function mostrar_profesorEscuela(){
 	var division = document.getElementById("listado_profesor");
-	AJAXPOST("profesorListado.php","rbdColegio=<?php echo $rbdColegio;?>",division);
+	AJAXPOST("profesorListado.php","rbdColegio=<? echo $rbdColegio;?>",division);
 	
 } 
 
@@ -66,11 +66,11 @@ function mostrar_profesorEscuela(){
 <div id="lugar_de_cargaCurso"></div>  
 <h2>Cursos</h2>
 <div id="datos_escuela"></div>  
-<a class="button" href="javascript:newCurso();"><span><div class="add"><?php echo "Nuevo Curso"; ?></div></span></a><br /><br />
+<a class="button" href="javascript:newCurso();"><span><div class="add"><? echo "Nuevo Curso"; ?></div></span></a><br /><br />
 <div id="listado_cursos"></div>  
 <div id="lugar_de_cargaProfesor"></div>  
 <h2>Profesores</h2>
-<a class="button" href="javascript:newProfesor();"><span><div class="add"><?php echo "Nuevo profesor"; ?></div></span></a><br /><br />
+<a class="button" href="javascript:newProfesor();"><span><div class="add"><? echo "Nuevo profesor"; ?></div></span></a><br /><br />
 <div id="listado_profesor"></div> 
 
 
@@ -82,4 +82,4 @@ function mostrar_profesorEscuela(){
 	mostrar_cursosEscuela();
 	mostrar_profesorEscuela();
 </script>         
-<?php require("_pie.php"); ?>
+<? require("_pie.php"); ?>

@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set("display_errors","on");
 require("inc/config.php");
 //require("inc/sesionAdmin.php");

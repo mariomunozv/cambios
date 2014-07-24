@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 require("inc/incluidos.php");
 require ("hd.php");
@@ -32,21 +32,21 @@ $datos = getDatosGenerico($idUsuario);
     
 <body>
 <div id="principal">
-<?php require("topMenu.php"); ?>
+<? require("topMenu.php"); ?>
 	
     <div id="lateralIzq">
-    <?php require("menuleft.php");	?>
+    <? require("menuleft.php");	?>
     </div> <!--lateralIzq-->
     
     
     
 	<div id="lateralDer">
-    <?php require("menuright.php");	?>
+    <? require("menuright.php");	?>
     </div><!--lateralDer-->
     
 	<div id="columnaCentro">
      
-		<p class="titulo_curso"><?php echo $_SESSION["sesionNombreUsuario"]; ?></p>
+		<p class="titulo_curso"><? echo $_SESSION["sesionNombreUsuario"]; ?></p>
         <hr />
         <br />
 
@@ -56,7 +56,7 @@ $datos = getDatosGenerico($idUsuario);
 <table width="400" border="0" class="tablesorter">
   <tr> 
     <td colspan="2">
-    <img src="<?php echo "subir/fotos_perfil/orig_".$_SESSION["sesionImagenUsuario"]; ?>"   />
+    <img src="<? echo "subir/fotos_perfil/orig_".$_SESSION["sesionImagenUsuario"]; ?>"   />
     </td>
     
   </tr>
@@ -69,12 +69,12 @@ $datos = getDatosGenerico($idUsuario);
   <tr>
     <th>Rut :</th>
     <td>
-      <input name="rut" type="hidden" value="<?php echo $datos["rut"]; ?>" />
-      <?php echo $datos["rut"]; ?>   </td>
+      <input name="rut" type="hidden" value="<? echo $datos["rut"]; ?>" />
+      <? echo $datos["rut"]; ?>   </td>
   </tr>
   <tr>
     <th>Usuario :</th>
-    <td><?php echo $datos["loginUsuario"]; ?></td>
+    <td><? echo $datos["loginUsuario"]; ?></td>
   </tr> 
   
   <tr>
@@ -85,72 +85,72 @@ $datos = getDatosGenerico($idUsuario);
 
   <tr>
     <th>&Uacute;ltimo acceso:</th>
-    <td><?php echo fechaConFormato($datos["ultimoAccesoUsuario"]); ?></td>
+    <td><? echo fechaConFormato($datos["ultimoAccesoUsuario"]); ?></td>
   </tr>
 
   <tr>
     <th>Nombre :</th>
-    <td><input type="text" name="nombre" id="nombre" value="<?php echo $datos["nombre"]; ?>"/></td>
+    <td><input type="text" name="nombre" id="nombre" value="<? echo $datos["nombre"]; ?>"/></td>
   </tr>
   
   <tr>
     <th> Apellido Paterno :</th>
-    <td><input type="text" name="apellidoPaterno" id="apellidoPaterno" value="<?php echo $datos["apellidoPaterno"];?>"/></td>
+    <td><input type="text" name="apellidoPaterno" id="apellidoPaterno" value="<? echo $datos["apellidoPaterno"];?>"/></td>
   </tr>
   <tr>
     <th>Apellido Materno :</th>
-    <td><input type="text" name="apellidoMaterno" id="apellidoMaterno" value="<?php echo $datos["apellidoMaterno"]; ?>"/></td>
+    <td><input type="text" name="apellidoMaterno" id="apellidoMaterno" value="<? echo $datos["apellidoMaterno"]; ?>"/></td>
   </tr>
   <tr>
     <th>Sexo :</th>
     <td>
-          <input type="radio" name="sexo" value="M" id="M" <?php  if ($datos["sexo"] == "M") echo 'checked="checked"' ?>/>
+          <input type="radio" name="sexo" value="M" id="M" <?  if ($datos["sexo"] == "M") echo 'checked="checked"' ?>/>
           M
-          <input type="radio" name="sexo" value="F" id="F" <?php  if ($datos["sexo"] == "F") echo 'checked="checked"' ?>/>
+          <input type="radio" name="sexo" value="F" id="F" <?  if ($datos["sexo"] == "F") echo 'checked="checked"' ?>/>
           F	</td>
   </tr>
   <tr>
     <th>Fecha de Nacimiento:<br>Actualizar:</th>
-    <td><?php echo $datos["fechaNacimiento"]?><br>
+    <td><? echo $datos["fechaNacimiento"]?><br>
       <input size="10" type="text" name="fechaNacimiento" id="datepicker" />
-      <input name="fechaNacimiento_h" type="hidden" value="<?php echo $datos["fechaNacimiento"]?>" /></td>
+      <input name="fechaNacimiento_h" type="hidden" value="<? echo $datos["fechaNacimiento"]?>" /></td>
   </tr>
   <tr>
     <th>Tel&eacute;fono :</th>
-    <td><input size="10" type="text" name="telefono" id="telefono" value="<?php echo $datos["telefono"]?>"/></td>
+    <td><input size="10" type="text" name="telefono" id="telefono" value="<? echo $datos["telefono"]?>"/></td>
   </tr>
   <tr>
     <th>Email :</th>
-    <td><input size="30" type="text" name="email" id="email" value="<?php echo $datos["email"]?>"/></td>
+    <td><input size="30" type="text" name="email" id="email" value="<? echo $datos["email"]?>"/></td>
   </tr>
   <tr>
     <th>Acerca de mi :</th>
-    <td><textarea name="acercaDeUsuario" cols="50" rows="5"><?php echo $datos["acercaDeUsuario"]?></textarea></td>
+    <td><textarea name="acercaDeUsuario" cols="50" rows="5"><? echo $datos["acercaDeUsuario"]?></textarea></td>
   </tr>
   <tr>
     <th>Mis intereses :</th>
-    <td><textarea name="interesesUsuario" cols="50" rows="5"><?php echo $datos["interesesUsuario"]?></textarea></td>
+    <td><textarea name="interesesUsuario" cols="50" rows="5"><? echo $datos["interesesUsuario"]?></textarea></td>
   </tr>
   
-  <?php 
+  <? 
   if ($_SESSION["sesionPerfilUsuario"] < 3){
   
   ?>
   
   <tr>
     <th>A&ntilde;os de experiencia docente:</th>
-    <td><input type="text" size="3" name="experiencia" id="experiencia" value="<?php echo @$datos["anosExperiencia"]?>"/></td>
+    <td><input type="text" size="3" name="experiencia" id="experiencia" value="<? echo @$datos["anosExperiencia"]?>"/></td>
   </tr>
   <tr>
     <th>Asignatura a Cargo :</th>
-    <td><input type="text" name="asignaturaACargo" id="asignaturaACargo" value="<?php echo @$datos["asignaturaACargo"]?>"/></td>
+    <td><input type="text" name="asignaturaACargo" id="asignaturaACargo" value="<? echo @$datos["asignaturaACargo"]?>"/></td>
   </tr>
   <!--<tr>
     <th>Coordinador de Enlace:</th>
-    <td>--><input type="hidden" name="coordinadorEnlace" id="coordinadorEnlace" value="0" <?php  /*if ($datos["coordinadorEnlaceProfesor"] == 1) echo 'checked="checked"'*/ ?> /><!--</td>
+    <td>--><input type="hidden" name="coordinadorEnlace" id="coordinadorEnlace" value="0" <?  /*if ($datos["coordinadorEnlaceProfesor"] == 1) echo 'checked="checked"'*/ ?> /><!--</td>
   </tr>-->
   
-  <?php 
+  <? 
   }
   ?>
   
@@ -166,7 +166,7 @@ $datos = getDatosGenerico($idUsuario);
 	
     </div> <!--columnaCentro-->
 
-     <?php 
+     <? 
     	
 		require("pie.php");
 		

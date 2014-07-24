@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 function getNombreCortoCurso($idCurso){
 	$sql = "SELECT nombreCortoCursoCapacitacion FROM `cursoCapacitacion` WHERE idCursoCapacitacion =".$idCurso;

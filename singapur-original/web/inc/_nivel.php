@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 function getNiveles(){
 	$sql = "SELECT * FROM nivel";

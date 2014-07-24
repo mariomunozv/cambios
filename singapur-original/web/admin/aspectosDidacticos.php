@@ -1,4 +1,4 @@
-<?php 
+<? 
 require("inc/config.php");
 require("_head.php");
 $menu = "asp";
@@ -30,13 +30,13 @@ function new_(pagina){
     <h3>Tareas matemáticas</h3>
 	 <a class="button" href="javascript:new_('tareaMatematicaNuevo.php');">
     	<span>
-        	<div class="add"><?php echo "Nueva tarea"; ?></div>
+        	<div class="add"><? echo "Nueva tarea"; ?></div>
         </span>
 	</a>
     
     <a class="button" href="javascript:new_('tareaMatematicaListado.php');">
         <span>
-            <div class="add"><?php echo "Ver tareas"; ?></div>
+            <div class="add"><? echo "Ver tareas"; ?></div>
         </span>
     </a>
     <br /><br />
@@ -47,13 +47,13 @@ function new_(pagina){
     <h3>Variables didácticas</h3>
 	<a class="button" href="javascript:new_('variableDidacticaNuevo.php');">
     	<span>
-        	<div class="add"><?php echo "Nueva variable"; ?></div>
+        	<div class="add"><? echo "Nueva variable"; ?></div>
         </span>
 	</a>
     
     <a class="button" href="javascript:new_('variableDidacticaListado.php');">
         <span>
-            <div class="add"><?php echo "Ver variables"; ?></div>
+            <div class="add"><? echo "Ver variables"; ?></div>
         </span>
     </a>
     
@@ -64,4 +64,4 @@ function new_(pagina){
 </ul>
 
 </p>
-<?php require("_pie.php"); ?>
+<? require("_pie.php"); ?>

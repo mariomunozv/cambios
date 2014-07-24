@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 function getGlosarioLetra($letra){
 	$sql = "SELECT * FROM `palabra` WHERE `nombrePalabra` REGEXP '^$letra'";

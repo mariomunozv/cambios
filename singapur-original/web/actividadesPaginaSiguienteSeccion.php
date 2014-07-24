@@ -1,4 +1,4 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 
 include "inc/_actividad.php";

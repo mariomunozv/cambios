@@ -1,4 +1,4 @@
-<?php
+<?
 /**
  * HTML2PDF Librairy - example
  *
@@ -19,7 +19,7 @@
     <br>
     Normalement une alerte devrait apparaitre, indiquant "coucou"
 </page>
-<?php
+<?
     $content = ob_get_clean();
 
     // convert to PDF

@@ -1,5 +1,5 @@
-<?php require("inc/incluidos.php"); ?>
-<?php require ("hd.php");
+<? require("inc/incluidos.php"); ?>
+<? require ("hd.php");
 
 $idCurso = $_SESSION["sesionIdCurso"];
 ?>
@@ -27,7 +27,7 @@ $idCurso = $_SESSION["sesionIdCurso"];
 		}
 	
 $(function() {
-	<?php /* Asi inicializas tablesorter */ ?>	   
+	<? /* Asi inicializas tablesorter */ ?>	   
 	$("#tabla").tablesorter({ 
 		headers: {  
 			5: { sorter: false },
@@ -73,12 +73,12 @@ function muestraBitacorasUtp(){
 <body>
 
 <div id="principal">
-<?php require("topMenu.php"); ?>
+<? require("topMenu.php"); ?>
 	
     <div id="lateralIzq">
    
    
-	<?php 
+	<? 
 		require("caja_misCursos.php");
 		require("caja_glosarioPalabra.php");
 		require("caja_mensajes.php");
@@ -87,11 +87,11 @@ function muestraBitacorasUtp(){
     </div>
   
    <div id="lateralDer">
-    <?php 		require("caja_bienvenida.php"); ?>
+    <? 		require("caja_bienvenida.php"); ?>
 	<br>
 
 
-	<?php	require("caja_calendario.php");
+	<?	require("caja_calendario.php");
 	
 	?>
     
@@ -106,8 +106,8 @@ function muestraBitacorasUtp(){
     <br />
 
  <p>Seleccione el tipo de informe que desea presionando los botones que aparecen a continuación</p>
-<?php $idPerfil = $_SESSION["sesionPerfilUsuario"];  ?>
-<?php 
+<? $idPerfil = $_SESSION["sesionPerfilUsuario"];  ?>
+<? 
 
 echo "<br><br>";
 if($idPerfil >= 5){
@@ -125,9 +125,9 @@ $alumnosCurso = getAlumnosCurso($idCurso);
 <tr><th>Nombre Utp</th><th>Instancia</th><th>Ver</th></tr>
 <tr>
 	<td><select name="idUsuario" id="idUsuario" class="campos">
-    <?php foreach ($alumnosCurso as $alumno){?>
-    <option value="<?php echo $alumno["idUsuario"];?>"><?php echo $alumno["nombreCompleto"];?></option>
-    <?php }?>
+    <? foreach ($alumnosCurso as $alumno){?>
+    <option value="<? echo $alumno["idUsuario"];?>"><? echo $alumno["nombreCompleto"];?></option>
+    <? }?>
     </select></td>
     <td><select name="instancia" id="instancia" class="campos"><option value="utp1">Reuniones</option><option value="utp2">Acompañamiento</option></select></td>
     <td><a href="javascript:muestraBitacorasUtp()">Ver</a></td>
@@ -144,12 +144,12 @@ $alumnosCurso = getAlumnosCurso($idCurso);
       </div> 
     
      
-  </div>     <?php //  require("misCursos.php");?>
+  </div>     <? //  require("misCursos.php");?>
      
           
       
    
-<?php 
+<? 
     	
 		require("pie.php");
 		

@@ -1,4 +1,4 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 
 $idPerfil =  $_SESSION["sesionPerfilUsuario"];
@@ -58,20 +58,20 @@ $(document).ready(function(){
 
 <body>
 <div id="principal">
-<?php 
+<? 
 	require("topMenu.php"); 
 	
 	require("_navegacion.php");
 
 ?>
     <div id="lateralIzq">
-	    <?php require("menuleft.php");	?>
+	    <? require("menuleft.php");	?>
 	</div>
     
     
     
     <div id="lateralDer">
-	    <?php require("menuright.php");?>
+	    <? require("menuright.php");?>
     </div><!--lateralDer-->
     
     <div id="columnaCentro" >
@@ -79,7 +79,7 @@ $(document).ready(function(){
     <p class="titulo_curso">Profesores por Curso</p>
     <br>
      
-     <?php $cursosUsuario = getCursosUsuario($idUsuario);
+     <? $cursosUsuario = getCursosUsuario($idUsuario);
 
      	echo "Seleccione Curso:  ";
         echo "<select name='ddlmiscursos' id='ddlmiscursos'>";
@@ -101,14 +101,14 @@ $(document).ready(function(){
     </div> 
     
      
-       <?php //  require("misCursos.php");?>
+       <? //  require("misCursos.php");?>
      
        
 
    
     
               
-	<?php 
+	<? 
     
     	require("pie.php");
 

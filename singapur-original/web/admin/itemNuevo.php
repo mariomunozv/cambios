@@ -1,4 +1,4 @@
-<?php
+<?
 require("inc/config.php");
 include "../inc/_funciones.php";
 include "../inc/_seccionBitacora.php";
@@ -84,18 +84,18 @@ function cambiarTitulo(objeto){
             
             <tr>
 				<th align="right">Capitulo</th>
-                <?php
+                <?
                 $idVariableFija = estaFija("fijar_idCapitulo");
 				if ($idVariableFija != ""){
 				?>	
 					<script>
 					eligeSeccion();
 					</script>
-                <?php
+                <?
 				}
 				?> 
 				<td><select name="idCapitulo" style="width:600px;" class="campos" id="idCapitulo" onchange="eligeSeccion()">
-				<?php 
+				<? 
                 $arreglo = getCapitulosConNivel();
 				
 				//print_r($arreglo);
@@ -122,7 +122,7 @@ function cambiarTitulo(objeto){
 				<th align="right">Tarea matem&aacute;tica</th> 
 				<td><select title="" onmouseover="javascript:cambiarTitulo(this)" name="idTareaMatematica" style="width:600px;" class="campos" id="idTareaMatematica">
                 <option value="">Seleccione una tarea</option>
-				<?php 
+				<? 
 				foreach($tareas as $tarea){
 	                echo "<option value=".$tarea[idTareaMatematica].">".$tarea[nombreTareaMatematica]."</option>";
 				}
@@ -136,7 +136,7 @@ function cambiarTitulo(objeto){
             <tr>
 				<th align="right">Competencia</th> 
 				<td><select name="idCompetencia" style="width:600px;" class="campos" id="idCompetencia">
-				<?php 
+				<? 
                 $arreglo = getIdNombreTabla("Competencia");
 				$idVariableFija = estaFija("fijar_idCompetencia");
                 armaSelectActual($arreglo,"Competencia",$idVariableFija);
@@ -150,7 +150,7 @@ function cambiarTitulo(objeto){
             <tr>
 				<th align="right">Nivel de complejidad</th> 
 				<td><select name="idNivelDeComplejidad" style="width:600px;" class="campos" id="idNivelDeComplejidad">
-				<?php 
+				<? 
                 $arreglo = getIdNombreTabla("NivelDeComplejidad");
 				$idVariableFija = estaFija("fijar_idNivelDeComplejidad");
                 armaSelectActual($arreglo,"NivelDeComplejidad",$idVariableFija);

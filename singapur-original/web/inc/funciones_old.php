@@ -1,4 +1,4 @@
-<?php
+<?
 function getUsuariosCurso($idCurso){
 	$sql =" SELECT * FROM inscripcionCursoCapacitacion where idCursoCapacitacion = ".$idCurso;
 	//echo $sql;
@@ -79,8 +79,8 @@ function getMensajesUsuario($idUsuario){
 
 function alerta($mensaje){
 	?><script language="javascript">
-	alert("<?php echo $mensaje; ?>");
-	</script><?php
+	alert("<? echo $mensaje; ?>");
+	</script><?
 }
 function getMensajesSinLeerUsuario($idUsuario){
 	$sql = "SELECT COUNT(paraMensaje) FROM mensaje WHERE estadoMensaje = 0 AND paraMensaje ="."'$idUsuario'";
@@ -174,8 +174,8 @@ function getDatosProfesor($idUsuario){
 
 function dirigirse_a($pagina){
 	?><script language="javascript">
-	location.href='<?php echo $pagina; ?>';
-	</script><?php
+	location.href='<? echo $pagina; ?>';
+	</script><?
 }
 
 

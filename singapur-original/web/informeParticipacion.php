@@ -1,4 +1,4 @@
-<?php 
+<? 
 ini_set("display_errors","OFF");
 require("inc/incluidos.php");
 require ("hd.php");
@@ -157,11 +157,11 @@ function volver(){
 <body>
 
 <div id="principal">
-<?php require("topMenu.php"); ?>
+<? require("topMenu.php"); ?>
 	
 	<!-- <div id="columnaCentro"> -->
 	<div id="completo">
-	<?php 
+	<? 
 	 	$idCurso = @$_REQUEST["idCurso"];
 		$cursosCapacitacion = getCursosCapacitacion();
 	?>   
@@ -172,17 +172,17 @@ function volver(){
 		</tr>
         <tr>
         	<td><label><select name="idCurso" id="idCurso" onChange="actualizaCurso()">
-                <option value=""><?php echo "Seleccione un Curso";?></option>
-                <?php foreach ($cursosCapacitacion as $curso){
+                <option value=""><? echo "Seleccione un Curso";?></option>
+                <? foreach ($cursosCapacitacion as $curso){
 					if($curso["idCursoCapacitacion"] != 17){?>
-                <option value="<?php echo $curso["idCursoCapacitacion"];?>" <?php if (@$idCurso == $curso["idCursoCapacitacion"]){echo 'selected="selected"';}?>><?php echo $curso["nombreCortoCursoCapacitacion"];?></option>
-                <?php }}?>
+                <option value="<? echo $curso["idCursoCapacitacion"];?>" <? if (@$idCurso == $curso["idCursoCapacitacion"]){echo 'selected="selected"';}?>><? echo $curso["nombreCortoCursoCapacitacion"];?></option>
+                <? }}?>
                 </select></label>
 			</td>
 		</tr>
 	</table>
     
-	<?php 
+	<? 
 	if($idCurso >=10 and $idCurso <=17)
 	{
 
@@ -229,14 +229,14 @@ print_r($idLista);
 <th rowspan="2">Colegio</th>
 <th rowspan="2">Profesor</th>
 <th rowspan="2">Curso</th>
-<?php 
+<? 
 $cuenta = 1;
 foreach($idLista as $lista){?>
-	<th colspan="2">Prueba <?php echo $cuenta ?></th>
-<?php $cuenta++; } ?>
+	<th colspan="2">Prueba <? echo $cuenta ?></th>
+<? $cuenta++; } ?>
 </tr>
 <tr>
-<?php 
+<? 
 $cuenta = 1;
 foreach($idLista as $lista){
 	switch($lista)
@@ -276,14 +276,14 @@ foreach($idLista as $lista){
 
 <th>%logro</th>
 <th>%particip</th>
-<?php $cuenta++; } ?>
+<? $cuenta++; } ?>
 </tr>
-<?php foreach($profesores as $profe) { ?>
+<? foreach($profesores as $profe) { ?>
 <tr>
-	<td><?php echo $profe["nombreColegio"] ?></td>
-	<td><?php echo $profe["nombreProfesor"] ?></td>
-	<td><?php echo $profe["idNivel"]."".$profe["letraCursoColegio"] ?></td>
-    <?php 
+	<td><? echo $profe["nombreColegio"] ?></td>
+	<td><? echo $profe["nombreProfesor"] ?></td>
+	<td><? echo $profe["idNivel"]."".$profe["letraCursoColegio"] ?></td>
+    <? 
 	$alumnosCurso = getTotalAlumnosCursoColegio($profe["rbdColegio"],$profe["idNivel"],$profe["letraCursoColegio"]);
 	if(count($alumnosCurso) == 0){	echo $profe["rbdColegio"]; }
 	foreach($idLista as $lista){
@@ -300,17 +300,17 @@ foreach($idLista as $lista){
 	}
 	?>
 </tr>
-<?php } ?>
+<? } ?>
 </table>
 
-<?php
+<?
 }else{
 	echo " Debe seleccionar un curso";
 	}?>
-<?php /////////////////////////////////TEMAS CURSO?>
+<? /////////////////////////////////TEMAS CURSO?>
 
            
-	<?php 
+	<? 
     
     	require("pie.php");
 

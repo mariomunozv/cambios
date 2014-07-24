@@ -1,4 +1,4 @@
-<?php
+<?
 /**
  * TimThumb script created by Ben Gillbanks, originally created by Tim McDaniels and Darren Hoyt
  * http://code.google.com/p/timthumb/

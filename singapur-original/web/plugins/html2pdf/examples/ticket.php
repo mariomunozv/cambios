@@ -1,4 +1,4 @@
-<?php
+<?
 /**
  * HTML2PDF Librairy - example
  *
@@ -33,16 +33,16 @@
             <td colspan="2" style="width: 100%">
                 <div class="zone" style="height: 34mm;position: relative;font-size: 5mm;">
                     <div style="position: absolute; right: 3mm; top: 3mm; text-align: right; font-size: 4mm; ">
-                        <b><?php echo $nom; ?></b><br>
+                        <b><? echo $nom; ?></b><br>
                     </div>
                     <div style="position: absolute; right: 3mm; bottom: 3mm; text-align: right; font-size: 4mm; ">
                         <b>1</b> place <b>plein tarif</b><br>
                         Prix unitaire TTC : <b>45,00&euro;</b><br>
-                        N° commande : <b><?php echo $num; ?></b><br>
-                        Date d'achat : <b><?php echo date('d/m/Y à H:i:s'); ?></b><br>
+                        N° commande : <b><? echo $num; ?></b><br>
+                        Date d'achat : <b><? echo date('d/m/Y à H:i:s'); ?></b><br>
                     </div>
                     <h1>Billet soirée spécial HTML2PDF</h1>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<b>Valable le <?php echo $date; ?> à 20h30</b><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>Valable le <? echo $date; ?> à 20h30</b><br>
                     <img src="./res/logo.gif" alt="logo" style="margin-top: 3mm; margin-left: 20mm">
                 </div>
             </td>
@@ -50,7 +50,7 @@
         <tr>
             <td style="width: 25%;">
                 <div class="zone" style="height: 40mm;vertical-align: middle;text-align: center;">
-                    <qrcode value="<?php echo $num."\n".$nom."\n".$date; ?>" ec="Q" style="width: 37mm; border: none;" ></qrcode>
+                    <qrcode value="<? echo $num."\n".$nom."\n".$date; ?>" ec="Q" style="width: 37mm; border: none;" ></qrcode>
                 </div>
             </td>
             <td style="width: 75%">
@@ -79,7 +79,7 @@
         </tr>
     </table>
 </page>
-<?php
+<?
      $content = ob_get_clean();
 
     // convert

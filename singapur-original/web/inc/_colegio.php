@@ -1,4 +1,4 @@
-<?php 
+<? 
  
 /* function getColegios(){
 	$sql = "SELECT * FROM colegio a left join comuna  b on a.idComuna = b.idComuna";

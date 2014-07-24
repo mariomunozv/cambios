@@ -1,5 +1,5 @@
 
-<?php 
+<? 
 require("inc/incluidos.php");
 
 include "inc/_actividad.php";
@@ -114,7 +114,7 @@ require ("hd.php");?>
 function nuevo_comentario(){
 	
 	 var division = document.getElementById("comentario");
-	 a = "tablaComentario=formulario"+"&idReferenciaComentario="+<?php echo $idPauta; ?>+"&idUsuarioNotificado="+<?php echo $idUsuario; ?>+"&idActividad="+<?php echo $idActividad; ?>;
+	 a = "tablaComentario=formulario"+"&idReferenciaComentario="+<? echo $idPauta; ?>+"&idUsuarioNotificado="+<? echo $idUsuario; ?>+"&idActividad="+<? echo $idActividad; ?>;
 	 AJAXPOST("informeActividadComentarioNuevo.php",a,division);
 	
 }
@@ -122,7 +122,7 @@ function nuevo_comentario(){
 function listado_comentarios(){
 	
 	 var division = document.getElementById("listado_comentarios");
-	 a = "tablaComentario=formulario"+"&idReferenciaComentario="+<?php echo $idPauta; ?>;
+	 a = "tablaComentario=formulario"+"&idReferenciaComentario="+<? echo $idPauta; ?>;
 	 AJAXPOST("informeActividadComentarioListado.php",a,division);
 	
 }
@@ -130,7 +130,7 @@ function listado_comentarios(){
 
 <body>
 <div id="principal">
-<?php require("topActividad.php"); ?>
+<? require("topActividad.php"); ?>
 	
  
     
@@ -141,38 +141,38 @@ function listado_comentarios(){
 	<div id="columnaCentro">
      
         <p class="titulo_curso">Informe de Actividad Coordinadores Pedagógicos <br>
- <?php echo getNombreUsuario($idUsuario);?></p>
+ <? echo getNombreUsuario($idUsuario);?></p>
         <hr />
       
 
         
         
-        <?php 
+        <? 
 		
 		 ?>
         	
         
-                <input name="idFormulario" class="campos" id="idFormulario" type="hidden" value="<?php echo $idFormulario;?>">	
-                	<?php 
+                <input name="idFormulario" class="campos" id="idFormulario" type="hidden" value="<? echo $idFormulario;?>">	
+                	<? 
 					foreach ($listaItem as $item){
 					//print_r($item);
 					
 					?>
-						<?php 
+						<? 
                         echo $item["textoEnunciado"];
                         
                         ?>
                       	<br><br>
-                      	<?php 
+                      	<? 
 						$respuestaItem = getRespuestaUsuarioIdEnunciado($item["idEnunciado"],$idUsuario);
 						
 					  	if ($item["esAbiertaEnunciado"] == 1){
 						
 						
 					  	?>
-   							<textarea name="item<?php echo $item["idEnunciado"];?>" id="item<?php echo $item["idEnunciado"];?>"  name="nombre" cols="60" rows="5" class="campos" disabled='disabled'><?php  echo $respuestaItem; ?></textarea>
+   							<textarea name="item<? echo $item["idEnunciado"];?>" id="item<? echo $item["idEnunciado"];?>"  name="nombre" cols="60" rows="5" class="campos" disabled='disabled'><?  echo $respuestaItem; ?></textarea>
                             <br>
-                		<?php 
+                		<? 
 						} 
 						else{
 							if($item["tipoInputEnunciado"] == "file" && $respuestaItem != ""){
@@ -180,10 +180,10 @@ function listado_comentarios(){
 								?>
                                 
 								<img border="0" src="img/ppt.gif" width="16" height="16">
-                                <a href="subir/archivos_act/<?php  echo $respuestaItem; ?>"><strong>Ver archivo</strong></a>
+                                <a href="subir/archivos_act/<?  echo $respuestaItem; ?>"><strong>Ver archivo</strong></a>
                                 <br><br>
 	
-                              <?php
+                              <?
 							}
 						}				
 				
@@ -213,12 +213,12 @@ function listado_comentarios(){
         
       </div><!--columnaCentro-->
          
-       <?php //  require("misCursos.php");?>
+       <? //  require("misCursos.php");?>
      
                
     
               
-	<?php 
+	<? 
     
     	require("pie.php");
     

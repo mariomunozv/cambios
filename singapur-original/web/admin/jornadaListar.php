@@ -1,4 +1,4 @@
-<?php
+<?
 require("inc/config.php");
 
 
@@ -88,14 +88,14 @@ $(document).ready(function()
 	</tr>
 </thead>    
 <tbody>
-	<?php 
+	<? 
 	foreach($jornadas as $jornada)
 	{
 	?>
 
 	<tr>
-		<td><?php echo $jornada["idJornada"]; ?></td>
-        <?php switch($jornada["tipoJornada"]){
+		<td><? echo $jornada["idJornada"]; ?></td>
+        <? switch($jornada["tipoJornada"]){
 			case 0:
 				echo "<td>Home</td>";
 			break;
@@ -109,17 +109,17 @@ $(document).ready(function()
 			break;
 			
 		}?>
-		<td><?php echo $jornada["nombreJornada"]; ?></td>
-		<td><?php echo $jornada["nombreCortoCursoCapacitacion"]; ?></td>
-		<?php
+		<td><? echo $jornada["nombreJornada"]; ?></td>
+		<td><? echo $jornada["nombreCortoCursoCapacitacion"]; ?></td>
+		<?
 		if($jornada["visibleJornada"]==1){
 		?>
-		<td style="background-color:#99CC00"><a href="javascript:estado_jornada(<?php echo $jornada["idJornada"].",".$jornada["visibleJornada"]?>)">Visible</a></td>
-		<?php }else { ?>
-		<td style="background-color:#FF0000"><a href="javascript:estado_jornada(<?php echo $jornada["idJornada"].",".$jornada["visibleJornada"]?>)">Oculta</a></td>
-		<?php } ?>
-		<td><a href="javascript:edit_jornada(<?php echo $jornada["idJornada"] ?>)">Editar</a></td>
+		<td style="background-color:#99CC00"><a href="javascript:estado_jornada(<? echo $jornada["idJornada"].",".$jornada["visibleJornada"]?>)">Visible</a></td>
+		<? }else { ?>
+		<td style="background-color:#FF0000"><a href="javascript:estado_jornada(<? echo $jornada["idJornada"].",".$jornada["visibleJornada"]?>)">Oculta</a></td>
+		<? } ?>
+		<td><a href="javascript:edit_jornada(<? echo $jornada["idJornada"] ?>)">Editar</a></td>
 	</tr>
-	<?php } ?>
+	<? } ?>
 </tbody>
 <table>

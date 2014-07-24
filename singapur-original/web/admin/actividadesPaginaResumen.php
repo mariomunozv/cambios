@@ -1,4 +1,4 @@
-<?php
+<?
 require("inc/config.php");
 
 $idActividadPagina = $_REQUEST["idActividadPagina"];
@@ -42,7 +42,7 @@ $("a").click(function () {
 <th>ID Página</th>
 <th>Nombre Actividad Página</th>
 </tr>
-<?php
+<?
 
 foreach($actividades as $actividad)
 {

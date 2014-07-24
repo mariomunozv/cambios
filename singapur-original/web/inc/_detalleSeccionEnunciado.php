@@ -1,4 +1,4 @@
-<?php
+<?
 
 
 function crearSeccionEnunciado($idSeccionFormulario,$idEnunciado)

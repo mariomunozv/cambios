@@ -1,4 +1,4 @@
-<?php 
+<? 
 function _t($texto){
 	return htmlentities($texto);
 } 
@@ -7,7 +7,7 @@ function _t2($texto){
 }
 function sesion(){
 	if($_SESSION["persona"]["per_id"] == ""){
-		?><script language="javascript">location.href="logout.php";</script><?php
+		?><script language="javascript">location.href="logout.php";</script><?
 	}
 } 
 function fec($fecha){

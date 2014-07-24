@@ -1,5 +1,5 @@
 
-<?php 
+<? 
 session_start();
 include "inc/conectav10.php";
 include "inc/funciones.php";
@@ -141,65 +141,65 @@ require ("hd.php");?>
 	
      
         <p class="titulo_curso">Informe de Actividad UTP
- <?php echo getNombreUsuario($idUsuario);?></p>
+ <? echo getNombreUsuario($idUsuario);?></p>
       
 <table class="tablesorter">
 <tr>
 <td>&nbsp;</td>
   
-    <?php foreach ($usuarios as $usuario){
+    <? foreach ($usuarios as $usuario){
 		$colegio = getDatosColegio($usuario["rbdColegio"]);
 		
 		
 		?>
 
-                <td><?php echo $colegio["nombreColegio"];?></td>
+                <td><? echo $colegio["nombreColegio"];?></td>
 
-  <?php // echo getRespuestaUsuarioIdEnunciado($item["idEnunciado"],$idUsuario); ?></textarea>
-                <?php } ?>
+  <? // echo getRespuestaUsuarioIdEnunciado($item["idEnunciado"],$idUsuario); ?></textarea>
+                <? } ?>
 
 </tr>
 <tr>
 	<td>&nbsp;</td>
   
-    <?php foreach ($usuarios as $usuario){
+    <? foreach ($usuarios as $usuario){
 		$colegio = getDatosColegio($usuario["rbdColegio"]);
 		
 		
 		?>
 
-                <th><?php echo getNombreUsuario($usuario["idUsuario"]);?></th>
+                <th><? echo getNombreUsuario($usuario["idUsuario"]);?></th>
 
-  <?php // echo getRespuestaUsuarioIdEnunciado($item["idEnunciado"],$idUsuario); ?></textarea>
-                <?php } ?>
+  <? // echo getRespuestaUsuarioIdEnunciado($item["idEnunciado"],$idUsuario); ?></textarea>
+                <? } ?>
 </tr>
 
 
 
 
-                <input name="idFormulario" class="campos" id="idFormulario" type="hidden" value="<?php echo $idFormulario;?>">	
-                <?php foreach ($listaItem as $item){?>
+                <input name="idFormulario" class="campos" id="idFormulario" type="hidden" value="<? echo $idFormulario;?>">	
+                <? foreach ($listaItem as $item){?>
                 <tr>
-                <td><?php echo $item["textoEnunciado"];?></td>
+                <td><? echo $item["textoEnunciado"];?></td>
                 
-                 <?php foreach ($usuarios as $usuario){
+                 <? foreach ($usuarios as $usuario){
 		$colegio = getDatosColegio($usuario["rbdColegio"]);
 		
 		
 		?>
 
-                <td><?php echo getRespuestaUsuarioIdEnunciado($item["idEnunciado"],$usuario["idUsuario"]); ?></td>
+                <td><? echo getRespuestaUsuarioIdEnunciado($item["idEnunciado"],$usuario["idUsuario"]); ?></td>
 
-  <?php // echo getRespuestaUsuarioIdEnunciado($item["idEnunciado"],$idUsuario); ?></textarea>
-                <?php } ?>
+  <? // echo getRespuestaUsuarioIdEnunciado($item["idEnunciado"],$idUsuario); ?></textarea>
+                <? } ?>
                 
                 </tr>  	
-  <?php // echo getRespuestaUsuarioIdEnunciado($item["idEnunciado"],$idUsuario); ?></textarea>
-                <?php } ?>
+  <? // echo getRespuestaUsuarioIdEnunciado($item["idEnunciado"],$idUsuario); ?></textarea>
+                <? } ?>
 
 
          
-       <?php //  require("misCursos.php");?>
+       <? //  require("misCursos.php");?>
      
                
     

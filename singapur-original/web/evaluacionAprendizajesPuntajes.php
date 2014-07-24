@@ -4,7 +4,7 @@
 	
 		// decimal values
 		
-		<?php 
+		<? 
 		for ($i=1;$i<5;$i++){
 			echo "$('#ptje".$i."').stepper({step:0.5, decimals:1, min:0, max:1});	";
 		}
@@ -22,7 +22,7 @@
         <tr> 
             <th>#</th> 
             <th>Alumno</th>
-            <?php
+            <?
 			
 			for ($i=1;$i<5;$i++){
 				echo '
@@ -43,7 +43,7 @@
         	<td>1</td> 
             <td>Alumno 1</td>
            	
-            <?php 
+            <? 
 			for ($i=1;$i<5;$i++){
 				echo '
 			<td>

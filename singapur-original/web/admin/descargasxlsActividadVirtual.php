@@ -1,4 +1,4 @@
-<?php
+<?
 	ini_set('display_errors','1');
 	header('Content-type: application/vnd.ms-excel');
 	header("Content-Disposition: attachment; filename=Descarga.xls");
@@ -121,7 +121,7 @@
   <tbody>
 
 
-  <?php
+  <?
 
   		$respuestas = getRespuestasItem($nivel);
 
@@ -134,19 +134,19 @@
 			{
 				?>
 				<tr>
-					<td><?php echo $respuesta["rutProfesor"]; ?></td>
-					<td><?php echo $respuesta["idItem"]; ?></td>
-					<td><?php echo $respuesta["nivel"]; ?></td>
-					<td><?php echo $respuesta["curso"]; ?></td>
-					<td><?php echo $respuesta["tema"]; ?></td>
-					<td><?php echo $respuesta["capitulo"]; ?></td>
-					<td><?php echo $respuesta["apartado"]; ?></td>
-					<td><?php echo $respuesta["intento"]; ?></td>
-					<td><?php echo $respuesta["puntajeRespuestaItem"]; ?></td>
-					<td><?php echo $respuesta["puntajeItem"]; ?></td>
-					<td> <?php echo $respuesta["valorSeleccionadaItem"]; ?></td>
+					<td><? echo $respuesta["rutProfesor"]; ?></td>
+					<td><? echo $respuesta["idItem"]; ?></td>
+					<td><? echo $respuesta["nivel"]; ?></td>
+					<td><? echo $respuesta["curso"]; ?></td>
+					<td><? echo $respuesta["tema"]; ?></td>
+					<td><? echo $respuesta["capitulo"]; ?></td>
+					<td><? echo $respuesta["apartado"]; ?></td>
+					<td><? echo $respuesta["intento"]; ?></td>
+					<td><? echo $respuesta["puntajeRespuestaItem"]; ?></td>
+					<td><? echo $respuesta["puntajeItem"]; ?></td>
+					<td> <? echo $respuesta["valorSeleccionadaItem"]; ?></td>
 				</tr>
-				<?php
+				<?
 			}
 		}
 

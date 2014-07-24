@@ -1,14 +1,14 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 require ("hd.php");
 ?>
 
 <body>
 <div id="principal">
-<?php require("topMenu.php"); ?>
+<? require("topMenu.php"); ?>
 	
     <div id="lateralIzq">
-    <?php 
+    <? 
 	    require("caja_participantes.php");
         require("menuleft.php");
 	
@@ -18,7 +18,7 @@ require ("hd.php");
     
     
     <div id="lateralDer">
-		<?php 
+		<? 
         require("menuright.php");
         ?>
     
@@ -269,7 +269,7 @@ require ("hd.php");
 			
     </div> <!--columnaCentro-->
 
-	<?php 
+	<? 
     	
 		require("pie.php");
 		

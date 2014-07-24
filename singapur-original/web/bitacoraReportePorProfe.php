@@ -1,5 +1,5 @@
-<?php require("inc/incluidos.php"); ?>
-<?php require ("hd.php");
+<? require("inc/incluidos.php"); ?>
+<? require ("hd.php");
 
 $idCurso = $_SESSION["sesionIdCurso"];
 ?>
@@ -24,7 +24,7 @@ function muestraBitacorasProfe(idUsuario){
     </tr>
   
 
-	<?php 
+	<? 
 	//print_r($_SESSION);
 
     $alumnosCurso = getAlumnosCurso($idCurso);
@@ -53,11 +53,11 @@ function muestraBitacorasProfe(idUsuario){
 		}
 
 		?>
-		<tr <?php echo $color;?>>
+		<tr <? echo $color;?>>
 			<td valign="center">
-				<?php echo $num;?>
+				<? echo $num;?>
 			</td>
-		<?php
+		<?
 		// Si no existen alumnos
 		if(empty($alumnosCurso[0])){
 			echo '<td colspan="6">No hay alumnos inscritos em el curso</td>';
@@ -66,13 +66,13 @@ function muestraBitacorasProfe(idUsuario){
 			?>
 			<td valign="center">
 				<div align="left">
-					<strong><a href="#listado" onclick="muestraBitacorasProfe(<?php echo $value["idUsuario"];?>)"><?php echo $value["nombreCompleto"]; ?></a></strong>
+					<strong><a href="#listado" onclick="muestraBitacorasProfe(<? echo $value["idUsuario"];?>)"><? echo $value["nombreCompleto"]; ?></a></strong>
 				</div>
 			</td>
 			
 			<td valign="center">
 				<div align="center">
-					<?php
+					<?
 					echo getNombrePerfil($value["idPerfil"]); 
 					?>
 				</div>
@@ -80,14 +80,14 @@ function muestraBitacorasProfe(idUsuario){
 			
 			<td>
 				<div align="center">
-					<a href="verPerfil.php?idUsuario=<?php  echo $value["idUsuario"]; ?>" ><img src="img/profile.png" width="16" height="16" style="cursor:pointer" border="0" title="Perfil de <?php echo $value["nombreCompleto"]; ?>"/></a>
+					<a href="verPerfil.php?idUsuario=<?  echo $value["idUsuario"]; ?>" ><img src="img/profile.png" width="16" height="16" style="cursor:pointer" border="0" title="Perfil de <? echo $value["nombreCompleto"]; ?>"/></a>
 				</div>
 			</td>
 			
 			
 		</tr>
 		
-	<?php 	
+	<? 	
 		} // else (existen alumnos)
 		
 	} //foreach

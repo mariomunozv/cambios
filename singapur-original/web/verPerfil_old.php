@@ -1,4 +1,4 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 require ("hd.php");
 
@@ -11,7 +11,7 @@ $region = getRegion($datosColegio["idComuna"]);
 
 <body>
 <div id="principal">
-<?php 
+<? 
 	require("topMenu.php"); 
 	$navegacion = "Home*curso.php?idCurso=$idCurso,Perfil*#";	
 	require("_navegacion.php");
@@ -19,17 +19,17 @@ $region = getRegion($datosColegio["idComuna"]);
 ?>
 	
     <div id="lateralIzq">
-    <?php require("menuleft.php");	?>
+    <? require("menuleft.php");	?>
     </div> <!--lateralIzq-->
     
     <div id="lateralDer">
-    <?php require("menuright.php");	?>
+    <? require("menuright.php");	?>
     </div><!--lateralDer-->
     
     
     
 	<div id="columnaCentro">
-     	<p class="titulo_curso"><?php echo getNombreUsuario($idUsuarioPerfil); ?></p>
+     	<p class="titulo_curso"><? echo getNombreUsuario($idUsuarioPerfil); ?></p>
         <hr />
     <table border="0" class="tablesorter" style="width:100%;" id="tbGeneral">
 	<tr>
@@ -37,47 +37,47 @@ $region = getRegion($datosColegio["idComuna"]);
     </tr>
 	<tr> 
 	    <td align="center" colspan="4">
-	    <img src="<?php echo "subir/fotos_perfil/orig_$idUsuarioPerfil.jpg"; ?>"  border="1" onerror="this.src='img/nophoto.jpg'"/><br/><br/>
+	    <img src="<? echo "subir/fotos_perfil/orig_$idUsuarioPerfil.jpg"; ?>"  border="1" onerror="this.src='img/nophoto.jpg'"/><br/><br/>
         </td>
  	</tr>
 	<tr>
         <th>Nombre:</th>
-        <td colspan="3"><label style="font-size:14px"><?php echo $datos["nombreProfesor"]; ?></label></td>
+        <td colspan="3"><label style="font-size:14px"><? echo $datos["nombreProfesor"]; ?></label></td>
 	</tr>
 	<tr>
         <th> Apellido Paterno:</th>
-        <td colspan="3"><label style="font-size:14px"><?php echo $datos["apellidoPaternoProfesor"]; ?></label></td>
+        <td colspan="3"><label style="font-size:14px"><? echo $datos["apellidoPaternoProfesor"]; ?></label></td>
 	</tr>
 	<tr>
         <th>Apellido Materno:</th>
-        <td colspan="3"><label style="font-size:14px"><?php echo $datos["apellidoMaternoProfesor"]; ?></label></td>
+        <td colspan="3"><label style="font-size:14px"><? echo $datos["apellidoMaternoProfesor"]; ?></label></td>
 	</tr>
 	<tr>
 		<th align="left">Nombre del establecimiento:</th>
-        <td colspan="3"><label style="font-size:14px"><?php echo $datosColegio["nombreColegio"]; ?></label></td>        
+        <td colspan="3"><label style="font-size:14px"><? echo $datosColegio["nombreColegio"]; ?></label></td>        
     </tr>
   	<tr>
 		<th>Region/Departamento: </th>
-		<td colspan="3"><label style="font-size:14px"><?php echo $region; ?></label></td>        
+		<td colspan="3"><label style="font-size:14px"><? echo $region; ?></label></td>        
 	</tr>
   	<tr>
       	<th>Comuna/Ciudad: </th>
-		<td colspan="3"><label style="font-size:14px"><?php echo $datosColegio["nombreComuna"]; ?></label></td>        
+		<td colspan="3"><label style="font-size:14px"><? echo $datosColegio["nombreComuna"]; ?></label></td>        
 	</tr>
 	<tr>
     	<th width="30%">Acerca de mi:</th>
 	    <td colspan="3" style="vertical-align:middle">
-		<label style="font-size:14px"><?php echo $datos["acercaDeUsuario"]?></label>
+		<label style="font-size:14px"><? echo $datos["acercaDeUsuario"]?></label>
         </td>
  	</tr>
     </table>
   
 	<p align="right">
-		<?php boton("Volver","history.go(-1)");?>
+		<? boton("Volver","history.go(-1)");?>
 	</p>
 </div> <!--columnaCentro-->
 
-	<?php 
+	<? 
     	
 		require("pie.php");
 		

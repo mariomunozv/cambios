@@ -1,4 +1,4 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 
 
@@ -191,7 +191,7 @@ function volver(){
  
     
     
- <?php $idCurso = @$_REQUEST["idCurso"];
+ <? $idCurso = @$_REQUEST["idCurso"];
  $cursosCapacitacion = getCursosCapacitacion();?>   
     
     
@@ -199,9 +199,9 @@ function volver(){
      
 
 
-<p class="titulo_curso"><?php echo "Informe CURSO:"; ?></p>
+<p class="titulo_curso"><? echo "Informe CURSO:"; ?></p>
     
- <?php boton("Volver","volver();");?>
+ <? boton("Volver","volver();");?>
      
     <br />
     <table class="tablesorter">
@@ -213,10 +213,10 @@ function volver(){
                 	
                     <td><label>
                       <select name="idCurso" id="idCurso" onChange="actualizaCurso()">
-                      		<option value=""><?php echo "Seleccione un Curso";?></option>
-                       <?php foreach ($cursosCapacitacion as $curso){?>
-                      		<option value="<?php echo $curso["idCursoCapacitacion"];?>" <?php if (@$idCurso == $curso["idCursoCapacitacion"]){echo 'selected="selected"';}?>><?php echo $curso["nombreCortoCursoCapacitacion"];?></option>
-                      <?php }?>
+                      		<option value=""><? echo "Seleccione un Curso";?></option>
+                       <? foreach ($cursosCapacitacion as $curso){?>
+                      		<option value="<? echo $curso["idCursoCapacitacion"];?>" <? if (@$idCurso == $curso["idCursoCapacitacion"]){echo 'selected="selected"';}?>><? echo $curso["nombreCortoCursoCapacitacion"];?></option>
+                      <? }?>
                       </select>
                     </label></td>
                     
@@ -224,7 +224,7 @@ function volver(){
             </table>
             
             
-<?php 
+<? 
 
 if($idCurso >=10 and $idCurso <=17){
 	
@@ -234,13 +234,13 @@ if($idCurso >=10 and $idCurso <=17){
 
 $jornadas = getJornadasCurso($idCurso);
 ?>            
-<p class="titulo_curso"><?php echo getNombreCurso(@$idCurso); ?></p>
+<p class="titulo_curso"><? echo getNombreCurso(@$idCurso); ?></p>
 <hr /><br>
  <table border="0" align="center" width="100%" class="tablesorter" id="orden1">
  <thead>
  <tr>
  <th colspan=3 ></th>
- <?php foreach($jornadas as $jornada){
+ <? foreach($jornadas as $jornada){
 	 		@$recursos = getTiposRecursosJornada($jornada["idJornada"],9,1);
 			$colspan = count($recursos); 
 			echo "<th colspan='".$colspan."'>";
@@ -258,7 +258,7 @@ $jornadas = getJornadasCurso($idCurso);
         <th width="470">Participante</th>
         <th width="287">Rol </th>
         
-        <?php 
+        <? 
 		$o=0;
 		foreach($jornadas as $jornada){
 			$o++;
@@ -282,7 +282,7 @@ $jornadas = getJornadasCurso($idCurso);
   
 </thead>
 <tbody>
-	<?php 
+	<? 
 	//print_r($_SESSION);
 
     $alumnosCurso = getAlumnosCurso($idCurso);
@@ -313,10 +313,10 @@ $jornadas = getJornadasCurso($idCurso);
 		}
 		
 		?>
-		<tr <?php echo $color;?> onMouseOver="this.className='normalActive'" onMouseOut="this.className='normal'" class="normal">
+		<tr <? echo $color;?> onMouseOver="this.className='normalActive'" onMouseOut="this.className='normal'" class="normal">
 			
-            <td><?php echo $datosU["rbdColegio"];?></td>
-		<?php
+            <td><? echo $datosU["rbdColegio"];?></td>
+		<?
 		// Si no existen alumnos
 		if(empty($alumnosCurso[0])){
 			echo '<td colspan="6">No hay alumnos inscritos em el curso</td>';
@@ -325,18 +325,18 @@ $jornadas = getJornadasCurso($idCurso);
 			?>
 			<td valign="center">
 				<div align="left">
-					<strong><a href="#listado" onClick="muestraBitacorasProfe(<?php echo $value["idUsuario"];?>)"><?php echo $datosU["nombreParaMostrar"]; ?></a></strong>
+					<strong><a href="#listado" onClick="muestraBitacorasProfe(<? echo $value["idUsuario"];?>)"><? echo $datosU["nombreParaMostrar"]; ?></a></strong>
 				</div>
 			</td>
 			
 			<td valign="center">
 				<div align="center">
-					<?php
+					<?
 					echo getNombrePerfil($value["idPerfil"]); 
 					?>
 				</div>
 			</td>
-		<?php 
+		<? 
 		$o=0;
 		foreach($jornadas as $jornada){
 			$o++;
@@ -357,7 +357,7 @@ $jornadas = getJornadasCurso($idCurso);
 			
 		</tr>
 		
-	<?php 	
+	<? 	
 		} // else (existen alumnos)
 		
 	} //foreach
@@ -371,7 +371,7 @@ $jornadas = getJornadasCurso($idCurso);
  <thead>
  <tr>
  <th colspan=3> Evaluaciones</th>
-<?php
+<?
 	 		$pruebas[0] = array("idLista" => 13,"nombrePrueba" => "prueba1");
 			
 			
@@ -399,7 +399,7 @@ $jornadas = getJornadasCurso($idCurso);
   
 </thead>
 <tbody>
-	<?php 
+	<? 
 	//print_r($_SESSION);
 
   
@@ -430,12 +430,12 @@ $jornadas = getJornadasCurso($idCurso);
 		}
 		
 		?>
-		<tr <?php echo $color;?> onMouseOver="this.className='normalActive'" onMouseOut="this.className='normal'" class="normal">
+		<tr <? echo $color;?> onMouseOver="this.className='normalActive'" onMouseOut="this.className='normal'" class="normal">
 			
-            <td><?php 	
+            <td><? 	
 			echo getNombreColegio($datosU["rbdColegio"]);
 			?></td>
-		<?php
+		<?
 		// Si no existen alumnos
 		if(empty($alumnosCurso[0])){
 			echo '<td colspan="6">No hay alumnos inscritos em el curso</td>';
@@ -444,18 +444,18 @@ $jornadas = getJornadasCurso($idCurso);
 			?>
 			<td valign="center">
 				<div align="left">
-					<strong><?php echo $datosU["nombreParaMostrar"]; ?></strong>
+					<strong><? echo $datosU["nombreParaMostrar"]; ?></strong>
 				</div>
 			</td>
 			
 			<td valign="center">
 				<div align="center">
-					<?php
+					<?
 					echo getNombrePerfil($value["idPerfil"]); 
 					?>
 				</div>
 			</td><td>
-		<?php 
+		<? 
 		$o=0;
 		
 		
@@ -465,17 +465,17 @@ $jornadas = getJornadasCurso($idCurso);
 			 foreach ($cursos as $curso){  
 				  ?>
 
-                <td><?php echo $curso["idNivel"].$curso["letraCursoColegio"];?>
+                <td><? echo $curso["idNivel"].$curso["letraCursoColegio"];?>
               
                 
                   
                 
-  <a rel="shadowbox;height=700;width=950" href="evaluacionAlumnoResumen.php?nombreProfesor=<?php echo $datosU["nombre"]." ".$datosU["apellidoPaterno"];?>&rbdColegio=<?php echo $curso["rbdColegio"];?>&idNivel=<?php echo $curso["idNivel"];?>&anoCursoColegio=<?php echo $curso["anoCursoColegio"];?>&letraCursoColegio=<?php echo $curso["letraCursoColegio"];?>&escala=<?php echo $escala."&nombreNivel=".$curso["nombreNivel"];?>"><img border="0" src="img/ver.gif" width="14" height="14" alt="Ver más" title="Ver más" /> </a>
+  <a rel="shadowbox;height=700;width=950" href="evaluacionAlumnoResumen.php?nombreProfesor=<? echo $datosU["nombre"]." ".$datosU["apellidoPaterno"];?>&rbdColegio=<? echo $curso["rbdColegio"];?>&idNivel=<? echo $curso["idNivel"];?>&anoCursoColegio=<? echo $curso["anoCursoColegio"];?>&letraCursoColegio=<? echo $curso["letraCursoColegio"];?>&escala=<? echo $escala."&nombreNivel=".$curso["nombreNivel"];?>"><img border="0" src="img/ver.gif" width="14" height="14" alt="Ver más" title="Ver más" /> </a>
   </td>
 </a>
                
              
-<?php 		}
+<? 		}
 	echo "</tr></table>";
  }else{ 
 	 echo "NC"; 
@@ -488,7 +488,7 @@ $jornadas = getJornadasCurso($idCurso);
 			
 		</tr>
 		
-	<?php 	
+	<? 	
 		} // else (existen alumnos)
 		
 	} //foreach
@@ -499,13 +499,13 @@ $jornadas = getJornadasCurso($idCurso);
        
    </tbody>    
 </table>        
-<?php /*////////////////////////////////////////////////// // TEMAS CURSO    
+<? /*////////////////////////////////////////////////// // TEMAS CURSO    
 
   <table border="0" align="center" width="100%" class="tablesorter" id="foros">
   <thead>
  <tr>
  <th colspan=3 ></th>
-<?php
+<?
 	 		$temas = getTemasCurso($idCurso);
 			foreach($temas as $tema){
 				$colspan = count($tema); 
@@ -522,7 +522,7 @@ $jornadas = getJornadasCurso($idCurso);
         <th width="400">E</th>
         <th width="470">Participante</th>
         <th width="287">Rol </th>
-        <th colspan="<?php echo count($temas);?>">&nbsp;</th>
+        <th colspan="<? echo count($temas);?>">&nbsp;</th>
        
                            
                        
@@ -532,7 +532,7 @@ $jornadas = getJornadasCurso($idCurso);
   
 </thead>
 <tbody>
-	<?php 
+	<? 
 	//print_r($_SESSION);
 
   
@@ -562,10 +562,10 @@ $jornadas = getJornadasCurso($idCurso);
 		}
 		
 		?>
-		<tr <?php echo $color;?> onMouseOver="this.className='normalActive'" onMouseOut="this.className='normal'" class="normal">
+		<tr <? echo $color;?> onMouseOver="this.className='normalActive'" onMouseOut="this.className='normal'" class="normal">
 			
-            <td><?php echo @$datosU["rbdColegio"];?></td>
-		<?php
+            <td><? echo @$datosU["rbdColegio"];?></td>
+		<?
 		// Si no existen alumnos
 		if(empty($alumnosCurso[0])){
 			echo '<td colspan="5">No hay alumnos inscritos em el curso</td>';
@@ -574,18 +574,18 @@ $jornadas = getJornadasCurso($idCurso);
 			?>
 			<td valign="center">
 				<div align="left">
-					<strong><?php echo $datosU["nombreParaMostrar"]; ?></strong>
+					<strong><? echo $datosU["nombreParaMostrar"]; ?></strong>
 				</div>
 			</td>
 			
 			<td valign="center">
 				<div align="center">
-					<?php
+					<?
 					echo getNombrePerfil($value["idPerfil"]); 
 					?>
 				</div>
 			</td>
-		<?php 
+		<? 
 		$o=0;
 		
 		
@@ -596,7 +596,7 @@ $jornadas = getJornadasCurso($idCurso);
 				  ?>
 
                 <td>
-					<?php echo getNRespuestasTemaUsuario($tema["idTema"],$value["idUsuario"]);?>
+					<? echo getNRespuestasTemaUsuario($tema["idTema"],$value["idUsuario"]);?>
                  </td>
                
                
@@ -604,7 +604,7 @@ $jornadas = getJornadasCurso($idCurso);
                 </a>
                
              
-<?php 		}
+<? 		}
 	
  }else{ 
 	 echo "ST"; 
@@ -617,7 +617,7 @@ $jornadas = getJornadasCurso($idCurso);
 			
 		</tr>
 		
-	<?php 	
+	<? 	
 		} // else (existen alumnos)
 		
 	} //foreach
@@ -632,10 +632,10 @@ $jornadas = getJornadasCurso($idCurso);
 }else{
 	echo " Debe seleccionar un curso";
 	}?>
-<?php /////////////////////////////////TEMAS CURSO?>
+<? /////////////////////////////////TEMAS CURSO?>
 
            
-	<?php 
+	<? 
     
     	require("pie.php");
 

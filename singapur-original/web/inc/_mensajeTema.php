@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 function getUltimoMensajeTema($idTema){
 	$sql =" SELECT * FROM mensajeTema where idTema = ".$idTema." order by idMensajeTema DESC";

@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 function getRecursosJornada($idJornada,$idPerfil){
 	$sql ="SELECT * FROM publicacion  WHERE idJornada = ".$idJornada." AND idPerfil >= ".$idPerfil." AND estadoPublicacion = 1";

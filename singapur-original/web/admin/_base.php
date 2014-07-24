@@ -1,6 +1,6 @@
 
 
-<?php 
+<? 
 
 $path = $_SERVER['DOCUMENT_ROOT']."/sitio/";
 
@@ -13,10 +13,10 @@ include ($path."hd.php");
 ?>
 
 <body>
-<?php // require("topMenu.php"); ?>
+<? // require("topMenu.php"); ?>
 	
     <div id="lateralIzq">
-    <?php 
+    <? 
 		//require("caja_misCursos.php");
 		//require("caja_glosarioPalabra.php");
 		//require("caja_mensajes.php");
@@ -27,7 +27,7 @@ include ($path."hd.php");
     
     
     <div id="lateralDer">
-    <?php 
+    <? 
 		//require("caja_bienvenida.php");
 		//require("caja_eventosProximos.php");
 		
@@ -43,7 +43,7 @@ include ($path."hd.php");
 			
     </div> <!--columnaCentro-->
 
-	<?php 
+	<? 
     	
 		require("../pie.php");
 		

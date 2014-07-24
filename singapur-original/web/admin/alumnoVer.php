@@ -1,4 +1,4 @@
-<?php //session_start();
+<? //session_start();
 require("inc/config.php");
 require("_head.php");
 $menu = "ini";
@@ -15,7 +15,7 @@ $datosUsuario = getDatosUsuario($usuario);
 <table class="tablesorter" id="tabla">
 
    <tbody>
-  <?php 
+  <? 
   
   $alumno = getDatosAlumno($datosUsuario["rut"]);
   
@@ -23,21 +23,21 @@ $datosUsuario = getDatosUsuario($usuario);
 		
 	  ?>
               
-                 <tr><th>Rut</th> <td><?php echo $alumno["rutAlumno"];?></td></tr>
-                  <tr><th>Nombre </th> <td><?php echo $alumno["nombreAlumno"];?></td></tr>
-                <tr> <th>Apellido Paterno</th> <td><?php echo $alumno["apellidoPaternoAlumno"];?></td></tr>
-                 <tr><th>Apellido Materno </th> <td><?php echo $alumno["apellidoMaternoAlumno"];?></td></tr>
-                  <tr><th>Sexo</th> <td><?php echo $alumno["sexoAlumno"];?></td></tr>
-                <tr><th>Fecha Nacimiento </th> <td><?php echo $alumno["fechaNacimientoAlumno"];?></td></tr>
-             <tr><th>Tipo Usuario </th> <td><?php echo $datosUsuario["tipoUsuario"];?></td></tr>
-              <tr><th>Email </th> <td><?php echo $datosUsuario["emailUsuario"];?></td></tr>
-               <tr><th>Usuario </th> <td><?php echo $datosUsuario["loginUsuario"];?></td></tr>
-                <tr><th>Ultimo Acceso </th> <td><?php echo $datosUsuario["ultimoAccesoUsuario"];?></td></tr>
+                 <tr><th>Rut</th> <td><? echo $alumno["rutAlumno"];?></td></tr>
+                  <tr><th>Nombre </th> <td><? echo $alumno["nombreAlumno"];?></td></tr>
+                <tr> <th>Apellido Paterno</th> <td><? echo $alumno["apellidoPaternoAlumno"];?></td></tr>
+                 <tr><th>Apellido Materno </th> <td><? echo $alumno["apellidoMaternoAlumno"];?></td></tr>
+                  <tr><th>Sexo</th> <td><? echo $alumno["sexoAlumno"];?></td></tr>
+                <tr><th>Fecha Nacimiento </th> <td><? echo $alumno["fechaNacimientoAlumno"];?></td></tr>
+             <tr><th>Tipo Usuario </th> <td><? echo $datosUsuario["tipoUsuario"];?></td></tr>
+              <tr><th>Email </th> <td><? echo $datosUsuario["emailUsuario"];?></td></tr>
+               <tr><th>Usuario </th> <td><? echo $datosUsuario["loginUsuario"];?></td></tr>
+                <tr><th>Ultimo Acceso </th> <td><? echo $datosUsuario["ultimoAccesoUsuario"];?></td></tr>
        
                
                
               
-<?php 		
+<? 		
  }else{ 
 	 echo "<tr><td colspan='12'>No existen datos de este Alumno</td></tr>"; 
   

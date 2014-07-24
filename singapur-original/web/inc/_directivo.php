@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 function getNombreDirectivoPorRut($rutProfe){
 	$sql = "SELECT * FROM `directivo` where rutDirectivo = '".$rutProfe."'";

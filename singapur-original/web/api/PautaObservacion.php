@@ -1,4 +1,4 @@
-<?php
+<?
 
 require '../lib/limonade.php';
 require '../admin/inc/jsonwrapper_inner.php';

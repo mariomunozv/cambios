@@ -1,4 +1,4 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 include "inc/_actividad.php";
 include "inc/_pauta.php";
@@ -32,7 +32,7 @@ function muestraBitacorasProfe(idUsuario){
 </script>
 <body>
 <div id="principal">
-<?php 
+<? 
 require("topMenu.php"); 
 $nombreCurso = getNombreCortoCurso($idCurso);
 $navegacion = "Home*home.php,".$nombreCurso."*curso.php?idCurso=".$idCurso.",Informe Bitacoras*#";
@@ -40,16 +40,16 @@ require("_navegacion.php");
 ?>
 	
 <div id="lateralIzq">
-	<?php require("menuleft.php"); ?>
+	<? require("menuleft.php"); ?>
 </div>
     
 <div id="lateralDer">
-	<?php require("menuright.php"); ?>
+	<? require("menuright.php"); ?>
 <br />
 </div>
     
 <div id="columnaCentro">
-	<p class="titulo_curso"><?php echo "Informe Bitácoras Curso ".$nombreCurso; ?></p>
+	<p class="titulo_curso"><? echo "Informe Bitácoras Curso ".$nombreCurso; ?></p>
     <hr /> <br />
 	<table border="0" align="center" width="100%" class="tablesorter">
 	    <tr  align="center">
@@ -58,7 +58,7 @@ require("_navegacion.php");
             <th width="287">Rol </th>
             <th width="255">Respuestas</th>
         </tr>
-	<?php 
+	<? 
 	//print_r($_SESSION);
 	$alumnosCurso = getAlumnosCursoParaBitacora($idCurso);
 //	print_r($alumnosCurso);
@@ -82,9 +82,9 @@ require("_navegacion.php");
 			$color = ' bgcolor ="#FFFFFF"';
 		}
 		?>
-		<tr <?php echo $color;?>>
-			<td valign="center"><?php echo $num;?></td>
-		<?php
+		<tr <? echo $color;?>>
+			<td valign="center"><? echo $num;?></td>
+		<?
 		// Si no existen alumnos
 		if(empty($alumnosCurso[0])){
 			echo '<td colspan="6">No hay alumnos inscritos em el curso</td>';
@@ -92,13 +92,13 @@ require("_navegacion.php");
 			?>
 			<td valign="center">
 				<div align="left">
-					<strong><?php echo $value["nombreCompleto"]; ?></strong>
+					<strong><? echo $value["nombreCompleto"]; ?></strong>
 				</div>
 			</td>
 			
 			<td valign="center">
 				<div align="center">
-					<?php
+					<?
 					echo getNombrePerfil($value["idPerfil"]); 
 					?>
 				</div>
@@ -106,28 +106,28 @@ require("_navegacion.php");
 			
 			<td>
 				<div align="center">
-             	<?php
+             	<?
 					$numBitacoras = cuentaBitacoras($value["idUsuario"]);
 					if ($numBitacoras > 0){
 				?>
-						<a href="javascript:muestraBitacorasProfe(<?php  echo $value["idUsuario"]; ?>)" >
-                        	Ver Bitacoras (<?php echo $numBitacoras;?>)
+						<a href="javascript:muestraBitacorasProfe(<?  echo $value["idUsuario"]; ?>)" >
+                        	Ver Bitacoras (<? echo $numBitacoras;?>)
 						</a>
-                <?php }	?>
+                <? }	?>
 				</div>
 			</td>
 		</tr>
-	<?php 	
+	<? 	
 		} // else (existen alumnos)
 		
 	} //foreach
 	?>
        
 	</table>
-	<?php boton("Volver","history.back();");?>
+	<? boton("Volver","history.back();");?>
 	<div id="bitacorasProfe"></div>
 </div><!--columnaCentro-->
-<?php 
+<? 
 	require("pie.php");
 ?>      
 </div><!--principal-->

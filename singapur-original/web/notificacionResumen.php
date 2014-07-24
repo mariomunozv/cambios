@@ -1,4 +1,4 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 require ("hd.php");
 
@@ -8,17 +8,17 @@ require ("hd.php");
 
 <body onLoad="toggleDisplay(document.getElementById('theTable'));">	
 <div id="principal">
-<?php 
+<? 
 	require("topMenu.php"); 
 	$navegacion = "Home*curso.php?idCurso=$idCurso,Notificaciones*#";	
 	require("_navegacion.php");
 ?>
     <div id="lateralIzq">
-    	<?php require("menuleft.php");?>
+    	<? require("menuleft.php");?>
     </div> <!--lateralIzq-->
     
     <div id="lateralDer">
-	    <?php require("menuright.php");?>
+	    <? require("menuright.php");?>
     </div><!--lateralDer-->
     
     
@@ -28,7 +28,7 @@ require ("hd.php");
 	<div id="columnaCentro">
     
     	<div id="notificaciones" align="center">
-		<?php 
+		<? 
             require("notificaciones.php");
         
         ?>	
@@ -37,7 +37,7 @@ require ("hd.php");
     </div> <!--columnaCentro-->
 
 
-	<?php 
+	<? 
     	
 		require("pie.php");
 		

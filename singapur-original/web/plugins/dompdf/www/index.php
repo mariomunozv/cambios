@@ -1,4 +1,4 @@
-<?php 
+<? 
 ini_set("display_errors","on");
 include("head.inc"); ?>
 
@@ -27,4 +27,4 @@ a PHP 4 port. If your web host does not offer PHP 5, I suggest either pestering
 them, or setting up your own PHP 5 box and using it to run dompdf.  Your scripts
 on your web host can redirect PDF requests to your PHP 5 box.</p>
 
-<?php include("foot.inc"); ?>
+<? include("foot.inc"); ?>

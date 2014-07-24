@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set("display_errors","on");
 require("inc/incluidos.php"); 
 require("inc/_bitacora.php"); 
@@ -45,7 +45,7 @@ $(function() {
 </script>
 <body>
 <div id="principal">
-<?php 
+<? 
 require("topMenu.php"); 
 $nombreCurso = getNombreCortoCurso($idCurso);
 $navegacion = "Home*home.php,".$nombreCurso."*curso.php?idCurso=".$idCurso.",Informe Bitacoras*#";
@@ -53,15 +53,15 @@ require("_navegacion.php");
 ?>
 	
 <div id="lateralIzq">
-	<?php require("menuleft.php"); ?>
+	<? require("menuleft.php"); ?>
 </div>
     
 <div id="lateralDer">
-	<?php require("menuright.php"); ?>
+	<? require("menuright.php"); ?>
 <br />
 </div>
 <div id="columnaCentro">
-<?php
+<?
 foreach($cursos as $curso)
 {
 	$bitacoras = getBitacoraUsuarioCurso($idUsuario,$curso["idCursoColegio"]); 
@@ -69,7 +69,7 @@ foreach($cursos as $curso)
 <table class="tablesorter" id="tabla2">
 <thead>     
 	<tr>
-    	<th colspan="7">Profesor: <?php echo $nombreUsuario;?> - <?php echo $curso["cursoColegio"]; ?></th>
+    	<th colspan="7">Profesor: <? echo $nombreUsuario;?> - <? echo $curso["cursoColegio"]; ?></th>
 	</tr>    
   	<tr>
   		<th align="center">Capitulo</th>
@@ -83,20 +83,20 @@ foreach($cursos as $curso)
 </thead>
 <tbody>
 
-<?php 
+<? 
 	if ($bitacoras){
 		foreach ($bitacoras as $bit){  
 	?>
 		<tr>
-			<td title="Nombre Capítulo" align="center"><?php echo getNombreSeccion($bit["idPadreSeccionBitacora"]);?></td>
-			<td title="Nombre Apartado" align="center"><?php echo $bit["nombreSeccionBitacora"];?></td>
-			<td align="center"><?php echo $bit["tiempoBitacora"];//echo cambiaf_a_normal($bit["fechaBitacora"]);?></td>
-            <td align="center"><?php echo $bit["tiempoEstimadoSeccionBitacora"]?></td>
-			<td align="center" ><?php echo $bit["fechaInicio"];?></td>
-			<td align="center"><?php echo $bit["fechaTermino"];?></td>
-			<td align="center"><?php echo $bit["fechaCreacionBitacora"];?></td>
+			<td title="Nombre Capítulo" align="center"><? echo getNombreSeccion($bit["idPadreSeccionBitacora"]);?></td>
+			<td title="Nombre Apartado" align="center"><? echo $bit["nombreSeccionBitacora"];?></td>
+			<td align="center"><? echo $bit["tiempoBitacora"];//echo cambiaf_a_normal($bit["fechaBitacora"]);?></td>
+            <td align="center"><? echo $bit["tiempoEstimadoSeccionBitacora"]?></td>
+			<td align="center" ><? echo $bit["fechaInicio"];?></td>
+			<td align="center"><? echo $bit["fechaTermino"];?></td>
+			<td align="center"><? echo $bit["fechaCreacionBitacora"];?></td>
 		</tr>
-	<?php 	}
+	<? 	}
 	}else{ 
 		echo "<tr><td colspan='13'>No existen bitacoras para este profesor</td></tr>"; 
 	} // Fin if ($bitacoras){
@@ -105,10 +105,10 @@ foreach($cursos as $curso)
 </tbody> 
 </table>
 <div align="right">
-	<?php boton("Volver","history.back();");?>
+	<? boton("Volver","history.back();");?>
 </div>
 </div><!--columnaCentro-->
-<?php 
+<? 
 	require("pie.php");
 ?>      
 </div><!--principal-->

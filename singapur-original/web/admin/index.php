@@ -1,4 +1,4 @@
-<?php
+<?
 require("_head.php");
 
 ?>

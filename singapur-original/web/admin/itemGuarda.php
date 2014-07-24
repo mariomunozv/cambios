@@ -1,4 +1,4 @@
-<?php
+<?
 
 require("inc/config.php");
 include "../inc/_item.php";

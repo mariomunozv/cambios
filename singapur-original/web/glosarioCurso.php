@@ -1,5 +1,5 @@
 <div id="glosario" align="justify">
-<?php
+<?
 session_start();
 include "inc/conecta.php";
 include "inc/funciones.php";

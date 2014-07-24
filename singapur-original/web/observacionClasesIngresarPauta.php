@@ -1,4 +1,4 @@
-<?php
+<?
   require "inc/incluidos.php";
   require "hd.php";
 ?>
@@ -8,7 +8,7 @@
 <link type="text/css" href="css/bootstrap-timepicker.min.css" />
 <body>
 <div id="principal">
-  <?php
+  <?
   require "topMenu.php";
   $navegacion = "Home*mural.php?idCurso=$idCurso,Informes*#";
   require "_navegacion.php";
@@ -28,11 +28,11 @@
 
   ?>
 	<div id="lateralIzq">
-	    <?php require "menuleft.php";	?>
+	    <? require "menuleft.php";	?>
     </div>
 
     <div id="lateralDer">
-      <?php require"menuright.php"; ?>
+      <? require"menuright.php"; ?>
     </div>
 
     <div id="columnaCentro">
@@ -237,7 +237,7 @@
 
     </div> <!--columnaCentro-->
 
-    <?php
+    <?
       require "pie.php";
     ?>
 </div><!--principal-->
@@ -248,7 +248,7 @@
 <script src="./js/ingresaPautaObservacion.js"></script>
 <script type="text/javascript">
   //$.ready(function() {
-  new Pauta('<?php echo $tipoUsuario ?>', '<?php echo $rut ?>');
+  new Pauta('<? echo $tipoUsuario ?>', '<? echo $rut ?>');
   //});
 
 </script>

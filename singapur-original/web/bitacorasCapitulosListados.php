@@ -1,4 +1,4 @@
-<?php 
+<? 
 session_start();
 include "inc/conecta.php";
 include "inc/_bitacora.php";
@@ -59,12 +59,12 @@ if(count($capCompletos)>0){?>
         <th align="left">Fecha término</th>
         <th>Estado</th>
     </tr>
-    <?php foreach($capCompletos as $capCompletos){?>
+    <? foreach($capCompletos as $capCompletos){?>
     
      <tr>
-       	<?php $nombres = getUsuariosIngresanCapitulo($capCompletos,$idCurso,$idUsuario); ?>
+       	<? $nombres = getUsuariosIngresanCapitulo($capCompletos,$idCurso,$idUsuario); ?>
 		<td align="center" valign="top">
-			<?php 
+			<? 
 			$slash = 0;
 			foreach($nombres as $nombre){
 				if($slash > 0){
@@ -75,23 +75,23 @@ if(count($capCompletos)>0){?>
 			}?>
         </td>
 		<td align="center" valign="top">
-        	<?php echo getNombreCapituloCompletoBitacora($capCompletos);?>
+        	<? echo getNombreCapituloCompletoBitacora($capCompletos);?>
         </td>
 		<td align="center" valign="top">
-        	<?php echo getHorasImplementadas($capCompletos,$idUsuario,$idCurso); ?>
+        	<? echo getHorasImplementadas($capCompletos,$idUsuario,$idCurso); ?>
         </td>
 		<td align="center" valign="top">
-        	<?php $bitacorasTodas = getFechasCapitulo($capCompletos,$idUsuario,$idCurso);
+        	<? $bitacorasTodas = getFechasCapitulo($capCompletos,$idUsuario,$idCurso);
 			echo $bitacorasTodas["fechaInicio"];?>
         </td>
 		<td align="center" valign="top">
-        <?php  echo $bitacorasTodas["fechaTermino"];?>
+        <?  echo $bitacorasTodas["fechaTermino"];?>
         </td>        
 		<td align="center" valign="top">Declarada</td> 
-	<?php }?>
+	<? }?>
     </tr>
 </table>
-<?php 
+<? 
 }else{
 	echo "Aun no tiene capítulos completos";
 }

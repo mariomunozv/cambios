@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set("display_errors","on");
 include("../inc/_seccion.php");
 require("inc/config.php");
@@ -9,16 +9,16 @@ $secciones = getSeccionesFormulario($idFormulario);
 
 if($secciones != null)
 {
-	?><option value="NULL">Seleccione Sección</option><?php
+	?><option value="NULL">Seleccione Sección</option><?
 	foreach ($secciones as $seccion)
 	{?>
-		<option value="<?php echo $seccion['idSeccionFormulario']; ?>"><?php echo $seccion['tituloSeccionFormulario']; ?></option>
-	<?php
+		<option value="<? echo $seccion['idSeccionFormulario']; ?>"><? echo $seccion['tituloSeccionFormulario']; ?></option>
+	<?
 	}
 }
 else
 {?>
 	<option value="NULL">Sin Secciones</option>
-<?php 
+<? 
 }
 ?>

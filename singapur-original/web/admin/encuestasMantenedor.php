@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set("display_errors","on");
 include ("_head.php");
 require("inc/config.php");

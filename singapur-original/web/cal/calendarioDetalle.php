@@ -38,7 +38,7 @@
 
 	<div id="agenda">
 		
-		<?php
+		<?
 			include("config.inc.php");
 			function fecha ($valor)
 			{

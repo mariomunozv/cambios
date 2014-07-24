@@ -1,4 +1,4 @@
-<?php require("inc/config.php");
+<? require("inc/config.php");
 require("../inc/_profesor.php");
 $rbdColegio = $_REQUEST["rbdColegio"];
 ?>
@@ -23,7 +23,7 @@ $rbdColegio = $_REQUEST["rbdColegio"];
   </tr>
   </thead>
   <tbody>
-  <?php 
+  <? 
    
   $profesores = getProfesoresColegio($rbdColegio);
  
@@ -32,21 +32,21 @@ $rbdColegio = $_REQUEST["rbdColegio"];
 		foreach ($profesores as $profesor){  
 	  ?>
               <tr onmouseover="this.className='normalActive'" onmouseout="this.className='normal'" class="normal">
-                <td><?php echo $profesor["rutProfesor"];?></td>
-                <td><?php echo $profesor["nombreProfesor"];?></td>
-                <td><?php echo $profesor["apellidoPaternoProfesor"];?></td>
-                <td><?php echo $profesor["apellidoMaternoProfesor"];?></td>
-                <td><?php echo $profesor["sexoProfesor"];?></td>
-                <td><?php echo $profesor["fechaNacimientoProfesor"];?></td>
-                <td><?php echo $profesor["telefonoProfesor"];?></td>
-                <td><?php echo $profesor["emailProfesor"];?></td>
-                <td><?php echo $profesor["anosExperienciaProfesor"];?></td>
-                <td><?php echo $profesor["asignaturaACargoProfesor"];?></td>
-                <td><?php echo $profesor["coordinadorEnlaceProfesor"];?></td>
-                <td>Editar - Activar - <a href="profesorVer.php?rutProfesor=<?php echo $profesor["rutProfesor"];?>">Ver +</a></td>
+                <td><? echo $profesor["rutProfesor"];?></td>
+                <td><? echo $profesor["nombreProfesor"];?></td>
+                <td><? echo $profesor["apellidoPaternoProfesor"];?></td>
+                <td><? echo $profesor["apellidoMaternoProfesor"];?></td>
+                <td><? echo $profesor["sexoProfesor"];?></td>
+                <td><? echo $profesor["fechaNacimientoProfesor"];?></td>
+                <td><? echo $profesor["telefonoProfesor"];?></td>
+                <td><? echo $profesor["emailProfesor"];?></td>
+                <td><? echo $profesor["anosExperienciaProfesor"];?></td>
+                <td><? echo $profesor["asignaturaACargoProfesor"];?></td>
+                <td><? echo $profesor["coordinadorEnlaceProfesor"];?></td>
+                <td>Editar - Activar - <a href="profesorVer.php?rutProfesor=<? echo $profesor["rutProfesor"];?>">Ver +</a></td>
                
               </tr>
-<?php 		}
+<? 		}
  }else{ 
 	 echo "<tr><td colspan='12'>No existen profesores</td></tr>"; 
   

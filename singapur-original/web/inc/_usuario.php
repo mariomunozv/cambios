@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 function getTiposUsuario(){
 	$sql = "SELECT DISTINCT tipoUsuario FROM usuario";

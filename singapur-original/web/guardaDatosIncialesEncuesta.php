@@ -1,4 +1,4 @@
-<?php 
+<? 
 ini_set("display_errors","On");
 require("inc/incluidos.php");
 require("hd.php");
@@ -7,8 +7,8 @@ require("hd.php");
 /*
 function dirigirse_a($pagina){
 	?><script language="javascript">
-	location.href='<?php echo $pagina; ?>';
-	</script><?php
+	location.href='<? echo $pagina; ?>';
+	</script><?
 }
 */
 function getSeleccionada($respuesta){

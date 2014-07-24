@@ -1,4 +1,4 @@
-<?php
+<?
 
 require_once "../dompdf_config.inc.php";
 
@@ -37,7 +37,7 @@ function getPath(hash) {
     case "html": 
       return "test/"+file;
     case "pdf":
-      return "<?php echo $dompdf; ?>&options[Attachment]=0&input_file="+file+"#toolbar=0&view=FitH&statusbar=0&messages=0&navpanes=0";
+      return "<? echo $dompdf; ?>&options[Attachment]=0&input_file="+file+"#toolbar=0&view=FitH&statusbar=0&messages=0&navpanes=0";
   }
 }
 
@@ -73,7 +73,7 @@ $(function(){
 these files is included in the test/ directory of the distribution
 package.)</p>
 
-<?php
+<?
 
 $extensions = array("html");
 if ( DOMPDF_ENABLE_PHP ) {

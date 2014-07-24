@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 require("inc/config.php");
 require("inc/sesionAdmin.php");

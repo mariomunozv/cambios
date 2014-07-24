@@ -1,1 +1,1 @@
-<?php header("Location: www/"); ?>
+<? header("Location: www/"); ?>

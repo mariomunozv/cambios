@@ -1,4 +1,4 @@
-<?php
+<?
 session_start();
 include "../inc/conecta.php";
 include "../inc/funciones.php";
@@ -38,7 +38,7 @@ $arregloPerfil= getIdNombreTabla("Perfil");
     	<td>Curso:</td>
 		<td>
         <select id="idsCursos" name="idsCursos[]" multiple="multiple" size="15">
-        	<?php armaSelectIdAtributo($arregloCursoCapacitacion,"CursoCapacitacion","nombreCorto"); ?>
+        	<? armaSelectIdAtributo($arregloCursoCapacitacion,"CursoCapacitacion","nombreCorto"); ?>
 	    </select>
         </td>
     </tr>

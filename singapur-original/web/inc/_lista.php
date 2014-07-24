@@ -1,4 +1,4 @@
-<?php
+<?
 
 function getTextoTransicion($idLista){
 	$sql = "SELECT textoTransicionLista FROM lista WHERE idLista = ".$idLista;

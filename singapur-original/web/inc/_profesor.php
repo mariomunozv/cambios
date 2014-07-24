@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 function getDatosProfesor2($idUsuario){
 		$sql = "SELECT profesor.rutProfesor,profesor.nombreProfesor,profesor.apellidoPaternoProfesor,colegio.nombreColegio,usuario.imagenUsuario,profesor.implementaProfesor FROM profesor profesor join usuario usuario on usuario.rutProfesor = profesor.rutProfesor join colegio colegio on colegio.rbdColegio = profesor.rbdColegio WHERE usuario.idUsuario ='$idUsuario'";

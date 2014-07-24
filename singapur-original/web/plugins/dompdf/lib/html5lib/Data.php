@@ -1,4 +1,4 @@
-<?php
+<?
 
 // warning: this file is encoded in UTF-8!
 

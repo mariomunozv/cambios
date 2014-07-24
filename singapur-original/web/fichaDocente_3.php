@@ -1,4 +1,4 @@
-<?php 
+<? 
 //ini_set("display_errors","on");
 require("inc/incluidos.php");
 require ("hd.php");
@@ -44,7 +44,7 @@ marcaCursoActual();
 <meta charset="iso-8859-1"/>    
 <body>
 <div id="principal">
-<?php require("topMenu.php"); ?>
+<? require("topMenu.php"); ?>
 	
 	<div id="aka">
 <div class="olo" align="center">
@@ -56,69 +56,69 @@ marcaCursoActual();
 	<tr> 
     	<th>Actualizar Imagen:</th>
 	    <td align="center" colspan="3">
-	    <img src="<?php echo "subir/fotos_perfil/orig_".$_SESSION["sesionImagenUsuario"]; ?>"  border="1"/><br/><br/>
+	    <img src="<? echo "subir/fotos_perfil/orig_".$_SESSION["sesionImagenUsuario"]; ?>"  border="1"/><br/><br/>
         <p><input type="file" name="file" id="file" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  width="20px" /></span>
         Tama&ntilde;o M&aacute;ximo 1MB, Formato JPG</p></td>
  	</tr>
 	<tr>
         <th>Nombre:</th>
-        <td colspan="3"><input type="text" name="nombre" id="nombre" size="100" value="<?php echo $datos["nombreProfesor"]; ?>"/></td>  </tr>
+        <td colspan="3"><input type="text" name="nombre" id="nombre" size="100" value="<? echo $datos["nombreProfesor"]; ?>"/></td>  </tr>
 	<tr>
         <th> Apellido Paterno:</th>
-        <td colspan="3"><input type="text" name="apellidoPaterno" size="100" id="apellidoPaterno" value="<?php echo $datos["apellidoPaternoProfesor"];?>"/></td>
+        <td colspan="3"><input type="text" name="apellidoPaterno" size="100" id="apellidoPaterno" value="<? echo $datos["apellidoPaternoProfesor"];?>"/></td>
 	</tr>
 	<tr>
         <th>Apellido Materno:</th>
-        <td colspan="3"><input type="text" name="apellidoMaterno" size="100" id="apellidoMaterno" value="<?php echo $datos["apellidoMaternoProfesor"]; ?>"/></td>
+        <td colspan="3"><input type="text" name="apellidoMaterno" size="100" id="apellidoMaterno" value="<? echo $datos["apellidoMaternoProfesor"]; ?>"/></td>
 	</tr>
 	<tr>
 		<th align="left">Nombre del establecimiento:</th>
-		<td style="vertical-align:middle"><input type="text" name="colegio" id="colegio" value="<?php echo $datosColegio["nombreColegio"]; ?>" readonly/></td>
+		<td style="vertical-align:middle"><input type="text" name="colegio" id="colegio" value="<? echo $datosColegio["nombreColegio"]; ?>" readonly/></td>
         <th>RBD:</th>
-        <td style="vertical-align:middle"><input type="text" name="rbd" id="rbd" value="<?php echo $datos["rbdColegio"]; ?>" readonly/></td>
+        <td style="vertical-align:middle"><input type="text" name="rbd" id="rbd" value="<? echo $datos["rbdColegio"]; ?>" readonly/></td>
 	</tr>
   	<tr>
 		<th>Region/Departamento: </th>
-        <td colspan="3"><input type="text" name="region" size="100" id="region" value="<?php echo $region; ?>" readonly/></td>
+        <td colspan="3"><input type="text" name="region" size="100" id="region" value="<? echo $region; ?>" readonly/></td>
 	</tr>
   	<tr>
       	<th>Comuna/Ciudad: </th>
-		<td colspan="3"><input type="text" name="comuna" size="100" id="comuna" value="<?php echo $datosColegio["nombreComuna"]; ?>" readonly/></td>
+		<td colspan="3"><input type="text" name="comuna" size="100" id="comuna" value="<? echo $datosColegio["nombreComuna"]; ?>" readonly/></td>
 	</tr>
 	<tr>
     	<th>Acerca de mi:
         <p style="font-size:9px" align="left">(Describa los aspectos que quiera compartir con otros docentes que interact&uacute;an en la plataforma virtual, tales como experiencia profesional, intereses personales, entre otros)</p></th>
-	    <td colspan="3" style="vertical-align:middle"><textarea name="acercaDeUsuario" cols="75" rows="7"><?php echo $datos["acercaDeUsuario"]?></textarea></td>
+	    <td colspan="3" style="vertical-align:middle"><textarea name="acercaDeUsuario" cols="75" rows="7"><? echo $datos["acercaDeUsuario"]?></textarea></td>
  	</tr>
 	<tr>
     	<th>Rut/C&eacute;dula:</th>
 	    <td colspan="3">
-	      <input name="rut" value="<?php echo $datos["rutProfesor"]; ?>" readonly size="100"/>
+	      <input name="rut" value="<? echo $datos["rutProfesor"]; ?>" readonly size="100"/>
          </td>
 	</tr>
 	<tr>
     	<th>Fecha de Nacimiento:<br>Actualizar:</th>
-	    <td colspan="3" style="vertical-align:middle"><?php echo $datos["fechaNacimientoProfesor"]?><br>
+	    <td colspan="3" style="vertical-align:middle"><? echo $datos["fechaNacimientoProfesor"]?><br>
     	  <input size="100" type="text" name="fechaNacimiento" id="datepicker"/>
-	      <input name="fechaNacimiento_h" type="hidden" value="<?php echo $datos["fechaNacimientoProfesor"]?>"  /></td>
+	      <input name="fechaNacimiento_h" type="hidden" value="<? echo $datos["fechaNacimientoProfesor"]?>"  /></td>
 	</tr>
 	<tr>
     	<th>Correo Electrónico:</th>
-	    <td colspan="3"><input size="30" type="text" name="email" id="email" value="<?php echo $datos["emailProfesor"]?>" size="100"/></td>
+	    <td colspan="3"><input size="30" type="text" name="email" id="email" value="<? echo $datos["emailProfesor"]?>" size="100"/></td>
   	</tr>
 	<tr>
     	<th align="left">Teléfono del Establecimiento:</th>
-	    <td style="vertical-align:middle"><input size="10" type="text" name="telefonoColegio" id="telefonoColegio" value="<?php echo $datosColegio["telefonoColegio"]?>" readonly/></td>
+	    <td style="vertical-align:middle"><input size="10" type="text" name="telefonoColegio" id="telefonoColegio" value="<? echo $datosColegio["telefonoColegio"]?>" readonly/></td>
         <th>Teléfono Móvil</th>
-		<td style="vertical-align:middle"><input size="10" type="text" name="telefono" id="telefono" value="<?php echo $datos["telefonoProfesor"]?>"/></td>
+		<td style="vertical-align:middle"><input size="10" type="text" name="telefono" id="telefono" value="<? echo $datos["telefonoProfesor"]?>"/></td>
 	</tr>
 	<tr>
     	<th>Años de Docencia</th>
-	    <td colspan="3"><input type="text" name="experiencia" id="experiencia" value="<?php echo @$datos["anosExperienciaProfesor"]?>" size="100"/></td>
+	    <td colspan="3"><input type="text" name="experiencia" id="experiencia" value="<? echo @$datos["anosExperienciaProfesor"]?>" size="100"/></td>
 	</tr>
 	<tr>
     	<th>Años de Docencia en Establecimiento actual:</th>
-	    <td style="vertical-align:middle" colspan="3"><input type="text" name="experienciaColegioActual" id="experienciaColegioActual" size="100" value="<?php echo @$datos["anosExperienciaEnColegio"]?>"/></td>
+	    <td style="vertical-align:middle" colspan="3"><input type="text" name="experienciaColegioActual" id="experienciaColegioActual" size="100" value="<? echo @$datos["anosExperienciaEnColegio"]?>"/></td>
 	</tr>
 	<tr>
     	<th>Curso(s) en que hace clases de matemática durante el 2013:
@@ -216,7 +216,7 @@ marcaCursoActual();
 	
     </div> <!--columnaCentro-->
 
-     <?php 
+     <? 
     	
 		require("pie.php");
 		

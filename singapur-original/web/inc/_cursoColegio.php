@@ -1,4 +1,4 @@
-<?php
+<?
 function getCursosUsuarioBitacora($idUsuario){
 	$sql = "SELECT c.* 
 		FROM cursoColegio c, usuario u

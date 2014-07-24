@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 function Conectarse(){   
    if (!($link=mysql_connect("localhost","desarrollo","..5&desarrollo")))

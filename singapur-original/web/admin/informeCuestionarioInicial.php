@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 
 session_start();
@@ -113,23 +113,23 @@ $datosPauta = getPautasCompletas();
     <th scope="col">(Pauta)</th>
   </tr>
 
-<?php 
+<? 
 $i = 1;
 foreach ($datosPauta as $pauta){
 ?>
 
   <tr>
-    <td><?php echo $i;?></td>
-    <td><?php echo $pauta["comunaColegio"];?></td>
-    <td><?php echo $pauta["rbd"];?></td>
-    <td><?php echo $pauta["nombreColegio"];?></td>
-    <td><?php echo $pauta["nivel"];?></td>
-    <td><?php echo $pauta["letra"];?></td>
-    <td><?php echo $pauta["fechaRespuestaPauta"];?></td>
-    <td><?php echo $pauta["idPauta"];?></td>
+    <td><? echo $i;?></td>
+    <td><? echo $pauta["comunaColegio"];?></td>
+    <td><? echo $pauta["rbd"];?></td>
+    <td><? echo $pauta["nombreColegio"];?></td>
+    <td><? echo $pauta["nivel"];?></td>
+    <td><? echo $pauta["letra"];?></td>
+    <td><? echo $pauta["fechaRespuestaPauta"];?></td>
+    <td><? echo $pauta["idPauta"];?></td>
   </tr>
 
-<?php 
+<? 
 $i++;
 }
 ?>  

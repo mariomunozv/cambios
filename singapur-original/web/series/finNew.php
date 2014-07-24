@@ -1,4 +1,4 @@
-<?php
+<?
 
 session_start();
 include "../inc/conecta.php";
@@ -58,7 +58,7 @@ function closer() {
 
 
 
-<?php
+<?
 if (isset($_SESSION["porcentajeLogroLista"])) {
 	$porcentajeLogroLista = $_SESSION["porcentajeLogroLista"];
 	$totalPuntosItem = $_SESSION["puntajeTotal"];
@@ -116,7 +116,7 @@ boton("Finalizar Actividad","closer();");
 ?>
 </td></tr></table>
 </div></div>
-<?php
+<?
 $tiempo = 0;
 if (isset($_SESSION["tiempo"])) {
 	$tiempo = $_SESSION["tiempo"];

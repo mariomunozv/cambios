@@ -1,4 +1,4 @@
-<?php
+<?
 
 require("inc/incluidos.php");
 
@@ -15,7 +15,7 @@ $idPerfil = getIdPerfilUsuario($idUsuario);
 
 <h3>
 	Mensajes Recibidos 
-	<?php
+	<?
 	$num = getMensajesSinLeerUsuario($idUsuario);
 	if ($num > 0){
 		echo "(".$num.")";
@@ -27,12 +27,12 @@ $idPerfil = getIdPerfilUsuario($idUsuario);
 	<tr class="ui-state-active" >
 		<th>&nbsp;</th>
 		<th>&nbsp;De</th>
-		<?php
+		<?
 		// Si el usuario tiene perfil de coordinador grl (idPefil=9) 
 	   if($idPerfil == 9){ 
 	   ?>
 	   <th>&nbsp;Para</th>
-	   <?php
+	   <?
 	   }
 	   ?>
 		<th>&nbsp;Asunto</th>
@@ -40,7 +40,7 @@ $idPerfil = getIdPerfilUsuario($idUsuario);
 	</tr>
 	
 	
-	<?php
+	<?
 	// Si el usuario tiene perfil de coordinador (idPefil=3), 
 	// puede acceder a los mensajes hechos a los tutores además de los propios
 	
@@ -87,30 +87,30 @@ $idPerfil = getIdPerfilUsuario($idUsuario);
 			}
 	
 	?>
-	<tr <?php echo $estilo;?>>
+	<tr <? echo $estilo;?>>
 		<td align="center">
-			<img src="<?php echo "subir/fotos_perfil/th_".$datosDeUsuario["imagenUsuario"];?>" />
+			<img src="<? echo "subir/fotos_perfil/th_".$datosDeUsuario["imagenUsuario"];?>" />
 		</td>
 		<td>
-			<?php
+			<?
 			echo $texto_de;
 			?> 
 		</td>
-		<?php
+		<?
 		if($idPerfil == 9){
 		?>
 		<td>
-			<?php
+			<?
 			
 			echo $texto_para; 
 			?> 
 		</td>
-		<?php
+		<?
 		}
 		?>
 		<td>
-			<a href="mensaje.php?idMensaje=<?php echo $row["idMensaje"];?>">
-			<?php if($row["asuntoMensaje"]!= ''){
+			<a href="mensaje.php?idMensaje=<? echo $row["idMensaje"];?>">
+			<? if($row["asuntoMensaje"]!= ''){
             	echo $row["asuntoMensaje"];
 			}else {
 				echo "menasje sin asunto";
@@ -118,11 +118,11 @@ $idPerfil = getIdPerfilUsuario($idUsuario);
             </a>
 		</td>
 		<td>
-			<?php cambiaf_a_normal($row["fechaMensaje"]); ?>
+			<? cambiaf_a_normal($row["fechaMensaje"]); ?>
 		</td>
 	</tr>
 	
-<?php 
+<? 
 		}// while
 	
 	}
@@ -132,7 +132,7 @@ $idPerfil = getIdPerfilUsuario($idUsuario);
 	<tr class="style6">
 		<td colspan="5">Usted no tiene mensajes en su bandeja.</td>
 	</tr>			
-<?php
+<?
 	}
 	 
 	 ?>

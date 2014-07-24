@@ -1,4 +1,4 @@
-<?php
+<?
     $url = $_SERVER['REQUEST_URI'];
     if (substr($url, 0, 7)!=='http://') {
         $url = 'http://'.$_SERVER['HTTP_HOST'];
@@ -22,7 +22,7 @@ input, textarea, select
 <page footer="form">
     <h1>Test de formulaire</h1><br>
     <br>
-    <form action="<?php echo $url; ?>">
+    <form action="<? echo $url; ?>">
         <input type="hidden" name="test" value="1">
         Vous utilisez cette librairie dans le cadre :
         <ul style="list-style: none">

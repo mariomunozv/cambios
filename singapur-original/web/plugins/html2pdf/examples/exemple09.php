@@ -1,4 +1,4 @@
-<?php
+<?
 /**
  * HTML2PDF Librairy - example
  *
@@ -25,7 +25,7 @@ if ($generate) {
         <title>Exemple d'auto génération de PDF</title>
     </head>
     <body>
-<?php
+<?
 }
 
 $url = dirname($_SERVER['REQUEST_URI']).'/res/exemple09.png.php?px=5&amp;py=20';
@@ -36,19 +36,19 @@ if (substr($url, 0, 7)!=='http://') {
 <br>
 Ceci est un exemple de génération de PDF via un bouton :)<br>
 <br>
-<img src="<?php echo $url; ?>" alt="image_php" ><br>
+<img src="<? echo $url; ?>" alt="image_php" ><br>
 <br>
-<?php
+<?
     if ($generate) {
 ?>
-Bonjour <b><?php echo $nom; ?></b>, ton nom peut s'écrire : <br>
-<barcode type="C39" value="<?php echo strtoupper($nom); ?>" style="color: #770000" ></barcode><hr>
+Bonjour <b><? echo $nom; ?></b>, ton nom peut s'écrire : <br>
+<barcode type="C39" value="<? echo strtoupper($nom); ?>" style="color: #770000" ></barcode><hr>
 <br>
-<?php
+<?
     }
 ?>
 <br>
-<?php
+<?
     if ($generate) {
         $content = ob_get_clean();
         require_once(dirname(__FILE__).'/../html2pdf.class.php');

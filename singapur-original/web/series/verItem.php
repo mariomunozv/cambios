@@ -1,4 +1,4 @@
-<?php
+<?
 session_start();
 include "../inc/conecta.php";
 include "../inc/funciones.php";
@@ -144,7 +144,7 @@ $datos = $item["fondoItem"];
 
 <body>
 <!-- Panel -->
-<?php //include("barra.php");?>
+<? //include("barra.php");?>
 <div id="todo">
 <div id="top">&nbsp;</div>
 	<div id="contenido">
@@ -164,7 +164,7 @@ $datos = $item["fondoItem"];
 
 		                <td class="enunciadoProblema" id="enunciado">
                         <div id="textoEnunciado">
-							<?php echo $item["enunciadoItem"];?>
+							<? echo $item["enunciadoItem"];?>
 		               	</div>
                         </td>
 
@@ -175,13 +175,13 @@ $datos = $item["fondoItem"];
 		            <td>
                      <table width="100%" border="0" cellpadding="0" cellspacing="1" bordercolor="#000000">
 		              <tr>
-                    <?php //$datos = $item;?>
-		                <td rowspan="5"  valign="top" bgcolor="#FFFFFF" id="fondo"><img src="<?php echo $datos;?>"/></td>
+                    <? //$datos = $item;?>
+		                <td rowspan="5"  valign="top" bgcolor="#FFFFFF" id="fondo"><img src="<? echo $datos;?>"/></td>
 		                <td align="center" bgcolor="#FFFFFF">
 
                         <table border="0" cellpadding="0" cellspacing="0" width="500">
 
-                         <?php
+                         <?
 
 						 if($item["cantidadRespuestasItem"] > 1){
 							 $letras = array("A","B","C","D","E","F","G","H","I","J");
@@ -217,19 +217,19 @@ $datos = $item["fondoItem"];
 										<td bgcolor="#F3F3F3"><img src="img/transparent.gif" width="5"></td>
 
                                         <!-- Aquí va el texto de la alternativa-->
-                                        <?php if(strlen($alternativa["nombreAlternativaItem"]) > 400){
+                                        <? if(strlen($alternativa["nombreAlternativaItem"]) > 400){
 											$ancho = 550;
 										}else{
 											$ancho = 270;
 											}?>
 
-                                        <td id="alternativa" width="<?php echo $ancho;?>" class="alternativa" bgcolor="#F3F3F3" height="40" onclick="check=document.getElementById('respuesta<?php echo $i; ?>');
+                                        <td id="alternativa" width="<? echo $ancho;?>" class="alternativa" bgcolor="#F3F3F3" height="40" onclick="check=document.getElementById('respuesta<? echo $i; ?>');
 											check.checked=(check.checked==true)?true:true;">
 
 											<table>
 												<tr>
 													<td rowspan="3">
-													<?php
+													<?
 													echo $alternativa["nombreAlternativaItem"];
 
 													if ($alternativa["tipoCampo"] == "normal") {
@@ -268,7 +268,7 @@ $datos = $item["fondoItem"];
                                       <tr><td>&nbsp;</td>
                                       </tr>
 
-								 <?php
+								 <?
 							  }
 
 							  ?>

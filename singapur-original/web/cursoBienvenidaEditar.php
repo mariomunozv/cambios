@@ -1,4 +1,4 @@
-<?php
+<?
 
 require("admin/inc/config.php");
 include "inc/_cursoCapacitacion.php";
@@ -25,9 +25,9 @@ function save_bienvenida(){
 
 </script>
 
-<input id="idCursoCapacitacion" name="idCursoCapacitacion" type="hidden" value="<?php echo $_SESSION["sesionIdCurso"];?>" class="campos" />
+<input id="idCursoCapacitacion" name="idCursoCapacitacion" type="hidden" value="<? echo $_SESSION["sesionIdCurso"];?>" class="campos" />
         
-<textarea id="descripcionCursoCapacitacion" name="descripcionCursoCapacitacion" class="campos" cols="70" rows="15"><?php echo @$datos["descripcionCursoCapacitacion"]; ?></textarea>
+<textarea id="descripcionCursoCapacitacion" name="descripcionCursoCapacitacion" class="campos" cols="70" rows="15"><? echo @$datos["descripcionCursoCapacitacion"]; ?></textarea>
 
 <a class="button" href="javascript:save_bienvenida();"><span><div class="save">Guardar</div></span></a>
 

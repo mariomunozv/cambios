@@ -1,4 +1,4 @@
-<?php
+<?
 
 require("inc/config.php");
 
@@ -10,7 +10,7 @@ require("inc/config.php");
 
 
         
-<?php
+<?
 
 
 

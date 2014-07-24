@@ -1,4 +1,4 @@
-<?php
+<?
 require("inc/config.php");
 $idActividad = $_REQUEST["idActividad"];
 $idActividadPagina = $_REQUEST["idActividadPagina"];
@@ -55,19 +55,19 @@ $("#cancelar").click(function () {
 </tr>
 <tr>
 	<td>idActividad</td>
-    <td><input type="text" name="idActividad" id="idActividad" class="campos" readonly="readonly" value="<?php echo $idActividad ?>" required="required" size="100px">
+    <td><input type="text" name="idActividad" id="idActividad" class="campos" readonly="readonly" value="<? echo $idActividad ?>" required="required" size="100px">
 </tr>
-<?php
+<?
 if(isset($idActividadPagina))
 { ?>
 <tr>
 	<td>idActividadPagina</td>
-    <td><input type="text" name="idActividadPagina" id="idActividadPagina" class="campos" readonly="readonly" value="<?php echo $idActividadPagina ?>" required="required" size="100px">
+    <td><input type="text" name="idActividadPagina" id="idActividadPagina" class="campos" readonly="readonly" value="<? echo $idActividadPagina ?>" required="required" size="100px">
 </tr>
-<?php }?>
+<? }?>
 <tr>
 	<td>Nombre</td>
-    <td><input type="text" name="titulo" id="titulo" class="campos"  value="<?php echo $actividades[0]["nombreActividadPagina"];?>" size="100px">
+    <td><input type="text" name="titulo" id="titulo" class="campos"  value="<? echo $actividades[0]["nombreActividadPagina"];?>" size="100px">
 </tr>
 <tr>
 	<td>Tipo</td>
@@ -75,22 +75,22 @@ if(isset($idActividadPagina))
 </tr>
 <tr>
 	<td>Orden</td>
-    <td><input type="text" name="ordenPagina" id="ordenPagina" class="campos" value="<?php echo $actividades[0]["ordenActividadPagina"];?>" size="100px"></td>
+    <td><input type="text" name="ordenPagina" id="ordenPagina" class="campos" value="<? echo $actividades[0]["ordenActividadPagina"];?>" size="100px"></td>
 </tr>
 <tr>
 	<td colspan="2" align="center">
-    	<?php
+    	<?
 			if(isset($idActividadPagina))
 			{ ?>
             <input type="button" name="enviar" id="enviar" value="Actualizar" onclick="guarda_actividadPagina()"/>				
             <input type="hidden" name="orden" id="orden" value="actualizar" class="campos" />
-            <input type="hidden" name="idActividad" id="idActividad" value="<?php echo $idActividad ?> " class="campos"/>
-            <input type="hidden" name="idActividadPagina" id="idActividadPagina" value="<?php echo $idActividadPagina ?> " class="campos"/>
-			<?php 
+            <input type="hidden" name="idActividad" id="idActividad" value="<? echo $idActividad ?> " class="campos"/>
+            <input type="hidden" name="idActividadPagina" id="idActividadPagina" value="<? echo $idActividadPagina ?> " class="campos"/>
+			<? 
 			}else{ ?>
 			<input type="button" name="enviar" id="enviar" value="Guardar" onclick="guarda_actividadPagina()"/>				
 			<input type="hidden" name="orden" id="orden" value="guardar" class="campos"/>
-			<?php }	?>
+			<? }	?>
 		<input type="button" name="cancelar" id="cancelar" value="Cancelar"/>
 	</td>
 

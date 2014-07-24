@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 function getComentariosMensaje($idMensaje){
 	$sql = "SELECT * FROM comentario WHERE tablaComentario = 'mensajeTema' AND idReferenciaComentario = ".$idMensaje;

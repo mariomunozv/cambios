@@ -1,4 +1,4 @@
-<?php
+<?
 
 require("inc/config.php");
 //require "inc/funcionesAdmin.php";
@@ -82,10 +82,10 @@ function save_escuela(){
             <tr>
 				<th align="right">Comuna</th> 
 				<td><select class="campos" id="idComuna" name="idComuna">
-                <?php foreach ($comunas as $comuna){ ?> 
-				<option value="<?php echo $comuna["idComuna"];?>"><?php echo $comuna["nombreComuna"];?></option>
+                <? foreach ($comunas as $comuna){ ?> 
+				<option value="<? echo $comuna["idComuna"];?>"><? echo $comuna["nombreComuna"];?></option>
 				
-				<?php }?>
+				<? }?>
 				</select></td>
 			</tr>   
 			<tr>

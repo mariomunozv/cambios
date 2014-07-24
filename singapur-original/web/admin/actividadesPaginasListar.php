@@ -1,4 +1,4 @@
-<?php
+<?
 require("inc/config.php");
 include "../inc/_funciones.php";
 
@@ -45,7 +45,7 @@ $actividades = getActividades($idActividad);
 <script type="text/javascript" src="js/jquery.Rut.js"></script>
 <script type="text/javascript" src="js/tablednd.js"></script>
 
-<?php
+<?
 boton("Nueva Pagina", "new_pagina($idActividad);");
 ?>
 
@@ -72,20 +72,20 @@ $('#tblAcPag').tableDnD({
             <th>Editar</th>
             <th>Ver Detalle</th>
         </tr>
-        <?php 
+        <? 
         foreach($actividades as $actividad)
         {
         ?>
-        <tr id="<?php echo $actividad["idActividadPagina"];?>" onmouseout="this.className='normal'" onmouseover="this.className='normalActive'">
-            <td><?php echo $actividad["idActividadPagina"]; ?></td>
-            <td><?php echo $actividad["idActividad"]; ?></td>
-            <td><?php echo $actividad["nombreActividadPagina"]; ?></td>
-            <td><?php echo $actividad["tipoActividadPagina"];?></td>
-            <td><?php echo $actividad["ordenActividadPagina"];?></td>
-            <td><a href="javascript:edit_actividadPagina(<?php echo $actividad["idActividad"].",".$actividad["idActividadPagina"] ?>)">Editar</a></td>
-            <td><a id="detalle" href="javascript:listaPaginas(<?php echo $actividad["idActividadPagina"] ?>)">Ver Detalle</a></td>
+        <tr id="<? echo $actividad["idActividadPagina"];?>" onmouseout="this.className='normal'" onmouseover="this.className='normalActive'">
+            <td><? echo $actividad["idActividadPagina"]; ?></td>
+            <td><? echo $actividad["idActividad"]; ?></td>
+            <td><? echo $actividad["nombreActividadPagina"]; ?></td>
+            <td><? echo $actividad["tipoActividadPagina"];?></td>
+            <td><? echo $actividad["ordenActividadPagina"];?></td>
+            <td><a href="javascript:edit_actividadPagina(<? echo $actividad["idActividad"].",".$actividad["idActividadPagina"] ?>)">Editar</a></td>
+            <td><a id="detalle" href="javascript:listaPaginas(<? echo $actividad["idActividadPagina"] ?>)">Ver Detalle</a></td>
         </tr>
-        <?php } ?>
+        <? } ?>
 	<tbody>
 </table>
 

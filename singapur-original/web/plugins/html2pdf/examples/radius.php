@@ -1,4 +1,4 @@
-<?php
+<?
 /**
  * HTML2PDF Librairy - example
  *
@@ -36,7 +36,7 @@
     <div class="div div7">Exemple de div</div>
     <div class="div div8">Exemple de div</div>
 </page>
-<?php
+<?
      $content = ob_get_clean();
 
     // convert to PDF

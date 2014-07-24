@@ -1,5 +1,5 @@
 
-<?php 
+<? 
 require("inc/incluidos.php");
 include "inc/_actividad.php";
 
@@ -65,7 +65,7 @@ require ("hd.php");?>
 
 <body>
 <div id="principal">
-<?php 
+<? 
 require("topMenu.php"); 
 $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 //$navegacion = "Home*home.php,".$nombreCurso."*curso.php?idCurso=".$_SESSION["sesionIdCurso"].",Actividades*informeActividad.php";
@@ -75,7 +75,7 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 
 
     <div id="lateralIzq">
-    <?php 
+    <? 
 		require("caja_misCursos.php");
 		
 		require("caja_participantes.php");
@@ -94,7 +94,7 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
     
     
      <div id="lateralDer">
-      <?php 
+      <? 
 	  require("caja_bienvenida.php");
 		require("caja_calendario.php");
 	  ?>
@@ -110,13 +110,13 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
         <p class="titulo_curso">Informe de Actividades</p>
         <hr />
         <br />
-         <?php if($actividades){?>
+         <? if($actividades){?>
         <p align="justify">Seleccione la actividad que desea consultar.</p>
        <br>
 <br>
 
         <ul>
-    	<?php foreach ($actividades as $actividad){
+    	<? foreach ($actividades as $actividad){
 			
 				if ($_SESSION["sesionPerfilUsuario"] < 5){ // Tutor
 					$link = "informeActividadDetalle.php?idUsuario=".$idUsuario."&idActividad=".$actividad["idActividad"];
@@ -127,16 +127,16 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 				
 			
 			?>
-        	<li><a href="<?php echo $link; ?>"><?php echo $actividad["tituloActividad"];?></a></li>
+        	<li><a href="<? echo $link; ?>"><? echo $actividad["tituloActividad"];?></a></li>
             <li>&nbsp;</li>
         	
-        <?php }?>
+        <? }?>
         </ul>
-       <?php }else{?>
+       <? }else{?>
        <p class="titulo_curso">No hay actividades en este curso</p>
        <br>
 
-       <?php }
+       <? }
 	   
 	   boton("Volver","history.back();");
 	   ?>
@@ -150,12 +150,12 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
         
       </div><!--columnaCentro-->
          
-       <?php //  require("misCursos.php");?>
+       <? //  require("misCursos.php");?>
      
                
     
               
-	<?php 
+	<? 
     
     	require("pie.php");
     

@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set("display_errors","on");
 require("inc/config.php");
 include("../inc/_formulario.php");
@@ -33,7 +33,7 @@ function creaSeccion()
 	<tr>
 		<td>Seleccionar Formulario: </td>
 		<td align="left">
-		<?php
+		<?
 		
 		$formularios = getFormularios();
 		print("<select name='formulario' id='formulario' class='campos' onchange='javascript:listarSecciones();'>");

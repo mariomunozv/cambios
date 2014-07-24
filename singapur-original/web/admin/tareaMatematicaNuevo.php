@@ -1,4 +1,4 @@
-<?php
+<?
 
 require("../inc/_funciones.php");
 
@@ -40,7 +40,7 @@ function save_tarea(){
                 <th align="right">Campo</th> 
                 <td>
                     <select name="idCampo" id="idCampo" class="campos">
-					<?php 
+					<? 
                     $arreglo = getIdNombreTabla("Campo");
                     armaSelect($arreglo,"Campo"); 
                     ?>

@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set("display_errors","on");
 require("inc/config.php");
 //require("inc/sesionAdmin.php");
@@ -163,11 +163,11 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
 
 			<div class="row">
 				<div class="span2">
-					<input type="hidden" name="idActividad" id="idActividad" value="<?php echo $_GET['idActividad']; ?>" onclick="">
+					<input type="hidden" name="idActividad" id="idActividad" value="<? echo $_GET['idActividad']; ?>" onclick="">
 					<input class="btn  btn-success" type="button" name="enviar" id="enviar" value="Guardar" onclick="">
 			    </div>
 				<div class="span2">
-					<a href='itemNew.php?idActividad=<?php echo $_GET['idActividad'] ?>' id="cancelar" class='btn btn-danger'>Cancelar</a>
+					<a href='itemNew.php?idActividad=<? echo $_GET['idActividad'] ?>' id="cancelar" class='btn btn-danger'>Cancelar</a>
 			    </div>
 			</div>
 

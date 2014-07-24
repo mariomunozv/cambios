@@ -1,4 +1,4 @@
-<?php 
+<? 
 //ini_set('display_errors','On');
 require("inc/incluidos.php");
 require("inc/pruebasPorCurso.php");
@@ -109,7 +109,7 @@ var muestraCurso = function (rbdColegio,idNivel,anoCursoColegio,letraCursoColegi
  
 
 <div id="principal">
-<?php 
+<? 
 	require("topMenu.php"); 
 	$navegacion = "Home*curso.php?idCurso=$idCurso,Evaluación*#";
 	require("_navegacion.php");
@@ -117,7 +117,7 @@ var muestraCurso = function (rbdColegio,idNivel,anoCursoColegio,letraCursoColegi
 ?>
 	
     <div id="lateralIzq">
-    <?php 
+    <? 
 		require("menuleft.php")	
 	?>
     </div> <!--lateralIzq-->
@@ -125,7 +125,7 @@ var muestraCurso = function (rbdColegio,idNivel,anoCursoColegio,letraCursoColegi
     
     
     <div id="lateralDer">
-  	<?php 
+  	<? 
 		require("menuright.php")
     ?>
     
@@ -157,7 +157,7 @@ var muestraCurso = function (rbdColegio,idNivel,anoCursoColegio,letraCursoColegi
 			  </tr>
 			  </thead>
 			  <tbody> 
-			  <?php 
+			  <? 
 			  $perfilUsuario = $_SESSION['sesionPerfilUsuario'];
 			  $cursos = getCursosProfesor($datosUsuario["rutProfesor"],$anoActual, $perfilUsuario);
 			 
@@ -169,13 +169,13 @@ var muestraCurso = function (rbdColegio,idNivel,anoCursoColegio,letraCursoColegi
 
 				  ?>
 			              <tr onMouseOver="this.className='normalActive'" onMouseOut="this.className='normal'" class="normal">
-			                <td><?php echo $curso["nombreNivel"]." ".$curso["letraCursoColegio"];?></td>
-			                <td><?php echo $curso["anoCursoColegio"];?></td>
-			                <td><?php echo $nombre;?> </td>
-			                  <td><?php cuentaAlumnosCurso($curso["letraCursoColegio"],$curso["anoCursoColegio"],$curso["rbdColegio"],$curso["idNivel"]);?> </td>
+			                <td><? echo $curso["nombreNivel"]." ".$curso["letraCursoColegio"];?></td>
+			                <td><? echo $curso["anoCursoColegio"];?></td>
+			                <td><? echo $nombre;?> </td>
+			                  <td><? cuentaAlumnosCurso($curso["letraCursoColegio"],$curso["anoCursoColegio"],$curso["rbdColegio"],$curso["idNivel"]);?> </td>
 			                
 			  <td>
-			  <?php 
+			  <? 
 				$i=0;
 				if (isset($pruebasPorCurso[$curso["idNivel"]])) {
 					$pruebas = $pruebasPorCurso[$curso["idNivel"]];
@@ -191,14 +191,14 @@ var muestraCurso = function (rbdColegio,idNivel,anoCursoColegio,letraCursoColegi
 						echo "<br>"; 
 					}
 				  ?>
-			  <a href="javascript:muestraCurso(<?php echo $curso["rbdColegio"];?>,<?php echo $curso["idNivel"];?>,<?php echo $curso["anoCursoColegio"];?>,'<?php echo $curso["letraCursoColegio"];?>',<?php echo $escala.",'".$curso["nombreNivel"]."',".$idLista; ?>)"><img border="0" src="img/ver.gif" width="14" height="14" alt="Ver más" title="Ver más" /> Prueba <?php echo $i;?></a>
-			  <?php } ?>
+			  <a href="javascript:muestraCurso(<? echo $curso["rbdColegio"];?>,<? echo $curso["idNivel"];?>,<? echo $curso["anoCursoColegio"];?>,'<? echo $curso["letraCursoColegio"];?>',<? echo $escala.",'".$curso["nombreNivel"]."',".$idLista; ?>)"><img border="0" src="img/ver.gif" width="14" height="14" alt="Ver más" title="Ver más" /> Prueba <? echo $i;?></a>
+			  <? } ?>
 			  
 			  </td>
 			             </a>
 			               
 			              </tr>
-			<?php 		}
+			<? 		}
 			 }else{ 
 				 echo "<tr><td colspan='5'>No existen Cursos asociados a este profesor</td></tr>"; 
 			  
@@ -219,19 +219,19 @@ var muestraCurso = function (rbdColegio,idNivel,anoCursoColegio,letraCursoColegi
            
   	<div id="lugarCarga"></div>          
       
-  <?php
+  <?
 if(@$_SESSION["sesionRbdColegio"] != ""){?>
 	<!--<script>
-	muestraCurso(<?php echo $_SESSION["sesionRbdColegio"];?>,<?php echo $_SESSION["sesionIdNivel"];?>,<?php echo $_SESSION["sesionAnoCursoColegio"];?>,'<?php echo $_SESSION["sesionLetraCursoColegio"];?>',<?php echo $escala.","."'".$_SESSION["sesionNombreNivel"]."'"; ?>);
+	muestraCurso(<? echo $_SESSION["sesionRbdColegio"];?>,<? echo $_SESSION["sesionIdNivel"];?>,<? echo $_SESSION["sesionAnoCursoColegio"];?>,'<? echo $_SESSION["sesionLetraCursoColegio"];?>',<? echo $escala.","."'".$_SESSION["sesionNombreNivel"]."'"; ?>);
 	</script>-->
-	<?php
+	<?
 	}
 ?>      
 			
         
     </div> <!--columnaCentro-->
 
-	<?php 
+	<? 
     	
 		require("pie.php");
 		

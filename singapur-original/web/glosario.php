@@ -1,4 +1,4 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 require ("hd.php");
 
@@ -18,20 +18,20 @@ $(function() {
 
 <body>
 <div id="principal">
-<?php 
+<? 
 	require("topMenu.php"); 
 	$navegacion = "Home*curso.php?idCurso=$idCurso,Glosario*#";	
 	require("_navegacion.php");
 ?>
 	
     <div id="lateralIzq">
-	    <?php require("menuleft.php");	?>
+	    <? require("menuleft.php");	?>
     </div> <!--lateralIzq-->
     
     
     
 	<div id="lateralDer">
-	    <?php require("menuright.php");	?>
+	    <? require("menuright.php");	?>
 	</div><!--lateralDer-->
     
     
@@ -41,7 +41,7 @@ $(function() {
 		<div id="tabs">
             <ul>
         
-                <?php 
+                <? 
                 
             
                     if (isset($_REQUEST["idPalabra"])){
@@ -58,7 +58,7 @@ $(function() {
 
                 ?>    
             
-                <li><a href="<?php echo $tipoGlosario; ?>">Glosario</a></li>
+                <li><a href="<? echo $tipoGlosario; ?>">Glosario</a></li>
                 <li><a href="glosarioLetra.php?letra=a">A</a></li>
                 <li><a href="glosarioLetra.php?letra=b">B</a></li>
                 <li><a href="glosarioLetra.php?letra=c">C</a></li>
@@ -92,7 +92,7 @@ $(function() {
 			
     </div> <!--columnaCentro-->
 
-	<?php 
+	<? 
     	
 		require("pie.php");
 		

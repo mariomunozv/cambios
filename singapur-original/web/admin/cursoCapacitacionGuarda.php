@@ -1,4 +1,4 @@
-<?php
+<?
 require("inc/config.php");
 require("../inc/_funciones.php");
 
@@ -19,7 +19,7 @@ guardarCursoCapacitacion($idProyectoKlein, $nombreCortoCursoCapacitacion, $nombr
 
 
 
-<?php 
+<? 
 
 function guardarCursoCapacitacion($idProyectoKlein, $nombreCortoCursoCapacitacion, $nombreCursoCapacitacion, $descripcionCursoCapacitacion,$estadoCursoCapacitacion){
 	$sql = "INSERT INTO cursoCapacitacion ( idProyectoKlein , nombreCortoCursoCapacitacion , nombreCursoCapacitacion, descripcionCursoCapacitacion , estadoCursoCapacitacion)";

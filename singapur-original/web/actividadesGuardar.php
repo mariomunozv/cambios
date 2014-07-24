@@ -1,4 +1,4 @@
-<?php
+<?
 require("inc/config.php");
 
 $titulo = $_REQUEST["titulo"];

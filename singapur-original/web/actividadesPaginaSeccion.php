@@ -1,5 +1,5 @@
 
-<?php 
+<? 
 require("inc/incluidos.php");
 
 include "inc/_actividad.php";
@@ -152,9 +152,9 @@ require ("hd.php");?>
 
 <body>
 <div id="principal">
-<?php require("topActividad.php"); ?>
+<? require("topActividad.php"); ?>
 	
- <?php 
+ <? 
  
  
  $items = getItemsSeccion($paginas[$j]["nombreActividadPagina"]);
@@ -169,23 +169,23 @@ require ("hd.php");?>
     
 	<div id="columnaCentro">
      
-        <p class="titulo_curso"><?php  echo "Actividad 2"; ?></p>
+        <p class="titulo_curso"><?  echo "Actividad 2"; ?></p>
         <hr />
         
-	<input name="tipoActividad" class="campos" id="tipoActividad" type="hidden" value="<?php echo $paginas[$j]["tipoActividadPagina"];?>">
+	<input name="tipoActividad" class="campos" id="tipoActividad" type="hidden" value="<? echo $paginas[$j]["tipoActividadPagina"];?>">
   
         
-           <input name="idSeccion" class="campos" id="idSeccion" type="hidden" value="<?php echo $paginas[$j]["nombreActividadPagina"];?>">
+           <input name="idSeccion" class="campos" id="idSeccion" type="hidden" value="<? echo $paginas[$j]["nombreActividadPagina"];?>">
         
-        <?php 
+        <? 
 		if($paginas[$j]["tipoActividadPagina"] == "Seccion"){?>
-		<?php ?>
+		<? ?>
         	
         
-                <input name="idFormulario" class="campos" id="idFormulario" type="hidden" value="<?php echo $idFormulario;?>">	
-                <?php foreach ($items as $item){?>
+                <input name="idFormulario" class="campos" id="idFormulario" type="hidden" value="<? echo $idFormulario;?>">	
+                <? foreach ($items as $item){?>
                 
-						<?php 
+						<? 
 						if(cuentaRestpuestaItem($item["idEnunciado"],$idUsuario)==0){
   	
 								$contestada = 0;
@@ -198,12 +198,12 @@ require ("hd.php");?>
                             info("Ya has enviado este item.");
                         } 
 						?>
-                      <?php echo $item["textoEnunciado"];?><br> 
+                      <? echo $item["textoEnunciado"];?><br> 
                      
   
-   <textarea name="item<?php echo $item["idEnunciado"];?>" id="item<?php echo $item["idEnunciado"];?>" name="nombre" cols="60" rows="5" class="campos" <?php if ($contestada == 1){ echo"disabled='disabled'";}?>><?php if ($contestada == 1){ echo getRespuestaUsuarioIdEnunciado($item["idEnunciado"],$idUsuario);}?></textarea>
+   <textarea name="item<? echo $item["idEnunciado"];?>" id="item<? echo $item["idEnunciado"];?>" name="nombre" cols="60" rows="5" class="campos" <? if ($contestada == 1){ echo"disabled='disabled'";}?>><? if ($contestada == 1){ echo getRespuestaUsuarioIdEnunciado($item["idEnunciado"],$idUsuario);}?></textarea>
    <br>
-                <?php }
+                <? }
              
 			 
 			
@@ -213,18 +213,18 @@ require ("hd.php");?>
         
        
       
-       <p align="right"><?php boton("Siguiente","continuar();");?></p>
+       <p align="right"><? boton("Siguiente","continuar();");?></p>
         
        <div id="carga"></div> 
         
       </div><!--columnaCentro-->
-           <input name="contestada" class="campos" id="contestada" type="hidden" value="<?php echo $contestada;?>">
-       <?php //  require("misCursos.php");?>
+           <input name="contestada" class="campos" id="contestada" type="hidden" value="<? echo $contestada;?>">
+       <? //  require("misCursos.php");?>
      
                
     
               
-	<?php 
+	<? 
     
     	require("pie.php");
     
@@ -235,12 +235,12 @@ require ("hd.php");?>
 
 <script>
 function continuar(){  
-		<?php 
+		<? 
 		
 		
 		foreach ($items as $item){?>
-		if(val_obligatorio("item<?php echo $item["idEnunciado"];?>") == false){ return; } // CAMPOS
-		<?php }?>
+		if(val_obligatorio("item<? echo $item["idEnunciado"];?>") == false){ return; } // CAMPOS
+		<? }?>
 		
 		var division = document.getElementById("carga");
 		var a = $(".campos").fieldSerialize(); 

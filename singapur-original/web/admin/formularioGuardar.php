@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set("display_errors","on");
 include("../inc/_formulario.php");
 require("inc/config.php");
@@ -21,7 +21,7 @@ if(crearformulario($idActividadPagina,$nombre,$descripcion,1)>0)
 	<script language="javascript">
 		formularioListado();
 	</script>
-	<?php
+	<?
 }
 else
 {

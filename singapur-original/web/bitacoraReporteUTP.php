@@ -1,5 +1,5 @@
-<?php require("inc/incluidos.php"); ?>
-<?php require ("hd.php");
+<? require("inc/incluidos.php"); ?>
+<? require ("hd.php");
 
 $idUsuario = $_REQUEST["idUsuario"];
 $tipoBitacora = $_REQUEST["instancia"];
@@ -60,7 +60,7 @@ function getNivelesBitacora($idBitacora){
    
   
 
-	<?php 
+	<? 
 	//print_r($_SESSION);
 
     $bitacoras = getBitacoraUsuarioTipo($idUsuario,$tipoBitacora); 
@@ -73,7 +73,7 @@ function getNivelesBitacora($idBitacora){
 
 
    <thead>     
-   <tr><th colspan="4"> <?php echo $datosProfesor["nombreParaMostrar"];?> <?php echo $datosProfesor["nombreColegio"]; ?><br /> Curso: <?php echo $nombreCurso; ?></th></tr>    
+   <tr><th colspan="4"> <? echo $datosProfesor["nombreParaMostrar"];?> <? echo $datosProfesor["nombreColegio"]; ?><br /> Curso: <? echo $nombreCurso; ?></th></tr>    
   <tr>
   <th width="80">Fecha</th>
   <th width="15">Minutos </th>
@@ -87,7 +87,7 @@ function getNivelesBitacora($idBitacora){
   <tbody>
   
 
-  <?php 
+  <? 
     
   if ($bitacoras){
 		foreach ($bitacoras as $bit){  
@@ -96,14 +96,14 @@ function getNivelesBitacora($idBitacora){
 	//	print_r($bit);
  ?>
               <tr>
-                <td title="Fecha "><?php echo cambiaf_a_normal($bit["fechaBitacora"]);?></td>
-                <td title="Minutos"><?php echo $bit["tiempoBitacora"];?></td>
-				 <td title="Niveles"><?php foreach($nivelesBitacora as $nivel){ echo $nivel["nombreNivel"]."<br>";};?></td>
-				<td><?php echo $bit["comentariosBitacora"];?></td>
+                <td title="Fecha "><? echo cambiaf_a_normal($bit["fechaBitacora"]);?></td>
+                <td title="Minutos"><? echo $bit["tiempoBitacora"];?></td>
+				 <td title="Niveles"><? foreach($nivelesBitacora as $nivel){ echo $nivel["nombreNivel"]."<br>";};?></td>
+				<td><? echo $bit["comentariosBitacora"];?></td>
 			
                
               </tr>
-<?php 		}
+<? 		}
  }else{ 
 	 echo "<tr><td colspan='12'>No existen bitacoras para este profesor</td></tr>"; 
   

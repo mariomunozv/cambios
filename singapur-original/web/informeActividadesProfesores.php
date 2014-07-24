@@ -1,5 +1,5 @@
 
-<?php 
+<? 
  ini_set('display_errors','On');
 session_start();
 include "inc/conectav10.php";
@@ -277,45 +277,45 @@ require ("hd.php");?>
 <tr>
 	<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
   
-    <?php foreach ($actividades as $actividad){	?>
+    <? foreach ($actividades as $actividad){	?>
 
-                <th><?php echo $actividad["tituloActividad"];?></th>
+                <th><? echo $actividad["tituloActividad"];?></th>
   
-                <?php } ?>
+                <? } ?>
 </tr>
 
 
 
 
                 
-                <?php foreach ($profes as $profe){
+                <? foreach ($profes as $profe){
 					$datosColegio = getDatosColegio($profe["rbdColegio"]);
 					
 					?>
                 <tr>
                 
-                <td><?php echo $datosColegio["nombreColegio"];?></td><td><?php echo $profe["curso"];?></td><td><?php echo $profe["nombreProfesor"]." ".$profe["apellidoPaternoProfesor"];?></td>
+                <td><? echo $datosColegio["nombreColegio"];?></td><td><? echo $profe["curso"];?></td><td><? echo $profe["nombreProfesor"]." ".$profe["apellidoPaternoProfesor"];?></td>
                 
-                 <?php foreach ($actividades as $actividad){
+                 <? foreach ($actividades as $actividad){
 					 $pautasUsuario =  getIntentos($profe["idUsuario"],$actividad["idLista"])
 					 ?>
                			<td>
                         <table class="tablesorter">
                         <tr><th>Intento</th><th>%</th><th>Item Malos</th></tr>
-                        <?php $i = 1; 
+                        <? $i = 1; 
 							foreach ($pautasUsuario as $pauta){?>
 							<tr>
-                            <td><?php echo "Intento ".$i; $i++; ?></td><td><?php echo $pauta["porcentajeLogroPautaItem"]."%"; ?></td>
-                            <td>&nbsp;<?php $itemMalos =	getItemMalos($pauta["idPautaItem"]); ?>
+                            <td><? echo "Intento ".$i; $i++; ?></td><td><? echo $pauta["porcentajeLogroPautaItem"]."%"; ?></td>
+                            <td>&nbsp;<? $itemMalos =	getItemMalos($pauta["idPautaItem"]); ?>
                             <table class="tablesorter">
                             <tr><td>ID</td><td>TAREA</td><td>Condiciones</td></tr>
-								<?php foreach ($itemMalos as $item){
+								<? foreach ($itemMalos as $item){
 									$condiciones = getCondicionesItem($item["idItem"]);
 									?>
                                  <tr>
-                                <td><?php echo $item["idItem"]?></td><td><?php echo $item["nombreTareaMatematica"]?></td>
+                                <td><? echo $item["idItem"]?></td><td><? echo $item["nombreTareaMatematica"]?></td>
                                 
-                                		<td><?php foreach ($condiciones as $condicion){
+                                		<td><? foreach ($condiciones as $condicion){
 												echo "<b>".$condicion["nombreVariableDidactica"]."</b>: ".$condicion["valorInstanciaVariableDidactica"]."<br>";
 											
 											
@@ -324,7 +324,7 @@ require ("hd.php");?>
                                 
                                 
                             </tr>    
-                                <?php }?>
+                                <? }?>
                             
                             
                             </table>
@@ -335,20 +335,20 @@ require ("hd.php");?>
                             
                             
                             </tr>
-							<?php }?>
+							<? }?>
                         </table>
                         
                         
                         </td>
-                <?php } ?>
+                <? } ?>
                 
                 </tr>  	
-  <?php // echo getRespuestaUsuarioIdEnunciado($item["idEnunciado"],$idUsuario); ?></textarea>
-                <?php } ?>
+  <? // echo getRespuestaUsuarioIdEnunciado($item["idEnunciado"],$idUsuario); ?></textarea>
+                <? } ?>
 
 
          
-       <?php //  require("misCursos.php");?>
+       <? //  require("misCursos.php");?>
      
                
     

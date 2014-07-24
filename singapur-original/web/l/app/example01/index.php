@@ -1,4 +1,4 @@
-<?php
+<?
 require_once '../lib/limonade.php';
 
 function configure()
@@ -104,21 +104,21 @@ function html_my_layout($vars){ extract($vars);?>
 </head>
 <body>
   <h1>Limonade first example</h1>
-	<?php echo $content?>
+	<? echo $content?>
 	<hr>
-	<a href="<?php echo url_for('/')?>">Home</a> |
-	<a href="<?php echo url_for('/hello/', $name)?>">Hello</a> | 
-	<a href="<?php echo url_for('/welcome/', $name)?>">Welcome !</a> | 
-	<a href="<?php echo url_for('/are_you_ok/', $name)?>">Are you ok ?</a> | 
-	<a href="<?php echo url_for('/how_are_you/', $name)?>">How are you ?</a>
+	<a href="<? echo url_for('/')?>">Home</a> |
+	<a href="<? echo url_for('/hello/', $name)?>">Hello</a> | 
+	<a href="<? echo url_for('/welcome/', $name)?>">Welcome !</a> | 
+	<a href="<? echo url_for('/are_you_ok/', $name)?>">Are you ok ?</a> | 
+	<a href="<? echo url_for('/how_are_you/', $name)?>">How are you ?</a>
 </body>
 </html>
-<?php }
+<? }
 
 function html_welcome($vars){ extract($vars);?> 
-<h3>Hello <?php echo $name?>!</h3>
-<p><a href="<?php echo url_for('/how_are_you/', $name)?>">How are you <?php echo $name?>?</a></p>
+<h3>Hello <? echo $name?>!</h3>
+<p><a href="<? echo url_for('/how_are_you/', $name)?>">How are you <? echo $name?>?</a></p>
 <hr>
-<p><a href="<?php echo url_for('/images/soda_glass.jpg')?>">
-   <img src="<?php echo url_for('/soda_glass.jpg/thumb')?>"></a></p>
-<?php }
+<p><a href="<? echo url_for('/images/soda_glass.jpg')?>">
+   <img src="<? echo url_for('/soda_glass.jpg/thumb')?>"></a></p>
+<? }

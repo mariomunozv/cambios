@@ -1,4 +1,4 @@
-<?php require("inc/config.php"); 
+<? require("inc/config.php"); 
 
 
 require("../inc/_colegio.php");
@@ -69,7 +69,7 @@ function saca(){
 
 
 $(function() {
-	<?php /* Asi inicializas tablesorter */ ?>	   
+	<? /* Asi inicializas tablesorter */ ?>	   
 	$("#tabla2").tablesorter();  
 }); 
 
@@ -93,7 +93,7 @@ $(function() {
   <tbody>
   
 
-  <?php 
+  <? 
   
 
 
@@ -111,16 +111,16 @@ $(function() {
 
  ?>
               <tr>
-              <td><?php echo $bitacora["nombreColegio"];?></td>
-			    <td><?php echo $bitacora["apellidoPaternoProfesor"]." ".$bitacora["apellidoMaternoProfesor"];?></td>
-                <td><?php echo $bitacora["nombreProfesor"];?></td>
-                <td><?php echo $bitacora["fechaBitacora"];?></td>
-				<td><?php echo $bitacora["nombreBitacora"];?></td>
-				<td><?php echo $bitacora["tiempoBitacora"];?></td>
-				<td><?php echo $bitacora["comentariosBitacora"];?></td>
+              <td><? echo $bitacora["nombreColegio"];?></td>
+			    <td><? echo $bitacora["apellidoPaternoProfesor"]." ".$bitacora["apellidoMaternoProfesor"];?></td>
+                <td><? echo $bitacora["nombreProfesor"];?></td>
+                <td><? echo $bitacora["fechaBitacora"];?></td>
+				<td><? echo $bitacora["nombreBitacora"];?></td>
+				<td><? echo $bitacora["tiempoBitacora"];?></td>
+				<td><? echo $bitacora["comentariosBitacora"];?></td>
                
               </tr>
-<?php 		}
+<? 		}
  }else{ 
 	 echo "<tr><td colspan='12'>No existen bitacoras en este curso</td></tr>"; 
   

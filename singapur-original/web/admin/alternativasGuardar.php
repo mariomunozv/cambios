@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set("display_errors","on");
 include("../inc/_alternativa.php");
 require("inc/config.php");
@@ -385,7 +385,7 @@ if($cuentaErrores == 0)
 		<script language="javascript">
 		   listarEnunciadosCerrados();
 		</script>
-	<?php 
+	<? 
 }
 else
 {

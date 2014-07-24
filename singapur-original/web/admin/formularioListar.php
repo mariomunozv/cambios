@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set("display_errors","on");
 include("../inc/_formulario.php");
 require("inc/config.php");
@@ -14,7 +14,7 @@ $formularios = getFormularios();
 <th>Página</th>
 </tr>
 
-<?php
+<?
 if(count($formularios) > 0)
 {
 	foreach ($formularios as $formulario)

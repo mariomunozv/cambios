@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 function getNombreComuna($idComuna){
 	$sql = "SELECT nombreComuna 

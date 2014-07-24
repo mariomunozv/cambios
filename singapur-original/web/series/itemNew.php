@@ -1,4 +1,4 @@
-<?php
+<?
 session_start();
 include "../inc/conecta.php";
 include "../inc/_funciones.php";
@@ -210,7 +210,7 @@ function validaItem(abierto){
 
 
 setTimeout(addSeg, 0);
-var segundos = <?php echo $_SESSION["tiempo"];?>;
+var segundos = <? echo $_SESSION["tiempo"];?>;
 
 function addSeg() {
 	document.getElementById("tiempo").value = segundos;
@@ -259,7 +259,7 @@ var updateTimeSession = function (segundos) {
 
 <body OnContextMenu="return false">
 <!-- Panel -->
-<?php //include("barra.php");?>
+<? //include("barra.php");?>
 <div id="todo">
 <div id="top">&nbsp;</div>
 	<div id="contenido">
@@ -268,11 +268,11 @@ var updateTimeSession = function (segundos) {
 
 		<td  valign="top"  width="100%"><table width="980" border="0">
 		  <tr>
-		  	Intento: <?php echo getNumIntentosActividad($idLista,$idUsuario);?>
+		  	Intento: <? echo getNumIntentosActividad($idLista,$idUsuario);?>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			Tiempo: <span id="spanreloj"><?php echo $_SESSION["tiempo"];?></span>
+			Tiempo: <span id="spanreloj"><? echo $_SESSION["tiempo"];?></span>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			Pregunta: <?php echo $_SESSION["indice"] + 1;
+			Pregunta: <? echo $_SESSION["indice"] + 1;
 			?>
 		    <td width="974"><table border="0" cellpadding="0" cellspacing="0" width="100%">
 		      <tr>
@@ -284,7 +284,7 @@ var updateTimeSession = function (segundos) {
 
 		                <td class="enunciadoProblema" id="enunciado">
                         <div align="left" id="textoEnunciado">
-							<?php echo $item["enunciadoItem"];?>
+							<? echo $item["enunciadoItem"];?>
 		               	</div>
                         </td>
 
@@ -295,22 +295,22 @@ var updateTimeSession = function (segundos) {
 		            <td>
                      <table width="100%" border="0" cellpadding="0" cellspacing="1" bordercolor="#000000">
 		              <tr>
-                    <?php //$datos = $item;?>
+                    <? //$datos = $item;?>
 		                <td rowspan="5"  valign="top" bgcolor="#FFFFFF" id="fondo">
-		                	<img src="<?phpecho $imagen;?>"/>
-		                	<?php //imprimeCodigoFlash2($datos);?>
+		                	<img src="<?echo $imagen;?>"/>
+		                	<? //imprimeCodigoFlash2($datos);?>
 		                </td>
 		                <td align="center" bgcolor="#FFFFFF">
                         <table border="0" cellpadding="0" cellspacing="0">
 
                     <form autocomplete="off" name="form" method="post" action="guardaItemNew.php">
-                        <input type="hidden" id="indice" name="indice" value="<?php  echo $j;?>" />
-                        <input type="hidden" id="tiempo" name="tiempo" value="<?php echo $_SESSION["tiempo"];?>" />
-                        <input type="hidden"  id="cantidadRespuestasItem" name="cantidadRespuestasItem" value="<?php  echo $item["cantidadRespuestasItem"];?>" />
-                        <input type="hidden" id"esAbierto" name="esAbierto" value="<?php  echo $item["esAbiertoItem"];?>" />
+                        <input type="hidden" id="indice" name="indice" value="<?  echo $j;?>" />
+                        <input type="hidden" id="tiempo" name="tiempo" value="<? echo $_SESSION["tiempo"];?>" />
+                        <input type="hidden"  id="cantidadRespuestasItem" name="cantidadRespuestasItem" value="<?  echo $item["cantidadRespuestasItem"];?>" />
+                        <input type="hidden" id"esAbierto" name="esAbierto" value="<?  echo $item["esAbiertoItem"];?>" />
 
 
-                         <?php
+                         <?
 
 						 if($item["cantidadRespuestasItem"] > 1){
 								  $letras = array("A","B","C","D","E","F","G","H","I","J");
@@ -344,13 +344,13 @@ var updateTimeSession = function (segundos) {
 									<tr>
 										<td background="img/x4.jpg">&nbsp;</td>
 										<td align="left" valign="middle" bgcolor="#80D305"><img src="img/transparent.gif" width="5" height="10">
-											<?php
+											<?
 												$abierto = 1;
 												if ($item["esAbiertoItem"] != 1){
 													$abierto = 0;
 											?>
-													<input type="radio" name="respuesta" id="respuesta<?php echo $i; ?>" value="<?php echo $alternativa["idAlternativaItem"];?>" class="crirHiddenJS">
-											<?php
+													<input type="radio" name="respuesta" id="respuesta<? echo $i; ?>" value="<? echo $alternativa["idAlternativaItem"];?>" class="crirHiddenJS">
+											<?
 												}
 											?>
 									    </td>
@@ -358,19 +358,19 @@ var updateTimeSession = function (segundos) {
 										<td bgcolor="#F3F3F3"><img src="img/transparent.gif" width="5"></td>
 
                                         <!-- Aquí va el texto de la alternativa-->
-                                         <?php if(strlen($alternativa["nombreAlternativaItem"]) > 400) {
+                                         <? if(strlen($alternativa["nombreAlternativaItem"]) > 400) {
 											$ancho = 500;
 										}else{
 											$ancho = 270;
 											}?>
 
-                                        <td id="alternativa" title="Click para seleccionar la alternativa" width="<?php echo $ancho;?>" class="alternativa" bgcolor="#F3F3F3" height="40" onclick="check=document.getElementById('respuesta<?php echo $i; ?>');
+                                        <td id="alternativa" title="Click para seleccionar la alternativa" width="<? echo $ancho;?>" class="alternativa" bgcolor="#F3F3F3" height="40" onclick="check=document.getElementById('respuesta<? echo $i; ?>');
 											check.checked=(check.checked==true)?true:true;">
 
 											<table>
 												<tr>
 													<td rowspan="3">
-													<?php
+													<?
 													echo $alternativa["nombreAlternativaItem"];
 
 													if ($alternativa["tipoCampo"] == "normal") {
@@ -395,7 +395,7 @@ var updateTimeSession = function (segundos) {
 												</tr>
 											</table>
 
-										<?php
+										<?
 										$i++;
 										?>
                                         </td>
@@ -413,7 +413,7 @@ var updateTimeSession = function (segundos) {
                                       <tr><td>&nbsp;</td>
                                       </tr>
 
-								 <?php
+								 <?
 							  }
 
 							  ?>
@@ -446,7 +446,7 @@ var updateTimeSession = function (segundos) {
 
                             <br>
 
-                            <?php boton("Responder","validaItem(".$abierto.");");?>
+                            <? boton("Responder","validaItem(".$abierto.");");?>
 
                         </td>
 		                </tr>

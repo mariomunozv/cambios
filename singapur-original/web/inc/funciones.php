@@ -1,4 +1,4 @@
-<?php
+<?
 
 @include "inc/_accesoRecurso.php";
 @include "inc/_bitacoraClase.php";
@@ -112,21 +112,21 @@ function cambiaf_a_normal($fecha){
 
 function alerta($mensaje){
 	?><script language="javascript">
-	alert("<?php echo $mensaje; ?>");
-	</script><?php
+	alert("<? echo $mensaje; ?>");
+	</script><?
 }
 
 
 function dirigirse_a($pagina){
 	?><script language="javascript">
-	location.href='<?php echo $pagina; ?>';
-	</script><?php
+	location.href='<? echo $pagina; ?>';
+	</script><?
 }
 
 function dirigirse_despues($pagina,$tiempo){
 	?><script language="javascript">
-	setTimeout("location.href='<?php echo $pagina; ?>'",<?php echo $tiempo; ?>);
-	</script><?php
+	setTimeout("location.href='<? echo $pagina; ?>'",<? echo $tiempo; ?>);
+	</script><?
 }
 
 

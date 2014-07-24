@@ -1,4 +1,4 @@
-<?php 
+<? 
 /* mensajes recibidos */
 function getMensajesUsuario($idUsuario){
 	$sql = "SELECT * 

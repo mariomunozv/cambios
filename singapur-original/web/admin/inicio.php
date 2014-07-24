@@ -1,4 +1,4 @@
-<?php 
+<? 
 //session_start();
 require("inc/config.php");
 
@@ -52,4 +52,4 @@ class_activo('boton_inicio','activo');
 	mostrar_escuelas();
 </script>  
    
-<?php require("_pie.php"); ?>
+<? require("_pie.php"); ?>

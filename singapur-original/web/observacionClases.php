@@ -1,4 +1,4 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 require ("hd.php");
 ?>
@@ -6,7 +6,7 @@ require ("hd.php");
 <link rel="stylesheet" href="./css/seccion-cajas.css" />
 <body>
 <div id="principal">
-<?php 
+<? 
 	require("topMenu.php"); 
 	$navegacion = "Home*mural.php?idCurso=$idCurso,Observación de Clases*#";
 	require("_navegacion.php");
@@ -15,11 +15,11 @@ require ("hd.php");
 ?>
 	
 	<div id="lateralIzq">
-	    <?php require("menuleft.php");	?>
+	    <? require("menuleft.php");	?>
     </div> <!--lateralIzq-->
     
     <div id="lateralDer">
-		<?php require("menuright.php"); ?>
+		<? require("menuright.php"); ?>
     </div><!--lateralDer-->
     
 
@@ -110,7 +110,7 @@ require ("hd.php");
 			
     </div> <!--columnaCentro-->
 
-	<?php 
+	<? 
     	
 		require("pie.php");
 		

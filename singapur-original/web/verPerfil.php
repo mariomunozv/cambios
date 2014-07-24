@@ -1,4 +1,4 @@
-<?php 
+<? 
 ini_set("display_errors","on");
 require("inc/incluidos.php");
 require("inc/_comuna.php");
@@ -66,14 +66,14 @@ function enviaMensaje(){
 	var division = document.getElementById("nuevoMensaje");
 	var asunto = document.getElementById("asunto").value;
 	var mensaje = document.getElementById("textoMensaje").value;
-	a = "idDe="+<?php echo $idUsuarioMira; ?>+"&idPara="+<?php echo $idUsuarioPerfil ?>+"&asunto="+asunto+"&mensaje="+mensaje;
+	a = "idDe="+<? echo $idUsuarioMira; ?>+"&idPara="+<? echo $idUsuarioPerfil ?>+"&asunto="+asunto+"&mensaje="+mensaje;
 	alert(a);
 	AJAXPOST("mensajeEnviadoPerfil.php",a,division);
 } 
 </script>
 <body>
 <div id="principal">
-<?php 
+<? 
 	require("topMenu.php"); 
 	$navegacion = "Home*curso.php?idCurso=$idCurso,Perfil*#";	
 	require("_navegacion.php");
@@ -81,11 +81,11 @@ function enviaMensaje(){
 ?>
 	
     <div id="lateralIzq">
-    <?php require("menuleft.php");	?>
+    <? require("menuleft.php");	?>
     </div> <!--lateralIzq-->
     
     <div id="lateralDer">
-    <?php require("menuright.php");	?>
+    <? require("menuright.php");	?>
     </div><!--lateralDer-->
     
     
@@ -105,8 +105,8 @@ function enviaMensaje(){
             <tr>
                 <td><label for="nombre">Nombre:</label></td>
                 <td>
-                	<input readonly type="input" nombre="nombre" id="nombre" size="50" value="<?php echo $datos["nombre"]." ".$datos["apellidoPaterno"]." ".$datos["apellidoMaterno"];?>"/>
-                	<input readonly type="hidden" nombre="idUsrPara" id="idUsrPara" size="50" value="<?php echo $idUsuarioPerfil ?>"/>
+                	<input readonly type="input" nombre="nombre" id="nombre" size="50" value="<? echo $datos["nombre"]." ".$datos["apellidoPaterno"]." ".$datos["apellidoMaterno"];?>"/>
+                	<input readonly type="hidden" nombre="idUsrPara" id="idUsrPara" size="50" value="<? echo $idUsuarioPerfil ?>"/>
 				</td>
 		    </tr>
             <tr>
@@ -123,28 +123,28 @@ function enviaMensaje(){
         </fieldset>
     </form>
 	</div>
-   	<p class="titulo_curso"><?php echo getNombreUsuario($idUsuarioPerfil); ?></p>
+   	<p class="titulo_curso"><? echo getNombreUsuario($idUsuarioPerfil); ?></p>
     <hr /><br/>
 	<p align="right">
 	<button name="btnCrear" id="btnCrear">Enviar Mensaje</button>
     </p>
-  	<?php if($datos['tipoUsuario']=="Empleado Klein") {?>
+  	<? if($datos['tipoUsuario']=="Empleado Klein") {?>
     <table border="0" class="tablesorter" style="width:100%;" id="tbGeneral">
 	<tr>
     	<th colspan="4" align="center"><h1>Datos Coordinador General</h1></th>
     </tr>
 	<tr> 
 	    <td align="center" colspan="4">
-	    <img src="<?php echo "subir/fotos_perfil/orig_$idUsuarioPerfil.jpg"; ?>"  border="1" onerror="this.src='img/nophoto.jpg'" width="250"/><br/><br/>
+	    <img src="<? echo "subir/fotos_perfil/orig_$idUsuarioPerfil.jpg"; ?>"  border="1" onerror="this.src='img/nophoto.jpg'" width="250"/><br/><br/>
         </td>
  	</tr>
 	<tr>
         <th>Nombre:</th>
-        <td colspan="3"><label style="font-size:14px"><?php echo $datos["nombre"]." ".$datos["apellidoPaterno"]." ".$datos["apellidoMaterno"]; ?></label></td>
+        <td colspan="3"><label style="font-size:14px"><? echo $datos["nombre"]." ".$datos["apellidoPaterno"]." ".$datos["apellidoMaterno"]; ?></label></td>
 	</tr>
     <tr>
         <th>Ciudad:</th>
-        <td colspan="3"><label style="font-size:14px"><?php echo getNombreComuna($datos["idComuna"]); ?></label></td>
+        <td colspan="3"><label style="font-size:14px"><? echo getNombreComuna($datos["idComuna"]); ?></label></td>
 	</tr>
 	<tr>
 		<th align="left">Instituci&oacute;n:</th>
@@ -152,64 +152,64 @@ function enviaMensaje(){
     </tr>
     <tr>
       	<th align="left">Rol asesoria M&eacute;todo Singapur: </th>
-		<td colspan="3"><label style="font-size:14px"><?php echo $datos["rolEmpleadoKlein"]; ?></label></td>        
+		<td colspan="3"><label style="font-size:14px"><? echo $datos["rolEmpleadoKlein"]; ?></label></td>        
 	</tr>
 	<tr>
     	<th width="30%">Acerca de mi:</th>
 	    <td colspan="3" style="vertical-align:middle">
-		<label style="font-size:14px"><?php echo $datos["acercaDeUsuario"]?></label>
+		<label style="font-size:14px"><? echo $datos["acercaDeUsuario"]?></label>
         </td>
  	</tr>
     </table>
-    <?php } else { ?>
+    <? } else { ?>
     <table border="0" class="tablesorter" style="width:100%;" id="tbGeneral">
 	<tr>
     	<th colspan="4" align="center"><h1>Ficha Docente</h1></th>
     </tr>
 	<tr> 
 	    <td align="center" colspan="4">
-	    <img src="<?php echo "subir/fotos_perfil/orig_$idUsuarioPerfil.jpg"; ?>"  border="1" onerror="this.src='img/nophoto.jpg'" width="250"/><br/><br/>
+	    <img src="<? echo "subir/fotos_perfil/orig_$idUsuarioPerfil.jpg"; ?>"  border="1" onerror="this.src='img/nophoto.jpg'" width="250"/><br/><br/>
         </td>
  	</tr>
 	<tr>
         <th>Nombre:</th>
-        <td colspan="3"><label style="font-size:14px"><?php echo $datos["nombre"]; ?></label></td>
+        <td colspan="3"><label style="font-size:14px"><? echo $datos["nombre"]; ?></label></td>
 	</tr>
 	<tr>
         <th>Apellido Paterno:</th>
-        <td colspan="3"><label style="font-size:14px"><?php echo $datos["apellidoPaterno"]; ?></label></td>
+        <td colspan="3"><label style="font-size:14px"><? echo $datos["apellidoPaterno"]; ?></label></td>
 	</tr>
 	<tr>
         <th>Apellido Materno:</th>
-        <td colspan="3"><label style="font-size:14px"><?php echo $datos["apellidoMaterno"]; ?></label></td>
+        <td colspan="3"><label style="font-size:14px"><? echo $datos["apellidoMaterno"]; ?></label></td>
 	</tr>
 	<tr>
 		<th align="left">Nombre del establecimiento:</th>
-        <td colspan="3"><label style="font-size:14px"><?php echo $datosColegio["nombreColegio"]; ?></label></td>        
+        <td colspan="3"><label style="font-size:14px"><? echo $datosColegio["nombreColegio"]; ?></label></td>        
     </tr>
   	<tr>
 		<th>Region/Departamento: </th>
-		<td colspan="3"><label style="font-size:14px"><?php echo $region; ?></label></td>        
+		<td colspan="3"><label style="font-size:14px"><? echo $region; ?></label></td>        
 	</tr>
   	<tr>
       	<th>Comuna/Ciudad: </th>
-		<td colspan="3"><label style="font-size:14px"><?php echo $datosColegio["nombreComuna"]; ?></label></td>        
+		<td colspan="3"><label style="font-size:14px"><? echo $datosColegio["nombreComuna"]; ?></label></td>        
 	</tr>
 	<tr>
     	<th width="30%">Acerca de mi:</th>
 	    <td colspan="3" style="vertical-align:middle">
-		<label style="font-size:14px"><?php echo $datos["acercaDeUsuario"]?></label>
+		<label style="font-size:14px"><? echo $datos["acercaDeUsuario"]?></label>
         </td>
  	</tr>
     </table>
-    <?php } ?>    
+    <? } ?>    
    	<p align="right">
-		<?php boton("Volver","history.go(-1)");?>
+		<? boton("Volver","history.go(-1)");?>
 	</p>
 
 </div> <!--columnaCentro-->
 
-	<?php 
+	<? 
     	
 		require("pie.php");
 		

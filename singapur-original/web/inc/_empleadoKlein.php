@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 function getNombreEmpleadoKleinPorRut($rutEmpleadoKlein){
 	$sql = "SELECT * FROM `empleadoKlein` where rutEmpleadoKlein = '".$rutEmpleadoKlein."'";

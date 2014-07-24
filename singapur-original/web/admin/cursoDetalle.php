@@ -1,4 +1,4 @@
-<?php 
+<? 
 //session_start();
 ini_set('display_errors','On');
 require("inc/config.php");
@@ -61,33 +61,33 @@ if($_REQUEST["modo"] == "rechazar"){
 <script language="javascript">
 function newAlumno(){
 	var division = document.getElementById("lugar_de_carga");
-	AJAXPOST("alumnoNuevo.php","rbdColegio=<?php echo $rbdColegio;?>&idNivel=<?php echo $idNivel;?>&anoCursoColegio=<?php echo $anoCursoColegio;?>&letraCursoColegio=<?php echo $letraCursoColegio;?>",division);
+	AJAXPOST("alumnoNuevo.php","rbdColegio=<? echo $rbdColegio;?>&idNivel=<? echo $idNivel;?>&anoCursoColegio=<? echo $anoCursoColegio;?>&letraCursoColegio=<? echo $letraCursoColegio;?>",division);
 } 
 
 function cargaMasiva(){
 	var division = document.getElementById("lugar_de_carga");
 	 var a = $(".campos").fieldSerialize();
-	AJAXPOST("uploadAlumnosCurso.php",a+"&rbdColegio=<?php echo $rbdColegio;?>&idNivel=<?php echo $idNivel;?>&anoCursoColegio=<?php echo $anoCursoColegio;?>&letraCursoColegio=<?php echo $letraCursoColegio;?>",division);
+	AJAXPOST("uploadAlumnosCurso.php",a+"&rbdColegio=<? echo $rbdColegio;?>&idNivel=<? echo $idNivel;?>&anoCursoColegio=<? echo $anoCursoColegio;?>&letraCursoColegio=<? echo $letraCursoColegio;?>",division);
 }  
 
 function editAlumno(usuario){
 	 
 	var division = document.getElementById("lugar_de_carga");
-	AJAXPOST("alumnoEditar.php","rbdColegio=<?php echo $rbdColegio;?>&usuario="+usuario,division);
+	AJAXPOST("alumnoEditar.php","rbdColegio=<? echo $rbdColegio;?>&usuario="+usuario,division);
 } 
 function mostrar_alumnosCurso(){
 	var division = document.getElementById("listado_alumnos");
-	AJAXPOST("alumnoListado.php","rbdColegio=<?php echo $rbdColegio;?>&idNivel=<?php echo $idNivel;?>&anoCursoColegio=<?php echo $anoCursoColegio;?>&letraCursoColegio=<?php echo $letraCursoColegio;?>&",division);
+	AJAXPOST("alumnoListado.php","rbdColegio=<? echo $rbdColegio;?>&idNivel=<? echo $idNivel;?>&anoCursoColegio=<? echo $anoCursoColegio;?>&letraCursoColegio=<? echo $letraCursoColegio;?>&",division);
 	
 } 
 
 
 
 function cancelar(){
-	if(confirm("Cancelar esta operación?")){ location.href="cursoDetalle.php?rbdColegio=<?php echo $rbdColegio;?>&idNivel=<?php echo $idNivel;?>&anoCursoColegio=<?php echo $anoCursoColegio;?>&letraCursoColegio=<?php echo $letraCursoColegio;?>"; }  
+	if(confirm("Cancelar esta operación?")){ location.href="cursoDetalle.php?rbdColegio=<? echo $rbdColegio;?>&idNivel=<? echo $idNivel;?>&anoCursoColegio=<? echo $anoCursoColegio;?>&letraCursoColegio=<? echo $letraCursoColegio;?>"; }  
 }
 </script><p>
-<span class="titulo_form"><h2>Administración <?php echo $nombreNivel." ".$letraCursoColegio;?></h2></span>
+<span class="titulo_form"><h2>Administración <? echo $nombreNivel." ".$letraCursoColegio;?></h2></span>
 
     
 
@@ -106,4 +106,4 @@ function cancelar(){
 	mostrar_alumnosCurso();
 	
 </script> 
-<?php require("_pie.php"); ?>
+<? require("_pie.php"); ?>

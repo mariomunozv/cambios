@@ -1,4 +1,4 @@
-<?php 
+<? 
 ini_set("display_errors","ON");
 require("inc/incluidos.php");
 
@@ -92,7 +92,7 @@ require ("hd.php");?>
 
 <body>
 <div id="principal">
-<?php require("topMenu.php"); 
+<? require("topMenu.php"); 
 $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 //$navegacion = "Home*home.php,".$nombreCurso."*curso.php?idCurso=".$_SESSION["sesionIdCurso"].",".$datosActividad["tituloActividad"]."*#";
 //require("_navegacion.php");
@@ -101,77 +101,77 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 
 	
 <div id="lateralIzq">
-	<?php 	require("menuleft.php") ?>
+	<? 	require("menuleft.php") ?>
 </div>
     
     
 <div id="lateralDer">
-	<?php 	require("menuright.php") ?>
+	<? 	require("menuright.php") ?>
 </div>
     
 	<div id="columnaCentro">
      
-        <p class="titulo_curso"><?php echo $datosActividad["tituloActividad"]; ?></p>
+        <p class="titulo_curso"><? echo $datosActividad["tituloActividad"]; ?></p>
         <hr />
         <br />
     	<p class="textoBienvenida" align="justify">
-        <?php echo nl2br($datosActividad["bienvenidaActividad"]); ?>
+        <? echo nl2br($datosActividad["bienvenidaActividad"]); ?>
         </p>
         
         
         
         
     <!-- Si lista no tiene idActividad entonces dejar tal cual-->
-    <?phpif(isActividad($idActividad)){ ?>
+    <?if(isActividad($idActividad)){ ?>
        <center>
        	<table>
        		<tr>
        			<td>
-       				<a href="<?php echo $datosActividad["linkActividad"]; ?>" target="_blank"><img src="img/documentos.png"  title="Ver actividad" border="0" width="128" height="128" /></a></p>
+       				<a href="<? echo $datosActividad["linkActividad"]; ?>" target="_blank"><img src="img/documentos.png"  title="Ver actividad" border="0" width="128" height="128" /></a></p>
         
        			</td>
-       			<?php if (isPautaItem($idActividad,$idUsuario)){?>
+       			<? if (isPautaItem($idActividad,$idUsuario)){?>
        			<td>
-       				<a href="<?php echo "actividadrevision.php?idActividad=" . $idActividad; ?>"><img src="img/lupa.png" width="50px" height="100px" title="Ver resultados" border="0" width="128" height="128" /></a></p>
+       				<a href="<? echo "actividadrevision.php?idActividad=" . $idActividad; ?>"><img src="img/lupa.png" width="50px" height="100px" title="Ver resultados" border="0" width="128" height="128" /></a></p>
         
        			</td>
-       			<?php } ?>
+       			<? } ?>
        		</tr>
        		<tr>
        			<td>
-       				<a class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" href="<?php echo $datosActividad["linkActividad"]; ?>" target="_blank">
+       				<a class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" href="<? echo $datosActividad["linkActividad"]; ?>" target="_blank">
 			       		<span class="ui-button-text">Comenzar Actividad</span>
 			       </a>
        			</td>
-       			<?php if (isPautaItem($idActividad,$idUsuario)){?>
+       			<? if (isPautaItem($idActividad,$idUsuario)){?>
        			<td>
-       				<a class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" href="<?php echo "actividadrevision.php?idActividad=" . $idActividad; ?>">
+       				<a class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" href="<? echo "actividadrevision.php?idActividad=" . $idActividad; ?>">
 			       		<span class="ui-button-text">Revisión</span>
        				</a>
        			</td>
-       			<?php } ?>
+       			<? } ?>
        		</tr>
 
        	</table>
 
        	<br><br>
 
-       	<?php boton("Volver","history.back();"); ?>
+       	<? boton("Volver","history.back();"); ?>
 
        </center>
        	
 
-    <?php } else{ ?>
-    	<p align="center"><a href="<?php echo $datosActividad["linkActividad"]; ?>" target="_blank"><img src="img/documentos.png"  title="Ver actividad" border="0" width="128" height="128" /></a></p>
+    <? } else{ ?>
+    	<p align="center"><a href="<? echo $datosActividad["linkActividad"]; ?>" target="_blank"><img src="img/documentos.png"  title="Ver actividad" border="0" width="128" height="128" /></a></p>
         
-    	<p align="center"><strong><a  href="<?php echo $datosActividad["linkActividad"]; ?>" target="_blank"><?php echo $datosActividad["tituloActividad"]; ?></a></strong>
+    	<p align="center"><strong><a  href="<? echo $datosActividad["linkActividad"]; ?>" target="_blank"><? echo $datosActividad["tituloActividad"]; ?></a></strong>
         <br /><br /> 
-       <?php boton("Volver","history.back();"); ?>
+       <? boton("Volver","history.back();"); ?>
        </p>
 
 
-    <?php } ?>
-    <?php if ($datosActividad["linkActividad"] == "actividadesPagina.php"){
+    <? } ?>
+    <? if ($datosActividad["linkActividad"] == "actividadesPagina.php"){
 			
 			$paginas = getIdsTipoPaginasActividad($idActividad);
 			
@@ -179,7 +179,7 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 			$_SESSION["j"] = 0;
 			
 		}?>
-      <?php if ($datosActividad["linkActividad"] == "actividadesPaginaSeccion.php"){
+      <? if ($datosActividad["linkActividad"] == "actividadesPaginaSeccion.php"){
 			
 			$paginas = getIdsTipoPaginasActividad($idActividad);
 			
@@ -224,12 +224,12 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
         
       </div><!--columnaCentro-->
          
-       <?php //  require("misCursos.php");?>
+       <? //  require("misCursos.php");?>
      
                
     
               
-	<?php 
+	<? 
     
     	require("pie.php");
     

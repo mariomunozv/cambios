@@ -1,4 +1,4 @@
-<?php
+<?
 /**
  * Command line utility to use dompdf.
  * Can also be used with HTTP GET parameters

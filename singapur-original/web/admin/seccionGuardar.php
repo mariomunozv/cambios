@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 include("../inc/_seccion.php");
 require("inc/config.php");
@@ -33,7 +33,7 @@ if(crearSeccion($idFomulario,$idPadre,$titulo,$descripcion)>0)
 	<script language="javascript">
 		listarSecciones();
 	</script>
-	<?php
+	<?
 }
 else
 {	

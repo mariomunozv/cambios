@@ -1,4 +1,4 @@
-<?php 
+<? 
 //session_start();
 require("inc/config.php");
 require("../inc/_detalleColegioProyecto.php");
@@ -33,7 +33,7 @@ class_activo('boton_accesos','activo');
 
 </script> 
 <span class="titulo_form">Adminitracion Sistema</span>
-<?php 
+<? 
 		  function getAccesos(){
 			  $idUsuario = $_GET["idUsuario"];
 			 // echo $idUsuario."<--------------------";
@@ -104,7 +104,7 @@ class_activo('boton_accesos','activo');
                     </tr> 
                 </thead> 
                 <tbody> 
-                <?php 
+                <? 
 				$acceso = getAccesos();
 				if ($acceso == ""){
 					echo "<tr  valign='middle' height='50'><td colspan='7' align='center'><strong>ESTE USUARIO NO POSEE REGISTROS</strong></td></tr>";
@@ -117,18 +117,18 @@ class_activo('boton_accesos','activo');
 					  
 					   ?> 
                         <tr valign="top"> 
-                            <td ><?php echo $value["idAccesoRecurso"]; ?></td>
-                            <?php 
+                            <td ><? echo $value["idAccesoRecurso"]; ?></td>
+                            <? 
 							$datosUsuario = getNombreFotoUsuario($value["idUsuario"]);
 							?>
                              
-                            <td ><?php echo $datosUsuario["nombre"]." ".$datosUsuario["apellidoPaterno"]; ?></td>  
-                            <td ><?php echo $value["fechaAccesoRecurso"]; ?></td> 
-                            <td ><?php echo $value["nombreRecursoObservado"]; ?></td> 
-                            <td ><?php echo $value["categoriaRecursoObservado"]; ?></td> 
-                            <td ><?php echo $value["nombreRecurso"]; ?></td>  		
+                            <td ><? echo $datosUsuario["nombre"]." ".$datosUsuario["apellidoPaterno"]; ?></td>  
+                            <td ><? echo $value["fechaAccesoRecurso"]; ?></td> 
+                            <td ><? echo $value["nombreRecursoObservado"]; ?></td> 
+                            <td ><? echo $value["categoriaRecursoObservado"]; ?></td> 
+                            <td ><? echo $value["nombreRecurso"]; ?></td>  		
                         </tr>
-                <?php $i++;
+                <? $i++;
 				}?>    
                     </tbody> 
                 </table> 
@@ -140,10 +140,10 @@ class_activo('boton_accesos','activo');
                         <img src="css/tabla/next.png" class="next"/>
             
                         <img src="css/tabla/last.png" class="last"/>
-                        <input type="hidden" class="pagesize" value="20"><?php /* Registros por paginas */ ?> 
+                        <input type="hidden" class="pagesize" value="20"><? /* Registros por paginas */ ?> 
                     </form>
                 </div>
-                <?php }?> 
+                <? }?> 
 
                 
                 
@@ -154,4 +154,4 @@ class_activo('boton_accesos','activo');
       </tr>
     </table>  
 
-<?php require("_pie.php"); ?>
+<? require("_pie.php"); ?>

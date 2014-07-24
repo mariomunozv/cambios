@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 require("inc/incluidos.php"); 
 
@@ -147,7 +147,7 @@ if ($inputEmpty == 1) {
 		<script type="text/javascript">
 			location.href="./informeEvaluacion.php";
 		</script>
-		<?php
+		<?
 	}
 	info("Todos los puntajes han sido guardados con éxito, en la opción ver informes encontrará los resultados.");	
 }

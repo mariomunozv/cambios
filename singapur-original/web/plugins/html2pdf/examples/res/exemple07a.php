@@ -51,7 +51,7 @@ td    { vertical-align: top; }
     <table cellspacing="0" style="width: 100%; text-align: left;font-size: 10pt">
         <tr>
             <td style="width:50%;"></td>
-            <td style="width:50%; ">Spipu Ville, le <?php echo date('d/m/Y'); ?></td>
+            <td style="width:50%; ">Spipu Ville, le <? echo date('d/m/Y'); ?></td>
         </tr>
     </table>
     <br>
@@ -76,7 +76,7 @@ td    { vertical-align: top; }
             <th style="width: 13%">Prix Net</th>
         </tr>
     </table>
-<?php
+<?
     $nb = rand(5, 11);
     $produits = array();
     $total = 0;
@@ -90,20 +90,20 @@ td    { vertical-align: top; }
 ?>
     <table cellspacing="0" style="width: 100%; border: solid 1px black; background: #F7F7F7; text-align: center; font-size: 10pt;">
         <tr>
-            <td style="width: 12%; text-align: left"><?php echo $num; ?></td>
-            <td style="width: 52%; text-align: left"><?php echo $nom; ?></td>
-            <td style="width: 13%; text-align: right"><?php echo number_format($prix, 2, ',', ' '); ?> &euro;</td>
-            <td style="width: 10%"><?php echo $qua; ?></td>
-            <td style="width: 13%; text-align: right;"><?php echo number_format($prix*$qua, 2, ',', ' '); ?> &euro;</td>
+            <td style="width: 12%; text-align: left"><? echo $num; ?></td>
+            <td style="width: 52%; text-align: left"><? echo $nom; ?></td>
+            <td style="width: 13%; text-align: right"><? echo number_format($prix, 2, ',', ' '); ?> &euro;</td>
+            <td style="width: 10%"><? echo $qua; ?></td>
+            <td style="width: 13%; text-align: right;"><? echo number_format($prix*$qua, 2, ',', ' '); ?> &euro;</td>
         </tr>
     </table>
-<?php
+<?
     }
 ?>
     <table cellspacing="0" style="width: 100%; border: solid 1px black; background: #E7E7E7; text-align: center; font-size: 10pt;">
         <tr>
             <th style="width: 87%; text-align: right;">Total : </th>
-            <th style="width: 13%; text-align: right;"><?php echo number_format($total, 2, ',', ' '); ?> &euro;</th>
+            <th style="width: 13%; text-align: right;"><? echo number_format($total, 2, ',', ' '); ?> &euro;</th>
         </tr>
     </table>
     <br>

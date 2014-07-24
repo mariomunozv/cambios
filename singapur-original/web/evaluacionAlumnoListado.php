@@ -1,4 +1,4 @@
-<?php 
+<? 
     require("inc/incluidos.php");
     require("inc/_respuestaItem.php");
     require("inc/_item.php");
@@ -73,7 +73,7 @@
     <script type="text/javascript" src="js/jquery.numeric.js"></script>
 
 <body>
-    <button class="btn btn-large btn-primary" onclick="window.location.href = './evaluacionProfesor.php?rbdColegio=<?php echo $rbdColegio; ?>&idNivel=<?php echo $idNivel; ?>&anoCursoColegio=<?php echo $anoCursoColegio; ?>&letraCursoColegio=<?php echo $letraCursoColegio; ?>&escala=5&nombreNivel=null&idLista=<?php echo $idLista; ?>&idPrueba=<?php echo $idPrueba; ?>';">Modificar registro de asistencia  </button>
+    <button class="btn btn-large btn-primary" onclick="window.location.href = './evaluacionProfesor.php?rbdColegio=<? echo $rbdColegio; ?>&idNivel=<? echo $idNivel; ?>&anoCursoColegio=<? echo $anoCursoColegio; ?>&letraCursoColegio=<? echo $letraCursoColegio; ?>&escala=5&nombreNivel=null&idLista=<? echo $idLista; ?>&idPrueba=<? echo $idPrueba; ?>';">Modificar registro de asistencia  </button>
     <button class="btn btn-large btn-primary" onclick="xls();">Exportar a XLS</button>
     <button class="btn btn-large btn-primary" onclick="window.location.href = './evaluacionProfesor.php';">Volver a selección de los cursos</button>
     
@@ -86,22 +86,22 @@
         <thead>  
             <tr>
                 <th colspan="2">Listado de Alumnos</th>
-                <th colspan="<?php echo count($items);?>">Puntajes <?php echo getNombreNivel($idNivel)." ".$letraCursoColegio ?><br> <?php echo $prueba; ?> </th>
+                <th colspan="<? echo count($items);?>">Puntajes <? echo getNombreNivel($idNivel)." ".$letraCursoColegio ?><br> <? echo $prueba; ?> </th>
             </tr>
              
             <tr>
                 <th>Nº</th>
                 <th>Nombres</th>
         
-                <?php foreach($items as $item){ ?>           
-                    <th><?php echo $item["enunciadoItem"];?></th>
-                <?php }  ?>           
+                <? foreach($items as $item){ ?>           
+                    <th><? echo $item["enunciadoItem"];?></th>
+                <? }  ?>           
        
             </tr>
         </thead>
         
         <tbody>        
-            <?php 
+            <? 
             $countInput = 0;
             if (count($alumnos) > 0){
                 $countAlumno = 1;
@@ -118,12 +118,12 @@
                     }
                     $respuestaUsuario = getRespuestaUsuarioByPauta($alumno["idUsuario"],$datosPauta["idPautaItem"]);
                     ?>
-                    <input type="hidden" name="pauta[]" value="<?php echo $datosPauta["idPautaItem"];?>"  class="campos" />
-                        <tr onMouseOver="this.className='normalActive'" onMouseOut="this.className='<?php echo $claseTR; ?>'" class="<?php echo $claseTR; ?>">
-                            <td><?php echo $countAlumno;?></td>
-                            <td><?php echo $alumno["apellidoPaternoAlumno"]." ".$alumno["nombreAlumno"];?></td>
-                            <input type="hidden" name="usuarios[]" class="campos" value="<?php echo $alumno['idUsuario'];?>" /> 
-                            <?php 
+                    <input type="hidden" name="pauta[]" value="<? echo $datosPauta["idPautaItem"];?>"  class="campos" />
+                        <tr onMouseOver="this.className='normalActive'" onMouseOut="this.className='<? echo $claseTR; ?>'" class="<? echo $claseTR; ?>">
+                            <td><? echo $countAlumno;?></td>
+                            <td><? echo $alumno["apellidoPaternoAlumno"]." ".$alumno["nombreAlumno"];?></td>
+                            <input type="hidden" name="usuarios[]" class="campos" value="<? echo $alumno['idUsuario'];?>" /> 
+                            <? 
                             foreach($items as $item){ 
                                 // $respuesta = getRespuestaUsuarioItem($item["idItem"],$alumno["idUsuario"],$datosPauta["idPautaItem"]);
                                 $respuesta = '';
@@ -132,21 +132,21 @@
                                 }
                             ?>   
                                 <td>
-                                    <div id="divInput<?php echo $countInput;?>">
-                                        <span id="item<?php echo $alumno["usuario"]."-".$item["idItem"]; ?>" class="ui-stepper">
-                                            <input id="sel<?php echo $item['idItem'].$alumno['idUsuario']; ?>" data="<?php echo $item['puntajeItem'] ?>" type="text" 
-                                                name="sel<?php echo $alumno['idUsuario']?>[]" size="2" autocomplete="off" class="ui-stepper-textbox campos field positive-integer"
-                                                value="<?php echo $respuesta["puntajeRespuestaItem"];?>"
+                                    <div id="divInput<? echo $countInput;?>">
+                                        <span id="item<? echo $alumno["usuario"]."-".$item["idItem"]; ?>" class="ui-stepper">
+                                            <input id="sel<? echo $item['idItem'].$alumno['idUsuario']; ?>" data="<? echo $item['puntajeItem'] ?>" type="text" 
+                                                name="sel<? echo $alumno['idUsuario']?>[]" size="2" autocomplete="off" class="ui-stepper-textbox campos field positive-integer"
+                                                value="<? echo $respuesta["puntajeRespuestaItem"];?>"
                                             />
                                         </span>
                                     </div>
                                 </td>
-                            <?php 
+                            <? 
                                 $countInput++;
                             } 
                             ?>                  
                         </tr>
-                    <?php 
+                    <? 
                     $countAlumno++;   
                 }
             }else{ 
@@ -182,7 +182,7 @@
             AJAXPOST("alumnoGuarda.php","modo="+modo+"&rut="+rutAlumno,division);            
         } 
 
-        var nItems = <?php echo count($items) ?>;
+        var nItems = <? echo count($items) ?>;
 
         var inputEmpty = function() {
             var inputEmpty = $('input:text').filter(function() { return $(this).val() == ""; });
@@ -197,13 +197,13 @@
             //a = "arreglo="+document.getElementsByName("sel"+jornada);
             var a = '';
             a = $(".campos").fieldSerialize();
-            <?php 
+            <? 
             $valores = "";
             foreach ($items as $item){
                 $valores .= "&itemes[]=".$item["idItem"];
             } 
             ?>
-            a = a+"<?php echo $valores;?>"+"&inputEmpty="+inputEmpty()+"&idLista=<?php echo $idLista; ?>&idNivel=<?php echo $idNivel; ?>&rbdColegio=<?php echo $rbdColegio; ?>&anoCursoColegio=<?php echo $anoCursoColegio; ?>&letraCursoColegio=<?php echo $letraCursoColegio; ?>";
+            a = a+"<? echo $valores;?>"+"&inputEmpty="+inputEmpty()+"&idLista=<? echo $idLista; ?>&idNivel=<? echo $idNivel; ?>&rbdColegio=<? echo $rbdColegio; ?>&anoCursoColegio=<? echo $anoCursoColegio; ?>&letraCursoColegio=<? echo $letraCursoColegio; ?>";
             AJAXPOST("evaluacionAlumnoGuarda.php",a,division);
         }
 
@@ -217,13 +217,13 @@
             //a = "arreglo="+document.getElementsByName("sel"+jornada);
             var a = '';
             a = $(".campos").fieldSerialize();
-            <?php 
+            <? 
             $valores = "";
             foreach ($items as $item){
                 $valores .= "&itemes[]=".$item["idItem"];
             } 
             ?>
-            a = a+"<?php echo $valores;?>"+"&inputEmpty="+inputEmpty()+"&idLista=<?php echo $idLista; ?>&idNivel=<?php echo $idNivel; ?>&rbdColegio=<?php echo $rbdColegio; ?>&anoCursoColegio=<?php echo $anoCursoColegio; ?>&letraCursoColegio=<?php echo $letraCursoColegio; ?>&finaliza=1";
+            a = a+"<? echo $valores;?>"+"&inputEmpty="+inputEmpty()+"&idLista=<? echo $idLista; ?>&idNivel=<? echo $idNivel; ?>&rbdColegio=<? echo $rbdColegio; ?>&anoCursoColegio=<? echo $anoCursoColegio; ?>&letraCursoColegio=<? echo $letraCursoColegio; ?>&finaliza=1";
             AJAXPOST("evaluacionAlumnoGuarda.php",a,division);
             if (!inputEmpty()) {
                 desactivaInput();

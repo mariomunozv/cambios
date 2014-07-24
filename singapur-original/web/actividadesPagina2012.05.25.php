@@ -1,5 +1,5 @@
 
-<?php 
+<? 
 //include_once("inc/configErrores.php");
 //ini_set('display_errors','On');
 require("inc/incluidos.php");
@@ -485,7 +485,7 @@ function contesta(){
 
 
 <!--Imagen encabezado-->
-<?php require("topActividad.php"); ?>
+<? require("topActividad.php"); ?>
 	
  
     
@@ -497,14 +497,14 @@ function contesta(){
     
      
       <p class="titulo_actividad"> 
-		<?php 
+		<? 
 		// Titulo de la página
 		echo $paginas[$j]["nombreActividadPagina"]; 
 		?>
         </p>
         <hr /> 
  
- <?php  	  
+ <?  	  
  		
 		
 		// Tipo de Actividad con Contenidos para mostrar
@@ -573,11 +573,11 @@ function contesta(){
 					$respuesta = getRespuestaUsuarioIdEnunciado($contenido["textoContenidoPagina"],$idUsuario);
 					?>   
 					<div class="respuestaTexto">
-					<?php
+					<?
 					echo $respuesta;
 					?>
 					</div>                            
-					<?php
+					<?
 					echo "<br>";
 					break;
 					
@@ -689,7 +689,7 @@ function contesta(){
 								function nuevo_comentario(){
 	
 									 var division = document.getElementById("comentario");
-									 a = "tablaComentario=actividadPagina&idReferenciaComentario=<?php echo $idPauta; ?>&idPaginaActual=<?php echo $idPaginaActual; ?>&idUsuarioNotificado=<?php echo $idUsuario; ?>&idActividad=<?php echo $idActividad; ?>";
+									 a = "tablaComentario=actividadPagina&idReferenciaComentario=<? echo $idPauta; ?>&idPaginaActual=<? echo $idPaginaActual; ?>&idUsuarioNotificado=<? echo $idUsuario; ?>&idActividad=<? echo $idActividad; ?>";
 									 AJAXPOST("informeActividadComentarioNuevo.php",a,division);
 									
 								}
@@ -697,7 +697,7 @@ function contesta(){
 								function listado_comentarios(){
 									
 									 var division = document.getElementById("listado_comentarios");
-									 a = "tablaComentario=actividadPagina&idReferenciaComentario=<?php echo $idPauta; ?>";
+									 a = "tablaComentario=actividadPagina&idReferenciaComentario=<? echo $idPauta; ?>";
 									 AJAXPOST("informeActividadComentarioListado.php",a,division);
 									
 								}
@@ -705,7 +705,7 @@ function contesta(){
 							</script>
                             
                             
-                            <?php
+                            <?
 							
 						}
 							
@@ -731,7 +731,7 @@ function contesta(){
 ?>
  
         
-        <?php if(@$contestada==1){
+        <? if(@$contestada==1){
 
 				
 				if (isset($_SESSION["sesionIdUsuarioRevisado"]) ){
@@ -746,13 +746,13 @@ function contesta(){
 		} ?>
         
         
-    <input name="hayFormulario" class="campos" id="hayFormulario" type="hidden" value="<?php echo $hayFormulario;?>">    
-	<input name="tipoActividad" class="campos" id="tipoActividad" type="hidden" value="<?php echo $paginas[$j]["tipoActividadPagina"];?>">
-    <input name="contestada" class="campos" id="contestada" type="hidden" value="<?php echo $contestada;?>">
+    <input name="hayFormulario" class="campos" id="hayFormulario" type="hidden" value="<? echo $hayFormulario;?>">    
+	<input name="tipoActividad" class="campos" id="tipoActividad" type="hidden" value="<? echo $paginas[$j]["tipoActividadPagina"];?>">
+    <input name="contestada" class="campos" id="contestada" type="hidden" value="<? echo $contestada;?>">
         
         
         
-        <?php 
+        <? 
 		
 		// Tipo de Actividad con Formulario para mostrar
 		
@@ -763,13 +763,13 @@ function contesta(){
 		
         	
         
-                <input name="idFormulario" class="campos" id="idFormulario" type="hidden" value="<?php echo $idFormulario;?>">
+                <input name="idFormulario" class="campos" id="idFormulario" type="hidden" value="<? echo $idFormulario;?>">
                 <input type="hidden" id="contestoAlgo"  name="contestoAlgo" />
                 	
                 
                 
                 
-                <?php
+                <?
 					
 				
 					// Imprimir el titulo de cada seccion del formulario 
@@ -778,12 +778,12 @@ function contesta(){
 					echo "<p class='titulo_actividad'>".$datosSeccion["tituloSeccionFormulario"]."</p><br>";
 					?>
 					<div id="link_acla" align="right" style="margin-right:50px;"><a href="#top">[Subir]</a></div>
-                    <?php
+                    <?
 					$flagSeccion = false;
 					
 					?>
 							<div id="textoEnunciado">
-                    <?php
+                    <?
 					
 					
 					foreach ($listaItem as $item){
@@ -801,12 +801,12 @@ function contesta(){
 							$datosSeccion = getDatosSeccion($seccionActual);
 							?>
 							</div>
-                            <?php
+                            <?
 							echo "<br><p class='titulo_actividad'>".$datosSeccion["tituloSeccionFormulario"]."</p><br>";
 							?>
                             <div id="link_acla" align="right" style="margin-right:50px;"><a href="#top">[Subir]</a></div>
                             <div id="textoEnunciado">
-							<?php
+							<?
 							
 							
 							
@@ -822,26 +822,26 @@ function contesta(){
     
                             $(document).ready(function() {
                                //the simple way, use default alert message and callback
-                               $("#my_form_<?php echo $item["idEnunciado"];?>").jqupload();
-                               $("#my_form_<?php echo $item["idEnunciado"];?>").jqupload_form();
+                               $("#my_form_<? echo $item["idEnunciado"];?>").jqupload();
+                               $("#my_form_<? echo $item["idEnunciado"];?>").jqupload_form();
                             
                             
                             });
                             </script>
                             
                             <div id="demo_message"></div>
-                            <form id="my_form_<?php echo $item["idEnunciado"];?>" name="my_form_<?php echo $item["idEnunciado"];?>" method="post" action="actividadesPaginaUpload.php" enctype="multipart/form-data">
+                            <form id="my_form_<? echo $item["idEnunciado"];?>" name="my_form_<? echo $item["idEnunciado"];?>" method="post" action="actividadesPaginaUpload.php" enctype="multipart/form-data">
                             <fieldset>
-                            <legend><?php echo $item["textoEnunciado"];?></legend>
-                            <input class="campos" name="item<?php echo $item["idEnunciado"];?>" id="item<?php echo $item["idEnunciado"];?>" type="file">
-                            <input name="nombreInputFile" type="hidden" value="item<?php echo $item["idEnunciado"];?>">
+                            <legend><? echo $item["textoEnunciado"];?></legend>
+                            <input class="campos" name="item<? echo $item["idEnunciado"];?>" id="item<? echo $item["idEnunciado"];?>" type="file">
+                            <input name="nombreInputFile" type="hidden" value="item<? echo $item["idEnunciado"];?>">
                             <input type="submit" value="Adjuntar archivo" >
                             </fieldset>
                             </form>
                             
                             
                             <br><br>
-                            <?php 
+                            <? 
                            
                         } // fin if tipo "file"
 						
@@ -866,13 +866,13 @@ function contesta(){
 								
 								?>
                                 <p class="texto_actividad">
-                                <?php 
+                                <? 
                                 // escribo el texto de la pregunta
                                 echo $item["textoEnunciado"];
                                 ?>
                                 <br><br>
                                 </p>
-                                <?php
+                                <?
 								
 								$flagDisabled = "";
 								$respuesta = "";
@@ -881,15 +881,15 @@ function contesta(){
 									$respuesta = getRespuestaUsuarioIdEnunciado($item["idEnunciado"],$idUsuario);
 									
 								?>
-								<div id="item<?php echo $item["idEnunciado"];?>">      
+								<div id="item<? echo $item["idEnunciado"];?>">      
                        			<div class="respuestaTexto">
-                                <?php
+                                <?
 								echo $respuesta;
                                 ?>
                                 </div>                            
                                	</div>
                                 
-                                <?php
+                                <?
 
 								}
 								else{
@@ -900,12 +900,12 @@ function contesta(){
 								?>
 
                                 
-                                <div id="item<?php echo $item["idEnunciado"];?>">      
-                       			<div align="left" class="editor" id="editor<?php echo $item["idEnunciado"];?>" style="width:480px"></div>                                
+                                <div id="item<? echo $item["idEnunciado"];?>">      
+                       			<div align="left" class="editor" id="editor<? echo $item["idEnunciado"];?>" style="width:480px"></div>                                
                                	</div>
 
                                 
-                                <?php
+                                <?
 								
 								
 								
@@ -940,11 +940,11 @@ function contesta(){
                                 
                                 <script>
 								
-								function registraRespuestaFlash_item<?php echo $item["idEnunciado"]; ?>(respuesta){
+								function registraRespuestaFlash_item<? echo $item["idEnunciado"]; ?>(respuesta){
 						
 									
 									
-									var inputHidden = document.getElementById("item<?php echo $item["idEnunciado"]; ?>");
+									var inputHidden = document.getElementById("item<? echo $item["idEnunciado"]; ?>");
 																		
 									inputHidden.value = respuesta; 
 									
@@ -955,7 +955,7 @@ function contesta(){
 								</script>
                                 
                                 
-                                <?php
+                                <?
 								$flagDisabled = "";
 								$respuesta = "";
 								
@@ -969,8 +969,8 @@ function contesta(){
 								?>
                                 
                                 
-								<input class="campos" name="item<?php echo $item["idEnunciado"]; ?>" id="item<?php echo $item["idEnunciado"]; ?>" type="hidden" value="<?php echo $respuesta;?>">
-								<?php
+								<input class="campos" name="item<? echo $item["idEnunciado"]; ?>" id="item<? echo $item["idEnunciado"]; ?>" type="hidden" value="<? echo $respuesta;?>">
+								<?
 								
 
 								
@@ -992,11 +992,11 @@ function contesta(){
 								
 								?>
                                 <!--<p class="texto_actividad">-->
-                                <?php
+                                <?
 								imprimeCodigoFlash4($arch,$datos,$funcionJS,$ancho,$alto);
                                 ?>
 								<!--</p>-->
-                                <?php
+                                <?
 
 								
 					   		}
@@ -1017,23 +1017,23 @@ function contesta(){
 								  
 								?>
                                 <p class="texto_actividad">
-                                <?php 
+                                <? 
                                 // escribo el texto de la pregunta
                                 echo $item["textoEnunciado"];
                                 ?>
                                 <br><br>
                                 
-                                <?php
+                                <?
 								$respuesta = "";
 								if ($contestada == 1){ 
 									$respuesta = getRespuestaUsuarioIdEnunciado($item["idEnunciado"],$idUsuario);
 									?>
                                     <div class="respuestaTexto">
-									<?php
+									<?
                                     echo $respuesta;
                                     ?>
                                     </div>   
-                                    <?php
+                                    <?
 								}
 								else
 								{
@@ -1043,7 +1043,7 @@ function contesta(){
 									$i = 1;
 									?>
 									<table class="texto_actividad" width="100%" border="0" cellspacing="0" cellpadding="0">
-									<?php
+									<?
 									foreach ($alternativas as $alternativa)
 									{  
 									?>
@@ -1053,10 +1053,10 @@ function contesta(){
 									  <tr>
 										<td  align="right" >
 										
-										 <input type="radio" <?php echo $flagDisabled; ?> name="item<?php echo $item["idEnunciado"]; ?>" id="radio<?php echo $i."_item".$item["idEnunciado"]; ?>" value="<?php echo $alternativa['idEtiqueta'] ?>" class="campos"/>
+										 <input type="radio" <? echo $flagDisabled; ?> name="item<? echo $item["idEnunciado"]; ?>" id="radio<? echo $i."_item".$item["idEnunciado"]; ?>" value="<? echo $alternativa['idEtiqueta'] ?>" class="campos"/>
 										 </td>
 										 <td>&nbsp;
-											<?php 
+											<? 
 												echo $alternativa["nombreEtiqueta"]; 
 												$i++;
 											?>
@@ -1069,20 +1069,20 @@ function contesta(){
 	
 										
 	
-									<?php 
+									<? 
 									} // foreach
 									?>
 									</table>
-                                    <input name="numRadios_item<?php echo $item["idEnunciado"]; ?>"  id="numRadios_item<?php echo $item["idEnunciado"]; ?>" type="hidden" value="<?php echo $i-1;?>">
+                                    <input name="numRadios_item<? echo $item["idEnunciado"]; ?>"  id="numRadios_item<? echo $item["idEnunciado"]; ?>" type="hidden" value="<? echo $i-1;?>">
 									
 									
 									
-                                <?php
+                                <?
 								}
 								?>
                                 
                                  </p>
-                                 <?php
+                                 <?
 								 
 							   }
                             
@@ -1099,13 +1099,13 @@ function contesta(){
 								
 								?>
                                 <p class="texto_actividad">
-                                <?php 
+                                <? 
                                 // escribo el texto de la pregunta
                                 echo $item["textoEnunciado"];
                                 ?>
                                 <br><br>
                                 </p>
-                                <?php
+                                <?
 								
 								$flagDisabled = "";
 								
@@ -1121,10 +1121,10 @@ function contesta(){
 								?>
                                 
 								<div id="textRespuesta" align="center">
-								<textarea name="item<?php echo $item["idEnunciado"]; ?>" id="item<?php echo $item["idEnunciado"]; ?>" cols="60" rows="5" class="campos" <?php echo $flagDisabled; ?>><?php echo $respuesta;?></textarea>
+								<textarea name="item<? echo $item["idEnunciado"]; ?>" id="item<? echo $item["idEnunciado"]; ?>" cols="60" rows="5" class="campos" <? echo $flagDisabled; ?>><? echo $respuesta;?></textarea>
                                 </div>
                                 
-                       			<?php 
+                       			<? 
 					   		}
 							
 							
@@ -1135,13 +1135,13 @@ function contesta(){
 								?>
                                 
                                 <div align="center" style="width:850px; font-size:15px">
-                                <?php 
+                                <? 
                                 // escribo el texto de la pregunta
                                 echo $item["textoEnunciado"];
                                 ?>
                               
                                 
-                                <?php
+                                <?
 								
 								$flagDisabled = "";
 								
@@ -1156,13 +1156,13 @@ function contesta(){
 								
 								?>
                                 &nbsp;&nbsp;
-                                <input name="item<?php echo $item["idEnunciado"]; ?>" id="item<?php echo $item["idEnunciado"]; ?>" onChange="contesta()" type="text" size="3" class="campos" <?php echo $flagDisabled; ?> value="<?php echo $respuesta;?>" onkeyup='javascript:checkDecimal(this);' >
+                                <input name="item<? echo $item["idEnunciado"]; ?>" id="item<? echo $item["idEnunciado"]; ?>" onChange="contesta()" type="text" size="3" class="campos" <? echo $flagDisabled; ?> value="<? echo $respuesta;?>" onkeyup='javascript:checkDecimal(this);' >
 
                                 </div><br>
    
                                                            
                                 
-                       			<?php 
+                       			<? 
 					   		}
 							
 							
@@ -1172,7 +1172,7 @@ function contesta(){
 								
 								?>
                                 <div align="center" style="width:850px; font-size:15px">
-                                <?php 
+                                <? 
                                 // escribo el texto de la pregunta
                             
 								
@@ -1194,7 +1194,7 @@ function contesta(){
 								?>
                                                                 
                                 </div>
-                       			<?php 
+                       			<? 
 					   		}
 							
 							
@@ -1204,7 +1204,7 @@ function contesta(){
 								
 								?>
                                 <div align="center" style="width:850px; font-size:15px">
-                                <?php 
+                                <? 
                                 // escribo el texto de la pregunta
                             
 								
@@ -1226,7 +1226,7 @@ function contesta(){
 								?>
                                                                 
                                 </div>
-                       			<?php 
+                       			<? 
 					   		}
 							
 							
@@ -1238,7 +1238,7 @@ function contesta(){
 					   ?>
                        
                        
-                <?php } // foreach 
+                <? } // foreach 
 				
 				
 					if ($contadorEditor > 0){
@@ -1249,7 +1249,7 @@ function contesta(){
 						<script type="text/javascript">
                         window.onload = function ()
                         {
-                            <?php foreach($editores as $editor){
+                            <? foreach($editores as $editor){
 								echo $editor."\n";	
 							} ?>
                         };
@@ -1257,12 +1257,12 @@ function contesta(){
                                             
                         </script>	
                                 
-                    <?php
+                    <?
 					}
 					
 					?>
                     </div>
-                    <?php
+                    <?
 			
 		} // formulario
 		?>
@@ -1270,7 +1270,7 @@ function contesta(){
 		<br>
 
       	
-       	<p align="right"><?php 
+       	<p align="right"><? 
 		
 		if ($contestada == 1 || $hayFormulario == 0){
 			boton("Avanzar","soloAvanzar();");		
@@ -1295,7 +1295,7 @@ function contesta(){
         <div id="comentario"></div>
         
         
-        <?php 
+        <? 
 		// Si esta contestada esta página, aparecen los posibles comentarios ya hechos o se puede comentar 
 		if(@$contestada==1){
 		
@@ -1305,7 +1305,7 @@ function contesta(){
 			</script>   
             
             
-        <?php 
+        <? 
 			
 			
 		}
@@ -1320,12 +1320,12 @@ function contesta(){
         
       </div><!--columnaCentro-->
          
-       <?php //  require("misCursos.php");?>
+       <? //  require("misCursos.php");?>
      
                
     
               
-	<?php 
+	<? 
     
     	require("pie.php");
     
@@ -1343,22 +1343,22 @@ function soloAvanzar(){
 
 function continuar(){  
 	
-		<?php 
+		<? 
 		if($paginas[$j]["tipoActividadPagina"] == "Formulario" || $hayFormulario == 1){
 		
 			?>	
 
 			
 			var textosEditor = "";
-			<?php
+			<?
 			foreach ($listaItem as $item){?>
-				//if ("<?php echo $item["tipoInputEnunciado"];?>" != "file"){
-					//if(val_obligatorio("item<?php echo $item["idEnunciado"];?>") == false){ return; } // CAMPOS
+				//if ("<? echo $item["tipoInputEnunciado"];?>" != "file"){
+					//if(val_obligatorio("item<? echo $item["idEnunciado"];?>") == false){ return; } // CAMPOS
 					
 				//}
 				
-				if ("<?php echo $item["tipoInputEnunciado"];?>" == "editor"){
-					var divItem = document.getElementById("item<?php echo $item["idEnunciado"];?>");
+				if ("<? echo $item["tipoInputEnunciado"];?>" == "editor"){
+					var divItem = document.getElementById("item<? echo $item["idEnunciado"];?>");
 					
 					var iframe = divItem.getElementsByTagName("iframe");
 					var content = iframe[0].contentWindow.document.body.innerHTML;
@@ -1372,7 +1372,7 @@ function continuar(){
 						document.getElementById("contestoAlgo").value = "1";
 					}
 					
-					textosEditor = textosEditor+"item<?php echo $item["idEnunciado"];?>="+escape(simbolos(content))+"&";
+					textosEditor = textosEditor+"item<? echo $item["idEnunciado"];?>="+escape(simbolos(content))+"&";
 
 					
 				} <!--editor-->
@@ -1380,9 +1380,9 @@ function continuar(){
 				
 				/* Radio */
 				
-				if ("<?php echo $item["tipoInputEnunciado"];?>" == "Radio"){
+				if ("<? echo $item["tipoInputEnunciado"];?>" == "Radio"){
 					
-					var numRadios = document.getElementById("numRadios_item<?php echo $item["idEnunciado"];?>");
+					var numRadios = document.getElementById("numRadios_item<? echo $item["idEnunciado"];?>");
 					var num = numRadios.value;
 					
 					var flagContestado = false;
@@ -1391,7 +1391,7 @@ function continuar(){
 					
 					for (i=1 ; i <= numRadios.value ; i++ ){
 						
-						var radio = document.getElementById("radio"+i+"_item<?php echo $item["idEnunciado"]; ?>");	
+						var radio = document.getElementById("radio"+i+"_item<? echo $item["idEnunciado"]; ?>");	
 						var checked = radio.checked;
 
 						if (checked){
@@ -1413,9 +1413,9 @@ function continuar(){
 				
 				/* Flash dinamico */
 				
-				if ("<?php echo $item["tipoInputEnunciado"];?>" == "hidden_flash"){
+				if ("<? echo $item["tipoInputEnunciado"];?>" == "hidden_flash"){
 
-					var inputHidden = document.getElementById("item<?php echo $item["idEnunciado"]; ?>");
+					var inputHidden = document.getElementById("item<? echo $item["idEnunciado"]; ?>");
 													
 					 
 					
@@ -1432,7 +1432,7 @@ function continuar(){
 				
 
 				
-			<?php 
+			<? 
 			} // foreach
 		?>
 			var contesta = document.getElementById("contestoAlgo").value;
@@ -1441,13 +1441,13 @@ function continuar(){
 				alert("Debe ingresar un valor para responder");
 				return;
 			}
-		<?php
+		<?
 			
 		}
 		else{
 			?>
 			var textosEditor = "";	
-			<?php
+			<?
 		}
 		?>
 		

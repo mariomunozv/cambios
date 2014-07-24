@@ -1,4 +1,4 @@
-<?php
+<?
 session_start();
 include "../inc/conecta.php";
 include "../inc/_funciones.php";
@@ -232,7 +232,7 @@ if (abierto == 1){
 
 <body OnContextMenu="return false">
 <!-- Panel -->
-<?php //include("barra.php");?>
+<? //include("barra.php");?>
 <div id="todo">
 <div id="top">&nbsp;</div>
 	<div id="contenido">
@@ -251,7 +251,7 @@ if (abierto == 1){
                                     
 		                <td class="enunciadoProblema" id="enunciado">
                         <div id="textoEnunciado">
-					<?php echo $item["enunciadoItem"];?>
+					<? echo $item["enunciadoItem"];?>
 		               	</div>               
                         </td>
 		                
@@ -262,23 +262,23 @@ if (abierto == 1){
 		            <td>
                      <table width="100%" border="0" cellpadding="0" cellspacing="1" bordercolor="#000000">
 		              <tr>
-                    <?php //$datos = $item;?>
-		                <td rowspan="5"  valign="top" bgcolor="#FFFFFF" id="fondo"><?php imprimeCodigoFlash2($datos);?></td>
+                    <? //$datos = $item;?>
+		                <td rowspan="5"  valign="top" bgcolor="#FFFFFF" id="fondo"><? imprimeCodigoFlash2($datos);?></td>
 		                <td align="center" bgcolor="#FFFFFF">
                         
                         <table border="0" cellpadding="0" cellspacing="0">
                        
                         <form autocomplete="off" name="form" method="post" action="guardaItem.php">
-                        <input type="hidden" id="indice" name="indice" value="<?php  echo $j;?>" />
-                        <input type="hidden"  id="cantidadRespuestasItem" name="cantidadRespuestasItem" value="<?php  echo $item["cantidadRespuestasItem"];?>" />
-                        <input type="hidden" id"esAbierto" name="esAbierto" value="<?php  echo $item["esAbiertoItem"];?>" />
+                        <input type="hidden" id="indice" name="indice" value="<?  echo $j;?>" />
+                        <input type="hidden"  id="cantidadRespuestasItem" name="cantidadRespuestasItem" value="<?  echo $item["cantidadRespuestasItem"];?>" />
+                        <input type="hidden" id"esAbierto" name="esAbierto" value="<?  echo $item["esAbiertoItem"];?>" />
 
                       
                        
                      
                        
                        
-                         <?php 
+                         <? 
 						 
 						 if($item["cantidadRespuestasItem"] > 1){
 								  $letras = array("A","B","C","D","E","F","G","H","I","J");	 
@@ -298,12 +298,12 @@ if (abierto == 1){
 
 							 ?>
 
-					<?php for ($i=0;$i<$item["cantidadRespuestasItem"];$i++){
+					<? for ($i=0;$i<$item["cantidadRespuestasItem"];$i++){
 						$tipoR = explode("*",$tipoRespuestas[$i]);
 						
 						
 						?> 
-                          <input type="hidden"  name="tipoR<?php echo $i;?>" value="<?php  echo $tipoR[0];?>" />	
+                          <input type="hidden"  name="tipoR<? echo $i;?>" value="<?  echo $tipoR[0];?>" />	
                          <input type="hidden" id="contestoAlgo"  name="contestoAlgo" />                          
 		                  <tr>
 		                    <td align="left" valign="top" background="img/x4.jpg"><img src="img/x1.jpg" width="14" height="11"></td>
@@ -315,19 +315,19 @@ if (abierto == 1){
 
 		                  <tr>
 		                    <td background="img/x4.jpg">&nbsp;</td>
-		                    <td  valign="middle" bgcolor="#80D305" class="textoRespuesta"><img src="img/transparent.gif"  height="10">Respuesta <?php echo $letras[$i]?>:  &nbsp;&nbsp;&nbsp;</td>
+		                    <td  valign="middle" bgcolor="#80D305" class="textoRespuesta"><img src="img/transparent.gif"  height="10">Respuesta <? echo $letras[$i]?>:  &nbsp;&nbsp;&nbsp;</td>
 		                    <td bgcolor="#41B200">&nbsp;</td>
 		                    <td bgcolor="#F3F3F3"><img src="img/transparent.gif" width="5" height="25"></td>
 		                    <td width="160" bgcolor="#F3F3F3">
-							<?php if ($tipoR[0] == "F" || $tipoR[0] == "FI"){ 
+							<? if ($tipoR[0] == "F" || $tipoR[0] == "FI"){ 
 									echo  muestraInputFraccion($i); 
 								}
 							?> 
-                            <?php if ($tipoR[0] == "Digito"){ 
+                            <? if ($tipoR[0] == "Digito"){ 
 									echo '<input name="respuesta'.$i.'" type="text" title="Dígito" onkeyup="javascript:checkNumber(this);" id="respuesta'.$i.'" size="1" maxlength="1" onchange="contesta()" />'; 
 								}
 							?>
-							<?php if ($tipoR[0] == "D" || $tipoR[0] == "DecEq" || $tipoR[0] == "DI"){ 
+							<? if ($tipoR[0] == "D" || $tipoR[0] == "DecEq" || $tipoR[0] == "DI"){ 
 									echo '<input name="respuesta'.$i.'" type="text" title="Decimal" onkeyup="javascript:checkDecimal(this);" id="respuesta'.$i.'" size="10" maxlength="10" onchange="contesta()" />';
 								}
 							?></td>
@@ -343,9 +343,9 @@ if (abierto == 1){
 		                    </tr>
                             
                             
-                          <?php }?>  
+                          <? }?>  
 
-                         <?php	 }else{
+                         <?	 }else{
    	 								$respuestaCerrada = getRespuestaCerradaItem($idItem);
 									$valorCorrecta = $respuestaCerrada["idAlternativaItem"];
 									$opcionCorrecta = $respuestaCerrada["nombreAlternativaItem"];
@@ -371,22 +371,22 @@ if (abierto == 1){
 										  
                                           
                                          
-										<input type="radio" name="respuesta" id="respuesta<?php echo $i; ?>" value="<?php echo $alternativa["idAlternativaItem"];?>" class="crirHiddenJS">
+										<input type="radio" name="respuesta" id="respuesta<? echo $i; ?>" value="<? echo $alternativa["idAlternativaItem"];?>" class="crirHiddenJS">
                                         
 									    </td>
 										<td bgcolor="#41B200">&nbsp;</td>
 										<td bgcolor="#F3F3F3"><img src="img/transparent.gif" width="5"></td>
 										
                                         <!-- Aquí va el texto de la alternativa-->
-                                         <?php if(strlen($alternativa["nombreAlternativaItem"]) > 400){
+                                         <? if(strlen($alternativa["nombreAlternativaItem"]) > 400){
 											$ancho = 500;
 										}else{
 											$ancho = 270;
 											}?>
                                         
-                                        <td id="alternativa" title="Click para seleccionar la alternativa" width="<?php echo $ancho;?>" class="alternativa" bgcolor="#F3F3F3" height="40" onclick="check=document.getElementById('respuesta<?php echo $i; ?>');
+                                        <td id="alternativa" title="Click para seleccionar la alternativa" width="<? echo $ancho;?>" class="alternativa" bgcolor="#F3F3F3" height="40" onclick="check=document.getElementById('respuesta<? echo $i; ?>');
 											check.checked=(check.checked==true)?true:true;">
-										<?php 
+										<? 
 										echo $alternativa["nombreAlternativaItem"]; 
 										$i++;
 										?>
@@ -405,7 +405,7 @@ if (abierto == 1){
                                       <tr><td>&nbsp;</td>
                                       </tr>
                                       
-								 <?php } 
+								 <? } 
 							  }
 							  
 							  ?>     
@@ -438,7 +438,7 @@ if (abierto == 1){
                          
                             
                        
-                            <?php boton("Responder","validaItem(".$item["esAbiertoItem"].");");?>
+                            <? boton("Responder","validaItem(".$item["esAbiertoItem"].");");?>
 		                 
                         </td>
 		                </tr>

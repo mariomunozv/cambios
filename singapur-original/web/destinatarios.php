@@ -1,4 +1,4 @@
-<?php 
+<? 
 session_start();
 include "inc/conecta.php";
 include "inc/funciones.php";
@@ -19,18 +19,18 @@ if (isset($_REQUEST["idUsuario"])){
 ?>
 
 <table width="200" border="0">
-  <?php 
+  <? 
  $listaDest = @$_SESSION["listaDestinatarios"];
  
  for ($i=0;$i<count($listaDest);$i++){
  ?>
       <tr>
-        <td><?php echo getNombreUsuario($listaDest[$i])?></td>
-        <td><img src="img/delete.gif" width="16" height="16" onclick="sacarDestinatario(<?php echo $listaDest[$i];?>)"/></td>
+        <td><? echo getNombreUsuario($listaDest[$i])?></td>
+        <td><img src="img/delete.gif" width="16" height="16" onclick="sacarDestinatario(<? echo $listaDest[$i];?>)"/></td>
   </tr>
       
       
-  <?php }?>
+  <? }?>
   
 </table>
 

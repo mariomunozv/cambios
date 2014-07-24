@@ -1,11 +1,11 @@
-<?php
+<?
 require("inc/config.php");
 include("../inc/_usuario.php");
 include("../inc/_funciones.php");
 
 ?>
 
-<?php
+<?
 	
 $usuario = $_REQUEST["usuario"];	
 $password = $_REQUEST["clave"];	

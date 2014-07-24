@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 function numNuevaClase($idJornada,$idUsuario){
 	$sql = "SELECT COUNT(*) FROM bitacoraClase WHERE idJornada = '$idJornada' AND idUsuario = '$idUsuario'";

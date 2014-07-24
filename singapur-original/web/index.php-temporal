@@ -1,13 +1,13 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 ?>
-<?php require ("hd.php");?>
+<? require ("hd.php");?>
 
 
 
 <body>
 <div id="principal">
-<?php require("topMenu.php"); ?>
+<? require("topMenu.php"); ?>
 	
    
     
@@ -38,7 +38,7 @@ require("inc/incluidos.php");
     
      
 
-        <?php require("pie.php");?>
+        <? require("pie.php");?>
 
 </div>
 </body>

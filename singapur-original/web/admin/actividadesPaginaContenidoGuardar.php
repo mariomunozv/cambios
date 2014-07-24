@@ -1,4 +1,4 @@
-<?php
+<?
 require("inc/config.php");
 
 $idTipoContenidoPagina = $_REQUEST["tipoContenido"];
@@ -52,8 +52,8 @@ if($orden == "actualizar")
 	{
 		echo "se actualizó la actividad";
 		?>
-		<script language="javascript">listaPaginas(<?php echo $idActividadPagina ?>)</script>
-		<?php
+		<script language="javascript">listaPaginas(<? echo $idActividadPagina ?>)</script>
+		<?
 	}
 	else
 	{
@@ -66,8 +66,8 @@ else if($orden == "guardar")
 	{
 		echo "se inserto la actividad $textoContenidoPagina";
 		?>
-		<script language="javascript">listaPaginas(<?php echo $idActividadPagina ?>)</script>
-		<?php
+		<script language="javascript">listaPaginas(<? echo $idActividadPagina ?>)</script>
+		<?
 	}
 	else
 	{

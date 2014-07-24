@@ -1,4 +1,4 @@
-<?php 
+<? 
 ini_set("display_errors","On");
 //include "inc/conectav10.php";
 //include "inc/funciones.php";
@@ -76,7 +76,7 @@ foreach($secciones as $seccion)
 if(existePauta($idUsuario,$idFormulario))
 {?>
 	<script language="javascript">alert("Usted ya contestó la encuesta")</script>>
-<?php 
+<? 
 	dirigirse_a("home.php");
 }else{	
 	$idPauta = creaPauta($idFormulario,$idUsuario);
@@ -158,7 +158,7 @@ var MsjTipico = "<center><img src='img/loading.gif' alt='Cargando'><br>Cargando<
 
 function cargarDatosIniciales(){
 	var division = document.getElementById("datos");
-	<?php 
+	<? 
 		switch($idFormulario)
 		{
 			case 1:

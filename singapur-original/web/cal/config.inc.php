@@ -1,4 +1,4 @@
-<?php
+<?
 $dbhost="localhost";
 $dbname="GESTION_ASESORIAS_v34";
 $dbuser="desarrollo";

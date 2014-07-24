@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set("display_errors","On");
 //include "inc/conectav10.php";
 //include "inc/funciones.php";
@@ -110,11 +110,11 @@ $colegio = getNombreColegio($usuario['rbdColegio']);
 	<tr>
 		<td colspan="2" align="center" valign="top">
 			<p class="style4">
-				<?php
+				<?
 				  echo $frm[0]['nombreFormulario'];
 				?>
 			<br/></p><hr color="#339900"/>
-            	<?php
+            	<?
 				  echo "<h3 style='color:'>".$frm[0]['descripcionFormulario']."</h3>";
 				?>
             
@@ -126,14 +126,14 @@ $colegio = getNombreColegio($usuario['rbdColegio']);
             	<tr>
                 	<td class="style10">Colegio:</td>
 					<td class="style10">
-                    	<input type="text" name="colegio" id="colegio" size="30" value="<?php echo $datosIniciales['nombreColegio'] ?>" readonly="true"/>
+                    	<input type="text" name="colegio" id="colegio" size="30" value="<? echo $datosIniciales['nombreColegio'] ?>" readonly="true"/>
                   	</td>
               	</tr>
                 <tr>
                 	<td class="style10">Curso:</td>
                   	<td class="style10" colspan="2">
-                  		<input type="text" name="curso" id="curso" size="30" value="<?php echo $datosIniciales['nombreCortoCursoCapacitacion']?>" readonly="true"/>
-                  		<input type="hidden" name="nombre" id="nombre" value="<?php echo $datosIniciales['nombreProfesor']?>"/>
+                  		<input type="text" name="curso" id="curso" size="30" value="<? echo $datosIniciales['nombreCortoCursoCapacitacion']?>" readonly="true"/>
+                  		<input type="hidden" name="nombre" id="nombre" value="<? echo $datosIniciales['nombreProfesor']?>"/>
                   	</td>
                 </tr>
                 <tr>

@@ -1,4 +1,4 @@
-<?php 
+<? 
 session_start();
 include "../inc/conecta.php";
 include "../inc/_funciones.php";

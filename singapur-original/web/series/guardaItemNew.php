@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set("display_errors","on");
 session_start();
 include "../inc/conecta.php";
@@ -7,7 +7,7 @@ Conectarse_seg();
 
 ?>
 <link rel="stylesheet" href="css/estilo.css" type="text/css" >
-<?php
+<?
 
 function getPuntajeByItem ($idItem) {
 	print_r($idItem);

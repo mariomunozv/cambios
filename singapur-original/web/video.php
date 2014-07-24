@@ -1,4 +1,4 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 require ("hd.php");
 
@@ -10,10 +10,10 @@ $video = getRecurso($idRecurso);
 
 
 <div id="principal">
-<?php require("topMenu.php"); ?>
+<? require("topMenu.php"); ?>
 	
     <div id="lateralIzq">
-    <?php 
+    <? 
 		require("menuleft.php");
 	?>
     </div> <!--lateralIzq-->
@@ -21,7 +21,7 @@ $video = getRecurso($idRecurso);
     
     
     <div id="lateralDer">
-		<?php 		
+		<? 		
 		require("menuright.php");
 	?>
     
@@ -30,7 +30,7 @@ $video = getRecurso($idRecurso);
     
     
 	<div id="columnaCentro">
-    	<p class="titulo_curso">Video - <?php echo $video["nombreRecurso"] ?></p>
+    	<p class="titulo_curso">Video - <? echo $video["nombreRecurso"] ?></p>
         <hr /><br>
 
         
@@ -41,17 +41,17 @@ $video = getRecurso($idRecurso);
 		<div id='my-video'></div>
 		<script type='text/javascript'>
             jwplayer('my-video').setup({
-                file: '<?php echo $video["urlRecurso"] ?>',
+                file: '<? echo $video["urlRecurso"] ?>',
                 width: '320',
                 height: '240'
             });
         </script>
         <br><br>
-		<?php  boton("Volver","history.go(-1)"); ?>
+		<?  boton("Volver","history.go(-1)"); ?>
 			
     </div> <!--columnaCentro-->
 
-	<?php 
+	<? 
     	
 		require("pie.php");
 		

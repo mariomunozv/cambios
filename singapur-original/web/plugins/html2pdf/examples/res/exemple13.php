@@ -68,7 +68,7 @@ Exemple de caracteres :<br>
     <tr><th>7</th><td>&euro;</td><td>&laquo;</td><td> </td><td>&oslash;</td><td> </td></tr>
 </table>
 <br>
-<?php
+<?
     $phrase = "ceci est un exemple avec <b>du gras</b>, ";
     $phrase.= "<i>de l'italique</i>, ";
     $phrase.= "<u>du souligné</u>, ";
@@ -77,12 +77,12 @@ Exemple de caracteres :<br>
 ?>
 Table :<br>
 <table style="border: solid 1px red; width: 105mm">
-    <tr><td style="width: 100%; border: solid 1px green; text-align: left; "><?php echo $phrase; ?></td></tr>
-    <tr><td style="width: 100%; border: solid 1px green; text-align: center;"><?php echo $phrase; ?></td></tr>
-    <tr><td style="width: 100%; border: solid 1px green; text-align: right; "><?php echo $phrase; ?></td></tr>
+    <tr><td style="width: 100%; border: solid 1px green; text-align: left; "><? echo $phrase; ?></td></tr>
+    <tr><td style="width: 100%; border: solid 1px green; text-align: center;"><? echo $phrase; ?></td></tr>
+    <tr><td style="width: 100%; border: solid 1px green; text-align: right; "><? echo $phrase; ?></td></tr>
 </table>
 <br>
 Div :<br>
-<div style="width: 103mm; border: solid 1px green; text-align: left; margin: 1mm 0 1mm 0;padding: 1mm;"><?php echo $phrase; ?></div>
-<div style="width: 103mm; border: solid 1px green; text-align: center;margin: 1mm 0 1mm 0;padding: 1mm;"><?php echo $phrase; ?></div>
-<div style="width: 103mm; border: solid 1px green; text-align: right; margin: 1mm 0 1mm 0;padding: 1mm;"><?php echo $phrase; ?></div>
+<div style="width: 103mm; border: solid 1px green; text-align: left; margin: 1mm 0 1mm 0;padding: 1mm;"><? echo $phrase; ?></div>
+<div style="width: 103mm; border: solid 1px green; text-align: center;margin: 1mm 0 1mm 0;padding: 1mm;"><? echo $phrase; ?></div>
+<div style="width: 103mm; border: solid 1px green; text-align: right; margin: 1mm 0 1mm 0;padding: 1mm;"><? echo $phrase; ?></div>

@@ -1,4 +1,4 @@
-<?php 
+<? 
 function getPadre($idSeccionBitacora){
 	$sql ="SELECT idPadreSeccionBitacora FROM seccionBitacora WHERE idSeccionBitacora = $idSeccionBitacora";
 	//echo "<br>".$sql;

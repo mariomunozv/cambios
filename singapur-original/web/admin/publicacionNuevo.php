@@ -1,4 +1,4 @@
-<?php
+<?
 session_start();
 include "../inc/conecta.php";
 include "../inc/funciones.php";
@@ -31,7 +31,7 @@ function eligeJornada(){
 Tipo de recurso:
 <br>
 <select name="idTipoRecurso">
-	<?php armaSelect($arregloTipoRecurso,"TipoRecurso"); ?>
+	<? armaSelect($arregloTipoRecurso,"TipoRecurso"); ?>
 </select>
 
 <br>
@@ -50,7 +50,7 @@ URL/ID a publicar:
 Curso:
 <br>
 <select name="idCursoCapacitacion[]" size="10" multiple="multiple" class="campos" id="idCursoCapacitacion" onchange="eligeJornada()">
-	<?php armaSelectIdAtributo($arregloCursoCapacitacion,"CursoCapacitacion","nombreCorto"); ?>
+	<? armaSelectIdAtributo($arregloCursoCapacitacion,"CursoCapacitacion","nombreCorto"); ?>
 </select>
 
 <br>
@@ -59,7 +59,7 @@ Curso:
 Jornada:
 <br>
 <select name="idJornada[]" size="10" multiple="multiple" id="idJornada">
-	<?php //armaSelect($arregloJornada,"Jornada"); ?>
+	<? //armaSelect($arregloJornada,"Jornada"); ?>
 </select>
 
 <br>
@@ -68,7 +68,7 @@ Jornada:
 Perfil:
 <br>
 <select name="idPerfil">
-	<?php armaSelect($arregloPerfil,"Perfil"); ?>
+	<? armaSelect($arregloPerfil,"Perfil"); ?>
 </select>
 
 <input name="Enviar" type="submit" value="Enviar"/>

@@ -1,4 +1,4 @@
-<?php
+<?
 /**
  * HTML2PDF Librairy - example
  *
@@ -19,7 +19,7 @@
     <br>
     Normalement la fenetre d'impression devrait apparaitre automatiquement
 </page>
-<?php
+<?
     $content = ob_get_clean();
 
     // convert to PDF

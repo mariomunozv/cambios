@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set('display_errors','On');
 require("inc/config.php"); 
 require("inc/funcionesAdmin.php");
@@ -18,8 +18,8 @@ function activaDesactiva(rutAlumno,modo){
 } 
 </script>
 <h2>Alumnos</h2>
-<a class="button" href="javascript:newAlumno();"><span><div class="add"><?php echo "Nuevo Alumno"; ?></div></span></a>
-<a class="button" href="javascript:cargaMasiva();"><span><div class="add"><?php echo "Cargar Listado Alumnos"; ?></div></span></a>
+<a class="button" href="javascript:newAlumno();"><span><div class="add"><? echo "Nuevo Alumno"; ?></div></span></a>
+<a class="button" href="javascript:cargaMasiva();"><span><div class="add"><? echo "Cargar Listado Alumnos"; ?></div></span></a>
 
 
 <table class="tablesorter" id="tabla"> 
@@ -39,7 +39,7 @@ function activaDesactiva(rutAlumno,modo){
   </thead>
   <tbody>
  
-  <?php 
+  <? 
   
 $alumnos = getAlumnosCurso($rbdColegio,$idNivel,$anoCursoColegio,$letraCursoColegio);
  
@@ -58,17 +58,17 @@ $alumnos = getAlumnosCurso($rbdColegio,$idNivel,$anoCursoColegio,$letraCursoCole
 	
 	  ?>
               <tr onmouseover="this.className='normalActive'" onmouseout="this.className='normal'" class="normal">
-              <td><?php echo $i;?></td>
-                <td><?php echo $alumno["usuario"];?></td>
-                <td><?php echo $alumno["nombreAlumno"];?></td>
-                <td><?php echo $alumno["apellidoPaternoAlumno"];?></td>
-                <td><?php echo $alumno["apellidoMaternoAlumno"];?></td>
-                <td><a href="javascript:editAlumno('<?php echo $alumno["usuario"]; ?>');" >Editara</a> -  
-                <a href="alumnoVer.php?usuario=<?php echo $alumno["usuario"];?>">Ver +</a>
-                <a href="javascript:activaDesactiva('<?php echo $alumno["rutAlumno"]; ?>','<?php echo $modo;?>');"><?php echo $modo;?></a></td>
+              <td><? echo $i;?></td>
+                <td><? echo $alumno["usuario"];?></td>
+                <td><? echo $alumno["nombreAlumno"];?></td>
+                <td><? echo $alumno["apellidoPaternoAlumno"];?></td>
+                <td><? echo $alumno["apellidoMaternoAlumno"];?></td>
+                <td><a href="javascript:editAlumno('<? echo $alumno["usuario"]; ?>');" >Editara</a> -  
+                <a href="alumnoVer.php?usuario=<? echo $alumno["usuario"];?>">Ver +</a>
+                <a href="javascript:activaDesactiva('<? echo $alumno["rutAlumno"]; ?>','<? echo $modo;?>');"><? echo $modo;?></a></td>
                
               </tr>
-<?php 	$i++;	}
+<? 	$i++;	}
  }else{ 
 	 echo "<tr><td colspan='12'>No existen Alumnos en este curso.</td></tr>"; 
   

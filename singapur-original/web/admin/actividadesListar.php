@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set("display_errors","on");
 require("inc/config.php");
 include "../inc/_funciones.php";
@@ -42,17 +42,17 @@ boton("Nueva actividad", "new_actividad();");
 		<th>Editar</th>
 		<th>Detalle</th>
 	</tr>
-<?php 
+<? 
 foreach($actividades as $actividad)
 	{
 	?>
 	<tr class="row">
-		<td><?php echo $actividad["idActividad"]; ?></td>
-		<td><?php echo $actividad["tituloActividad"]; ?></td>
-		<td><?php echo $actividad["estadoActividad"];?></td>
-		<td><a href="javascript:edit_actividad(<?php echo $actividad["idActividad"] ?>)">Editar</a></td>
-		<td><a id="detalle" href="javascript:detalle_actividad(<?php echo $actividad["idActividad"] ?>)">Ver Detalle</a></td>
+		<td><? echo $actividad["idActividad"]; ?></td>
+		<td><? echo $actividad["tituloActividad"]; ?></td>
+		<td><? echo $actividad["estadoActividad"];?></td>
+		<td><a href="javascript:edit_actividad(<? echo $actividad["idActividad"] ?>)">Editar</a></td>
+		<td><a id="detalle" href="javascript:detalle_actividad(<? echo $actividad["idActividad"] ?>)">Ver Detalle</a></td>
 	</tr>
-	<?php } ?> <!-- //fin foreach -->
+	<? } ?> <!-- //fin foreach -->
 </table>
 	

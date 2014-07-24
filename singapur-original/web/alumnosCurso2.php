@@ -1,4 +1,4 @@
-<?php
+<?
 /*include "inc/conecta.php";
 include "inc/funciones.php";
 include "sesion/sesion.php";*/
@@ -10,7 +10,7 @@ $idCurso = $_SESSION["sesionIdCurso"];
 
 $datosCurso2 = getDatosCurso($_SESSION["sesionIdCurso"]);
 ?>
-<p class="titulo_curso"><?php echo "Participantes - ".$datosCurso2["nombreCortoCursoCapacitacion"]; ?></p>
+<p class="titulo_curso"><? echo "Participantes - ".$datosCurso2["nombreCortoCursoCapacitacion"]; ?></p>
 <table border="0" align="center" width="100%" class="tablesorter">
 
     <tr  align="center">
@@ -22,7 +22,7 @@ $datosCurso2 = getDatosCurso($_SESSION["sesionIdCurso"]);
     </tr>
   
 
-	<?php 
+	<? 
 	//print_r($_SESSION);
 
     $alumnosCurso = getAlumnosCurso($idCurso);
@@ -57,11 +57,11 @@ $datosCurso2 = getDatosCurso($_SESSION["sesionIdCurso"]);
 		}
 
 		?>
-		<tr <?php echo $color;?>>
+		<tr <? echo $color;?>>
 			<td valign="center">
-				<?php echo $num;?>
+				<? echo $num;?>
 			</td>
-		<?php
+		<?
 		// Si no existen alumnos
 		if(empty($alumnosCurso[0])){
 			echo '<td colspan="6">No hay alumnos inscritos em el curso</td>';
@@ -70,13 +70,13 @@ $datosCurso2 = getDatosCurso($_SESSION["sesionIdCurso"]);
 			?>
 			<td valign="center">
 				<div align="left">
-					<strong><?php echo $value["nombreCompleto"];?></strong>
+					<strong><? echo $value["nombreCompleto"];?></strong>
 				</div>
 			</td>
 			
 			<td valign="center">
 				<div align="center">
-					<?php
+					<?
 					echo getNombrePerfil($value["idPerfil"]); 
 					?>
 				</div>
@@ -84,20 +84,20 @@ $datosCurso2 = getDatosCurso($_SESSION["sesionIdCurso"]);
 			
 			<td>
 				<div align="center">
-					<a href="verPerfil.php?idUsuario=<?php  echo $value["idUsuario"]; ?>" ><img src="img/profile.png" width="16" height="16" style="cursor:pointer" border="0" title="Perfil de <?php echo $value["nombreCompleto"]; ?>"/></a>
+					<a href="verPerfil.php?idUsuario=<?  echo $value["idUsuario"]; ?>" ><img src="img/profile.png" width="16" height="16" style="cursor:pointer" border="0" title="Perfil de <? echo $value["nombreCompleto"]; ?>"/></a>
 				</div>
 			</td>
             
 			<td>
 				<div align="center">
-					<a href="creaPDF.php?idUsuario=<?php  echo $value["idUsuario"]; ?>" ><img src="img/profile.png" width="16" height="16" style="cursor:pointer" border="0" title="Perfil de <?php echo $value["nombreCompleto"]; ?>"/></a>
+					<a href="creaPDF.php?idUsuario=<?  echo $value["idUsuario"]; ?>" ><img src="img/profile.png" width="16" height="16" style="cursor:pointer" border="0" title="Perfil de <? echo $value["nombreCompleto"]; ?>"/></a>
 				</div>
 			</td>
 			
 			
 		</tr>
 		
-	<?php 	
+	<? 	
 		} // else (existen alumnos)
 		
 	} //foreach

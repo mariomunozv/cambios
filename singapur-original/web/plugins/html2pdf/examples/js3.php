@@ -1,4 +1,4 @@
-<?php
+<?
 /**
  * HTML2PDF Librairy - example
  *
@@ -19,7 +19,7 @@
     <br>
     Normalement une valeur devrait vous être demandée, puis affichée
 </page>
-<?php
+<?
     $content = ob_get_clean();
 
     // PDF script to execute

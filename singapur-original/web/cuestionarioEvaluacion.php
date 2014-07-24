@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set("display_errors","ON");
 //include "inc/conectav10.php";
 //include "inc/funciones.php";
@@ -153,27 +153,27 @@ $_SESSION["indice"] = 0;
 
 <table width="800" align="center" class="tablesorter">
 <tr>
-<th colspan="5"><h1><?php echo $frm[0]['nombreFormulario']; ?></h1></th>
+<th colspan="5"><h1><? echo $frm[0]['nombreFormulario']; ?></h1></th>
 </tr>
 </table>	
-<?php
+<?
 foreach ($secciones as $seccion)
 {
 	if($seccion['idSeccionFormulario'] != 25){ ?>
 		<table class="tablesorter" width="30%">
         	<tr>
-            	<th width="80%"><h2><?php echo $seccion['tituloSeccionFormulario']?></h2></th>
+            	<th width="80%"><h2><? echo $seccion['tituloSeccionFormulario']?></h2></th>
 				<th>1</th>
                 <th>2</th>
                 <th>3</th>
                 <th>4</th>
-					<?php } $seccionEnunciado = getEnunciadosDeSeccion($seccion['idSeccionFormulario']);
+					<? } $seccionEnunciado = getEnunciadosDeSeccion($seccion['idSeccionFormulario']);
 					foreach ($seccionEnunciado as $pregunta)
 					{ 
 						if($pregunta['esAbiertaEnunciado'] == 0 && $pregunta['tipoInputEnunciado'] == "Radio")
 						{?>
 							<tr align='left'>
-                            <?php if($pregunta['idEnunciado'] == 81)
+                            <? if($pregunta['idEnunciado'] == 81)
 							{
 								echo "<td colspan='5'>".$pregunta['textoEnunciado']."</td>";
 							}else{
@@ -183,13 +183,13 @@ foreach ($secciones as $seccion)
 						else if($pregunta['esAbiertaEnunciado'] == 0 && $pregunta['tipoInputEnunciado'] == "Check")
 						{?>
 							<tr align='left'>
-							<td colspan="5"><?php echo $pregunta['textoEnunciado']?></td>
-						<?php }
+							<td colspan="5"><? echo $pregunta['textoEnunciado']?></td>
+						<? }
 						else
 						{?>
 			  			    <tr align='left'>
-							<td colspan="5"><?php echo $pregunta['textoEnunciado']?></td>
-						<?php }
+							<td colspan="5"><? echo $pregunta['textoEnunciado']?></td>
+						<? }
 						if($pregunta['esAbiertaEnunciado'] == 0 && $pregunta['tipoInputEnunciado'] == "Radio")
 						{
 							$nomID = $pregunta['idEnunciado'];
@@ -214,7 +214,7 @@ foreach ($secciones as $seccion)
 						else if($pregunta['esAbiertaEnunciado'] == 0 && $pregunta['tipoInputEnunciado'] == "Check")
 						{?>
 							<tr><td colspan="5" align="left">
-                            <?php
+                            <?
 							$alternativas = getAlternativas($pregunta['idEnunciado']);
 							foreach ($alternativas as $alternativa)
 							{
@@ -222,14 +222,14 @@ foreach ($secciones as $seccion)
 								$nomID = $pregunta['idEnunciado'];
 								echo "<input type='checkbox' name='resp_".$nomID."[]' id='resp_$nomID' class='campos' value='".$alternativa['nombreEtiqueta']."'> ".$alternativa['nombreEtiqueta']."<br>";
 							}
-							?></td></tr><?php
+							?></td></tr><?
 						}
 						else
 						{?>
 			  <tr>
-								<td align='left' colspan='5'><textarea rows='5' cols='105' class="campos" name="resp_<?php echo $pregunta['idEnunciado']?>" id="resp_<?php echo $pregunta['idEnunciado']?>"></textarea></td>
+								<td align='left' colspan='5'><textarea rows='5' cols='105' class="campos" name="resp_<? echo $pregunta['idEnunciado']?>" id="resp_<? echo $pregunta['idEnunciado']?>"></textarea></td>
 			  </tr>
-					<?php }
+					<? }
 			echo "</tr>";
 			}
 		}
@@ -237,14 +237,14 @@ foreach ($secciones as $seccion)
 	?>
 	<tr><td colspan="5"><input type="button" name="Enviar" id="Enviar" value="Finalizar Encuesta" onClick="javascript:enviarRespuestas();"></td></tr>
 </table>
-<?php require("pie.php"); ?>
+<? require("pie.php"); ?>
 </div>
 
 <script language="javascript">
 
 function validaRadios()
 {
-	<?php
+	<?
 	$i = 0;
 	foreach ($secciones as $seccion)
 	{
@@ -256,7 +256,7 @@ function validaRadios()
 				if($pregunta['esAbiertaEnunciado'] == 0 && $pregunta['tipoInputEnunciado'] == "Radio")
 				{
 				?>
-					var radio = document.getElementsByName("resp_"+<?php echo $pregunta["idEnunciado"];?>);
+					var radio = document.getElementsByName("resp_"+<? echo $pregunta["idEnunciado"];?>);
 					var alerta = 0;
 
 					for(var con=0; con < radio.length; con++)
@@ -273,7 +273,7 @@ function validaRadios()
 						radio[1].focus();
 						return;
 					}
-				<?php}//if($pregunta["esAbiertaEnunciado"] == 0)
+				<?}//if($pregunta["esAbiertaEnunciado"] == 0)
 			}
 	}
 	$i++;
@@ -284,7 +284,7 @@ function validaRadios()
 
 function validaTextAreas()
 {
-	<?php
+	<?
 	$i = 0;
 	foreach ($secciones as $seccion)
 	{
@@ -296,9 +296,9 @@ function validaTextAreas()
 				if($pregunta["esAbiertaEnunciado"] == 1)
 				{
 				?>
-					if(val_obligatorio("resp_<?php echo $pregunta["idEnunciado"];?>") == false){ return; } // CAMPOS
+					if(val_obligatorio("resp_<? echo $pregunta["idEnunciado"];?>") == false){ return; } // CAMPOS
 
-				<?php }//if($pregunta["esAbiertaEnunciado"] == 1)
+				<? }//if($pregunta["esAbiertaEnunciado"] == 1)
 			}
 //		}
 		$i++;

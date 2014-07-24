@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 include "../inc/conecta.php";
 include "../inc/funciones.php";

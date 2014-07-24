@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 function getTema($idTema){
 	$sql = "SELECT * FROM tema WHERE idTema = ".$idTema;

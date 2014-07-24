@@ -1,4 +1,4 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 include "/inc/_actividad.php";
 include_once "/inc/_accesoRecurso.php";
@@ -26,7 +26,7 @@ function closer() {
 </script>
 <body>
 <div id="principal">
-<?php require("topActividad.php"); 
+<? require("topActividad.php"); 
 //echo count($_SESSION["paginasActividad"])."CUENTPAGINAS".$_SESSION["j"];
 unset($_SESSION["j"]);
 ?>
@@ -58,18 +58,18 @@ unset($_SESSION["j"]);
     <br>
     <br>
 
-	<p align="right"><?php boton("Finalizar","closer();");?></p>
+	<p align="right"><? boton("Finalizar","closer();");?></p>
         
 	<div id="carga"></div> 
         
       </div><!--columnaCentro-->
          
-       <?php //  require("misCursos.php");?>
+       <? //  require("misCursos.php");?>
      
                
     
               
-	<?php 
+	<? 
     
     	require("pie.php");
     

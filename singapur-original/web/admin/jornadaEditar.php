@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set('display_errors','On');
 
 session_start();
@@ -33,40 +33,40 @@ function marcaTipoJornada($tipoJornada, $tj){
 	<td>
 		<select name="tipoJornada" id="tipoJornada">
         	<option value="">Seleecionar un tipo</option>
-            <option value="0" <?php marcaTipoJornada($tipoJornada,"0") ?> >Home</option>
-            <option value="1" <?php marcaTipoJornada($tipoJornada,"1") ?> >Mural</option>
-            <option value="2" <?php marcaTipoJornada($tipoJornada,"2") ?> >Recurso</option>
+            <option value="0" <? marcaTipoJornada($tipoJornada,"0") ?> >Home</option>
+            <option value="1" <? marcaTipoJornada($tipoJornada,"1") ?> >Mural</option>
+            <option value="2" <? marcaTipoJornada($tipoJornada,"2") ?> >Recurso</option>
 		</select>
 	</td>
 </tr>
 <tr>
 	<td>Jornada:</td>
-	<td><input name="nombreJornada" id="nombreJornada" type="text" size="50" value="<?php echo $jornada["nombreJornada"] ?>" class="campos"/> <input type="hidden" name="idJornada" id="idJornada" value="<?php echo $jornada["idJornada"]?>" class="campos"/></td>
+	<td><input name="nombreJornada" id="nombreJornada" type="text" size="50" value="<? echo $jornada["nombreJornada"] ?>" class="campos"/> <input type="hidden" name="idJornada" id="idJornada" value="<? echo $jornada["idJornada"]?>" class="campos"/></td>
 </tr>
 <tr>
 	<td>Curso:</td>
-	<td><input name="cursoJornada" id="cursoJornada" type="text" readonly="true" size="50" value="<?php echo $jornada["nombreCortoCursoCapacitacion"] ?>" class="campos"/></td>
+	<td><input name="cursoJornada" id="cursoJornada" type="text" readonly="true" size="50" value="<? echo $jornada["nombreCortoCursoCapacitacion"] ?>" class="campos"/></td>
 </tr>
 <tr>
 	<td>Módulo (nº):</td>
-	<td><input name="moduloJornada" id="moduloJornada" type="text" size="5" value="<?php echo $jornada["moduloJornada"] ?>" class="campos"/></td>
+	<td><input name="moduloJornada" id="moduloJornada" type="text" size="5" value="<? echo $jornada["moduloJornada"] ?>" class="campos"/></td>
 </tr>
 
 <tr>
 <td>Descripcion:</td>
-<td><textarea id="descripcionJornada" name="descripcionJornada" cols="80" rows="5" class="campos"><?php echo $jornada["descripcionJornada"] ?></textarea></td>
+<td><textarea id="descripcionJornada" name="descripcionJornada" cols="80" rows="5" class="campos"><? echo $jornada["descripcionJornada"] ?></textarea></td>
 </tr>
 <tr>
 	<td>Visible</td>
-	<?php if($jornada["visibleJornada"]==1) { ?>
+	<? if($jornada["visibleJornada"]==1) { ?>
 	<td><input name="visibleJornada" id="visibleJornada" type="checkbox" checked  class="campos"/></td>
-	<?php }else{ ?>
+	<? }else{ ?>
 	<td><input name="visibleJornada" id="visibleJornada" type="checkbox" class="campos"/></td>
-	<?php } ?>
+	<? } ?>
 </tr>
 <tr>
 <td colspan="2" align="center">
-	<input name="send" type="button" value="Actualizar" onclick="javascript:actualizar_jornada(<?php echo $jornada["idCursoCapacitacion"]?>);"/> 
+	<input name="send" type="button" value="Actualizar" onclick="javascript:actualizar_jornada(<? echo $jornada["idCursoCapacitacion"]?>);"/> 
 	<input name="cancel" type="button" value="Cancelar" onclick="window.location.reload(true);"/>
 </td>
 </tr>

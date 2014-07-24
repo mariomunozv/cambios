@@ -1,4 +1,4 @@
-<?php
+<?
 include("../inc/_enunciado.php");
 require("inc/config.php");
 Conectarse();
@@ -17,15 +17,15 @@ $enunciados = getEnunciados($condicion);
 <th>Enunciado</th>
 <th>Seleccionar</th>
 </tr>
-<?php
+<?
 $i=0;
 foreach ($enunciados as $enunciado)
 {?>
 	<tr>
-		<td><?php echo $enunciado['textoEnunciado'] ?></td>
-		<td align="center"><input type="checkbox" name="seleccionados[]" class="campos" value=<?php echo $enunciado['idEnunciado']?>></td>
+		<td><? echo $enunciado['textoEnunciado'] ?></td>
+		<td align="center"><input type="checkbox" name="seleccionados[]" class="campos" value=<? echo $enunciado['idEnunciado']?>></td>
 	</tr>
-	<?php $i++;
+	<? $i++;
 }
 ?>
 

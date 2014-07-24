@@ -1,4 +1,4 @@
-<?php
+<?
 include "inc/conecta.php";
 include("inc/_seccionBitacora.php");
 Conectarse_seg();

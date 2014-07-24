@@ -1,5 +1,5 @@
 
-<?php 
+<? 
 require("inc/incluidos.php");
 
 include "inc/_actividad.php";
@@ -76,7 +76,7 @@ function closer() {
 function nuevo_comentario(){
 	
 	 var division = document.getElementById("comentario");
-	 a = "tablaComentario=pauta"+"&idReferenciaComentario="+<?php echo $idPauta; ?>+"&idUsuarioNotificado="+<?php echo $idUsuario; ?>+"&idActividad="+<?php echo $idActividad; ?>;
+	 a = "tablaComentario=pauta"+"&idReferenciaComentario="+<? echo $idPauta; ?>+"&idUsuarioNotificado="+<? echo $idUsuario; ?>+"&idActividad="+<? echo $idActividad; ?>;
 	 AJAXPOST("informeActividadComentarioNuevo.php",a,division);
 	
 }
@@ -84,7 +84,7 @@ function nuevo_comentario(){
 function listado_comentarios(){
 	
 	 var division = document.getElementById("listado_comentarios");
-	 a = "tablaComentario=pauta"+"&idReferenciaComentario="+<?php echo $idPauta; ?>;
+	 a = "tablaComentario=pauta"+"&idReferenciaComentario="+<? echo $idPauta; ?>;
 	 AJAXPOST("informeActividadComentarioListado.php",a,division);
 	
 }
@@ -92,7 +92,7 @@ function listado_comentarios(){
 
 <body>
 <div id="principal">
-<?php 
+<? 
 require("topMenu.php"); 
 $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 $navegacion = "Home*home.php,".$nombreCurso."*curso.php?idCurso=".$_SESSION["sesionIdCurso"].",Actividades*informeActividad.php,Informe Curso*informeActividadCurso.php?idActividad=".$idActividad.",Informe Usuario*informeActividadDetalle.php?idUsuario=".$idUsuario."&idActividad=".$idActividad.",Respuestas*informeActividadResultado.php?idPauta=".$idPauta."&idUsuario=".$idUsuario;
@@ -101,7 +101,7 @@ require("_navegacion.php");
 ?>
 	
     <div id="lateralIzq">
-    <?php 
+    <? 
 		require("caja_misCursos.php");
 		
 		require("caja_participantes.php");
@@ -116,7 +116,7 @@ require("_navegacion.php");
     
     
      <div id="lateralDer">
-      <?php 
+      <? 
 	  require("caja_bienvenida.php");
 		require("caja_calendario.php");
 	  ?>
@@ -129,12 +129,12 @@ require("_navegacion.php");
     
 	<div id="columnaCentro">
      
-        <p class="titulo_curso">Informe de <?php echo $nombreUsuario; ?></p>
+        <p class="titulo_curso">Informe de <? echo $nombreUsuario; ?></p>
         <hr />
         <br />
-   <p class="titulo_curso"><?php echo $datosActividad["tituloActividad"]; ?></p>
-   <input name="idPauta" type="hidden" value="<?php echo $idPauta; ?>">
-       <?php 
+   <p class="titulo_curso"><? echo $datosActividad["tituloActividad"]; ?></p>
+   <input name="idPauta" type="hidden" value="<? echo $idPauta; ?>">
+       <? 
 	   
 	   $respuestas = getRespuestasPautaItemUsuario($idPauta,$idUsuario);
 
@@ -207,12 +207,12 @@ listado_comentarios();
         
       </div><!--columnaCentro-->
          
-       <?php //  require("misCursos.php");?>
+       <? //  require("misCursos.php");?>
      
                
     
               
-	<?php 
+	<? 
     
     	require("pie.php");
     

@@ -1,4 +1,4 @@
-<?php 
+<? 
 //session_start();
 require("inc/config.php");
 require("../inc/_detalleColegioProyecto.php");
@@ -74,7 +74,7 @@ class_activo('boton_accesos','activo');
 <span class="titulo_form">Adminitracion Sistema</span><br />
 <br />
 
- <?php boton("Volver","volver();");?>
+ <? boton("Volver","volver();");?>
 <table class="tablesorter" >
             	<tr> 
                 	<th>Curso Capacitacion</th>
@@ -84,16 +84,16 @@ class_activo('boton_accesos','activo');
                 	
                     <td><label>
                       <select name="idCurso" id="idCurso" onchange="actualizaCurso()">
-                      		<option value=""><?php echo "Seleccione un Curso";?></option>
-                       <?php foreach ($cursosCapacitacion as $curso){?>
-                      		<option value="<?php echo $curso["idCursoCapacitacion"];?>" <?php if (@$idCurso == $curso["idCursoCapacitacion"]){echo 'selected="selected"';}?>><?php echo $curso["nombreCortoCursoCapacitacion"];?></option>
-                      <?php }?>
+                      		<option value=""><? echo "Seleccione un Curso";?></option>
+                       <? foreach ($cursosCapacitacion as $curso){?>
+                      		<option value="<? echo $curso["idCursoCapacitacion"];?>" <? if (@$idCurso == $curso["idCursoCapacitacion"]){echo 'selected="selected"';}?>><? echo $curso["nombreCortoCursoCapacitacion"];?></option>
+                      <? }?>
                       </select>
                     </label></td>
                     
                 </tr>
             </table>
-<?php 
+<? 
 	
 	function getTiposAccesos(){
 		
@@ -152,7 +152,7 @@ class_activo('boton_accesos','activo');
 		 // print_r($acceso);
 		// echo $acceso[0]["idAccesoRecurso"]."<--";		  
 		  ?>
-          <?php
+          <?
  function getNombrePerfil ( $idPerfil){
 	$sql = " SELECT * FROM `perfil` WHERE idPerfil = ".$idPerfil;
 	$res = mysql_query($sql);
@@ -206,14 +206,14 @@ if($idCurso >=10 and $idCurso <=17){
     <tr align="center" bgcolor="#CCCCCC">
     	 <th width="500">Colegio</th>
          <th width="500">Nombre                    </th>
-         <?php foreach ($tipoAcceso as $valor){?>
-                      <th width="60"><?php echo $valor["nombreRecursoObservado"];?></th>
-         <?php  }?>
+         <? foreach ($tipoAcceso as $valor){?>
+                      <th width="60"><? echo $valor["nombreRecursoObservado"];?></th>
+         <?  }?>
          <th>Detalle</th>
     </tr>
     </thead>
     <tbody>
-    <?php $alumnosCurso = getAlumnosCurso($idCurso);
+    <? $alumnosCurso = getAlumnosCurso($idCurso);
 	$color = ' bgcolor ="#FFFFFF"';
 	$flag = 0;
 	foreach ($alumnosCurso as $i => $value) { 
@@ -230,25 +230,25 @@ if($idCurso >=10 and $idCurso <=17){
 				?>
                 
               
-                          <tr bgcolor="<?php echo $color;?>" class="ui-state-highlight">
+                          <tr bgcolor="<? echo $color;?>" class="ui-state-highlight">
                               
-						<?php
+						<?
 						// Si no existen clases en la bitacora se despliega un mensaje con un colspan
                        
-                        ?> <td><?php echo @$datosU["nombreColegio"];?></td>
+                        ?> <td><? echo @$datosU["nombreColegio"];?></td>
                             <td valign="center">
-                              <div align="left"><a href="accesosUsuario.php?idUsuario=<?php echo $value["idUsuario"];?>">
-							  <?php echo $datosU["nombreParaMostrar"]; ?>                              </a></div></td><?php $user = $value["idUsuario"]; ?>
-                              <?php foreach ($tipoAcceso as $valor){?>
+                              <div align="left"><a href="accesosUsuario.php?idUsuario=<? echo $value["idUsuario"];?>">
+							  <? echo $datosU["nombreParaMostrar"]; ?>                              </a></div></td><? $user = $value["idUsuario"]; ?>
+                              <? foreach ($tipoAcceso as $valor){?>
                             <td valign="center"><div align="center">
-                                <?php echo getAccesoTipoUsuario($valor["idTipoRecursoObservado"],$value["idUsuario"]); ?>
-                              </div></td><?php } ?> 
-                              <td><a href="accesosUsuarioActividad.php?idUsuario=<?php echo $user; ?>">ver</a></td>
+                                <? echo getAccesoTipoUsuario($valor["idTipoRecursoObservado"],$value["idUsuario"]); ?>
+                              </div></td><? } ?> 
+                              <td><a href="accesosUsuarioActividad.php?idUsuario=<? echo $user; ?>">ver</a></td>
                             
   </tr>
        
                         
-				<?php 	
+				<? 	
 						// else (existen clases en la bitacora)
                 } //foreach
                 ?>
@@ -260,8 +260,8 @@ if($idCurso >=10 and $idCurso <=17){
             
                 
 
-<?php }else{
+<? }else{
 	echo " Debe seleccionar un curso";
 	}?>
 
-<?php require("_pie.php"); ?>
+<? require("_pie.php"); ?>

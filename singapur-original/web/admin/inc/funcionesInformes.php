@@ -1,4 +1,4 @@
-<?php function getLaboratorios(){
+<? function getLaboratorios(){
 	$sql = "SELECT * FROM laboratorio";
 	//echo $sql;
 	$res = mysql_query($sql);

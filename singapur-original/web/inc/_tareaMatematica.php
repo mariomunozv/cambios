@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 function getTareasMatematicas(){
 	// WHERE estadoHerramienta = 1

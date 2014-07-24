@@ -1,4 +1,4 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 
 $idCurso = $_REQUEST["idCurso"];
@@ -24,7 +24,7 @@ function registraMuestra(link,idRecurso){
 
 <body>
 <div id="principal">
-<?php 
+<? 
 	require("topMenu.php");
 	$navegacion = "Home*curso.php?idCurso=$idCurso,Recursos*#";
 	require("_navegacion.php")
@@ -33,7 +33,7 @@ function registraMuestra(link,idRecurso){
  ?>
     <div id="lateralIzq">
     
-    <?php 
+    <? 
 		require("menuleft.php");
 	?>
 	</div>
@@ -41,7 +41,7 @@ function registraMuestra(link,idRecurso){
     
     
      <div id="lateralDer">
-    <?php 		
+    <? 		
 		require("menuright.php");
 	?>
     
@@ -50,10 +50,10 @@ function registraMuestra(link,idRecurso){
     
      <div id="columnaCentro" >
      
-<p class="titulo_curso"><?php echo getNombreCurso($idCurso); ?></p>
+<p class="titulo_curso"><? echo getNombreCurso($idCurso); ?></p>
     <hr />
     <br />
-<?php 
+<? 
 
 $descripcionTotal = $datosCurso2["descripcionCursoCapacitacion"];
 $descripcion =  explode("#", $descripcionTotal);
@@ -61,13 +61,13 @@ $descripcion =  explode("#", $descripcionTotal);
 
 ?>
 <div id="textoBienvenida">
-<p class="textoBienvenida"><?php echo nl2br($descripcion[2]);?></p>
+<p class="textoBienvenida"><? echo nl2br($descripcion[2]);?></p>
 <br />
 
 </div>
 
  
-<?php 
+<? 
 
 $i = 0;
 	foreach ($jornadas as $value){	   
@@ -76,47 +76,47 @@ $i = 0;
         <div id="cajaCentralFondo" >
         <div id="cajaCentralTop">
         	<p class="titulo_jornada">
-			<?php 
+			<? 
                 echo @$value["nombreJornada"];
             ?>
             </p>
     	</div>
         
         <div id="textoJornada">
-			<?php echo @nl2br($value["descripcionJornada"]);?>
+			<? echo @nl2br($value["descripcionJornada"]);?>
 		</div>
         <br>
     	
 
             <ul >
                 <li>
-				   <?php 
+				   <? 
                    for ($i = 1; $i <= 6; $i++){
                    
                    ?>
                        
                        
                        <ul >
-                        <?php @$recursos = getTiposRecursosJornada($value["idJornada"],$idPerfil,$i);
+                        <? @$recursos = getTiposRecursosJornada($value["idJornada"],$idPerfil,$i);
 							//print_r($recursos);
 						
 									if (count($recursos) > 0){ 
 										
 									?>
                                     
-                                        <li><?php echo getNombreAtributoDeTabla($i,"TipoRecurso")  ?>
+                                        <li><? echo getNombreAtributoDeTabla($i,"TipoRecurso")  ?>
                                             <ul>
-                                                <?php foreach ($recursos as $rec){	?>
-                                                         <li><?php echo $rec["nombreRecurso"];?> - <?php getLinkRecursoDownload($rec["idRecurso"]); ?></li>
-                                                 <?php } ?> 
+                                                <? foreach ($recursos as $rec){	?>
+                                                         <li><? echo $rec["nombreRecurso"];?> - <? getLinkRecursoDownload($rec["idRecurso"]); ?></li>
+                                                 <? } ?> 
                                             
                                             </ul>
                                         
                                         </li>
-                                   <?php } ?> 
+                                   <? } ?> 
                            
                        </ul>
-					<?php 
+					<? 
 					}
 					   
 					?>
@@ -127,17 +127,17 @@ $i = 0;
         </div>
         
         <br />
-<?php }?>
+<? }?>
     
       </div> 
     
      
-       <?php //  require("misCursos.php");?>
+       <? //  require("misCursos.php");?>
      
                
     
               
-	<?php 
+	<? 
     
     	require("pie.php");
 

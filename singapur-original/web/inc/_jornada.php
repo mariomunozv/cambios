@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 function getNombreJornada($idJornada){
 	$sql ="SELECT * FROM jornada WHERE idJornada = ".$idJornada;

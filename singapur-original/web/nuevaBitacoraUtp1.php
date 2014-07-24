@@ -1,4 +1,4 @@
-<?php 
+<? 
 session_start();
 include "inc/conecta.php";
 include "inc/funciones.php";
@@ -47,7 +47,7 @@ $idJornada = 1;
 
 </script>
 
-<?php
+<?
 
 /*function numNuevaClase($idJornada, $idUsuario){
 		$sql = "SELECT COUNT(*) FROM bitacoraClase WHERE idJornada = ".$idJornada." and idUsuario = ".$idUsuario;
@@ -105,8 +105,8 @@ $idJornada = 1;
                       <th>Nivel</th>
 					</tr>
                     <tr>
-                      <td valign="top">Reuniones con profesores</td><input name="clase" type="hidden" class="campos" value = "<?php echo $clase;?>"/>
-                      <td valign="top"><input name="fechaClase" type="text" id="datepicker" size="12" class="campos" value = "<?php echo $fechaClase;?>"/><?php echo $fechaClase;?></td>
+                      <td valign="top">Reuniones con profesores</td><input name="clase" type="hidden" class="campos" value = "<? echo $clase;?>"/>
+                      <td valign="top"><input name="fechaClase" type="text" id="datepicker" size="12" class="campos" value = "<? echo $fechaClase;?>"/><? echo $fechaClase;?></td>
                       <td valign="top">
                       			<select name="tiempo" id="tiempo" class="campos">
                                         <option value="30">30</option>
@@ -127,12 +127,12 @@ $idJornada = 1;
                       <tr><th colspan="4">Descripción de los temas tratados</th></tr>
                     <tr >
                       
-                      <td colspan="4"><textarea name="comentarios" id="comentarios" cols="68" rows="8" class="campos"><?php echo $comentarios;?></textarea></td>
+                      <td colspan="4"><textarea name="comentarios" id="comentarios" cols="68" rows="8" class="campos"><? echo $comentarios;?></textarea></td>
                       </tr>
                       <tr>
                       <td colspan="4">
 					  <input type="hidden" id="tipoBitacora" name="tipoBitacora" value="utp1" class="campos">
-						<?php boton("Enviar","guardaBitacoraUTP1()"); ?>
+						<? boton("Enviar","guardaBitacoraUTP1()"); ?>
                       </td>
                       </tr>
                   </table>

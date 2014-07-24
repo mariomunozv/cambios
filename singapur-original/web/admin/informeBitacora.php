@@ -1,4 +1,4 @@
-<?php 
+<? 
 //session_start();
 require("inc/config.php");
 require("../inc/_colegio.php");
@@ -91,7 +91,7 @@ class_activo('boton_informeBitacora','activo');
 
 
 
-<?php 
+<? 
 
 $colegios = getColegios();
 $cursosCapacitacion = getCursosCapacitacion();
@@ -118,9 +118,9 @@ $cursosCapacitacion = getCursosCapacitacion();
                     <td><label>
                       <select name="idCurso" id="idCurso" onchange="actualizaCurso()">
                       <option>Selecciona Curso</option>
-                       <?php foreach ($cursosCapacitacion as $curso){?>
-                      		<option value="<?php echo $curso["idCursoCapacitacion"];?>"><?php echo $curso["nombreCortoCursoCapacitacion"];?></option>
-                      <?php }?>
+                       <? foreach ($cursosCapacitacion as $curso){?>
+                      		<option value="<? echo $curso["idCursoCapacitacion"];?>"><? echo $curso["nombreCortoCursoCapacitacion"];?></option>
+                      <? }?>
                       </select>
                     </label></td>
                     
@@ -135,4 +135,4 @@ $cursosCapacitacion = getCursosCapacitacion();
 
 
       
-<?php require("_pie.php"); ?>
+<? require("_pie.php"); ?>

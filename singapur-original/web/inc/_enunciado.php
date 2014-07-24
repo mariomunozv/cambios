@@ -1,4 +1,4 @@
-<?php
+<?
 
 function crearEnunciado($textoEnunciado,$respuestaCorrectaEnunciado,$esAbiertaEnunciado, $tipoInputEnunciado)
 {

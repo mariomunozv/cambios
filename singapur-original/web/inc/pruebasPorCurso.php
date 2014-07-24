@@ -1,4 +1,4 @@
-<?php 
+<? 
 	$anoActual = 2014;
 	$pruebasPorCurso = array(
 							'1' => array(34,39,55,65),

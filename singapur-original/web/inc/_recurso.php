@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 function getRecurso($idRecurso){
 	$sql ="SELECT * FROM `recurso` a left join tipoRecurso b on a.idTipoRecurso = b.idTipoRecurso where a.idRecurso = ".$idRecurso." ORDER BY idRecurso";

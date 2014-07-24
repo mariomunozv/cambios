@@ -1,11 +1,11 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 require ("hd.php");
 ?>
 <meta charset="iso-8859-1">
 <body>
 <div id="principal">
-<?php 
+<? 
 	require("topMenu.php"); 
 	$navegacion = "Home*mural.php?idCurso=$idCurso,Informes*#";
 	require("_navegacion.php");
@@ -14,11 +14,11 @@ require ("hd.php");
 ?>
 	
 	<div id="lateralIzq">
-	    <?php require("menuleft.php");	?>
+	    <? require("menuleft.php");	?>
     </div> <!--lateralIzq-->
     
     <div id="lateralDer">
-		<?php require("menuright.php"); ?>
+		<? require("menuright.php"); ?>
     </div><!--lateralDer-->
     
     
@@ -52,7 +52,7 @@ require ("hd.php");
 			
     </div> <!--columnaCentro-->
 
-	<?php 
+	<? 
     	
 		require("pie.php");
 		

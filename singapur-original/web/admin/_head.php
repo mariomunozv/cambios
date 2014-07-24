@@ -1,4 +1,4 @@
-<?php require ("../inc/configErrores.php");?>
+<? require ("../inc/configErrores.php");?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -22,7 +22,7 @@
 <script type="text/javascript" src="js/validarut.js"></script> 
 <script type="text/javascript" src="js/jquery.Rut.js"></script>
 
-<?php
+<?
 /*if($_SESSION["persona"] <> ""){
 	$datos_usuario = mysql_fetch_array(persona("*","where per_id = '$_SESSION[persona]'"));
 }*/

@@ -1,4 +1,4 @@
-<?php 
+<? 
 session_start();
 include "inc/conecta.php";
 include "inc/funciones.php";
@@ -90,7 +90,7 @@ function guardaBitacora(){
 
 </script>
 
-<?php
+<?
 
 $usuario = getDatosUsuarioPorId($idUsuario);
 $profesores = getProfesoresColegio($usuario['rbdColegio']);
@@ -111,7 +111,7 @@ pero indcando un valor de "0" en el campo "Horas de implementación" del formular
 	<tr>
     	<th colspan="2">Ingreso de Bítacora</th>
 	</tr>
-<?php
+<?
 // Llegó desde el curso
 if (isset ($_REQUEST["idSeccionBitacora"])){
 	$idPadre = getPadre($_REQUEST["idSeccionBitacora"]);
@@ -120,7 +120,7 @@ if (isset ($_REQUEST["idSeccionBitacora"])){
 		actualizaSecciones();
 	</script>
 	
-<?php
+<?
 }		
 ?>
 	<tr>
@@ -130,7 +130,7 @@ if (isset ($_REQUEST["idSeccionBitacora"])){
  		<td valign="top">
         	<select id="profesor" name="profesor" style="width:250px" class="campos" onchange="traeCursos(this.value)">
             	<option value="">Seleccione Profesor</option>
-			<?php 
+			<? 
 			if($idPerfil == 1){
 				echo "<option value=".$usuario['idUsuario'].">".$usuario['nombre']." ".$usuario['apellidoPaterno']."</option>";
 			}else if($idPerfil == 3 || $idPerfil == 4){
@@ -165,28 +165,28 @@ if (isset ($_REQUEST["idSeccionBitacora"])){
         </td>
 	</tr>
 	<tr>
-	<?php 
+	<? 
 		if($idPerfil == 1){?>
 		   <input name="tipoBitacora" id="tipoBitacora" class="campos" type="hidden" value="Profesor" />
-		<?php }else if($idPerfil == 3){ ?>
+		<? }else if($idPerfil == 3){ ?>
 		   <input name="tipoBitacora" id="tipoBitacora" class="campos" type="hidden" value="UTP" />
-		<?php }else{ ?>
+		<? }else{ ?>
 		<input name="tipoBitacora" id="tipoBitacora" class="campos" type="hidden" value="Nivel superior" />
-		<?php } ?>
+		<? } ?>
 		<td>Capítulo</td>
         <td valign="top">
  			<select name="idPadre" class="campos" onchange="javascript:actualizaSecciones(profesor.value,this.value,cursoColegio.value);" id="idPadre" style="width:250px">
                  <option value="">Seleccione Capítulo</option>
-					<?php 							
+					<? 							
                     foreach ($seccionesPadre as $seccion){ 
                             $opc_sel = "";
                             if ($seccion["idSeccionBitacora"] == @$idPadre){
                                 $opc_sel = "selected";	
                             }
                     ?>
-                 <option <?php echo $opc_sel; ?> value="<?php echo $seccion["idSeccionBitacora"];?>" ><?php echo $seccion["nombreSeccionBitacora"];?>
+                 <option <? echo $opc_sel; ?> value="<? echo $seccion["idSeccionBitacora"];?>" ><? echo $seccion["nombreSeccionBitacora"];?>
                  </option>
-                <?php }?>
+                <? }?>
             </select>
     	</td>
     </tr>
@@ -218,7 +218,7 @@ if (isset ($_REQUEST["idSeccionBitacora"])){
 	</tr>
     <tr>
         <td colspan="2" align="right">
-        <?php 
+        <? 
         boton("Enviar","guardaBitacora()");
         ?>
         </td>

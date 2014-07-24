@@ -1,4 +1,4 @@
-<?php
+<?
 function crearFormulario($idActividadPagina,$nombreFormulario,$descripcionFormulario)
 {
 	if($idActividadPagina == '')

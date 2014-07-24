@@ -1,4 +1,4 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 require ("hd.php");
 
@@ -8,7 +8,7 @@ $_SESSION["sesionIdCurso"] = $idCurso;
 
 <script language="javascript">
 $(function() {
-	<?php /* Asi inicializas tablesorter */ ?>	   
+	<? /* Asi inicializas tablesorter */ ?>	   
 	$("#tabla").tablesorter({ 
 		headers: {  
 			5: { sorter: false },
@@ -25,7 +25,7 @@ $(function() {
 <body>
 
 <div id="principal">
-<?php 
+<? 
 	require("topMenu.php"); 
 	$navegacion = "Home*curso.php?idCurso=$idCurso,Foro*#";	
 	require("_navegacion.php");
@@ -33,14 +33,14 @@ $(function() {
 ?>
 	
 	<div id="lateralIzq">
-    <?php 
+    <? 
 		require("menuleft.php");
 		require ("categoriaForo.php");
 	?>
     </div> <!--lateralIzq-->
     
     <div id="lateralDer">
-	    <?php require("menuright.php");?>
+	    <? require("menuright.php");?>
     </div><!--lateralDer-->
     
      <div id="columnaCentro">
@@ -54,30 +54,30 @@ $(function() {
                     <th width="12%">Numero de Temas</th>
                     <th width="71%">Descripci&oacute;n</th>
 				</tr>
-				<?php 
+				<? 
 				$res = getCategoriaCurso($_SESSION["sesionIdCurso"]); 
 				if (@mysql_num_rows($res) > 0 ){
 					while($row = mysql_fetch_array($res)){
                     dirigirse_a("foroCategoria.php?idCategoria=".$row["idTemaCategoria"]."&flag=1");
 				?>
 				<tr class="style1">
-                	<td valign="top" bgcolor="#D9E3EC"><a href="foroCategoria.php?idCategoria=<?php echo $row["idTemaCategoria"]."&flag=1"; ?>"><?php echo $row["nombreTemaCategoria"];?></a></td>
-					<td align="justify" valign="top" bgcolor="#D9E3EC">(<?php echo cuentaTemasCategoria($row["idTemaCategoria"],$_SESSION["sesionIdCurso"]); ?>)</td>
-                    <td height="50" align="justify" valign="top" bgcolor="#D9E3EC"><?php echo $row["descripcionTemaCategoria"];?></td>
+                	<td valign="top" bgcolor="#D9E3EC"><a href="foroCategoria.php?idCategoria=<? echo $row["idTemaCategoria"]."&flag=1"; ?>"><? echo $row["nombreTemaCategoria"];?></a></td>
+					<td align="justify" valign="top" bgcolor="#D9E3EC">(<? echo cuentaTemasCategoria($row["idTemaCategoria"],$_SESSION["sesionIdCurso"]); ?>)</td>
+                    <td height="50" align="justify" valign="top" bgcolor="#D9E3EC"><? echo $row["descripcionTemaCategoria"];?></td>
 				</tr>
-				<?php } }else{	 ?>
+				<? } }else{	 ?>
                 <tr>
                 	<td colspan="4" align="center"><br />
                     	No hay ninguna categoría disponible por el momento.<br/>
 					</td>
 				</tr>
-                <?php }?>
+                <? }?>
 			</table>
 			<br /><br />
 		</div> <!-- Fin <div class="demo"> -->
 	</div> <!-- Fin <div id="columnaCentro"> -->
 
-	<?php require("pie.php"); ?> 
+	<? require("pie.php"); ?> 
 </div> <!-- Fin <div id="principal"> -->
 </body>
 </html>

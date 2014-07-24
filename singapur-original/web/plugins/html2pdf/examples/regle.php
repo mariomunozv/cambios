@@ -1,4 +1,4 @@
-<?php
+<?
 /**
  * HTML2PDF Librairy - example
  *
@@ -38,10 +38,10 @@
 </style>
 <page>
 <table cellpadding="0" cellspacing="0"><tr>
-<?php for($k=0; $k<28; $k++) echo '<td><img src="./res/regle.png" alt="" ><br>'.$k.'</td>'; ?>
+<? for($k=0; $k<28; $k++) echo '<td><img src="./res/regle.png" alt="" ><br>'.$k.'</td>'; ?>
 </tr></table>
 </page>
-<?php
+<?
      $content = ob_get_clean();
 
     // convert to PDF

@@ -1,4 +1,4 @@
-<?php
+<?
 
 session_start();
 include "../inc/conectav10.php";
@@ -57,7 +57,7 @@ function closer() {
 
 
 
-<?php 
+<? 
 //print_r($_SESSION);
 echo '<table class="tablesorter"><tr><th>Numero Item</th><th colspan="2">Puntos Obtenidos</th><th>Puntaje Total </th><th>Opcion</th></tr>';
 $i = 0;
@@ -105,7 +105,7 @@ boton("Finalizar Actividad","closer();");
 ?>
 </td></tr></table>
 </div></div>
-<?php actualizaPauta($_SESSION["idPauta"],(round($porcentaje,2)*100)); 
+<? actualizaPauta($_SESSION["idPauta"],(round($porcentaje,2)*100)); 
 
 
 ?> 

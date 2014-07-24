@@ -1,4 +1,4 @@
-<?php 
+<? 
 ini_set("display_errors","On");
 require("inc/incluidos.php");
 require ("hd.php");
@@ -7,9 +7,9 @@ require ("hd.php");
 
 <body>
 <div id="principal">
-<?php require("topMenu.php"); ?>
+<? require("topMenu.php"); ?>
     <div id="lateralIzq">
-    <?php 
+    <? 
 		//require("menuleft.php");
 	?>
     </div> <!--lateralIzq-->
@@ -19,7 +19,7 @@ require ("hd.php");
     <div id="lateralDer">
  
     
-    <?php 
+    <? 
 		require("menuright.php");
 	?>
 
@@ -30,28 +30,28 @@ require ("hd.php");
     
 	<div id="columnaCentro">
     
-    	<p class="titulo_curso"><?php //echo getNombreCurso($idCurso); ?></p>
-  	    <?php require("cal/calendarioDetalle.php");?>
+    	<p class="titulo_curso"><? //echo getNombreCurso($idCurso); ?></p>
+  	    <? require("cal/calendarioDetalle.php");?>
         
 
-		<?php $datosEventos = getEventosProximosCurso(1); ?>
+		<? $datosEventos = getEventosProximosCurso(1); ?>
         <table class="tablesorter">
         <tr><th colspan="3">Eventos próximos</th></tr>
         <tr><th>Fecha</th><th>Titulo</th><th>Descripcion</th></tr>
-            <?php 	foreach ($datosEventos as $i => $value) { ?>
+            <? 	foreach ($datosEventos as $i => $value) { ?>
                 <tr>
-                    <?php if ($value["nombreEvento"] == "No existen Eventos Proximos."){ ?>
-                            <td colspan="3"><?php 	echo $value["nombreEvento"];?></td>
-                    <?php }else{ ?>
-                            <td><?php echo cambiaf_a_normal($value["fechaEvento"]);?></td><td><?php echo $value["nombreEvento"];?></td><td><?php echo $value["descripcionEvento"];?></td>
-                    <?php 	} ?>
+                    <? if ($value["nombreEvento"] == "No existen Eventos Proximos."){ ?>
+                            <td colspan="3"><? 	echo $value["nombreEvento"];?></td>
+                    <? }else{ ?>
+                            <td><? echo cambiaf_a_normal($value["fechaEvento"]);?></td><td><? echo $value["nombreEvento"];?></td><td><? echo $value["descripcionEvento"];?></td>
+                    <? 	} ?>
                 </tr>	
-            <?php	}?>
+            <?	}?>
         </table>
         
 	</div>
     
-	<?php 
+	<? 
     	require("pie.php");    ?> 
    </div>     
 </body>

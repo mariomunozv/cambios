@@ -4,7 +4,7 @@
             <tr>
                 <td style="text-align: left;    width: 33%">html2pdf</td>
                 <td style="text-align: center;    width: 34%">Test d'header</td>
-                <td style="text-align: right;    width: 33%"><?php echo date('d/m/Y'); ?></td>
+                <td style="text-align: right;    width: 33%"><? echo date('d/m/Y'); ?></td>
             </tr>
         </table>
     </page_header>
@@ -27,7 +27,7 @@
             </tr>
         </thead>
         <tbody>
-<?php
+<?
     for ($k=0; $k<13; $k++) {
 ?>
             <tr>
@@ -43,7 +43,7 @@
 
                 </td>
             </tr>
-<?php
+<?
     }
 ?>
         </tbody>
@@ -58,7 +58,7 @@
     Ca marche !!!<br>
     refaisons un test : <br>
     <table style="width: 80%;border: solid 1px #5544DD">
-<?php
+<?
     for ($k=0; $k<12; $k++) {
 ?>
         <tr>
@@ -74,7 +74,7 @@
 
             </td>
         </tr>
-<?php
+<?
     }
 ?>
     </table>

@@ -1,4 +1,4 @@
-<?php 
+<? 
 ini_set("display_errors","On");
 require("inc/incluidos.php");
 include "inc/_actividad.php";
@@ -94,7 +94,7 @@ Shadowbox.init();
 </script>
 <body>
 <div id="principal">
-<?php 
+<? 
 require("topMenu.php"); 
 $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 //$navegacion = "Home*home.php,".$nombreCurso."*curso.php?idCurso=".$_SESSION["sesionIdCurso"].",Actividades*informeActividad.php,Informe Curso*informeActividadCurso.php?idActividad=".$idActividad.",Informe Usuario*informeActividadDetalle.php?idUsuario=".$idUsuario."&idActividad=".$idActividad;
@@ -103,7 +103,7 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 ?>
 	
     <div id="lateralIzq">
-    <?php 
+    <? 
 		require("caja_misCursos.php");
 		
 		require("caja_participantes.php");
@@ -118,7 +118,7 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
     
     
      <div id="lateralDer">
-      <?php 
+      <? 
 	  require("caja_bienvenida.php");
 		require("caja_calendario.php");
 	  ?>
@@ -131,10 +131,10 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
     
 	<div id="columnaCentro">
      
-        <p class="titulo_curso">Informe de <?php echo $nombreUsuario; ?></p>
+        <p class="titulo_curso">Informe de <? echo $nombreUsuario; ?></p>
         <hr />
         <br />
-   <p class="titulo_curso"><?php echo $datosActividad["tituloActividad"]; ?></p>
+   <p class="titulo_curso"><? echo $datosActividad["tituloActividad"]; ?></p>
        <table border="0" align="center" width="100%" class="tablesorter">
 
     <tr  align="center">
@@ -143,22 +143,22 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
         <th width="287">Porcentaje Obtenido </th>
         <th width="255">Respuestas</th>
     </tr>
-  <?php $i = 1; 
+  <? $i = 1; 
   	foreach ($pautas as $pauta){?>
    <tr  align="center">
-        <td ><?php echo $i;?></td>
-        <td ><?php echo fechaConFormato($pauta["fechaRespuestaPauta"]);?></td>
-        <td ><?php echo $pauta["porcentajeLogroPautaItem"]." %";?> </td>
-        <td ><a href="informeActividadResultado.php?idPauta=<?php echo $pauta["idPautaItem"];?>&idUsuario=<?php echo $pauta["idUsuario"]."&idActividad=".$idActividad;?>"  >Ver Respuestas</a></td>
+        <td ><? echo $i;?></td>
+        <td ><? echo fechaConFormato($pauta["fechaRespuestaPauta"]);?></td>
+        <td ><? echo $pauta["porcentajeLogroPautaItem"]." %";?> </td>
+        <td ><a href="informeActividadResultado.php?idPauta=<? echo $pauta["idPautaItem"];?>&idUsuario=<? echo $pauta["idUsuario"]."&idActividad=".$idActividad;?>"  >Ver Respuestas</a></td>
     </tr>
   
   
-  <?php 
+  <? 
   $i++;
   }?>
 </table>
         
-        <?php boton("Volver","history.back();");?>
+        <? boton("Volver","history.back();");?>
 
    
     
@@ -166,12 +166,12 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
         
       </div><!--columnaCentro-->
          
-       <?php //  require("misCursos.php");?>
+       <? //  require("misCursos.php");?>
      
                
     
               
-	<?php 
+	<? 
     
     	require("pie.php");
     

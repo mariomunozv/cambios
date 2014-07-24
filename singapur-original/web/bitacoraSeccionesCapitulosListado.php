@@ -1,4 +1,4 @@
-<?php 
+<? 
 session_start();
 include "inc/conecta.php";
 include "inc/_bitacora.php";
@@ -28,37 +28,37 @@ if($hayBitacora > 0){
         <th align="left">Fecha término</th>
         <th>Estado</th>
     </tr>
-    <?php foreach($bitacoras as $bitacora){?>
+    <? foreach($bitacoras as $bitacora){?>
     <tr>
 		<td align="center" valign="top">
-        	<?php echo getNombreUsuario($bitacora["usuarioIngresa"]);?>
+        	<? echo getNombreUsuario($bitacora["usuarioIngresa"]);?>
         </td>
 		<td align="center" valign="top">
-        	<?php echo getNombreUsuario($bitacora["idUsuario"]);?>
+        	<? echo getNombreUsuario($bitacora["idUsuario"]);?>
         </td>
 		<td align="center" valign="top">
-        	<?php echo getNombreCapituloBitacora($bitacora["idSeccionBitacora"]);?>
+        	<? echo getNombreCapituloBitacora($bitacora["idSeccionBitacora"]);?>
         </td>
         <td align="center" valign="top">
-        	<?php echo $bitacora["nombreBitacora"];?>
+        	<? echo $bitacora["nombreBitacora"];?>
         </td>
 		<td align="center" valign="top">
-        	<?php echo $bitacora["tiempoBitacora"];?>
+        	<? echo $bitacora["tiempoBitacora"];?>
         </td>
 		<td align="center" valign="top">
-        	<?php echo $bitacora["fechaInicio"];?>
+        	<? echo $bitacora["fechaInicio"];?>
         </td>
 		<td align="center" valign="top">
-        	<?php echo $bitacora["fechaTermino"];?>
+        	<? echo $bitacora["fechaTermino"];?>
         </td>        
 		<td align="center" valign="top">
-        	<?php echo $bitacora["estadoBitacora"];?>
+        	<? echo $bitacora["estadoBitacora"];?>
         </td>        
-	<?php } ?>
+	<? } ?>
     </tr>
 </table>
 
-<?php
+<?
 }else{
 	echo "No hay Bitacoras Ingresadas";
 }

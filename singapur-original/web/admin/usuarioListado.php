@@ -1,4 +1,4 @@
-<?php 
+<? 
   //ini_set('display_errors','On');
   
 require("inc/config.php"); 
@@ -33,7 +33,7 @@ function inscribe_cursoCapacitacion(){
 
 
 $(function() {
-	<?php /* Asi inicializas tablesorter */ ?>	   
+	<? /* Asi inicializas tablesorter */ ?>	   
 	$("#tabla").tablesorter({ 
 		headers: {  
 			0: { sorter: false }
@@ -50,7 +50,7 @@ $(function() {
 
 
 </script>
-<?php boton("Inscribir","inscribe_cursoCapacitacion();");?>
+<? boton("Inscribir","inscribe_cursoCapacitacion();");?>
 
 <table class="tablesorter" id="tabla">
 
@@ -68,7 +68,7 @@ $(function() {
   </thead>
   <tbody>
   
-  <?php 
+  <? 
   
 	  $idUsuarios = getIdUsuarios();
 	  
@@ -81,21 +81,21 @@ $(function() {
 
  ?>
               <tr>
-			    <td><input type="checkbox" name="sel[]" id="sel<?php echo $idUsuario['idUsuario'];?>"  class="campos" value="<?php echo $idUsuario['idUsuario'];?>"></td>
-                <td onclick="check=document.getElementById('sel<?php echo $idUsuario['idUsuario'];?>');
-											check.checked=(check.checked==false)?true:false;"><?php echo $idUsuario['idUsuario'];?></td>
-                <td onclick="check=document.getElementById('sel<?php echo $idUsuario['idUsuario'];?>');
-											check.checked=(check.checked==false)?true:false;"><?php echo $usuariosObtenidos["nombre"];?></td>
-				<td onclick="check=document.getElementById('sel<?php echo $idUsuario['idUsuario'];?>');
-											check.checked=(check.checked==false)?true:false;"><?php echo $usuariosObtenidos["apellidoPaterno"];?></td>
-				<td onclick="check=document.getElementById('sel<?php echo $idUsuario['idUsuario'];?>');
-											check.checked=(check.checked==false)?true:false;"><?php echo $usuariosObtenidos["rbdColegio"];?></td>
-				<td onclick="check=document.getElementById('sel<?php echo $idUsuario['idUsuario'];?>');
-											check.checked=(check.checked==false)?true:false;"><?php echo $usuariosObtenidos["tipoUsuario"];?></td>
+			    <td><input type="checkbox" name="sel[]" id="sel<? echo $idUsuario['idUsuario'];?>"  class="campos" value="<? echo $idUsuario['idUsuario'];?>"></td>
+                <td onclick="check=document.getElementById('sel<? echo $idUsuario['idUsuario'];?>');
+											check.checked=(check.checked==false)?true:false;"><? echo $idUsuario['idUsuario'];?></td>
+                <td onclick="check=document.getElementById('sel<? echo $idUsuario['idUsuario'];?>');
+											check.checked=(check.checked==false)?true:false;"><? echo $usuariosObtenidos["nombre"];?></td>
+				<td onclick="check=document.getElementById('sel<? echo $idUsuario['idUsuario'];?>');
+											check.checked=(check.checked==false)?true:false;"><? echo $usuariosObtenidos["apellidoPaterno"];?></td>
+				<td onclick="check=document.getElementById('sel<? echo $idUsuario['idUsuario'];?>');
+											check.checked=(check.checked==false)?true:false;"><? echo $usuariosObtenidos["rbdColegio"];?></td>
+				<td onclick="check=document.getElementById('sel<? echo $idUsuario['idUsuario'];?>');
+											check.checked=(check.checked==false)?true:false;"><? echo $usuariosObtenidos["tipoUsuario"];?></td>
                
               </tr>
               
-<?php 		}
+<? 		}
  }else{ 
 	 echo "<tr><td colspan='12'>No existen profesores</td></tr>"; 
   
@@ -115,6 +115,6 @@ $(function() {
                         <img src="css/tabla/next.png" class="next"/>
             
                         <img src="css/tabla/last.png" class="last"/>
-                        <input type="hidden" class="pagesize" value="200"><?php /* Registros por paginas */ ?> 
+                        <input type="hidden" class="pagesize" value="200"><? /* Registros por paginas */ ?> 
                     </form>
                 </div>

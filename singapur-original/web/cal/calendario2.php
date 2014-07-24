@@ -43,7 +43,7 @@
 <body>
 	
 		
-		<?php
+		<?
 			include("config.inc.php");
 			function fecha ($valor)
 			{

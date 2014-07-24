@@ -1,4 +1,4 @@
-<?php
+<?
 
 session_start();
 include "../inc/conectav10.php";
@@ -74,7 +74,7 @@ function closer() {
 
 
 
-<?php 
+<? 
 
 $respuestas = getRespuestasPautaItemUsuario($idPauta,$idUsuario);
 

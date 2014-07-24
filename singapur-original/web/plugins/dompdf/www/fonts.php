@@ -1,4 +1,4 @@
-<?php 
+<? 
 include "head.inc"; 
 require_once "../dompdf_config.inc.php"; 
 
@@ -32,7 +32,7 @@ function to_bytes($string) {
 
 <h3 id="installed-fonts">Installed fonts</h3>
 
-<?php 
+<? 
 Font_Metrics::init();
 $fonts = Font_Metrics::get_font_families();
 $extensions = array("ttf", "afm", "afm.php", "ufm", "ufm.php");
@@ -54,17 +54,17 @@ $extensions = array("ttf", "afm", "afm.php", "ufm", "ufm.php");
     <th>UFM</th>
     <th>UFM cache</th>
   </tr>
-  <?php foreach($fonts as $family => $variants) { ?>
+  <? foreach($fonts as $family => $variants) { ?>
     <tr>
-      <td class="title" rowspan="<?php echo count($variants); ?>">
-        <?php 
+      <td class="title" rowspan="<? echo count($variants); ?>">
+        <? 
           echo htmlentities($family);
           if ($family == DOMPDF_DEFAULT_FONT) {
             echo ' <strong>(default)</strong>';
           }
         ?>
       </td>
-      <?php 
+      <? 
       $i = 0;
       foreach($variants as $name => $path) {
         if ($i > 0) {
@@ -116,7 +116,7 @@ $extensions = array("ttf", "afm", "afm.php", "ufm", "ufm.php");
         $i++;
       }
       ?>
-  <?php } ?>
+  <? } ?>
 
 </table>
 
@@ -155,14 +155,14 @@ function checkFileName(form) {
 }
 </script>
 
-<?php 
+<? 
 
 if (auth_ok()) {
 $max_size = min(to_bytes(ini_get('post_max_size')), to_bytes(ini_get('upload_max_filesize'))); 
 ?>
 
 <form name="upload-font" method="post" action="controller.php?cmd=install-font" target="upload-font" enctype="multipart/form-data" onsubmit="return checkFileName(this)">
-  <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $max_size; ?>" />
+  <input type="hidden" name="MAX_FILE_SIZE" value="<? echo $max_size; ?>" />
   
   <table class="setup">
     <tr>
@@ -192,9 +192,9 @@ $max_size = min(to_bytes(ini_get('post_max_size')), to_bytes(ini_get('upload_max
     </tr>
   </table>
 </form>
-<?php }
+<? }
 else {
   echo auth_get_link();
 } ?>
 
-<?php include("foot.inc"); ?>
+<? include("foot.inc"); ?>

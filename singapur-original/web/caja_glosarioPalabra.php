@@ -1,12 +1,12 @@
-<?php $datosPalabra = getPalabraRandom();?>
+<? $datosPalabra = getPalabraRandom();?>
 <br />
 <div class="titulo_div">Glosario</div>
 
 <div class="info_div">
-    <a href="glosario.php?idPalabra=<?php echo $datosPalabra["idPalabra"];?>">
-    	<strong><?php echo $datosPalabra["nombrePalabra"];?>:</strong><br />
+    <a href="glosario.php?idPalabra=<? echo $datosPalabra["idPalabra"];?>">
+    	<strong><? echo $datosPalabra["nombrePalabra"];?>:</strong><br />
 	</a>
-		<?php echo $datosPalabra["definicionPalabra"];?>
+		<? echo $datosPalabra["definicionPalabra"];?>
 	
 </div>    
 

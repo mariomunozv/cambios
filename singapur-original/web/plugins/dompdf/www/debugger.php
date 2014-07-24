@@ -1,4 +1,4 @@
-<?php 
+<? 
 $files = glob("test/*.{html,htm,php}", GLOB_BRACE);
 ?>
 
@@ -144,9 +144,9 @@ $files = glob("test/*.{html,htm,php}", GLOB_BRACE);
       
       <button onclick="navigateExamples('previous')">&lt;</button>
       <select onchange="$('#addressbar').val($(this).val()); updateAddress()" id="examples">
-        <?php foreach($files as $file) { ?>
-          <option value="<?php echo basename($file); ?>"><?php echo basename($file); ?></option>
-        <?php } ?>
+        <? foreach($files as $file) { ?>
+          <option value="<? echo basename($file); ?>"><? echo basename($file); ?></option>
+        <? } ?>
       </select>
       <button onclick="navigateExamples('next')">&gt;</button>
       

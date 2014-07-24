@@ -1,4 +1,4 @@
-<?php 
+<? 
 function desinscribirUsuarioCursoCapacitacion( $idUsuario, $idCursoCapacitacion ){
 	$sql="DELETE FROM `inscripcionCursoCapacitacion` WHERE  `idUsuario` = '$idUsuario' AND `idCursoCapacitacion` = '$idCursoCapacitacion'";
 	$res = mysql_query($sql);

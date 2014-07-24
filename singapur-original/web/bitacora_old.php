@@ -1,4 +1,4 @@
-<?php 
+<? 
 	require("inc/incluidos.php");
 	require ("hd.php");
 	$idCurso = $_SESSION["sesionIdCurso"];
@@ -29,7 +29,7 @@
 		}
 	
 $(function() {
-	<?php /* Asi inicializas tablesorter */ ?>	   
+	<? /* Asi inicializas tablesorter */ ?>	   
 	$("#tabla").tablesorter({ 
 		headers: {  
 			5: { sorter: false },
@@ -70,18 +70,18 @@ function muestraBitacoras(){
 <body>
 
 <div id="principal">
-<?php 
+<? 
 require("topMenu.php"); 
 $navegacion = "Home*curso.php?idCurso=$idCurso,Bitacora*#";
 require("_navegacion.php");
 ?>
 	
      <div id="lateralIzq">
-    	<?php require("menuleft.php");?>
+    	<? require("menuleft.php");?>
     </div> <!--lateralIzq-->
     
     <div id="lateralDer">
-	    <?php require("menuright.php");?>
+	    <? require("menuright.php");?>
     </div><!--lateralDer-->
  
     
@@ -101,8 +101,8 @@ En la Bitácora podrá registrar periódicamente las actividades realizadas en cada
 <!--    <h3>En Construcción</h3>
     <img src="img/constructor.jpg"/> -->
 
-<?php $idPerfil = $_SESSION["sesionPerfilUsuario"];  ?>
-<?php 
+<? $idPerfil = $_SESSION["sesionPerfilUsuario"];  ?>
+<? 
 
 if($idPerfil == 1){
 	boton("Ingresar Bitácora","#");
@@ -146,21 +146,21 @@ if ($idPerfil >=3){
       </div> 
      
   </div>     
-     <?php //  require("misCursos.php");?>
+     <? //  require("misCursos.php");?>
      
   
-<?php
+<?
 
 // Llegó desde el curso profes
 if (isset ($_REQUEST["idSeccionBitacora"])){
 	?>
-    <input name="idSeccionBitacora" id="idSeccionBitacora" class="campos" type="hidden" value="<?php echo @$_REQUEST["idSeccionBitacora"]; ?>" />
+    <input name="idSeccionBitacora" id="idSeccionBitacora" class="campos" type="hidden" value="<? echo @$_REQUEST["idSeccionBitacora"]; ?>" />
     
     <script>
 		nuevoBitacoraProfe();
 	</script>
     
-    <?php
+    <?
 }
 
 // Llegó desde el curso profes
@@ -171,7 +171,7 @@ if (isset ($_REQUEST["tipoBitacora"])){
 		<script>
 			nuevoBitacoraReunion();
 		</script>    
-		<?php
+		<?
 	}
 	else{
 		?>
@@ -179,13 +179,13 @@ if (isset ($_REQUEST["tipoBitacora"])){
             nuevoBitacoraAula();
         </script>
         
-        <?php	
+        <?	
 	}
 }
 ?>
 
    
-<?php 
+<? 
 		require("pie.php");
 ?> 
 </div> </body>

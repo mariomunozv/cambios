@@ -1,4 +1,4 @@
-<?php
+<?
 
 require("inc/incluidos.php");
 
@@ -12,11 +12,11 @@ $idPerfil = getIdPerfilUsuario($idUsuario);
 	
 	<tr class="ui-state-active" >
 		<th>&nbsp;</th>
-		<?php
+		<?
 	   if($idPerfil == 3){
 	   ?>
        	<th>&nbsp;De</th>
-		<?php
+		<?
 	   }
 	   ?>
 	   	<th>&nbsp;Para</th>
@@ -25,7 +25,7 @@ $idPerfil = getIdPerfilUsuario($idUsuario);
 	</tr>
 	
 	
-	<?php
+	<?
 	// Si el usuario tiene perfil de coordinador grl (idPefil=9) 
 	
 		$res = getMensajesEnviadosUsuario($idUsuario); 
@@ -62,26 +62,26 @@ $idPerfil = getIdPerfilUsuario($idUsuario);
 			}
 	
 	?>
-	<tr class="<?php echo $estilo;?>">
+	<tr class="<? echo $estilo;?>">
 		<td align="center">
-			<img src="<?php echo "subir/fotos_perfil/th_".$datosDeUsuario["imagenUsuario"];?>" />
+			<img src="<? echo "subir/fotos_perfil/th_".$datosDeUsuario["imagenUsuario"];?>" />
 		</td>
-		<?php
+		<?
 		if($idPerfil == 9){
 		?>
         <td>
-			<?php
+			<?
 			$texto_de = $datosDeUsuario["nombre"];
 			$texto_de = $texto_de." ".$datosDeUsuario["apellidoPaterno"];
 			$texto_de = $texto_de." ".$datosDeUsuario["apellidoMaterno"];
 			echo $texto_de;
 			?> 
 		</td>
-		<?php
+		<?
 		}
 		?>
 		<td>
-			<?php
+			<?
 			$texto_para = $datosParaUsuario["nombre"];
 			$texto_para = $texto_para." ".$datosParaUsuario["apellidoPaterno"];
 			$texto_para = $texto_para." ".$datosParaUsuario["apellidoMaterno"];
@@ -90,15 +90,15 @@ $idPerfil = getIdPerfilUsuario($idUsuario);
 		</td>
 		
 		<td>
-			<a href="mensaje.php?idMensaje=<?php echo $row["idMensaje"];?>">
-			<?php echo $row["asuntoMensaje"]; ?></a>
+			<a href="mensaje.php?idMensaje=<? echo $row["idMensaje"];?>">
+			<? echo $row["asuntoMensaje"]; ?></a>
 		</td>
 		<td>
-			<?php cambiaf_a_normal($row["fechaMensaje"]); ?>
+			<? cambiaf_a_normal($row["fechaMensaje"]); ?>
 		</td>
 	</tr>
 	
-<?php 
+<? 
 		}// while
 	
 	}
@@ -108,7 +108,7 @@ $idPerfil = getIdPerfilUsuario($idUsuario);
 	<tr class="style6">
 		<td colspan="5">Usted no tiene mensajes en su bandeja.</td>
 	</tr>			
-<?php
+<?
 	}
 	 
 	 ?>

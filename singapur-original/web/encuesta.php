@@ -1,4 +1,4 @@
-<?php 
+<? 
 session_start();
 require("inc/incluidos.php"); 
 require ("hd.php");
@@ -88,7 +88,7 @@ body {
 -->
 </style></head>
 
-<?php 
+<? 
 	$formularios = getEncuestas();
 ?>
 
@@ -120,7 +120,7 @@ body {
         <tr>
           <td align="center" valign="top" bgcolor="#FFFFFF"><table border="0" cellpadding="2" cellspacing="6" bgcolor="#FFFFFF">
             <tr>
-              <td colspan="2" align="left" valign="top"><p class="style4">Encuestas de apreciación - <?php echo $_SESSION["sesionNombreUsuario"];?><br />
+              <td colspan="2" align="left" valign="top"><p class="style4">Encuestas de apreciación - <? echo $_SESSION["sesionNombreUsuario"];?><br />
 </p>
                   <hr  color="#004600"/>
                   </td>
@@ -135,14 +135,14 @@ body {
               <table width="78%" border="0" cellpadding="4" cellspacing="4">
                 <tr>
                   <td class="style10">
-				  <?php 
+				  <? 
 					  foreach($formularios as $encuesta)
 					  {
 						  if($encuesta['idFormulario'] != 120 && $encuesta['idFormulario'] != 121 && $encuesta['idFormulario'] != 131 && $encuesta['idFormulario'] != 132)
 						  {
 				   ?>						
-				  	  <a href="datosInicialesEncuesta.php?formulario=<?php echo $encuesta["idFormulario"]?>" class="style4"> <?php echo $encuesta["nombreFormulario"]."<br>"; ?> </a>
-					<?php 
+				  	  <a href="datosInicialesEncuesta.php?formulario=<? echo $encuesta["idFormulario"]?>" class="style4"> <? echo $encuesta["nombreFormulario"]."<br>"; ?> </a>
+					<? 
 						  }
 					  }
 				    ?>

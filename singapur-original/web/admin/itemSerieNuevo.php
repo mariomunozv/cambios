@@ -1,4 +1,4 @@
-<?php
+<?
 require("inc/config.php");
 include "../inc/_funciones.php";
 include "../inc/_seccionBitacora.php";
@@ -142,7 +142,7 @@ function cargaApartados(idSeccion){
 				<th align="right">Nivel</th> 
 				<td>
                 <select onchange="cargaCapitulos(this.value)">
-                <?php 
+                <? 
 				$niveles = getNiveles();
 				echo "<option value=''>Seleccione un Nivel</option>";
 				foreach($niveles as $nivel){

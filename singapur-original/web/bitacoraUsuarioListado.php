@@ -1,4 +1,4 @@
-<?php 
+<? 
 session_start();
 include "inc/conecta.php";
 include "inc/funciones.php";
@@ -90,7 +90,7 @@ function guardaBitacora(){
 
 </script>
 
-<?php
+<?
 
 $usuario = getDatosUsuarioPorId($idUsuario);
 $profesores = getProfesoresColegio($usuario['rbdColegio']);
@@ -105,7 +105,7 @@ Busque a continuaci&oacute;n el profesor y curso para ver bit&aacute;cora
 	<tr>
     	<th colspan="2">Ingreso de Bit&aacute;cora</th>
 	</tr>
-<?php
+<?
 // Llegó desde el curso
 if (isset ($_REQUEST["idSeccionBitacora"])){
 	$idPadre = getPadre($_REQUEST["idSeccionBitacora"]);
@@ -114,7 +114,7 @@ if (isset ($_REQUEST["idSeccionBitacora"])){
 		actualizaSecciones();
 	</script>
 	
-<?php
+<?
 }		
 ?>
 	<tr>
@@ -124,7 +124,7 @@ if (isset ($_REQUEST["idSeccionBitacora"])){
  		<td valign="top">
         	<select id="profesor" name="profesor" style="width:250px" class="campos" onchange="traeCursos(this.value)">
             	<option value="">Seleccione Profesor</option>
-			<?php 
+			<? 
 			if($idPerfil == 1){
 				echo "<option value=".$usuario['idUsuario'].">".$usuario['nombre']." ".$usuario['apellidoPaterno']."</option>";
 			}else if($idPerfil == 3 || $idPerfil == 4){

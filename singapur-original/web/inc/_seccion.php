@@ -1,4 +1,4 @@
-<?php
+<?
 
 function getSeccionesFormulario($idFormulario){
 	$sql = "SELECT * FROM seccionFormulario WHERE idFormulario = ".$idFormulario;

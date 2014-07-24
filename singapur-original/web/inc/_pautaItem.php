@@ -1,4 +1,4 @@
-<?php 
+<? 
 function buscaPauta($idUsuario,$idLista){
 	$sql = "SELECT * from pautaItem WHERE idUsuario = ".$idUsuario." AND idLista = ".$idLista;
 	$res = mysql_query($sql);

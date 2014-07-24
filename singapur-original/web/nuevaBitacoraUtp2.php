@@ -1,4 +1,4 @@
-<?php 
+<? 
 session_start();
 include "inc/conecta.php";
 include "inc/funciones.php";
@@ -29,7 +29,7 @@ $idJornada = 1;?>
 
 </script>
 
-<?php
+<?
 /*function numNuevaClase($idJornada, $idUsuario){
 		$sql = "SELECT COUNT(*) FROM bitacoraClase WHERE idJornada = ".$idJornada." and idUsuario = ".$idUsuario;
 		$res = mysql_query($sql);
@@ -90,7 +90,7 @@ $idJornada = 1;?>
                       <td colspan="4">
                       <input name="tipoBitacora" id="tipoBitacora" type="hidden" value="utp2" class="campos"/>
                       <input name="niveles" id="niveles" type="hidden"  class="campos"/>
-                   <?php boton("Enviar","guardaBitacoraUTP2()"); ?>
+                   <? boton("Enviar","guardaBitacoraUTP2()"); ?>
                       </td>
                       </tr>
                   </table>

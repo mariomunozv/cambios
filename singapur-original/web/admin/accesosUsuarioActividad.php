@@ -1,4 +1,4 @@
-<?php 
+<? 
 //session_start();
 require("inc/config.php");
 require("../inc/_detalleColegioProyecto.php");
@@ -33,7 +33,7 @@ class_activo('boton_accesos','activo');
 
 </script>
 <span class="titulo_form">Adminitracion Sistema</span>
-<?php 
+<? 
 	
 		  function getNombreFormulario($idFormulario){
 			  $sql = "SELECT * FROM formulario WHERE idFormulario = ".$idFormulario;
@@ -75,7 +75,7 @@ $datosUsuario = getNombreFotoUsuarioProfesor($idUsuario);
 
 		// echo $acceso[0]["idAccesoRecurso"]."<--";		  
 		  ?>
-               <img src="<?php echo "../metodosingapur/".$datosUsuario["imagenUsuario"];?>"  align="left" width="50" height="46"/><h1><?php echo $datosUsuario["nombre"]." ".$datosUsuario["apellidoPaterno"]; ?></h1>
+               <img src="<? echo "../metodosingapur/".$datosUsuario["imagenUsuario"];?>"  align="left" width="50" height="46"/><h1><? echo $datosUsuario["nombre"]." ".$datosUsuario["apellidoPaterno"]; ?></h1>
                 <table id="tabla" class="tablesorter"> 
                 <thead> 
                     <tr> 
@@ -89,7 +89,7 @@ $datosUsuario = getNombreFotoUsuarioProfesor($idUsuario);
                     </tr> 
                 </thead> 
                 <tbody> 
-                <?php 
+                <? 
 				
 				$pautaUsuario = getPautasUsuario($idUsuario);
 				if ($pautaUsuario == ""){
@@ -103,17 +103,17 @@ $datosUsuario = getNombreFotoUsuarioProfesor($idUsuario);
 					  
 					   ?> 
                         <tr valign="top"> 
-                            <td ><?php echo $value["idFormulario"]; ?></td>
-                            <?php 
+                            <td ><? echo $value["idFormulario"]; ?></td>
+                            <? 
 							
 							?>
                              
-                            <td ><?php echo $value["idPauta"]; ?></td>  
-                            <td ><?php echo $value["nombreFormulario"]; ?></td> 
-                            <td ><?php echo $value["fechaRespuestaPauta"]; ?></td> 
-                                                       <td colspan="2"><?php echo "Ver detalle"; ?></td>  		
+                            <td ><? echo $value["idPauta"]; ?></td>  
+                            <td ><? echo $value["nombreFormulario"]; ?></td> 
+                            <td ><? echo $value["fechaRespuestaPauta"]; ?></td> 
+                                                       <td colspan="2"><? echo "Ver detalle"; ?></td>  		
                         </tr>
-                <?php $i++;
+                <? $i++;
 				}?>    
                     </tbody> 
                 </table> 
@@ -125,10 +125,10 @@ $datosUsuario = getNombreFotoUsuarioProfesor($idUsuario);
                         <img src="css/tabla/next.png" class="next"/>
             
                         <img src="css/tabla/last.png" class="last"/>
-                        <input type="hidden" class="pagesize" value="20"><?php /* Registros por paginas */ ?> 
+                        <input type="hidden" class="pagesize" value="20"><? /* Registros por paginas */ ?> 
                     </form>
                 </div>
-                <?php }?> 
+                <? }?> 
 
                 
                 
@@ -139,4 +139,4 @@ $datosUsuario = getNombreFotoUsuarioProfesor($idUsuario);
       </tr>
     </table>  
 
-<?php require("_pie.php"); ?>
+<? require("_pie.php"); ?>

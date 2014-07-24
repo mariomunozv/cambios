@@ -1,4 +1,4 @@
-<?php 
+<? 
 function getPautasFormulario($idUsuario,$idFormulario){
 	$sql = "SELECT * FROM pauta where idUsuario = ".$idUsuario." AND idFormulario = ".$idFormulario;
 	//echo $sql;

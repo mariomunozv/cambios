@@ -1,4 +1,4 @@
-<?php 
+<? 
 ini_set('display_errors','1');
 header('Content-type: application/vnd.ms-excel');
 header("Content-Disposition: attachment; filename=Descarga.xls");
@@ -153,7 +153,7 @@ function getAlumnosCurso($nivel){
   <tbody>
 
 	
-  <?php 
+  <? 
 
   		$alumnos = getAlumnosCurso($nivel); 
 

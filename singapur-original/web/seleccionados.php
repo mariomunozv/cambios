@@ -1,4 +1,4 @@
-<?php
+<?
 
 $niveles = $_REQUEST["niveles"];
 

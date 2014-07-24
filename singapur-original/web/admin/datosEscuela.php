@@ -1,9 +1,9 @@
-<?php require("inc/config.php");
+<? require("inc/config.php");
 
 require("../inc/_colegio.php");
 
 ?>
-<?php 
+<? 
 $rbdColegio = $_REQUEST["rbdColegio"];
 $colegio = getDatosColegio($rbdColegio);?>
 <p> <table class="tablesorter" >
@@ -22,7 +22,7 @@ $colegio = getDatosColegio($rbdColegio);?>
   </tr> 
   </thead>
   <tbody>
-  <?php 
+  <? 
   
 
   
@@ -30,18 +30,18 @@ $colegio = getDatosColegio($rbdColegio);?>
 		
 	  ?>
               <tr>
-                <td><?php echo $colegio["rbdColegio"];?></td>
-                <td><?php echo $colegio["nombreColegio"];?></td>
-                <td><?php echo $colegio["nombreComuna"];?></td>
-                <td><?php echo $colegio["emailColegio"];?></td>
-                 <td><?php echo $colegio["direccionColegio"];?></td>
-                  <td><?php echo $colegio["telefonoColegio"];?></td>
-                   <td><?php echo $colegio["paginaWebColegio"];?></td>
-                   <td><?php echo $colegio["logoColegio"];?></td>
+                <td><? echo $colegio["rbdColegio"];?></td>
+                <td><? echo $colegio["nombreColegio"];?></td>
+                <td><? echo $colegio["nombreComuna"];?></td>
+                <td><? echo $colegio["emailColegio"];?></td>
+                 <td><? echo $colegio["direccionColegio"];?></td>
+                  <td><? echo $colegio["telefonoColegio"];?></td>
+                   <td><? echo $colegio["paginaWebColegio"];?></td>
+                   <td><? echo $colegio["logoColegio"];?></td>
                 <td>Editar </td>
                
               </tr>
-<?php 		
+<? 		
  
   
   ?>

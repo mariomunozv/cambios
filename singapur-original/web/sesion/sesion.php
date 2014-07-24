@@ -1,4 +1,4 @@
-<?php 
+<? 
 $idUsuario = @$_SESSION["sesionIdUsuario"];
 //$idPerfil = getIdPerfilUsuario($idUsuario);
 

@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 /* Registra la lectura o envio de datos de un usuario */
 function registraAcceso($idUsuario, $idTipoRecursoObservado, $idLinkAccesoRecurso){

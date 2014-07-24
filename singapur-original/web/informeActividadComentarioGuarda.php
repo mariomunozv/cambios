@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set("display_errors","on");
 session_start();
 include "inc/conecta.php";
@@ -74,7 +74,7 @@ listado_comentarios();
 </script>
 
 
-<?php
+<?
 	
 
 }

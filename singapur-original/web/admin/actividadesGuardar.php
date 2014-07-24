@@ -1,4 +1,4 @@
-<?php
+<?
 require("inc/config.php");
 
 $titulo = $_REQUEST["titulo"];
@@ -55,7 +55,7 @@ if($orden == "actualizar")
 		echo "se actualizó la actividad";
 		?>
 		<script language="javascript">list_actividades()</script>
-		<?php
+		<?
 	}
 	else
 	{
@@ -69,7 +69,7 @@ else if($orden == "guardar")
 		echo "se inserto la actividad $titulo";
 		?>
 		<script language="javascript">list_actividades()</script>
-		<?php
+		<?
 	}
 	else
 	{

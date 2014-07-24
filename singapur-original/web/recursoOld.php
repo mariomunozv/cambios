@@ -1,4 +1,4 @@
-<?php 
+<? 
 require("inc/incluidos.php");
 
 $idCurso = $_SESSION["sesionIdCurso"];
@@ -33,29 +33,29 @@ function registraMuestra(link,idRecurso){
 
 <body>
 <div id="principal">
-<?php require("topMenu.php"); ?>
+<? require("topMenu.php"); ?>
 	
     <div id="lateralIzq">
-    	<?php require("menuleft.php"); ?>
+    	<? require("menuleft.php"); ?>
 	</div>
     
     <div id="lateralDer">
-		<?php require("menuright.php"); ?>
+		<? require("menuright.php"); ?>
 	</div>
     
      <div id="columnaCentro">
      
-<p class="titulo_curso"><?php echo getNombreCurso($idCurso); ?></p>
+<p class="titulo_curso"><? echo getNombreCurso($idCurso); ?></p>
     <hr />
     <br />
 
 
-   <?php 
+   <? 
 				 
 				$datosRecurso = getRecurso($idRecurso);
 //				print_r($datosRecurso);
-				?>   <p align="center"><a href="subir/docs/<?php echo $datosRecurso["urlRecurso"];?>"><img src="img/documentos.png" border="0" width="128" height="128" /></a></p>
-                 <p align="center">Usted a ingresado al recurso <strong><a href="subir/docs/<?php echo $datosRecurso["urlRecurso"];?>" target="_blank"><?php echo $datosRecurso["nombreRecurso"];?></a></strong>
+				?>   <p align="center"><a href="subir/docs/<? echo $datosRecurso["urlRecurso"];?>"><img src="img/documentos.png" border="0" width="128" height="128" /></a></p>
+                 <p align="center">Usted a ingresado al recurso <strong><a href="subir/docs/<? echo $datosRecurso["urlRecurso"];?>" target="_blank"><? echo $datosRecurso["nombreRecurso"];?></a></strong>
                    <br />
                    <br />
                   
@@ -64,17 +64,17 @@ function registraMuestra(link,idRecurso){
                    
                    Volver</a></p>
 				
-                <?php // FIN CENTRO  ?>
+                <? // FIN CENTRO  ?>
     
       </div> 
     
      
-       <?php //  require("misCursos.php");?>
+       <? //  require("misCursos.php");?>
      
                
     
               
-	<?php 
+	<? 
     
     	require("pie.php");
     

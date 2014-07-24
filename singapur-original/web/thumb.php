@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 $nombre= "subir/fotos_perfil/".$_GET['img']; 
 $datos = getimagesize($nombre);

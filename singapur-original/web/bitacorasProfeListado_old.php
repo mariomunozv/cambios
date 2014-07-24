@@ -1,4 +1,4 @@
-<?php session_start();
+<? session_start();
 include "inc/conecta.php";
 include "inc/funciones.php";
 include "sesion/sesion.php";
@@ -79,7 +79,7 @@ foreach ($secciones as $seccion){
 		$nombreCapituloBitacora = getNombreCapituloBitacora($bitacora["idSeccionBitacora"]);
 	?>
     <br>
-<h3>Bitacoras completadas - <?php echo $nombreSeccionBitacora;?></h3>
+<h3>Bitacoras completadas - <? echo $nombreSeccionBitacora;?></h3>
 <br>
 <table width="88%" border="0" align="center" class="tablesorter">
 	<tr>
@@ -89,15 +89,15 @@ foreach ($secciones as $seccion){
     </tr>
     <tr>
 		<td align="center" valign="top">
-        	<?php echo "Profesor";?>
+        	<? echo "Profesor";?>
         </td>
 
 		<td align="center" valign="top">
-        	<?php echo $nombreCapituloBitacora;?>
+        	<? echo $nombreCapituloBitacora;?>
         </td>
         
         <td align="center" valign="top">
-        	<?php echo $nombreSeccionBitacora;?>
+        	<? echo $nombreSeccionBitacora;?>
         </td>
 	
     </tr>
@@ -108,12 +108,12 @@ foreach ($secciones as $seccion){
     
 	<tr >
     	<td colspan="4">
-          <?php echo nl2br($bitacora["comentariosBitacora"]);?>
+          <? echo nl2br($bitacora["comentariosBitacora"]);?>
         </td>
     </tr>
     -->
 </table>
-<?php
+<?
 $hayBitacora++;
 }else{
 	

@@ -162,7 +162,7 @@ html {
  		#header {
  			/*position:relative;*/
  			height: 187px; /* 12 lines */
- 			background: #fff url(<?php=url_for('/_lim_public/img/bg_header.png')?>) no-repeat 0 0;
+ 			background: #fff url(<?=url_for('/_lim_public/img/bg_header.png')?>) no-repeat 0 0;
  			margin-top: 10px;
       padding:0;
  			}

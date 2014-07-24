@@ -1,4 +1,4 @@
-<?php
+<?
 require_once 'jsonwrapper_inner.php';
 require("../clases/actividad.php");
 

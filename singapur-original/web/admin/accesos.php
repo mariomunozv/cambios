@@ -1,4 +1,4 @@
-<?php 
+<? 
 //session_start();
 require("inc/config.php");
 require("../inc/_detalleColegioProyecto.php");
@@ -33,7 +33,7 @@ class_activo('boton_accesos','activo');
 
 </script>
 <span class="titulo_form">Adminitracion Sistema</span>
-<?php
+<?
  function getAccesos(){
 			  	$sql = "SELECT * FROM `accesoRecurso` a left join tipoRecursoObservado b on a.idTipoRecursoObservado = b.idTipoRecursoObservado ORDER BY fechaAccesoRecurso DESC";
 				echo $sql;
@@ -103,26 +103,26 @@ class_activo('boton_accesos','activo');
                     </tr> 
                 </thead> 
                 <tbody> 
-                <?php $i=0;
+                <? $i=0;
 				   foreach ($acceso as $value){
 					  
 					   ?> 
                         <tr valign="top"> 
-                            <td ><?php echo $value["idAccesoRecurso"]; ?></td>
-                            <?php 
+                            <td ><? echo $value["idAccesoRecurso"]; ?></td>
+                            <? 
 							$datosUsuario = getNombreUsuario($value["idUsuario"]);
 							?>
                              
-                            <td ><?php echo $datosUsuario["nombre"]." ".$datosUsuario["apellidoPaterno"]; ?></td>  
-                            <td ><?php echo $value["fechaAccesoRecurso"]; ?></td> 
-                            <td ><?php echo $value["nombreRecursoObservado"]; ?></td> 
-                            <td ><?php echo $value["categoriaRecursoObservado"]; ?></td> 
-                            <td ><?php echo $value["nombreRecurso"]; ?></td>  		
-                            <td width="50"><a href="prv_editar.php?id=<?php echo $value["idAccesoRecurso"]; ?>"><img src="css/btn/editar.gif" border="0"></a></td>
+                            <td ><? echo $datosUsuario["nombre"]." ".$datosUsuario["apellidoPaterno"]; ?></td>  
+                            <td ><? echo $value["fechaAccesoRecurso"]; ?></td> 
+                            <td ><? echo $value["nombreRecursoObservado"]; ?></td> 
+                            <td ><? echo $value["categoriaRecursoObservado"]; ?></td> 
+                            <td ><? echo $value["nombreRecurso"]; ?></td>  		
+                            <td width="50"><a href="prv_editar.php?id=<? echo $value["idAccesoRecurso"]; ?>"><img src="css/btn/editar.gif" border="0"></a></td>
                 
-                            <td width="70"><a href="javascript:eliminar(<?php echo $value["idAccesoRecurso"]; ?>);"><img src="css/btn/cancelar.gif" border="0"></a></td> 
+                            <td width="70"><a href="javascript:eliminar(<? echo $value["idAccesoRecurso"]; ?>);"><img src="css/btn/cancelar.gif" border="0"></a></td> 
                         </tr>
-                <?php $i++;
+                <? $i++;
 				}?>    
                     </tbody> 
                 </table> 
@@ -134,7 +134,7 @@ class_activo('boton_accesos','activo');
                         <img src="css/tabla/next.png" class="next"/>
             
                         <img src="css/tabla/last.png" class="last"/>
-                        <input type="hidden" class="pagesize" value="20"><?php /* Registros por paginas */ ?> 
+                        <input type="hidden" class="pagesize" value="20"><? /* Registros por paginas */ ?> 
                     </form>
                 </div>
 
@@ -148,4 +148,4 @@ class_activo('boton_accesos','activo');
     </table>  
 
 
-<?php require("_pie.php"); ?>
+<? require("_pie.php"); ?>

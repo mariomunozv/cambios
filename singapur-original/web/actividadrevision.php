@@ -1,4 +1,4 @@
-<?php 
+<? 
 ini_set("display_errors","ON");
 require("inc/incluidos.php");
 
@@ -112,7 +112,7 @@ require ("hd.php");?>
 </style>
 
 <div id="principal">
-<?php require("topMenu.php"); 
+<? require("topMenu.php"); 
 $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 //$navegacion = "Home*home.php,".$nombreCurso."*curso.php?idCurso=".$_SESSION["sesionIdCurso"].",".$datosActividad["tituloActividad"]."*#";
 //require("_navegacion.php");
@@ -120,17 +120,17 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 ?>
 	
 <div id="lateralIzq">
-	<?php 	require("menuleft.php") ?>
+	<? 	require("menuleft.php") ?>
 </div>
     
     
 <div id="lateralDer">
-	<?php 	require("menuright.php") ?>
+	<? 	require("menuright.php") ?>
 </div>
     
 	<div id="columnaCentro">
 	
-    <p class="titulo_curso">Resultados Obtenidos:<?php echo  $datosActividad["tituloActividad"]; ?></p>
+    <p class="titulo_curso">Resultados Obtenidos:<? echo  $datosActividad["tituloActividad"]; ?></p>
 
         <hr />
         <br />
@@ -146,7 +146,7 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 		</tr>
 		</thead>
 		<tbody>
-		<?php $intentos = getIntentos($idActividad,$idUsuario);
+		<? $intentos = getIntentos($idActividad,$idUsuario);
 		   
 		   $i = 1;
 		   $maxPorcentaje = 0; 
@@ -155,12 +155,12 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 		   	$tiempo = $row["tiempoPautaItem"];
 		   	?>
 		   		<tr>
-		   			<td><center> <?php echo $i; ?></center></td>
-		   			<td><center> <?php echo $porcentaje."%"; ?></center></td>
-		   			<td><center> <?php echo segToMin($tiempo); ?></center></td>
-		   			<td><center> <a href="<?php echo "actividaditems.php?idPautaItem=".$row["idPautaItem"]."&idActividad=".$idActividad; ?>" >Ver Items</a></center></td>
+		   			<td><center> <? echo $i; ?></center></td>
+		   			<td><center> <? echo $porcentaje."%"; ?></center></td>
+		   			<td><center> <? echo segToMin($tiempo); ?></center></td>
+		   			<td><center> <a href="<? echo "actividaditems.php?idPautaItem=".$row["idPautaItem"]."&idActividad=".$idActividad; ?>" >Ver Items</a></center></td>
 		   		</tr>
-		   	<?php
+		   	<?
 
 		   	if($maxPorcentaje < $porcentaje){
 		   		$maxPorcentaje = $porcentaje;
@@ -174,15 +174,15 @@ $nombreCurso = getNombreCortoCurso($_SESSION["sesionIdCurso"]);
 	    </table>  
 
 	    <br><br>
-	    <h2>Su porcentaje de logro final es <?php echo $maxPorcentaje."%";?>.</h2> <br><h3>Éste fue calculado considerando el mayor puntaje de sus tres primeros intentos</h3>
+	    <h2>Su porcentaje de logro final es <? echo $maxPorcentaje."%";?>.</h2> <br><h3>Éste fue calculado considerando el mayor puntaje de sus tres primeros intentos</h3>
 		<br>
-		<?php boton("Volver","history.back();"); ?>
+		<? boton("Volver","history.back();"); ?>
 	</center>
         
     </div><!--columnaCentro-->
      
               
-	<?php 
+	<? 
     
     	require("pie.php");
     

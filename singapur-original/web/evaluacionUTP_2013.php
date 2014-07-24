@@ -1,4 +1,4 @@
-<?php 
+<? 
 //ini_set("display_errors","on");
 require("inc/incluidos.php");
 require ("hd.php");
@@ -10,7 +10,7 @@ $idColegio = $_SESSION["sesionIdCurso"];
 <meta charset="iso-8859-1">
 <body>
 <div id="principal">
-<?php 
+<? 
 	require("topMenu.php"); 
 	$navegacion = "Home*mural.php?idCurso=$idCurso,Evaluacion*#";
 	require("_navegacion.php");
@@ -19,18 +19,18 @@ $idColegio = $_SESSION["sesionIdCurso"];
 ?>
 	
 	<div id="lateralIzq">
-   		<?php require("menuleft.php");	?>
+   		<? require("menuleft.php");	?>
     </div> <!--lateralIzq-->
     
     <div id="lateralDer">
-		<?php require("menuright.php"); ?>
+		<? require("menuright.php"); ?>
     </div><!--lateralDer-->
     
 	<div id="columnaCentro">
 	<p class="titulo_curso">Evaluaci&oacute;n de aprendizajes</p>
     <hr /><br />
     
-	<?php 
+	<? 
 	if($idCurso != 31 && $idCurso != 34){
 		if($rbdColegio != 1404 || $idPerfil > 1){ //En clase _usuario.php ?>
 			<div id="cajaCentralFondo" >
@@ -145,7 +145,7 @@ $idColegio = $_SESSION["sesionIdCurso"];
             </div>
             
         </div> <!--cajaCentralFondo-->
-			<?php } //if($rbdColegio != 1404 || $idPerfil > 1)
+			<? } //if($rbdColegio != 1404 || $idPerfil > 1)
 	}else{ //if($idCurso != 31 || $idCurso != 34)
 		echo "<h3>Aún no existen evaluaciones</h3>";
 	}?>
@@ -327,7 +327,7 @@ $idColegio = $_SESSION["sesionIdCurso"];
 			
     </div> <!--columnaCentro-->
 
-	<?php 
+	<? 
     	
 		require("pie.php");
 		

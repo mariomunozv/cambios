@@ -1,4 +1,4 @@
-<?php
+<?
 ini_set("display_errors","on");
 header('Content-Type: text/html; charset=UTF-8');
 require("inc/config.php");

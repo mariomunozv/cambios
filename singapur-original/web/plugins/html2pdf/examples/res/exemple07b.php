@@ -26,7 +26,7 @@
                             sur une grande route<br>
                             00000 - Spipu Ville<br>
                             <br>
-                            Date : <?php echo date('d/m/Y'); ?><br>
+                            Date : <? echo date('d/m/Y'); ?><br>
                             Dossier suivi par <b>Mle Jesuis CELIBATAIRE</b><br>
                             Tel : 33 (0) 1 00 00 00 00<br>
                             Email : on_va@chez.moi<br>
@@ -74,19 +74,19 @@
                         <th style="width: 15%; border: solid 1px #000000;">Neuf</th>
                         <th style="width: 15%; border: solid 1px #000000;">Abîmé</th>
                     </tr>
-<?php
+<?
 $i=0;
 foreach ($produits as $produit) {
     $i++;
 ?>
                     <tr>
-                        <td style="width: 15%; border: solid 1px #000000;"><?php echo $produit[0];        ?></td>
-                        <td style="width: 55%; border: solid 1px #000000;text-align: left;"><?php echo $produit[1];        ?></td>
-                        <td style="width: 15%; border: solid 1px #000000;"><?php echo $produit[4];        ?></td>
-                        <td style="width: 15%; border: solid 1px #000000;"><?php echo $produit[2]-$produit[4];        ?></td>
+                        <td style="width: 15%; border: solid 1px #000000;"><? echo $produit[0];        ?></td>
+                        <td style="width: 55%; border: solid 1px #000000;text-align: left;"><? echo $produit[1];        ?></td>
+                        <td style="width: 15%; border: solid 1px #000000;"><? echo $produit[4];        ?></td>
+                        <td style="width: 15%; border: solid 1px #000000;"><? echo $produit[2]-$produit[4];        ?></td>
                     </tr>
 
-<?php
+<?
 }
 for ($i; $i<12; $i++) {
 ?>
@@ -96,7 +96,7 @@ for ($i; $i<12; $i++) {
                         <td style="width: 15%; border: solid 1px #000000;">&nbsp;</td>
                         <td style="width: 15%; border: solid 1px #000000;">&nbsp;</td>
                     </tr>
-<?php
+<?
 }
 ?>
                 </table>
@@ -142,14 +142,14 @@ for ($i; $i<12; $i++) {
                         <th style="width: 50%; border: solid 1px #000000;">Produit neuf                </th>
                         <th style="width: 50%; border: solid 1px #000000;">Produit à reconditionner    </th>
                     </tr>
-<?php
+<?
     for ($i=0; $i<12; $i++) {
 ?>
                     <tr>
                         <td style="width: 50%; border: solid 1px #000000;">&nbsp;</td>
                         <td style="width: 50%; border: solid 1px #000000;">&nbsp;</td>
                     </tr>
-<?php
+<?
     }
 ?>
                 </table>

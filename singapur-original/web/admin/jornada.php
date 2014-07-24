@@ -1,4 +1,4 @@
-<?php 
+<? 
 
 require("inc/config.php");
 
@@ -52,7 +52,7 @@ class_activo('boton_jornada','activo');
 
 
 <a class="button" href="javascript:new_jornada();">
-<span><?php echo "Nueva Jornada"; ?></span>
+<span><? echo "Nueva Jornada"; ?></span>
 </a>
 
 
